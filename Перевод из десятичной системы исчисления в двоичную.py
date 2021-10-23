@@ -1,4 +1,3 @@
-import math
 def zn(x):
 	qw=str(x)
 	if '.' in qw:
