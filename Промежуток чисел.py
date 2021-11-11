@@ -4,97 +4,158 @@ def znak(x):
         return abs(qw.find('.') - len(qw)) - 1
     else:
         return 0
-def pdiap(c, d, e):
-    wt = max([znak(c), znak(d), znak(e)])
-    if c <= d and wt < 16:
+def gdeznak(*ar):
+    wt = [znak(a) for a in ar]
+    wt = max(wt)
+    if wt >= 16:
+        wt = 10000
+    return wt
+def pdiap(c, d, e, wt):
+    if c <= d:
         while c <= d and e > 0:
             yield c
             c = round(c + e, wt)
-    elif c >= d and wt < 16:
+    elif c >= d:
         while c >= d and e > 0:
             yield c
             c = round(c - e, wt)
-    elif c <= d and wt > 15:
-        while c <= d and e > 0:
-            yield c
-            c = c + e
-    elif c >= d and wt > 15:
-        while c >= d and e > 0:
-            yield c
-            c = c - e
 def withount(w):
-    if int(w) == w:
+    if w != float('inf') and int(w) == w:
         return int(w)
     else:
         return w
-def newlst(lst, addnum, removenum):
-    for num1 in addnum:
-        lst.append(withount(num1))
-    for num2 in removenum:
-        if num2 in lst:
-            lst.remove(num2)
-        else:
-            print('Число',withount(num2),'не найдено в промежутке.')
-    return lst
+def a_ti_kto(who):
+    non_int_neg = 0
+    negative = 0
+    non_int = 0
+    for i in range(len(who)):
+        if who[i] < 0 and type(who[i]) == float:
+            non_int_neg += 1
+        elif type(who[i]) == float:
+            non_int += 1
+        elif who[i] <= 0:
+            negative += 1
+    return non_int, negative, non_int_neg
+def multiply(m, a):
+    if znak(a) + znak(m) <= 8 and znak(a) <= 2:
+        return round(m * a, znak(m) + znak(a))
+    else:
+        return m * a
+def simple_composite(a):
+    i = 0
+    b = 0
+    while type(a) == int and i <= a:
+        i = i + 1
+        if a % i == 0:
+            b = b + 1
+        if b > 2:
+            break
+    return b
+def even_odd(a):
+    if type(a) == int and a % 2 == 0:
+        return str(a)
+    elif type(a) == int and a % 2 != 0:
+        return str(a)
+def palindrom(a):
+    k = str(a)
+    k = k[::-1]
+    if str(a) == k and (a >= 0 or type(a) == float):
+        return str(a)
+    else:
+        return ''
 
 
-def func(lst):
+def func_for_one(v):
+    v = withount(v)
+    print('Это число:', v)
+    if simple_composite(v) > 2 and v > 0:
+        print('Это число составное')
+    elif simple_composite(v) == 2 and v > 0:
+        print('Это число простое')
+    elif v == 1:
+        print('Это натуральное число - единица, оно не простое и не составное. По определению простые и составные числа - натуральные числа больше 1')
+    elif v <= 0 and type(v) == int:
+        print('Это число неположительное. По определению простые и составные числа - натуральные числа больше 1')
+    elif type(v) == float:
+        print('Это число нецелое. По определению простые и составные числа - натуральные числа больше 1')
+    if type(v) == int and v % 2 == 0:
+        print('Это число чётное')
+    elif type(v) == int and v % 2 != 0:
+        print('Это число нечётное')
+    else:
+        print('Это число нецелое. Чтобы определить чётное или нечётное число - оно должно быть целым')
+    if palindrom(v) != '':
+        print('Это число является палиндромом')
+    else:
+        print('Это число не является палиндромом')
+
+
+def func(c, d, e, wt):
+    lst = [withount(diap) for diap in pdiap(c, d, e, wt)]
+    yield lst
+    no_int, neg, no_int_neg = a_ti_kto(lst)
+    yield withount(sum(lst))
     simple = ''
+    composite = ''
     even = ''
     odd = ''
     pal = ''
-    composite = ''
     mult = 1
-    m = 0
-    yield lst
-    yield withount(sum(lst))
     for j in range(len(lst)):
-        mult = mult * lst[j]
+        mult = multiply(mult, lst[j])
     yield mult
-    lst=set(lst)
-    lst=list(lst)
     for j in range(len(lst)):
-        i = 0
-        q = 0
-        while i <= lst[j]:
-            i = i + 1
-            if lst[j] % i == 0:
-                q = q + 1
-            if q > 2:
-                break
+        q = simple_composite(lst[j])
         if q == 2:
             simple = simple + str(lst[j]) + '; '
         elif q > 2:
             composite = composite + str(lst[j]) + '; '
-    if len(simple) != 0:
-        yield simple
+    if len(simple) + len(composite) > 0:
+        yield 'Z'
+        if len(simple) == 0:
+            yield 'нет  '
+        else:
+            yield simple
+        if len(composite) == 0:
+            yield 'нет  '
+        else:
+            yield composite
+    elif neg == len(lst):
+        yield 'Z и <= 0'
+        yield 'Промежуток состоит только из целых неположительных чисел. По определению простые и составные числа - натуральные числа больше единицы'
+    elif no_int + no_int_neg == len(lst):
+        yield 'неZ'
+        yield 'Промежуток состоит только из нецелых чисел. По определению простые и составные числа - натуральные числа больше единицы'
+    elif no_int + no_int_neg + neg == len(lst):
+        yield 'неZ и <= 0'
+        yield 'Промежуток состоит только из нецелых и неположительных чисел. По определению простые и составные числа - натуральные числа больше единицы'
     else:
-        yield 'нет.  '
-    if len(composite) != 0:
-        yield composite
-    else:
-        yield 'нет.  '
+        yield '1'
+        yield 'Положительная часть промежутка состоит из натурального числа 1, которое не является простым или составным. По определению простые и составные числа - натуральные числа больше единицы'
     for j in range(len(lst)):
         if type(lst[j]) == int and lst[j] % 2 == 0:
-            even = even + str(lst[j]) + '; '
+            even = even + even_odd(lst[j]) + '; '
         elif type(lst[j]) == int and lst[j] % 2 != 0:
-            odd = odd + str(lst[j]) + '; '
-    if len(even) != 0:
-        yield even
-    else:
-        yield 'нет.  '
-    if len(odd) != 0:
-        yield odd
-    else:
-        yield 'нет.  '
+            odd = odd + even_odd(lst[j]) + '; '
+    if len(even) + len(odd) > 0:
+        yield 'Zp'
+        if len(even) == 0:
+            yield 'нет  '
+        else:
+            yield even
+        if len(odd) == 0:
+            yield 'нет  '
+        else:
+            yield odd
+    elif no_int_neg + no_int == len(lst):
+        yield 'неZp'
+        yield 'Промежуток состоит только из нецелых чисел. По определению чётные и нечётные числа - целые числа'
     for j in range(len(lst)):
-        k = str(abs(lst[j]))
-        k = k[::-1]
-        if str(abs(lst[j])) == k and (abs(lst[j]) > 9 or type(lst[j]) == float):
-            m = m + 1
-            pal = pal + str(lst[j]) + '; '
-    if m == 0:
-        yield 'нет.  '
+        pt = palindrom(lst[j])
+        if pt != '':
+            pal = pal + pt + '; '
+    if len(pal) == 0:
+        yield 'нет  '
     else:
         yield pal
 
@@ -102,45 +163,38 @@ def func(lst):
 print('<<<--------------Ввод-------------->>>')
 x = float(input('Введите первое число для создания промежутка: '))
 y = float(input('Введите второе число для создания промежутка: '))
-n = float(input('Введите шаг между числами в промежутке (число больше нуля): '))
-genlst = [withount(diap) for diap in pdiap(x, y, n)]
-print('==========================================')
-print('Созданный промежуток по двум числам и шагу -', genlst)
-if len(genlst) == 0 and n == 0:
-    print('Вы указали шаг между числами равный 0', 'Добавьте числа, чтобы создать промежуток', sep='\n')
-elif len(genlst) == 0 and n < 0:
-    print('Вы указали шаг между числами меньше 0', 'Добавьте числа, чтобы создать промежуток', sep='\n')
-print('==========================================')
-z1 = int(input('Укажите, сколько чисел нужно добавить в указанный промежуток (целое число): '))
-f1 = []
-f2 = []
-if z1 > 0:
-    print('-----------------------------')
-for i in range(z1):
-    f1 = [float(input('Укажите, какое число нужно добавить в указанный промежуток: '))] + f1
-if z1 > 0:
-    print('-----------------------------')
-z2 = int(input('Укажите, сколько чисел нужно убрать из указанного промежутка (целое число): '))
-if z2 > 0:
-    print('-----------------------------')
-for i in range(z2):
-    f2 = [float(input('Укажите, какое число нужно убрать из указанного промежутка: '))] + f2
-if z2 > 0:
-    print('-----------------------------')
+n = 1
+if x != y:
+    n = abs(float(input('Введите длину шага между двумя числами в промежутке (число отличное от нуля): ')))
+    if n == 0:
+        print('------------------------------------------------------------')
+        print('Вы указали длину шага между двумя числами равный 0', 'Выход из программы', sep='\n')
+        print('------------------------------------------------------------')
+        exit()
 print('>>>--------------Ввод--------------<<<')
-genlst = newlst(genlst, f1, f2)
-genlst.sort()
-Task = func(genlst)
+if x == y or (abs(x) < abs(y) and abs(round(x + n, gdeznak(znak(x), znak(n)))) > abs(y)) or (abs(y) < abs(x) and abs(round(y + n, gdeznak(znak(n), znak(y)))) > abs(x)):
+    print('<<<--------------Вывод-------------->>>')
+    if (abs(x) < abs(y) and abs(x + n) > abs(y)) or (abs(y) < abs(x) and abs(y + n) > abs(x)) and x != y:
+        print('Вы указали сумму по модулю первого числа и шага больше чем второе число. Поэтому промежуток представлен в виде первого числа')
+    func_for_one(x)
+    print('<<<--------------Вывод-------------->>>')
+    exit()
+Task = func(x, y, n, gdeznak(x, y, n))
 print('<<<--------------Вывод-------------->>>')
-print('Созданный промежуток на вводе -', genlst)
-if len(next(Task)) != 0:
-    print('Сумма чисел данного промежутка: ', next(Task), sep='')
-    print('Произведение чисел данного промежутка: ', next(Task), sep='')
+print('Созданный промежуток по двум числам и шагу:', next(Task))
+print('Сумма чисел данного промежутка: ', round(next(Task), gdeznak(x, y, n)), sep='')
+print('Произведение чисел данного промежутка: ', next(Task), sep='')
+Nat=next(Task)
+if Nat == 'Z':
     print('Простые числа данного промежутка: ', next(Task)[0:-2], sep='')
     print('Составные числа данного промежутка: ', next(Task)[0:-2], sep='')
+elif Nat == 'неZ и <= 0' or Nat == 'Z и <= 0' or Nat == 'неZ' or Nat == '1':
+    print(next(Task))
+Z = next(Task)
+if Z == 'Zp':
     print('Чётные числа данного промежутка: ', next(Task)[0:-2], sep='')
     print('Нечётные числа данного промежутка: ', next(Task)[0:-2], sep='')
-    print('Палиндром числа данного промежутка: ', next(Task)[0:-2], sep='')
-else:
-    print('Увы, но Вы задали программе пустой промежуток')
+elif Z == 'неZp':
+    print(next(Task))
+print('Палиндром числа данного промежутка: ', next(Task)[0:-2], sep='')
 print('>>>--------------Вывод--------------<<<')
