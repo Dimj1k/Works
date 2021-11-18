@@ -6,8 +6,6 @@ def zn(x):
 		return 0
 n=float(input())
 wt=zn(n)
-if wt >= 6:
-    wt=10*100
 n1=n-n//1
 n=int(n)
 k=''
@@ -25,7 +23,8 @@ k=k[::-1]
 we=len(k)
 if n1 > 0:
     while F!=1:
-        n1=round(n1,wt)
+	if wt < 16:
+        	n1=round(n1,wt)
         p.append(n1)
         n1=n1*2
         if n1 >= 1:
