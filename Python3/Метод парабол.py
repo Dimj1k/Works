@@ -49,6 +49,12 @@ def s_fp(x1, x2, n, epsilon, s2=0):
 # ax^2 + bx + c = f(x)
 x0 = float(input('Введите первую координату по X: '))
 y = float(input('Введите вторую координату по X: '))
+if x0 >= y:
+    print('Введите первую координату по X меньше чем вторую')
+    quit()
 k = 1
-acc = abs(float(input('Введите точность: ')))
+acc = abs(float(input('Введите погрешность (число не равное нулю): ')))
+if acc == 0:
+    print('Введите погрешность не равное нулю')
+    quit()
 print(s_fp(x0, y, k, acc))
