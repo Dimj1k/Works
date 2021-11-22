@@ -32,7 +32,7 @@ def s_fp(x1, x2, n, epsilon, s2=0):
         ax = [x1 ** 2, (x1 + step / 2) ** 2, (x1 + step) ** 2]
         bx = [x1, (x1 + step / 2), (x1 + step)]
         v = [f(x1), f(x1 + step / 2), f(x1 + step)]
-        # Метод Крамера
+        # Поиск корней линейных уравнений с помощью метода Крамера
         p = det3x3(ax, bx, cx)
         a = det3x3(v, bx, cx) / p
         b = det3x3(ax, v, cx) / p
