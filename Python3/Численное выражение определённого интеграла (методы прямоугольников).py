@@ -46,7 +46,7 @@ def s_fr(a, b, n, epsilon, s2=0):
         return s_fr(a, b, n / 2, epsilon, s1)
 
 
-# Метод прямоугольников с точки х0
+# Метод левых и правых прямоугольников с точки х0
 def s_fm(a, b, c, n, epsilon, s2=0):
     k1 = abs((c - b) / n)
     k2 = abs((c - a) / n)
