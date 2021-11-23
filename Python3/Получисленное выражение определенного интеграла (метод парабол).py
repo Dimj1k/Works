@@ -34,6 +34,7 @@ def s_fp(x1, x2, n, epsilon, s2=0):
         v = [f(x1), f(x1 + step / 2), f(x1 + step)]
         # Поиск членов квадратного трёхчлена с помощью метода Крамера
         p = det3x3(ax, bx, cx)
+        if p == 0: return s2
         a = det3x3(v, bx, cx) / p
         b = det3x3(ax, v, cx) / p
         c = det3x3(ax, bx, v) / p
@@ -56,9 +57,6 @@ k = 1
 acc = abs(float(input('Введите погрешность (число не равное нулю): ')))
 if acc == 0:
     print('Введите погрешность не равное нулю')
-    quit()
-elif acc < 10**(-9):
-    print('Введите погрешность меньше чем 10 в -9 степени')
     quit()
 
 
