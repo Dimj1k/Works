@@ -23,7 +23,8 @@ def integrate(d, j, h, o, m):
 
 # Поиск членов квадратного трёхчлена и значение определенного интеграла найденной параболы
 def s_fp(x1, x2, n, epsilon, s2=0):
-    if n == 2 ** 10: return s2
+    if n == 2 ** 10 and abs(x2 - c1) < 200: return s2
+    if n == 2 ** 16: return s2
     cx = [1, 1, 1]
     s1 = 0
     x1save = x1
