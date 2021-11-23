@@ -23,6 +23,7 @@ def integrate(d, j, h, o, m):
 
 # Поиск членов квадратного трёхчлена и значение определенного интеграла найденной параболы
 def s_fp(x1, x2, n, epsilon, s2=0):
+    if n == 2 ** 17: return s2
     cx = [1, 1, 1]
     s1 = 0
     x1save = x1
@@ -34,7 +35,6 @@ def s_fp(x1, x2, n, epsilon, s2=0):
         v = [f(x1), f(x1 + step / 2), f(x1 + step)]
         # Поиск членов квадратного трёхчлена с помощью метода Крамера
         p = det3x3(ax, bx, cx)
-        if p == 0: return s2
         a = det3x3(v, bx, cx) / p
         b = det3x3(ax, v, cx) / p
         c = det3x3(ax, bx, v) / p
