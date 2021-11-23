@@ -45,7 +45,7 @@ def s_fp(x1, x2, n, epsilon, s2=0):
     if abs(s2 - s1) <= epsilon:
         return s1
     else:
-        return s_fp(x1save, x2, n * 2, epsilon, s1)
+        return s_fp(x1save, x2, n + 16, epsilon, s1)
 
 
 # ax^2 + bx + c = f(x)
