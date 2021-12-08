@@ -2,7 +2,6 @@ from decimal import Decimal, getcontext
 n=float(input())
 getcontext().prec = 16
 n = Decimal(n)
-print(n)
 n1=n-n//1
 n=int(n)
 k=''
