@@ -24,10 +24,10 @@ for i in range(len(dates)):
     day, month, year = dates[i].split('.')
     if int(year) < 1970:
         year = (1970 - int(year)) + 1970
-        age = int(((time.time() - 12 * 3600) + time.mktime(dt.date(int(year), int(month), int(day)).timetuple()))
+        age = int(((time.time() - 6 * 3600) + time.mktime(dt.date(int(year), int(month), int(day)).timetuple()))
                   / (365.25 * 86400))
     else:
-        age = int(((time.time() - 12 * 3600) - time.mktime(dt.date(int(year), int(month), int(day)).timetuple()))
+        age = int(((time.time() - 6 * 3600) - time.mktime(dt.date(int(year), int(month), int(day)).timetuple()))
                   / (365.25 * 86400))
     ages.append(age)
 
