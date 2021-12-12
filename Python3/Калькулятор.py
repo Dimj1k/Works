@@ -60,7 +60,7 @@ def operator2act(lst, lstnum): # Перебор полученных опера�
             ans = lstnum[act] * lstnum[act + 1]
         if lst[act] == '^':
             if lstnum[act] == 0 and lstnum[act + 1] == 0:
-                print('В процессе вычислений вы возвели 0 в степень 0, данное выражение неопределено.\nИз-за этого бу'
+                print('В процессе вычислений вы возвели 0 в степень 0, что равно неопределенности.\nИз-за этого бу'
                       'дет произведён выход из программы. Ваш введенный пример сохранён в файл ZeroToThePowerOfZeroArit'
                       'hmeticExample.txt\nВыход из программы')
                 with open('ZeroToThePowerOfZeroArithmeticExample.txt', 'a', encoding='UTF-8') as f:
@@ -99,7 +99,7 @@ out = summ(out_lst)
 # Проверка, того что нашлось из вводных данных по регулярным выражениям с вводными данными и прочее
 while out != given or given == '' or havenums is None or given.count('(') > given.count(')') + 1 or \
         re.findall(re_oper, given) != re.findall(re_operators, given) or given.count(')') > given.count('(') or \
-        '()' in given:
+        '()' in given or ('/0' in given and not '/0.' in given) or ('^0' in given and not '^0.' in given):
     if given == '':
         print('Вы ввели пустой пример')
     elif out != given:
@@ -113,6 +113,10 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('Вы ввели более одного операторов подряд в примере')
     elif '()' in given:
         print('Вы ввели "()" в примере')
+    elif '^0' in given and not '^0.' in given:
+        print('0 в степени 0 - неопределенное выражение')
+    elif '/0' in given and not '/0.' in given:
+        print('На ноль делить нельзя')
     given = again()
     havenums = re.search(re_nums, given)
     out_lst = re.findall(re_all, given)
@@ -141,6 +145,7 @@ while '(' in out:
         st = change.start() + 1
         end = change.end() - 1
     change = out[st:end]
+    print(change)
     lstnums, lstoperators = re.findall(re_nums, change), re.findall(re_operators, change)
     while len(lstnums) < len(lstoperators):
         for j in range(len(lstnums)):
