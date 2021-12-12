@@ -61,7 +61,7 @@ def operator2act(lst, lstnum): # Перебор полученных опера�
             ans = lstnum[act] * lstnum[act + 1]
         if lst[act] == '^':
             if lstnum[act] == 0 and lstnum[act + 1] == 0:
-                print('В процессе вычислений вы возвели 0 в степень 0, чьё выражение неопределенно.\nИз-за этого будет'
+                print('В процессе вычислений вы возвели 0 в степень 0, что равно неопределенности.\nИз-за этого будет'
                       ' произведён выход из программы. Ваш введенный пример записан в файл ZeroToThePowerOfZeroArithmet'
                       'icExample.txt\nВыход из программы')
                 with open('ZeroToThePowerOfZeroArithmeticExample.txt', 'a', encoding='UTF-8') as f:
@@ -86,7 +86,7 @@ given = given.replace(' ', '', given.count(' '))
 
 # Регулярные выражения
 re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+' # Числа
-re_operators = r'[-+/*^]|\d+[(][-+/*^\d]+[)]' # Операторы
+re_operators = r'[-+/*^]' # Операторы
 re_parentheses = r'[()]' # Скобки
 re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses # Операторы + Числа + Скобки
 
@@ -99,7 +99,8 @@ out = summ(out_lst)
 
 # Проверка, того что нашлось из вводных данных по регулярным выражениям с вводными данными и прочее
 while out != given or given == '' or havenums is None or given.count('(') > given.count(')') + 1 or \
-        re.findall(re_oper, given) != re.findall(re_operators, given) or given.count(')') > given.count('('):
+        re.findall(re_oper, given) != re.findall(re_operators, given) or given.count(')') > given.count('(') or \
+        '()' in given:
     if given == '':
         print('Вы ввели пустой пример')
     elif out != given:
@@ -111,6 +112,8 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print(r'Введите равное количество "(" и ")"')
     elif re.findall(re_oper, given) != re.findall(re_operators, given):
         print('Вы ввели более одного операторов подряд в примере')
+    elif '()' in given:
+        print('Вы ввели "()" в примере')
     given = again()
     havenums = re.search(re_nums, given)
     out_lst = re.findall(re_all, given)
