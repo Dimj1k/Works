@@ -143,9 +143,9 @@ while '(' in out:
     change = re.search(re_parentheses, out)
     st = change.start() + 1
     end = change.end() - 1
-    ps = out[st - 2:st]
-    if '0(' == ps or '1(' == ps or '2(' == ps or '3(' == ps or '4(' == ps or '5(' == ps or '6(' == ps or '7(' == ps or \
-            '8(' == ps or '9(' == ps:
+    np = out[st - 2:st]
+    if '0(' == np or '1(' == np or '2(' == np or '3(' == np or '4(' == np or '5(' == np or '6(' == np or '7(' == np or \
+            '8(' == np or '9(' == np:
         out = out[0:st - 1] + '*(' + out[st:]
         change = re.search(re_parentheses, out)
         st = change.start() + 1
