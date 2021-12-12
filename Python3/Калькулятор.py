@@ -2,7 +2,6 @@ from decimal import Decimal, getcontext, InvalidOperation
 import re
 getcontext().prec = 16
 
-
 def again(): # Ввод данных снова
     give = input('Введите пример еще раз: ')
     give = give.replace(' ', '', give.count(' '))
@@ -53,7 +52,7 @@ def operator2act(lst, lstnum): # Перебор полученных опера�
                 ans = lstnum[act] / lstnum[act + 1]
             except ZeroDivisionError:
                 print('В процессе вычислений вы поделили на ноль.\nИз-за этого будет произведён выход из программы.\n'
-                      'Ваш введенный пример записан в файл ZeroDivisionArithmeticExample.txt\nВыход из программы')
+                      'Ваш введенный пример сохранён в файл ZeroDivisionArithmeticExample.txt\nВыход из программы')
                 with open('ZeroDivisionArithmeticExample.txt', 'a', encoding='UTF-8') as f:
                     f.writelines(given)
                 quit()
@@ -62,8 +61,8 @@ def operator2act(lst, lstnum): # Перебор полученных опера�
         if lst[act] == '^':
             if lstnum[act] == 0 and lstnum[act + 1] == 0:
                 print('В процессе вычислений вы возвели 0 в степень 0, что равно неопределенности.\nИз-за этого будет'
-                      ' произведён выход из программы. Ваш введенный пример записан в файл ZeroToThePowerOfZeroArithmet'
-                      'icExample.txt\nВыход из программы')
+                      ' произведён выход из программы. Ваш введенный пример сохранён в файл ZeroToThePowerOfZeroArithme'
+                      'ticExample.txt\nВыход из программы')
                 with open('ZeroToThePowerOfZeroArithmeticExample.txt', 'a', encoding='UTF-8') as f:
                     f.writelines(given)
                 quit()
@@ -124,7 +123,7 @@ if given.count('(') == given.count(')') + 1:
     given += ')'
     out += ')'
     print(fr'Вы ввели "(" больше ")" на 1, пример был закрыт ")". Получено: {out}')
-out = '(' + out + ')'
+out = '(' + out + ')' # Сам пример - огромная скобка
 
 # Вычисления внутри скобок
 re_parentheses = r'[(][\d+/^*-.,]+[)]' # Улавливать скобки
@@ -134,6 +133,13 @@ while '(' in out:
     change = re.search(re_parentheses, out)
     st = change.start() + 1
     end = change.end() - 1
+    ps = out[st - 2:st]
+    if '0(' == ps or '1(' == ps or '2(' == ps or '3(' == ps or '4(' == ps or '5(' == ps or '6(' == ps or '7(' == ps or \
+            '8(' == ps or '9(' == ps:
+        out = out[0:st - 1] + '*(' + out[st:]
+        change = re.search(re_parentheses, out)
+        st = change.start() + 1
+        end = change.end() - 1
     change = out[st:end]
     lstnums, lstoperators = re.findall(re_nums, change), re.findall(re_operators, change)
     while len(lstnums) < len(lstoperators):
@@ -146,7 +152,7 @@ while '(' in out:
     else:
         change = operator2act(lstoperators, lstnums)
     out = out[0:st - 1] + str(change) + out[end + 1:]
-    if '(' and ')' in out:
+    if '(' in out:
         print(f'Убираем {i} скобку:', out[1:len(out) - 1])
     else:
         print('Ответ:', out)
