@@ -1,6 +1,12 @@
-from decimal import Decimal, getcontext, InvalidOperation
+from decimal import Decimal, InvalidOperation
 import re
-getcontext().prec = 16
+
+
+def withount(a): # Функция, которая убирает .0
+    if a != float('inf') and int(a) == a:
+        return int(a)
+    else:
+        return a
 
 def again(): # Ввод данных снова
     give = input('Введите пример еще раз: ')
@@ -71,7 +77,7 @@ def operator2act(lst, lstnum): # Перебор полученных опера�
         if lst[act] == '+':
             ans = lstnum[act] + lstnum[act + 1]
         if lst[act] == '-':
-            ans = lstnum[act] + lstnum[act + 1]
+            ans = lstnum[act] - lstnum[act + 1]
         lst.pop(act)
         lstnum.pop(act)
         lstnum.insert(act, ans)
@@ -145,12 +151,12 @@ while '(' in out:
         st = change.start() + 1
         end = change.end() - 1
     change = out[st:end]
-    print(change)
     lstnums, lstoperators = re.findall(re_nums, change), re.findall(re_operators, change)
-    while len(lstnums) < len(lstoperators):
+    while len(lstnums) <= len(lstoperators):
         for j in range(len(lstnums)):
             if '+' in lstnums[j] or '-' in lstnums[j]:
                 lstoperators.pop(j)
+                print(lstnums, lstoperators)
     lstnums = str2Decimal(lstnums)
     if len(lstnums) == 1:
         change = lstnums[0]
@@ -160,4 +166,4 @@ while '(' in out:
     if '(' in out:
         print(f'Убираем {i} скобку:', out[1:len(out) - 1])
     else:
-        print('Ответ:', out)
+        print('Ответ:', withount(Decimal(out)))
