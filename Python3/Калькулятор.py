@@ -27,7 +27,7 @@ def changing(): return re.search(re_parentheses, out).start() + 1, re.search(re_
 
 
 def num_op2op(lst):  # Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
-    p = r'\d*[.,]?\d+'
+    p = r'\d*[.,]?\d+|[+-]\('
     for i in range(len(lst)):
         k = lst[i]
         if not (re.search(p, k) is None):
@@ -108,12 +108,12 @@ given = given.replace(' ', '', given.count(' '))
 
 # Регулярные выражения
 re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+' # Числа
-re_operators = r'[/*^]|\d*[.,]?\d+\+|\d*[.,]?\d+\-' # Операторы
+re_operators = r'[/*^]|\d*[.,]?\d+[+-]|[+-]\(' # Операторы
 re_parentheses = r'[()]' # Скобки
 re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses # Операторы + Числа + Скобки
 
 havenums = re.search(re_nums, given) # Есть ли число в примере
-re_oper = r'[/*^]+|\d*[.,]?\d+[+-]' # Ловить больше двух операторов подряд
+re_oper = r'[/*^]+|\d*[.,]?\d+[+-]|[+-]\(' # Ловить больше двух операторов подряд
 
 # Что нашлось из вводных данных по регулярным выражениям
 out_lst = re.findall(re_all, given)
@@ -145,6 +145,7 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('На ноль делить нельзя')
     elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
         print('Вы не дописали пример')
+    print(out)
 
     given = again()
     havenums = re.search(re_nums, given)
