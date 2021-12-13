@@ -113,7 +113,7 @@ re_parentheses = r'[()]' # Скобки
 re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses # Операторы + Числа + Скобки
 
 havenums = re.search(re_nums, given) # Есть ли число в примере
-re_oper = r'[/*^]+|\d*[.,]?\d+[+-]|[+-]\(' # Ловить больше двух операторов подряд
+re_oper = r'[/*^]{2,}' # Ловить больше двух операторов подряд
 
 # Что нашлось из вводных данных по регулярным выражениям
 out_lst = re.findall(re_all, given)
@@ -121,14 +121,14 @@ out = summ(out_lst)
 
 # Проверка, того что нашлось из вводных данных по регулярным выражениям с вводными данными и прочее
 while out != given or given == '' or havenums is None or given.count('(') > given.count(')') + 1 or \
-        re.findall(re_oper, given) != re.findall(re_operators, given) or given.count(')') > given.count('(') or \
-        '()' in given or ('/0' in given and (not '/0.' in given or not '/0,' in given)) or \
+        not (re.search(re_oper, given) is None) or given.count(')') > given.count('(') or '()' in given or \
+        ('/0' in given and (not '/0.' in given or not '/0,' in given)) or \
         ('^0' in given and (not '^0.' in given or not '^0,' in given)) or '()' in given + ')' or \
         not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
 
     if given == '':
         print('Вы ввели пустой пример')
-    elif re.findall(re_oper, given) != re.findall(re_operators, given):
+    elif not (re.search(re_oper, given) is None):
         print('Вы ввели более одного операторов подряд в примере')
     elif out != given:
         print(r'Введите пример без букв, c одной или без "." (",") в числе и иных символов отличных от "0-9", "-", "+",'
@@ -145,7 +145,7 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('На ноль делить нельзя')
     elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
         print('Вы не дописали пример')
-        
+
     print('Получено:', out)
     given = again()
     havenums = re.search(re_nums, given)
