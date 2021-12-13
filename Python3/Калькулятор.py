@@ -180,7 +180,7 @@ while '(' in out:
     lstnums = str2Decimal(lstnums)
 
     if len(lstnums) == 1:
-        if '--' in change:
+        if '--' == change[0:2]:
             change = -lstnums[0]
         else:
             change = lstnums[0]
