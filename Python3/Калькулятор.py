@@ -128,12 +128,12 @@ while out != given or given == '' or havenums is None or given.count('(') > give
 
     if given == '':
         print('Вы ввели пустой пример')
+    elif havenums is None:
+        print('Вы ввели пример без чисел')
     elif not (re.search(re_oper, given) is None):
         print('Вы ввели более одного операторов подряд в примере')
     elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
         print('Вы не дописали пример')
-    elif havenums is None:
-        print('Вы ввели пример без чисел')
     elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
         print(r'Введите равное количество "(" и ")"')
     elif '()' in given or '()' in given + ')':
