@@ -160,17 +160,17 @@ out = '(' + out + ')'  # Сам пример - огромная скобка
 
 # Улавливать скобки
 re_parentheses = r'[(][\d+/^*-.,]+[)]'
-j = 0
 
 # Вычисления внутри скобок
+j = 0
 while '(' in out:
     j = j + 1
     st, end = changing()
 
-    if not (re.search(r'\d\(', out[st - 2:st]) is None):
+    if not (re.search(r'[\d.,]\(', out[st - 2:st]) is None):
         out = out[0:st - 1] + '*(' + out[st:]
         st, end = changing()
-    if not (re.search(r'\)\d', out[end:end + 2]) is None):
+    if not (re.search(r'\)[\d.,]', out[end:end + 2]) is None):
         out = out[0:end] + ')*' + out[end + 1:]
         st, end = changing()
 
