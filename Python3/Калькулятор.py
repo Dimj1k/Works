@@ -3,7 +3,7 @@ import re
 
 
 def withount(a):  # Функция, которая убирает .0
-    if a < 10 ** 100 and int(a) == a:
+    if a <= 10 ** 100 and int(a) == a:
         return int(a)
     else:
         return a
@@ -65,7 +65,7 @@ def equal(n):  # Перебор операторов в списке
         return min([a1, a2, a3])
 
 
-def operator2act(lst, lstnum): # Перебор полученных операторов
+def operator2act(lst, lstnum):  # Перебор полученных операторов
     ans = 0
     while len(lstnum) != 1:
         act = equal(lst)
@@ -107,13 +107,13 @@ given = input('Введите пример: ')
 given = given.replace(' ', '', given.count(' '))
 
 # Регулярные выражения
-re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+' # Числа
-re_operators = r'[/*^]|\d*[.,]?\d+[+-]|[+-]\(' # Операторы
-re_parentheses = r'[()]' # Скобки
-re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses # Операторы + Числа + Скобки
+re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+'  # Числа
+re_operators = r'[/*^]|\d*[.,]?\d+[+-]|[+-]\('  # Операторы
+re_parentheses = r'[()]'  # Скобки
+re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses  # Операторы + Числа + Скобки
 
-havenums = re.search(re_nums, given) # Есть ли число в примере
-re_oper = r'[-+/*^]{2,}' # Ловить больше двух операторов подряд
+havenums = re.search(re_nums, given)  # Есть ли число в примере
+re_oper = r'[-+/*^]{2,}'  # Ловить больше двух операторов подряд
 
 # Что нашлось из вводных данных по регулярным выражениям
 out_lst = re.findall(re_all, given)
