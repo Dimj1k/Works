@@ -175,15 +175,12 @@ while '(' in out:
         out = out[0:end] + ')*' + out[end + 1:]
         st, end = changing()
 
-    change = out[st:end]
+    change = out[st:end].replace('--', '+', out[st:end].count('--'))
     lstnums, lstoperators = re.findall(re_nums, change), num_op2op(re.findall(re_operators, change))
     lstnums = str2Decimal(lstnums)
 
     if len(lstnums) == 1:
-        if '--' == change[0:2]:
-            change = -lstnums[0]
-        else:
-            change = lstnums[0]
+        change = lstnums[0]
     else:
         change = operator2act(lstoperators, lstnums)
     out = out[0:st - 1] + str(change) + out[end + 1:]
