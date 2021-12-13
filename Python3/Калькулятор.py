@@ -145,8 +145,8 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('На ноль делить нельзя')
     elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
         print('Вы не дописали пример')
-    print(out)
-
+        
+    print('Получено:', out)
     given = again()
     havenums = re.search(re_nums, given)
     out_lst = re.findall(re_all, given)
