@@ -113,7 +113,7 @@ re_parentheses = r'[()]' # Скобки
 re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses # Операторы + Числа + Скобки
 
 havenums = re.search(re_nums, given) # Есть ли число в примере
-re_oper = r'[/*^]{2,}' # Ловить больше двух операторов подряд
+re_oper = r'[-+/*^]{2,}' # Ловить больше двух операторов подряд
 
 # Что нашлось из вводных данных по регулярным выражениям
 out_lst = re.findall(re_all, given)
@@ -177,11 +177,13 @@ while '(' in out:
 
     change = out[st:end]
     lstnums, lstoperators = re.findall(re_nums, change), num_op2op(re.findall(re_operators, change))
-
     lstnums = str2Decimal(lstnums)
 
     if len(lstnums) == 1:
-        change = lstnums[0]
+        if '--' in change:
+            change = -lstnums[0]
+        else:
+            change = lstnums[0]
     else:
         change = operator2act(lstoperators, lstnums)
     out = out[0:st - 1] + str(change) + out[end + 1:]
