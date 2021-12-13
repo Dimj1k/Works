@@ -130,9 +130,8 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('Вы ввели пустой пример')
     elif not (re.search(re_oper, given) is None):
         print('Вы ввели более одного операторов подряд в примере')
-    elif out != given:
-        print(r'Введите пример без букв, c одной или без "." (",") в числе и иных символов отличных от "0-9", "-", "+",'
-              r' "/", "*", "^", и "(", ")"')
+    elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
+        print('Вы не дописали пример')
     elif havenums is None:
         print('Вы ввели пример без чисел')
     elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
@@ -143,8 +142,9 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('0 в степени 0 - неопределенное выражение')
     elif '/0' in given and (not '/0.' in given or not '/0,' in given):
         print('На ноль делить нельзя')
-    elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
-        print('Вы не дописали пример')
+    elif out != given:
+        print(r'Введите пример без букв, c одной или без "." (",") в числе и иных символов отличных от "0-9", "-", "+",'
+              r' "/", "*", "^", и "(", ")"')
 
     print('Получено:', out)
     given = again()
