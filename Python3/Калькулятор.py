@@ -22,7 +22,7 @@ def summ(lst):  # Сумма строк из списка
     return k
 
 
-# Превращать "(" в "*(" и ")" в ")*"
+# Раскрытие скобок
 def changing(): return re.search(re_parentheses, out).start() + 1, re.search(re_parentheses, out).end() - 1
 
 
