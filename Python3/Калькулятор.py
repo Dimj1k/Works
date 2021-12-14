@@ -124,7 +124,8 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         not (re.search(re_oper, given) is None) or given.count(')') > given.count('(') or '()' in given or \
         ('/0' in given and (not '/0.' in given or not '/0,' in given)) or \
         ('^0' in given and (not '^0.' in given or not '^0,' in given)) or '()' in given + ')' or \
-        not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
+        not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
+        not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
 
     if given == '':
         print('Вы ввели пустой пример')
@@ -132,7 +133,8 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('Вы ввели пример без чисел')
     elif not (re.search(re_oper, given) is None):
         print('Вы ввели более одного операторов подряд в примере')
-    elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None):
+    elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
+        not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
         print('Вы не дописали пример')
     elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
         print(r'Введите равное количество "(" и ")"')
@@ -144,9 +146,8 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print('На ноль делить нельзя')
     elif out != given:
         print(r'Введите пример без букв, c одной или без "." (",") в числе и иных символов отличных от "0-9", "-", "+",'
-              r' "/", "*", "^", и "(", ")"')
+              r' "/", "*", "^", и "(", ")"', '\nПолучено:', out)
 
-    print('Получено:', out)
     given = again()
     havenums = re.search(re_nums, given)
     out_lst = re.findall(re_all, given)
