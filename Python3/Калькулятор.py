@@ -122,10 +122,9 @@ out = summ(out_lst)
 # Проверка, того что нашлось из вводных данных по регулярным выражениям с вводными данными и прочее
 while out != given or given == '' or havenums is None or given.count('(') > given.count(')') + 1 or \
         not (re.search(re_oper, given) is None) or given.count(')') > given.count('(') or '()' in given or \
-        ('/0' in given and (not '/0.' in given or not '/0,' in given)) or \
-        ('^0' in given and (not '^0.' in given or not '^0,' in given)) or '()' in given + ')' or \
-        not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
-        not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
+        '()' in given + ')' or not (re.match(r'[*/^]', given) is None) or \
+        not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or not (re.search(r'\([*/^]', given) is None) or \
+        not (re.search(r'[-+*/^]\)', given) is None):
 
     if given == '':
         print('Вы ввели пустой пример')
@@ -140,10 +139,6 @@ while out != given or given == '' or havenums is None or given.count('(') > give
         print(r'Введите равное количество "(" и ")"')
     elif '()' in given or '()' in given + ')':
         print('Вы ввели пустые скобки в примере')
-    elif '^0' in given and (not '^0.' in given or not '^0,' in given):
-        print('0 в степени 0 - неопределенное выражение')
-    elif '/0' in given and (not '/0.' in given or not '/0,' in given):
-        print('На ноль делить нельзя')
     elif out != given:
         print(r'Введите пример без букв, c одной или без "." (",") в числе и иных символов отличных от "0-9", "-", "+",'
               r' "/", "*", "^", и "(", ")"', '\nПолучено:', out)
