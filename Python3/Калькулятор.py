@@ -72,7 +72,7 @@ def operator2act(lst, lstnum):  # Перебор полученных опера
         if lst[act] == '/':
             try:
                 ans = lstnum[act] / lstnum[act + 1]
-            except ZeroDivisionError:
+            except (ZeroDivisionError, InvalidOperation):
                 print('В процессе вычислений вы поделили на ноль.\nИз-за этого будет произведён выход из программы.\n'
                       'Ваш введенный пример сохранён в файл ZeroDivisionArithmeticExample.txt\nВыход из программы')
                 with open('ZeroDivisionArithmeticExample.txt', 'a', encoding='UTF-8') as f:
