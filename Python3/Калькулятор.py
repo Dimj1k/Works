@@ -111,6 +111,9 @@ def main(given):
     if given == '':
         print('Вы ввели пустой пример')
         main(input('Введите пример еще раз: '))
+    elif given == 'q' or given == 'Выйти' or given == 'В' or given == 'exit' or given == 'e' or given == 'quit':
+        print('Выход из программы')
+        quit()
     elif havenums is None:
         print('Вы ввели пример без чисел')
         main(input('Введите пример еще раз: '))
