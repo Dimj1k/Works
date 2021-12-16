@@ -9,12 +9,6 @@ def withount(a):  # Функция, которая убирает .0
         return a
 
 
-def again():  # Ввод данных снова
-    give = input('Введите пример еще раз: ')
-    give = give.replace(' ', '', give.count(' '))
-    return give
-
-
 def summ(lst):  # Сумма строк из списка
     k = ''
     for i in lst:
@@ -124,7 +118,7 @@ def main(given):
         print('Вы ввели более одного операторов подряд в примере')
         main(input('Введите пример еще раз: '))
     elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
-        not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
+            not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
         print('Вы не дописали пример')
         main(input('Введите пример еще раз: '))
     elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
