@@ -2,26 +2,29 @@ from decimal import Decimal, InvalidOperation
 import re
 
 
-def withount(a):  # Функция, которая убирает .0
+# Функция, которая убирает .0
+def withount(a):
     if a <= 10 ** 100 and int(a) == a:
         return int(a)
     else:
         return a
 
 
-def summ(lst):  # Сумма строк из списка
+# Сумма строк из списка
+def summ(lst):
     k = ''
     for i in lst:
         k += i
     return k
 
 
-# Раскрытие скобок
+# Скобки в примере
 def changing(out):
     return re.search(r'[(][\d+/^*-.,]+[)]', out).start() + 1, re.search(r'[(][\d+/^*-.,]+[)]', out).end() - 1
 
 
-def num_op2op(lst):  # Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
+# Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
+def num_op2op(lst):
     p = r'\d*[.,]?\d+|[+-]\('
     for i in range(len(lst)):
         k = lst[i]
@@ -32,7 +35,8 @@ def num_op2op(lst):  # Превращение "Число + Число" и "Чи
     return lst
 
 
-def str2Decimal(lst):  # Перебор полученных чисел
+# Перебор полученных чисел
+def str2Decimal(lst):
     k = []
     for i in lst:
         try:
@@ -43,7 +47,8 @@ def str2Decimal(lst):  # Перебор полученных чисел
     return k
 
 
-def equal(n):  # Перебор операторов в списке
+# Перебор операторов в списке
+def equal(n):
     try: a1 = n.index('/')
     except ValueError: a1 = float('inf')
     try: a2 = n.index('*')
@@ -60,7 +65,8 @@ def equal(n):  # Перебор операторов в списке
         return min([a1, a2, a3])
 
 
-def operator2act(lst, lstnum):  # Перебор полученных операторов
+# Перебор полученных операторов
+def operator2act(lst, lstnum):
     ans = 0
     while len(lstnum) != 1:
         act = equal(lst)
@@ -90,6 +96,7 @@ def operator2act(lst, lstnum):  # Перебор полученных опера
     return ans
 
 
+# Основная функция
 def main(given):
     # Ввод данных
     given = given.replace(' ', '', given.count(' '))
