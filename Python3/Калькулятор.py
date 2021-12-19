@@ -75,13 +75,13 @@ def operator2act(lst, lstnum):
                 ans = lstnum[act] / lstnum[act + 1]
             except (ZeroDivisionError, InvalidOperation):
                 print('В процессе вычислений вы поделили на ноль')
-                main(input('Введите пример еще раз: '))
+                return main(input('Введите пример еще раз: '))
         elif lst[act] == '*':
             ans = lstnum[act] * lstnum[act + 1]
         elif lst[act] == '^':
             if lstnum[act] == 0 and lstnum[act + 1] == 0:
                 print('В процессе вычислений вы возвели 0 в степень 0, что равно неопределенности')
-                main(input('Введите пример еще раз: '))
+                return main(input('Введите пример еще раз: '))
             else:
                 ans = lstnum[act] ** lstnum[act + 1]
         elif lst[act] == '+':
@@ -117,30 +117,30 @@ def main(given):
     # Проверка, того что нашлось из вводных данных по регулярным выражениям с вводными данными и прочее
     if given == '':
         print('Вы ввели пустой пример')
-        main(input('Введите пример еще раз: '))
+        return main(input('Введите пример еще раз: '))
     elif given == 'q' or given == 'Выйти' or given == 'В' or given == 'exit' or given == 'e' or given == 'quit':
         print('Выход из программы')
         quit()
     elif havenums is None:
         print('Вы ввели пример без чисел')
-        main(input('Введите пример еще раз: '))
+        return main(input('Введите пример еще раз: '))
     elif not (re.search(re_oper, given) is None):
         print('Вы ввели более одного операторов подряд в примере')
-        main(input('Введите пример еще раз: '))
+        return main(input('Введите пример еще раз: '))
     elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
             not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
         print('Вы не дописали пример')
-        main(input('Введите пример еще раз: '))
+        return main(input('Введите пример еще раз: '))
     elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
         print(r'Введите равное количество "(" и ")"')
-        main(input('Введите пример еще раз: '))
+        return main(input('Введите пример еще раз: '))
     elif '()' in given or '()' in given + ')':
         print('Вы ввели пустые скобки в примере')
-        main(input('Введите пример еще раз: '))
+        return main(input('Введите пример еще раз: '))
     elif out != given:
         print(r'Введите пример без букв, c одной или без "." (",") в числе и иных символов отличных от "0-9", "-", "+",'
               r' "/", "*", "^", и "(", ")"', '\nПолучено:', out)
-        main(input('Введите пример еще раз: '))
+        return main(input('Введите пример еще раз: '))
 
     # Добавить ")", если кол-во "(" == кол-ву ")" - 1
     if given.count('(') == given.count(')') + 1:
@@ -176,7 +176,7 @@ def main(given):
             print(f'Убираем {j} скобку:', out[1:len(out) - 1])
         else:
             print('Ответ:', withount(Decimal(out)))
-            main(input('Введите пример: '))
+            return main(input('Введите пример: '))
 
 
 main(input('Введите пример: '))
