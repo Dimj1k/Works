@@ -1,4 +1,5 @@
 import tkinter as tk
+from random import randint
 import re
 
 
@@ -139,34 +140,64 @@ screen_height = str(window.winfo_screenheight() // 2)
 window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(screen_width) // 2) + '+' + str(int(screen_height) // 2))
-a = int(input('Введите шрифт текста: '))
-k = ('Times New Roman', a)
+try:
+    px = int(input('Введите шрифт текста (11 - по умолчанию): '))
+except:
+    px = 11
+try:
+    k = ('Times New Roman', px)
+except:
+    k = ('Times New Roman', 11)
+
 
 # Ввод данных
-frame0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
-frame0.grid(row=0, column=0)
-lbl0Am = tk.Label(frame0, font=k, text='Количество столбцов матрицы А:').pack()
+frm0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
+frm0.grid(row=0, column=0)
+lbl0Am = tk.Label(frm0, font=k, text='Количество столбцов матрицы А:').pack()
 Am = tk.IntVar()
-ent0Am = tk.Spinbox(frame0, font=k, textvariable=Am, from_=1, to=float('inf')).pack()
-lbl0An = tk.Label(frame0, font=k, text='Количество строк матрицы А:').pack()
+ent0Am = tk.Spinbox(frm0, font=k, textvariable=Am, from_=1, to=float('inf')).pack()
+lbl0An = tk.Label(frm0, font=k, text='Количество строк матрицы А:').pack()
 An = tk.IntVar()
-ent0An = tk.Spinbox(frame0, font=k, textvariable=An, from_=1, to=float('inf')).pack()
-lbl0Bm = tk.Label(frame0, font=k, text='Количество столбцов матрицы B:').pack()
+ent0An = tk.Spinbox(frm0, font=k, textvariable=An, from_=1, to=float('inf')).pack()
+lbl0Bm = tk.Label(frm0, font=k, text='Количество столбцов матрицы B:').pack()
 Bm = tk.IntVar()
-ent0Bm = tk.Spinbox(frame0, font=k, textvariable=Bm, from_=0, to=float('inf')).pack()
-lbl0Bn = tk.Label(frame0, font=k, text='Количество строк матрицы B:').pack()
+ent0Bm = tk.Spinbox(frm0, font=k, textvariable=Bm, from_=0, to=float('inf')).pack()
+lbl0Bn = tk.Label(frm0, font=k, text='Количество строк матрицы B:').pack()
 Bn = tk.IntVar()
-ent0Bn = tk.Spinbox(frame0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
-btn0 = tk.Button(frame0, font=k, text='Получить размерность матриц').pack()
+ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
+
+# Матрица А и B
+def show():  # Показать
+    frm2 = tk.LabelFrame(window, text='Матрица А', font=k)
+    frm2.grid(row=0, column=1, padx=k[1])
+    for i in range(Am.get()):
+        for j in range(An.get()):
+            ent1 = tk.Entry(frm2, font=k, width=4)
+            ent1.grid(row=i+1, column=j+1)
+    frm3 = tk.LabelFrame(window, text='Матрица В', font=k)
+    frm3.grid(row=0, column=2, padx=k[1])
+    if Bn.get() != 0 and Bn.get() != 0:
+        for i in range(Bm.get()):
+            for j in range(Bn.get()):
+                ent2 = tk.Entry(frm3, font=k, width=4)
+                ent2.grid(row=i+1, column=j+1)
+    else:
+        lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\n в матрице В больше 0', font=k)
+        lbl2.grid()
+
+btn0 = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show).pack()
 
 # Кнопки вычислений
-frame1 = tk.LabelFrame(window, text='Операция', font=k)
-frame1.grid(row=1)
+frm1 = tk.LabelFrame(window, text='Операция', font=k)
+frm1.grid(row=1)
 res = tk.StringVar()
-btn1 = tk.Button(frame1, font=k, text='Сумма А и B', command=suma).pack()
-btn2 = tk.Button(frame1, font=k, text='Разность А и В', command=difference).pack()
-btn3 = tk.Button(frame1, font=k, text='Транспонирование А').pack()
-btn4 = tk.Button(frame1, font=k, text='Умножение А и В').pack()
-btn5 = tk.Button(frame1, font=k, text='След А').pack()
-lbl1 = tk.Label(frame1, font=k, textvariable=res)
+btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack()
+btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack()
+btn3 = tk.Button(frm1, font=k, text='Умножение А и В').pack()
+btn4 = tk.Button(frm1, font=k, text='Транспонирование А').pack()
+btn5 = tk.Button(frm1, font=k, text='След А').pack()
+btn6 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
+frm4 = tk.LabelFrame(window, font=k, text='Полученная матрица')
+frm4.grid(row=1, column=1)
+lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 window.mainloop()
