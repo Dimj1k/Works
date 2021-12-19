@@ -139,9 +139,7 @@ screen_height = str(window.winfo_screenheight() // 2)
 window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(screen_width) // 2) + '+' + str(int(screen_height) // 2))
-a = 11
-if int(screen_width * 2) < 600 and int(screen_height * 2) < 480:
-    a = 4
+a = int(input('Введите шрифт текста: '))
 k = ('Times New Roman', a)
 
 # Ввод данных
