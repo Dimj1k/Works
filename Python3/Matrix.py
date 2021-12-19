@@ -139,10 +139,13 @@ screen_height = str(window.winfo_screenheight() // 2)
 window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(screen_width) // 2) + '+' + str(int(screen_height) // 2))
-k = ('Times New Roman', 11)
+a = 11
+if int(screen_width * 2) < 600 and int(screen_height * 2) < 480:
+    a = 4
+k = ('Times New Roman', a)
 
 # Ввод данных
-frame0 = tk.LabelFrame(window, text='Ввод размерности матриц')
+frame0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
 frame0.grid(row=0, column=0)
 lbl0Am = tk.Label(master=frame0, font=k, text='Количество столбцов матрицы А:').pack()
 Am = tk.IntVar()
@@ -159,7 +162,7 @@ ent0Bn = tk.Spinbox(master=frame0, font=k, textvariable=Bn, from_=0, to=float('i
 btn0 = tk.Button(master=frame0, font=k, text='Получить размерность матриц').pack()
 
 # Кнопки вычислений
-frame1 = tk.LabelFrame(window, text='Операция')
+frame1 = tk.LabelFrame(window, text='Операция', font=k)
 frame1.grid(row=1)
 res = tk.StringVar()
 btn1 = tk.Button(master=frame1, font=k, text='Сумма А и B', command=suma).pack()
