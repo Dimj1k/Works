@@ -167,15 +167,15 @@ Bn = tk.IntVar()
 ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
 
 # Матрица А и B
-def show():  # Показать
+def show1():  # Показать
     frm2 = tk.LabelFrame(window, text='Матрица А', font=k)
     frm2.grid(row=0, column=1, padx=k[1])
+    frm3 = tk.LabelFrame(window, text='Матрица В', font=k)
+    frm3.grid(row=0, column=2, padx=k[1])
     for i in range(Am.get()):
         for j in range(An.get()):
             ent1 = tk.Entry(frm2, font=k, width=4)
             ent1.grid(row=i+1, column=j+1)
-    frm3 = tk.LabelFrame(window, text='Матрица В', font=k)
-    frm3.grid(row=0, column=2, padx=k[1])
     if Bn.get() != 0 and Bn.get() != 0:
         for i in range(Bm.get()):
             for j in range(Bn.get()):
@@ -184,8 +184,19 @@ def show():  # Показать
     else:
         lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\n в матрице В больше 0', font=k)
         lbl2.grid()
+    btn0b.pack()
+    btn0a.destroy()
+    global frms
+    frms = [frm2, frm3]
 
-btn0 = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show).pack()
+def show2():  # Показать
+    for i in frms:
+        i.destroy()
+    show1()
+
+btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
+btn0a.pack()
+btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
 
 # Кнопки вычислений
 frm1 = tk.LabelFrame(window, text='Операция', font=k)
