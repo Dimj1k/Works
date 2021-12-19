@@ -166,33 +166,51 @@ lbl0Bn = tk.Label(frm0, font=k, text='Количество строк матри
 Bn = tk.IntVar()
 ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
 
+
 # Матрица А и B
 def show1():  # Показать
     frm2 = tk.LabelFrame(window, text='Матрица А', font=k)
     frm2.grid(row=0, column=1, padx=k[1])
     frm3 = tk.LabelFrame(window, text='Матрица В', font=k)
     frm3.grid(row=0, column=2, padx=k[1])
+    global entrs1, entrs2, entrsA, entrsB, frms
+    entrs1, entrs2, entrsA, entrsB = [], [], [], []
+
     for i in range(Am.get()):
         for j in range(An.get()):
             ent1 = tk.Entry(frm2, font=k, width=4)
             ent1.grid(row=i+1, column=j+1)
-    if Bn.get() != 0 and Bn.get() != 0:
+            entrs1.append(ent1)
+        entrsA.append(entrs1)
+        entrs1.clear()
+
+    if Bn.get() != 0 and Bm.get() != 0:
         for i in range(Bm.get()):
             for j in range(Bn.get()):
                 ent2 = tk.Entry(frm3, font=k, width=4)
                 ent2.grid(row=i+1, column=j+1)
+                entrs2.append(ent2)
+            entrsB.append(entrs2)
+            entrs2.clear()
     else:
         lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\n в матрице В больше 0', font=k)
         lbl2.grid()
     btn0b.pack()
     btn0a.destroy()
-    global frms
     frms = [frm2, frm3]
+
 
 def show2():  # Показать
     for i in frms:
         i.destroy()
+    for i in range(len(entrsB)):
+        for j in range(len(entrsB[i])):
+            entrsB[i][j].destroy()
+    for i in range(len(entrsA)):
+        for j in range(len(entrsA[i])):
+            entrsA[i][j].destroy()
     show1()
+
 
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
 btn0a.pack()
