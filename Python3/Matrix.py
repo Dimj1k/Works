@@ -110,10 +110,38 @@ class Matrices():  # Матрицы
     def difference(self, matricC):
         self.matricC = matricC
 
+    @property
+    def transpA(self):
+        matricC = []
+        lstes = []
+        i = 0
+        for j in range(self.nA):
+            while i < self.mA:
+                lstes.append(self.matricA[i][j])
+                i = i + 1
+            i = 0
+            matricC.append(lstes)
+            lstes = []
+        return matricC
+
+    @transpA.setter
+    def transpA(self, matricC):
+        self.matricC = matricC
+
 
 class SquareMatrices(Matrices):  # Квадрат
-    pass
 
+    @property
+    def traceA(self):
+        lst = []
+        for i in range(len(self.matricA)):
+            lst.append(self.matricA[i][i])
+        trace = sum(lst)
+        return trace
+
+    @traceA.setter
+    def traceA(self, trace):
+        self.trace = trace
 
 class RectangleMatrices(Matrices):  # Прямоугольник
     pass
@@ -236,6 +264,22 @@ def difference():  # Разность
             replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
 
 
+def transpA():
+    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+    a = C.transpA
+    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
+            replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+
+
+def traceA():
+    if An.get() == Am.get():
+        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        a = C.traceA
+        res.set('След матрицы А = ' + str(a))
+    else:
+        res.set('След матрицы можно найти только у квадратной матрицы')
+
+
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
 btn0a.pack()
 btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
@@ -246,10 +290,10 @@ frm1.grid(row=1)
 res = tk.StringVar()
 btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack()
 btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack()
-btn3 = tk.Button(frm1, font=k, text='Транспонирование А').pack()
-btn4 = tk.Button(frm1, font=k, text='След А').pack()
+btn3 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack()
+btn4 = tk.Button(frm1, font=k, text='След А', command=traceA).pack()
 btn5 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
-frm4 = tk.LabelFrame(window, font=k, text='Получившаяся матрица')
+frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.grid(row=1, column=1, columnspan=3)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
 window.mainloop()
