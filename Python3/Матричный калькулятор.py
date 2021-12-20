@@ -265,14 +265,14 @@ def difference():  # Разность
             replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
 
 
-def transpA():
+def transpA():  # Транспонирование
     C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
     a = C.transpA
     res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
             replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
 
 
-def traceA():
+def traceA():  # След
     if An.get() == Am.get():
         C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
         a = C.traceA
@@ -281,7 +281,7 @@ def traceA():
         res.set('След матрицы можно найти только у квадратной матрицы')
 
 
-def rnd():
+def rnd():  #Случайные значения в ячейках матрицы
     for i in range(len(entrsA)):
         for j in range(len(entrsA[i])):
             entrsA[i][j].delete(0, 'end')
