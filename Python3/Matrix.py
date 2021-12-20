@@ -1,12 +1,11 @@
 import tkinter as tk
 from random import randint
-import re
 
 
 def translate(lst):
     lst1, lstes = [], []
     for i in range(len(lst)):
-        for j in range(len(lst)):
+        for j in range(len(lst[i])):
             lst1.append(int(lst[i][j].get()))
         lstes.append(lst1)
         lst1 = []
@@ -19,7 +18,7 @@ class MatrixException(Exception):
 
 class Matrices():  # Матрицы
 
-    def __init__(self, nA=1, mA=1, nB=0, mB=0, matricA=(), matricB=()):
+    def __init__(self, nA, mA, nB, mB, matricA, matricB):
         self.mA = mA
         self.nA = nA
         self.nB = nB
@@ -78,12 +77,15 @@ class Matrices():  # Матрицы
     @property
     def suma(self):
         matricC = []
+        lstes = []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 try:
-                    matricC.append(self.matricA[i][j] + self.matricB[i][j])
+                    lstes.append(self.matricA[i][j] + self.matricB[i][j])
                 except IndexError:
                     return ' Введите равное количество столбцов и строчек в матрицах А и B '
+            matricC.append(lstes)
+            lstes = []
         return matricC
 
     @suma.setter
@@ -93,12 +95,15 @@ class Matrices():  # Матрицы
     @property
     def difference(self):
         matricC = []
+        lstes = []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 try:
-                    matricC.append(self.matricA[i][j] - self.matricB[i][j])
+                    lstes.append(self.matricA[i][j] - self.matricB[i][j])
                 except IndexError:
                     return ' Введите равное количество столбцов и строчек в матрицах А и B '
+            matricC.append(lstes)
+            lstes = []
         return matricC
 
     @difference.setter
@@ -158,16 +163,16 @@ except:
 # Ввод данных
 frm0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
 frm0.grid(row=0, column=0)
-lbl0Am = tk.Label(frm0, font=k, text='Количество столбцов матрицы А:').pack()
+lbl0Am = tk.Label(frm0, font=k, text='Количество строк матрицы А:').pack()
 Am = tk.IntVar()
 ent0Am = tk.Spinbox(frm0, font=k, textvariable=Am, from_=1, to=float('inf')).pack()
-lbl0An = tk.Label(frm0, font=k, text='Количество строк матрицы А:').pack()
+lbl0An = tk.Label(frm0, font=k, text='Количество столбцов матрицы А:').pack()
 An = tk.IntVar()
 ent0An = tk.Spinbox(frm0, font=k, textvariable=An, from_=1, to=float('inf')).pack()
-lbl0Bm = tk.Label(frm0, font=k, text='Количество столбцов матрицы B:').pack()
+lbl0Bm = tk.Label(frm0, font=k, text='Количество строк матрицы B:').pack()
 Bm = tk.IntVar()
 ent0Bm = tk.Spinbox(frm0, font=k, textvariable=Bm, from_=0, to=float('inf')).pack()
-lbl0Bn = tk.Label(frm0, font=k, text='Количество строк матрицы B:').pack()
+lbl0Bn = tk.Label(frm0, font=k, text='Количество столбцов матрицы B:').pack()
 Bn = tk.IntVar()
 ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
 
@@ -197,7 +202,7 @@ def show1():  # Показать
             entrsB.append(entrs2)
             entrs2 = []
     else:
-        lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\n в матрице В больше 0', font=k)
+        lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\nв матрице В больше 0', font=k)
         lbl2.grid()
     btn0b.pack()
     btn0a.destroy()
@@ -219,24 +224,16 @@ def show2():  # Показать
 
 def suma():  # Сумма
     C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-    a, i, j = C.suma, 1, 0
-    while i < len(a) and type(a) != str:
-        if i / An.get() == i // An.get():
-            a.insert(i + j, '\n')
-            j += 1
-        i += 1
-    res.set(str(a)[1:-1].replace(r"'\n'", '\n', str(a).find('\n')).replace(',', ' ', str(a).count(',')))
+    a = C.suma
+    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
+            replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
 
 
 def difference():  # Разность
     C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-    a, i, j = C.difference, 1, 0
-    while i < len(a) and type(a) != str:
-        if i / An.get() == i // An.get():
-            a.insert(i + j, '\n')
-            j += 1
-        i += 1
-    res.set(str(a)[1:-1].replace(r"'\n'", '\n', str(a).count(r"'\n'")).replace(',', ' ', str(a).count(',')))
+    a = C.difference
+    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
+            replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
 
 
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
@@ -253,6 +250,6 @@ btn3 = tk.Button(frm1, font=k, text='Транспонирование А').pack(
 btn4 = tk.Button(frm1, font=k, text='След А').pack()
 btn5 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
 frm4 = tk.LabelFrame(window, font=k, text='Получившаяся матрица')
-frm4.grid(row=1, column=1)
-lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
+frm4.grid(row=1, column=1, columnspan=3)
+lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
 window.mainloop()
