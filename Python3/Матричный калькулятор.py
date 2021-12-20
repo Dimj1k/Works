@@ -78,7 +78,7 @@ class Matrices():  # Матрицы
         self.matricB = matricB
 
     @property
-    def suma(self):
+    def suma(self):  # Сумма матриц А и В
         matricCs, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
@@ -94,7 +94,7 @@ class Matrices():  # Матрицы
         self.matricCs = matricCs
 
     @property
-    def difference(self):
+    def difference(self):  # Разность матриц А и В
         matricCd, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
@@ -110,7 +110,7 @@ class Matrices():  # Матрицы
         self.matricCd = matricCd
 
     @property
-    def transpA(self):
+    def transpA(self):  # Транспонирование матрицы А
         matricCt, lstes, i = [], [], 0
         for j in range(self.nA):
             while i < self.mA:
@@ -126,7 +126,7 @@ class Matrices():  # Матрицы
         self.matricCt = matricCt
 
     @property
-    def mult(self):
+    def mult(self):  # Умножение матриц А и В
         matricCm, lstes, lst = [], [], []
         if self.nA != self.mB:
             return 'Количество столбцов А должно равняться количеству строк В'
@@ -148,7 +148,7 @@ class Matrices():  # Матрицы
 class SquareMatrices(Matrices):  # Квадрат
 
     @property
-    def traceA(self):
+    def traceA(self):  # След матрицы А
         if self.nA != self.mA:
             return 'След матрицы можно вычислить только у квадратной матрицы'
         lst = []
@@ -303,9 +303,10 @@ def mult():  # Умножение А и В
     C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
     a = C.mult
     if a != 'Количество столбцов А должно равняться количеству строк В':
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
                 replace('[', '', str(a).count('[')))
-    else: res.set(a)
+    else:
+        res.set(a)
 
 
 def rnd():  # Случайные значения в ячейках матриц
@@ -317,10 +318,10 @@ def rnd():  # Случайные значения в ячейках матриц
             entrsB[i][j].delete(0, 'end')
     for i in range(len(entrsA)):
         for j in range(len(entrsA[i])):
-            entrsA[i][j].insert(0, str(randint(-99,99)))
+            entrsA[i][j].insert(0, str(randint(-99, 99)))
     for i in range(len(entrsB)):
         for j in range(len(entrsB[i])):
-            entrsB[i][j].insert(0, str(randint(-99,99)))
+            entrsB[i][j].insert(0, str(randint(-99, 99)))
 
 
 btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы', command=rnd).pack()
