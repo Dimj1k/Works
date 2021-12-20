@@ -128,18 +128,17 @@ class Matrices():  # Матрицы
     @property
     def mult(self):
         matricCm, lstes, lst = [], [], []
-        if self.mA == self.nB:
-            for i in range(self.mA):
-                for k in range(self.nB):
-                    for j in range(self.mB):
-                        lst.append(self.matricA[i][j] * self.matricB[j][k])
-                    lstes.append(sum(lst))
-                    lst = []
-                matricCm.append(lstes)
-                lstes = []
-            return matricCm
-        else:
+        if self.nA != self.mB:
             return 'Количество столбцов А должно равняться количеству строк В'
+        for i in range(self.mA):
+            for k in range(self.nB):
+                for j in range(self.mB):
+                    lst.append(self.matricA[i][j] * self.matricB[j][k])
+                lstes.append(sum(lst))
+                lst = []
+            matricCm.append(lstes)
+            lstes = []
+        return matricCm
 
     @mult.setter
     def mult(self, matricCm):
@@ -150,17 +149,18 @@ class SquareMatrices(Matrices):  # Квадрат
 
     @property
     def traceA(self):
-        if self.nA == self.mA:
-            lst = []
-            for i in range(len(self.matricA)):
-                lst.append(self.matricA[i][i])
-            trace = sum(lst)
-            return trace
-        else: return 'След матрицы можно вычислить только у квадратной матрицы'
+        if self.nA != self.mA:
+            return 'След матрицы можно вычислить только у квадратной матрицы'
+        lst = []
+        for i in range(len(self.matricA)):
+            lst.append(self.matricA[i][i])
+        trace = sum(lst)
+        return trace
 
     @traceA.setter
     def traceA(self, trace):
         self.trace = trace
+
 
 class RectangleMatrices(Matrices):  # Прямоугольник
     pass
