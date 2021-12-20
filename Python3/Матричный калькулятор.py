@@ -251,7 +251,7 @@ def show1():  # Показать
     else:
         lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\nв матрице В больше 0', font=k)
         lbl2.grid()
-    btn0b.pack()
+    btn0b.pack(fill=tk.X)
     btn0a.destroy()
     frms = [frm2, frm3]
 
@@ -266,7 +266,6 @@ def show2():  # Показать
         for j in range(len(entrsA[i])):
             entrsA[i][j].destroy()
     return show1()
-
 
 
 def suma():  # Сумма
@@ -324,21 +323,21 @@ def rnd():  # Случайные значения в ячейках матриц
             entrsB[i][j].insert(0, str(randint(-99, 99)))
 
 
-btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы', command=rnd).pack()
+btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
-btn0a.pack()
+btn0a.pack(fill=tk.X)
 btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
 
 # Кнопки вычислений
 frm1 = tk.LabelFrame(window, text='Операция', font=k)
 frm1.grid(row=1)
 res = tk.StringVar()
-btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack()
-btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack()
-btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult).pack()
-btn4 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack()
-btn5 = tk.Button(frm1, font=k, text='След А', command=traceA).pack()
-btn6 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
+btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack(fill=tk.X)
+btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack(fill=tk.X)
+btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult).pack(fill=tk.X)
+btn4 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack(fill=tk.X)
+btn5 = tk.Button(frm1, font=k, text='След А', command=traceA).pack(fill=tk.X)
+btn6 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack(fill=tk.X)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.grid(row=1, column=1, columnspan=5)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
