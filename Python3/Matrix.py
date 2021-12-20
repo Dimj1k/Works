@@ -6,7 +6,10 @@ def translate(lst):
     lst1, lstes = [], []
     for i in range(len(lst)):
         for j in range(len(lst[i])):
-            lst1.append(int(lst[i][j].get()))
+            try:
+                lst1.append(int(lst[i][j].get()))
+            except ValueError:
+                lst1.append(0)
         lstes.append(lst1)
         lst1 = []
     return lstes
@@ -78,12 +81,11 @@ class Matrices():  # Матрицы
     def suma(self):
         matricC = []
         lstes = []
+        if self.nA != self.nB or self.mA != self.mB:
+            return ' Введите равное количество столбцов и строчек в матрицах А и B '
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
-                try:
-                    lstes.append(self.matricA[i][j] + self.matricB[i][j])
-                except IndexError:
-                    return ' Введите равное количество столбцов и строчек в матрицах А и B '
+                lstes.append(self.matricA[i][j] + self.matricB[i][j])
             matricC.append(lstes)
             lstes = []
         return matricC
@@ -96,12 +98,11 @@ class Matrices():  # Матрицы
     def difference(self):
         matricC = []
         lstes = []
+        if self.nA != self.nB or self.mA != self.mB:
+            return ' Введите равное количество столбцов и строчек в матрицах А и B '
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
-                try:
-                    lstes.append(self.matricA[i][j] - self.matricB[i][j])
-                except IndexError:
-                    return ' Введите равное количество столбцов и строчек в матрицах А и B '
+                lstes.append(self.matricA[i][j] - self.matricB[i][j])
             matricC.append(lstes)
             lstes = []
         return matricC
@@ -280,6 +281,22 @@ def traceA():
         res.set('След матрицы можно найти только у квадратной матрицы')
 
 
+def rnd():
+    for i in range(len(entrsA)):
+        for j in range(len(entrsA[i])):
+            entrsA[i][j].delete(0, 'end')
+    for i in range(len(entrsB)):
+        for j in range(len(entrsB[i])):
+            entrsB[i][j].delete(0, 'end')
+    for i in range(len(entrsA)):
+        for j in range(len(entrsA[i])):
+            entrsA[i][j].insert(0, str(randint(-99,99)))
+    for i in range(len(entrsB)):
+        for j in range(len(entrsB[i])):
+            entrsB[i][j].insert(0, str(randint(-99,99)))
+
+
+btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы', command=rnd).pack()
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
 btn0a.pack()
 btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
