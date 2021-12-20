@@ -79,66 +79,84 @@ class Matrices():  # Матрицы
 
     @property
     def suma(self):
-        matricC = []
-        lstes = []
+        matricCs, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 lstes.append(self.matricA[i][j] + self.matricB[i][j])
-            matricC.append(lstes)
+            matricCs.append(lstes)
             lstes = []
-        return matricC
+        return matricCs
 
     @suma.setter
-    def suma(self, matricC):
-        self.matricC = matricC
+    def suma(self, matricCs):
+        self.matricCs = matricCs
 
     @property
     def difference(self):
-        matricC = []
-        lstes = []
+        matricCd, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 lstes.append(self.matricA[i][j] - self.matricB[i][j])
-            matricC.append(lstes)
+            matricCd.append(lstes)
             lstes = []
-        return matricC
+        return matricCd
 
     @difference.setter
-    def difference(self, matricC):
-        self.matricC = matricC
+    def difference(self, matricCd):
+        self.matricCd = matricCd
 
     @property
     def transpA(self):
-        matricC = []
-        lstes = []
-        i = 0
+        matricCt, lstes, i = [], [], 0
         for j in range(self.nA):
             while i < self.mA:
                 lstes.append(self.matricA[i][j])
                 i = i + 1
             i = 0
-            matricC.append(lstes)
+            matricCt.append(lstes)
             lstes = []
-        return matricC
+        return matricCt
 
     @transpA.setter
-    def transpA(self, matricC):
-        self.matricC = matricC
+    def transpA(self, matricCt):
+        self.matricCt = matricCt
+
+    @property
+    def mult(self):
+        matricCm, lstes, lst = [], [], []
+        if self.mA == self.nB:
+            for i in range(self.mA):
+                for k in range(self.nB):
+                    for j in range(self.mB):
+                        lst.append(self.matricA[i][j] * self.matricB[j][k])
+                    lstes.append(sum(lst))
+                    lst = []
+                matricCm.append(lstes)
+                lstes = []
+            return matricCm
+        else:
+            return 'Количество столбцов А должно равняться количеству строк В'
+
+    @mult.setter
+    def mult(self, matricCm):
+        self.matricCm = matricCm
 
 
 class SquareMatrices(Matrices):  # Квадрат
 
     @property
     def traceA(self):
-        lst = []
-        for i in range(len(self.matricA)):
-            lst.append(self.matricA[i][i])
-        trace = sum(lst)
-        return trace
+        if self.nA == self.mA:
+            lst = []
+            for i in range(len(self.matricA)):
+                lst.append(self.matricA[i][i])
+            trace = sum(lst)
+            return trace
+        else: return 'След матрицы можно вычислить только у квадратной матрицы'
 
     @traceA.setter
     def traceA(self, trace):
@@ -174,11 +192,11 @@ class DiagonalMatrices(Matrices):  # По диагонали числа
 
 # Окно
 window = tk.Tk()
-screen_width = str(window.winfo_screenwidth() // 2)
-screen_height = str(window.winfo_screenheight() // 2)
+screen_width = str(int(window.winfo_screenwidth() // 1.5))
+screen_height = str(int(window.winfo_screenheight() // 1.5))
 window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
-                str(int(screen_width) // 2) + '+' + str(int(screen_height) // 2))
+                str(int(int(screen_width) * 1.5 // 5)) + '+' + str(int(int(screen_height) * 1.5 // 6)))
 try:
     px = int(input('Введите шрифт текста (11 - по умолчанию): '))
 except:
@@ -261,27 +279,36 @@ def suma():  # Сумма
 def difference():  # Разность
     C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
     a = C.difference
-    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
+    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
             replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
 
 
 def transpA():  # Транспонирование
     C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
     a = C.transpA
-    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
-            replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
+            replace('[', '', str(a).count('[')))
 
 
 def traceA():  # След
-    if An.get() == Am.get():
-        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-        a = C.traceA
+    C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+    a = C.traceA
+    if a != 'След матрицы можно вычислить только у квадратной матрицы':
         res.set('След матрицы А = ' + str(a))
     else:
-        res.set('След матрицы можно найти только у квадратной матрицы')
+        res.set(str(a))
 
 
-def rnd():  #Случайные значения в ячейках матрицы
+def mult():  # Умножение А и В
+    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+    a = C.mult
+    if a != 'Количество столбцов А должно равняться количеству строк В':
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
+                replace('[', '', str(a).count('[')))
+    else: res.set(a)
+
+
+def rnd():  # Случайные значения в ячейках матриц
     for i in range(len(entrsA)):
         for j in range(len(entrsA[i])):
             entrsA[i][j].delete(0, 'end')
@@ -307,10 +334,11 @@ frm1.grid(row=1)
 res = tk.StringVar()
 btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack()
 btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack()
-btn3 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack()
-btn4 = tk.Button(frm1, font=k, text='След А', command=traceA).pack()
-btn5 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
+btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult).pack()
+btn4 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack()
+btn5 = tk.Button(frm1, font=k, text='След А', command=traceA).pack()
+btn6 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
-frm4.grid(row=1, column=1, columnspan=3)
+frm4.grid(row=1, column=1, columnspan=5)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
 window.mainloop()
