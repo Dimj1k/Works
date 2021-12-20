@@ -3,33 +3,61 @@ from random import randint
 import re
 
 
+def translate(lst):
+    lst1, lstes = [], []
+    for i in range(len(lst)):
+        for j in range(len(lst)):
+            lst1.append(int(lst[i][j].get()))
+        lstes.append(lst1)
+        lst1 = []
+    return lstes
+
+
 class MatrixException(Exception):
     pass
 
 
 class Matrices():  # Матрицы
 
-    def __init__(self, n=1, m=1, matricA=(), matricB=()):
-        self.m = m
-        self.n = n
+    def __init__(self, nA=1, mA=1, nB=0, mB=0, matricA=(), matricB=()):
+        self.mA = mA
+        self.nA = nA
+        self.nB = nB
+        self.mB = mB
         self.matricA = matricA
         self.matricB = matricB
 
     @property
-    def set_m(self):
-        return self.m
+    def set_mA(self):
+        return self.mA
 
-    @set_m.setter
-    def set_m(self, m):
-        self.m = m
+    @set_mA.setter
+    def set_mA(self, mA):
+        self.mA = mA
 
     @property
-    def set_n(self):
-        return self.n
+    def set_nA(self):
+        return self.nA
 
-    @set_n.setter
-    def set_n(self, n):
-        self.n = n
+    @set_nA.setter
+    def set_nA(self, nA):
+        self.nA = nA
+
+    @property
+    def set_nB(self):
+        return self.nB
+
+    @set_nB.setter
+    def set_nB(self, nB):
+        self.nB = nB
+
+    @property
+    def set_mB(self):
+        return self.mB
+
+    @set_mB.setter
+    def set_mB(self, mB):
+        self.mB = mB
 
     @property
     def set_matricA(self):
@@ -110,29 +138,6 @@ class DiagonalMatrices(Matrices):  # По диагонали числа
     pass
 
 
-C = Matrices(2, 2, [[2, 4], [332, 6]], [[3, 5], [1, 3]])
-
-
-def suma():  # Сумма
-    a, i, j = C.suma, 1, 0
-    while i < len(a) and type(a) != str:
-        if i / C.n == i // C.n:
-            a.insert(i + j, '\n')
-            j += 1
-        i += 1
-    res.set(str(a)[1:-1].replace(r"'\n'", '\n', str(a).find('\n')).replace(',', ' ', str(a).count(',')))
-
-
-def difference():  # Разность
-    a, i, j = C.difference, 1, 0
-    while i < len(a) and type(a) != str:
-        if i / C.n == i // C.n:
-            a.insert(i + j, '\n')
-            j += 1
-        i += 1
-    res.set(str(a)[1:-1].replace(r"'\n'", '\n', str(a).count(r"'\n'")).replace(',', ' ', str(a).count(',')))
-
-
 # Окно
 window = tk.Tk()
 screen_width = str(window.winfo_screenwidth() // 2)
@@ -182,8 +187,7 @@ def show1():  # Показать
             ent1.grid(row=i+1, column=j+1)
             entrs1.append(ent1)
         entrsA.append(entrs1)
-        entrs1.clear()
-
+        entrs1 = []
     if Bn.get() != 0 and Bm.get() != 0:
         for i in range(Bm.get()):
             for j in range(Bn.get()):
@@ -191,7 +195,7 @@ def show1():  # Показать
                 ent2.grid(row=i+1, column=j+1)
                 entrs2.append(ent2)
             entrsB.append(entrs2)
-            entrs2.clear()
+            entrs2 = []
     else:
         lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\n в матрице В больше 0', font=k)
         lbl2.grid()
@@ -209,7 +213,30 @@ def show2():  # Показать
     for i in range(len(entrsA)):
         for j in range(len(entrsA[i])):
             entrsA[i][j].destroy()
-    show1()
+    return show1()
+
+
+
+def suma():  # Сумма
+    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+    a, i, j = C.suma, 1, 0
+    while i < len(a) and type(a) != str:
+        if i / An.get() == i // An.get():
+            a.insert(i + j, '\n')
+            j += 1
+        i += 1
+    res.set(str(a)[1:-1].replace(r"'\n'", '\n', str(a).find('\n')).replace(',', ' ', str(a).count(',')))
+
+
+def difference():  # Разность
+    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+    a, i, j = C.difference, 1, 0
+    while i < len(a) and type(a) != str:
+        if i / An.get() == i // An.get():
+            a.insert(i + j, '\n')
+            j += 1
+        i += 1
+    res.set(str(a)[1:-1].replace(r"'\n'", '\n', str(a).count(r"'\n'")).replace(',', ' ', str(a).count(',')))
 
 
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
@@ -222,11 +249,10 @@ frm1.grid(row=1)
 res = tk.StringVar()
 btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack()
 btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack()
-btn3 = tk.Button(frm1, font=k, text='Умножение А и В').pack()
-btn4 = tk.Button(frm1, font=k, text='Транспонирование А').pack()
-btn5 = tk.Button(frm1, font=k, text='След А').pack()
-btn6 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
-frm4 = tk.LabelFrame(window, font=k, text='Полученная матрица')
+btn3 = tk.Button(frm1, font=k, text='Транспонирование А').pack()
+btn4 = tk.Button(frm1, font=k, text='След А').pack()
+btn5 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack()
+frm4 = tk.LabelFrame(window, font=k, text='Получившаяся матрица')
 frm4.grid(row=1, column=1)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 window.mainloop()
