@@ -102,10 +102,8 @@ class Matrices():  # Матрицы
     def transpA(self):  # Транспонирование матрицы А
         matricCt, lstes, i = [], [], 0
         for j in range(self.nA):
-            while i < self.mA:
+            for i in range(self.mA):
                 lstes.append(self.matricA[i][j])
-                i = i + 1
-            i = 0
             matricCt.append(lstes)
             lstes = []
         return matricCt
