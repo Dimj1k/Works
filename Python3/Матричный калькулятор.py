@@ -216,15 +216,8 @@ screen_height = str(int(window.winfo_screenheight() // 1.5))
 window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(int(screen_width) * 1.5 // 5)) + '+' + str(int(int(screen_height) * 1.5 // 6)))
-try:
-    px = int(input('Введите шрифт текста (11 - по умолчанию): '))
-except:
-    px = 11
-try:
-    k = ('Times New Roman', px)
-except:
-    k = ('Times New Roman', 11)
 
+k = ('Times New Roman', int(window.winfo_screenwidth() // 130))
 
 # Ввод данных
 frm0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
@@ -351,18 +344,17 @@ def powerA():  # Возведение в степень
 
 
 def rnd():  # Случайные значения в ячейках матриц
-    for i in range(len(entrsA)):
-        for j in range(len(entrsA[i])):
-            entrsA[i][j].delete(0, 'end')
-    for i in range(len(entrsB)):
-        for j in range(len(entrsB[i])):
-            entrsB[i][j].delete(0, 'end')
-    for i in range(len(entrsA)):
-        for j in range(len(entrsA[i])):
-            entrsA[i][j].insert(0, str(randint(-99, 99)))
-    for i in range(len(entrsB)):
-        for j in range(len(entrsB[i])):
-            entrsB[i][j].insert(0, str(randint(-99, 99)))
+    try:
+        for i in range(len(entrsA)):
+            for j in range(len(entrsA[i])): entrsA[i][j].delete(0, 'end')
+        for i in range(len(entrsB)):
+            for j in range(len(entrsB[i])): entrsB[i][j].delete(0, 'end')
+        for i in range(len(entrsA)):
+            for j in range(len(entrsA[i])): entrsA[i][j].insert(0, str(randint(-99, 99)))
+        for i in range(len(entrsB)):
+            for j in range(len(entrsB[i])): entrsB[i][j].insert(0, str(randint(-99, 99)))
+    except NameError:
+        res.set('Введите размерность матриц')
 
 
 btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
