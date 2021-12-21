@@ -166,7 +166,7 @@ class SquareMatrices(Matrices):  # Квадрат
         self.trace = trace
 
     @property
-    def powerA(self):
+    def powerA(self):  # Возведение в степень
         matricAp = self.matricA
         if self.nA != self.mA:
             return 'Возвести в степень можно только квадратную матрицу'
@@ -328,7 +328,7 @@ def mult():  # Умножение А и В
         res.set(a)
 
 
-def powerA():
+def powerA():  # Возведение в степень
     C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsA), power.get())
     a = C.powerA
     if a != 'Возвести в степень можно только квадратную матрицу':
