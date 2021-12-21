@@ -129,7 +129,7 @@ class Matrices():  # Матрицы
     def mult(self):  # Умножение матриц А и В
         matricCm, lstes, lst = [], [], []
         if self.nA != self.mB:
-            return 'Количество столбцов А должно равняться количеству строк В'
+            return ' Количество столбцов А должно равняться количеству строк В '
         for i in range(self.mA):
             for k in range(self.nB):
                 for j in range(self.mB):
@@ -154,7 +154,7 @@ class SquareMatrices(Matrices):  # Квадрат
     @property
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
-            return 'След матрицы можно вычислить только у квадратной матрицы'
+            return ' След матрицы можно вычислить только у квадратной матрицы '
         lst = []
         for i in range(len(self.matricA)):
             lst.append(self.matricA[i][i])
@@ -169,7 +169,7 @@ class SquareMatrices(Matrices):  # Квадрат
     def powerA(self):  # Возведение в степень
         matricAp = self.matricA
         if self.nA != self.mA:
-            return 'Возвести в степень можно только квадратную матрицу'
+            return ' Возвести в степень можно только квадратную матрицу '
         for i in range(1, self.pow):
             matricCp = Matrices(self.nA, self.mA, self.nA, self.mA, matricAp, self.matricA)
             matricAp = matricCp.mult
@@ -289,53 +289,65 @@ def show2():  # Показать
 
 
 def suma():  # Сумма
-    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-    a = C.suma
-    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
-            replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+    try:
+        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        a = C.suma
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
+                replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+    except NameError:
+        res.set('Введите размерность матриц')
 
 
 def difference():  # Разность
-    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-    a = C.difference
-    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
-            replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+    try:
+        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        a = C.difference
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
+                replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+    except NameError:
+        res.set('Введите размерность матриц')
 
 
 def transpA():  # Транспонирование
-    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-    a = C.transpA
-    res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
-            replace('[', '', str(a).count('[')))
+    try:
+        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        a = C.transpA
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
+                replace('[', '', str(a).count('[')))
+    except NameError:
+        res.set('Введите размерность матриц')
 
 
 def traceA():  # След
-    C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-    a = C.traceA
-    if a != 'След матрицы можно вычислить только у квадратной матрицы':
-        res.set('След матрицы А = ' + str(a))
-    else:
-        res.set(str(a))
+    try:
+        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        a = C.traceA
+        if a != 'След матрицы можно вычислить только у квадратной матрицы':
+            res.set('След матрицы А = ' + str(a))
+        else:
+            res.set(str(a))
+    except NameError:
+        res.set('Введите размерность матриц')
 
 
 def mult():  # Умножение А и В
-    C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-    a = C.mult
-    if a != 'Количество столбцов А должно равняться количеству строк В':
+    try:
+        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        a = C.mult
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
-                replace('[', '', str(a).count('[')))
-    else:
-        res.set(a)
+            replace('[', '', str(a).count('[')))
+    except NameError:
+        res.set('Введите размерность матриц')
 
 
 def powerA():  # Возведение в степень
-    C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsA), power.get())
-    a = C.powerA
-    if a != 'Возвести в степень можно только квадратную матрицу':
+    try:
+        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsA), power.get())
+        a = C.powerA
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')))
-    else:
-        res.set(a)
+            replace('[', '', str(a).count('[')))
+    except NameError:
+        res.set('Введите размерность матриц')
 
 
 def rnd():  # Случайные значения в ячейках матриц
