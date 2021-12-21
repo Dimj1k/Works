@@ -21,7 +21,7 @@ class MatrixException(Exception):
 
 class Matrices():  # Матрицы
 
-    def __init__(self, nA, mA, nB, mB, matricA, matricB):
+    def __init__(self, nA, mA, matricA, nB=0, mB=0, matricB=()):
         self.mA = mA
         self.nA = nA
         self.nB = nB
@@ -141,7 +141,7 @@ class SquareMatrices(Matrices):  # Квадрат
         if self.nA != self.mA:
             return ' Возвести в степень можно только квадратную матрицу '
         for i in range(1, pow):
-            matricCp = Matrices(self.nA, self.mA, self.nA, self.mA, matricAp, self.matricA)
+            matricCp = Matrices(self.nA, self.nA, matricAp, self.nA, self.nA, self.matricA)
             matricAp = matricCp.mult()
         return matricAp
 
@@ -248,7 +248,7 @@ def show2():  # Показать
 
 def suma():  # Сумма
     try:
-        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        C = Matrices(An.get(), Am.get(), translate(entrsA), Bn.get(), Bm.get(), translate(entrsB))
         a = C.suma()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
@@ -258,7 +258,7 @@ def suma():  # Сумма
 
 def difference():  # Разность
     try:
-        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        C = Matrices(An.get(), Am.get(), translate(entrsA), Bn.get(), Bm.get(), translate(entrsB))
         a = C.difference()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
@@ -268,7 +268,7 @@ def difference():  # Разность
 
 def transpA():  # Транспонирование
     try:
-        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        C = Matrices(An.get(), Am.get(), translate(entrsA))
         a = C.transpA()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
                 replace('[', '', str(a).count('[')))
@@ -278,7 +278,7 @@ def transpA():  # Транспонирование
 
 def traceA():  # След
     try:
-        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        C = SquareMatrices(An.get(), Am.get(), translate(entrsA))
         a = C.traceA()
         if a != 'След матрицы можно вычислить только у квадратной матрицы':
             res.set('След матрицы А = ' + str(a))
@@ -290,7 +290,7 @@ def traceA():  # След
 
 def mult():  # Умножение А и В
     try:
-        C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
+        C = Matrices(An.get(), Am.get(), translate(entrsA))
         a = C.mult()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
             replace('[', '', str(a).count('[')))
@@ -300,7 +300,7 @@ def mult():  # Умножение А и В
 
 def powerA():  # Возведение в степень
     try:
-        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsA))
+        C = SquareMatrices(An.get(), Am.get(), translate(entrsA))
         a = C.powerA(power.get())
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
             replace('[', '', str(a).count('[')))
