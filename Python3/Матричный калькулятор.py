@@ -252,7 +252,7 @@ def suma():  # Сумма
         a = C.suma()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
-    except (NameError, tk.TclError):
+    except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
@@ -262,7 +262,7 @@ def difference():  # Разность
         a = C.difference()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
-    except (NameError, tk.TclError):
+    except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
@@ -272,7 +272,7 @@ def transpA():  # Транспонирование
         a = C.transpA()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
                 replace('[', '', str(a).count('[')))
-    except (NameError, tk.TclError):
+    except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
@@ -284,17 +284,17 @@ def traceA():  # След
             res.set('След матрицы А = ' + str(a))
         else:
             res.set(str(a))
-    except (NameError, tk.TclError):
+    except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def mult():  # Умножение А и В
     try:
-        C = Matrices(An.get(), Am.get(), translate(entrsA))
+        C = Matrices(An.get(), Am.get(), translate(entrsA), Bn.get(), Bm.get(), translate(entrsB))
         a = C.mult()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
             replace('[', '', str(a).count('[')))
-    except (NameError, tk.TclError):
+    except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
@@ -304,7 +304,7 @@ def powerA():  # Возведение в степень
         a = C.powerA(power.get())
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
             replace('[', '', str(a).count('[')))
-    except (NameError, tk.TclError):
+    except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
