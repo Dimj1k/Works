@@ -77,7 +77,6 @@ class Matrices():  # Матрицы
     def set_matricB(self, matricB):
         self.matricB = matricB
 
-    @property
     def suma(self):  # Сумма матриц А и В
         matricCs, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
@@ -89,11 +88,6 @@ class Matrices():  # Матрицы
             lstes = []
         return matricCs
 
-    @suma.setter
-    def suma(self, matricCs):
-        self.matricCs = matricCs
-
-    @property
     def difference(self):  # Разность матриц А и В
         matricCd, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
@@ -105,11 +99,6 @@ class Matrices():  # Матрицы
             lstes = []
         return matricCd
 
-    @difference.setter
-    def difference(self, matricCd):
-        self.matricCd = matricCd
-
-    @property
     def transpA(self):  # Транспонирование матрицы А
         matricCt, lstes, i = [], [], 0
         for j in range(self.nA):
@@ -121,11 +110,6 @@ class Matrices():  # Матрицы
             lstes = []
         return matricCt
 
-    @transpA.setter
-    def transpA(self, matricCt):
-        self.matricCt = matricCt
-
-    @property
     def mult(self):  # Умножение матриц А и В
         matricCm, lstes, lst = [], [], []
         if self.nA != self.mB:
@@ -140,14 +124,9 @@ class Matrices():  # Матрицы
             lstes = []
         return matricCm
 
-    @mult.setter
-    def mult(self, matricCm):
-        self.matricCm = matricCm
-
 
 class SquareMatrices(Matrices):  # Квадрат
 
-    @property
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
             return ' След матрицы можно вычислить только у квадратной матрицы '
@@ -157,19 +136,14 @@ class SquareMatrices(Matrices):  # Квадрат
         trace = sum(lst)
         return trace
 
-    @traceA.setter
-    def traceA(self, trace):
-        self.trace = trace
-
     def powerA(self, pow):  # Возведение в степень
         matricAp = self.matricA
         if self.nA != self.mA:
             return ' Возвести в степень можно только квадратную матрицу '
         for i in range(1, pow):
             matricCp = Matrices(self.nA, self.mA, self.nA, self.mA, matricAp, self.matricA)
-            matricAp = matricCp.mult
+            matricAp = matricCp.mult()
         return matricAp
-
 
 
 class RectangleMatrices(Matrices):  # Прямоугольник
@@ -275,7 +249,7 @@ def show2():  # Показать
 def suma():  # Сумма
     try:
         C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-        a = C.suma
+        a = C.suma()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError):
@@ -285,7 +259,7 @@ def suma():  # Сумма
 def difference():  # Разность
     try:
         C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-        a = C.difference
+        a = C.difference()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError):
@@ -295,7 +269,7 @@ def difference():  # Разность
 def transpA():  # Транспонирование
     try:
         C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-        a = C.transpA
+        a = C.transpA()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
                 replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError):
@@ -305,7 +279,7 @@ def transpA():  # Транспонирование
 def traceA():  # След
     try:
         C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-        a = C.traceA
+        a = C.traceA()
         if a != 'След матрицы можно вычислить только у квадратной матрицы':
             res.set('След матрицы А = ' + str(a))
         else:
@@ -317,7 +291,7 @@ def traceA():  # След
 def mult():  # Умножение А и В
     try:
         C = Matrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsB))
-        a = C.mult
+        a = C.mult()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
             replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError):
