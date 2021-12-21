@@ -147,6 +147,10 @@ class Matrices():  # Матрицы
 
 class SquareMatrices(Matrices):  # Квадрат
 
+    def __init__(self, nA, mA, nB, mB, matricA, matricB, pow=1):
+        super().__init__(nA, mA, nB, mB, matricA, matricB)
+        self.pow = pow
+
     @property
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
@@ -160,6 +164,21 @@ class SquareMatrices(Matrices):  # Квадрат
     @traceA.setter
     def traceA(self, trace):
         self.trace = trace
+
+    @property
+    def powerA(self):
+        matricAp = self.matricA
+        if self.nA != self.mA:
+            return 'Возвести в степень можно только квадратную матрицу'
+        for i in range(1, self.pow):
+            matricCp = Matrices(self.nA, self.mA, self.nA, self.mA, matricAp, self.matricA)
+            matricAp = matricCp.mult
+        return matricAp
+
+    @powerA.setter
+    def powerA(self, matricAp):
+        self.matricAp = matricAp
+
 
 
 class RectangleMatrices(Matrices):  # Прямоугольник
@@ -222,6 +241,7 @@ ent0Bm = tk.Spinbox(frm0, font=k, textvariable=Bm, from_=0, to=float('inf')).pac
 lbl0Bn = tk.Label(frm0, font=k, text='Количество столбцов матрицы B:').pack()
 Bn = tk.IntVar()
 ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
+power = tk.IntVar()
 
 
 # Матрица А и B
@@ -308,6 +328,16 @@ def mult():  # Умножение А и В
         res.set(a)
 
 
+def powerA():
+    C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsA), power.get())
+    a = C.powerA
+    if a != 'Возвести в степень можно только квадратную матрицу':
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
+                replace('[', '', str(a).count('[')))
+    else:
+        res.set(a)
+
+
 def rnd():  # Случайные значения в ячейках матриц
     for i in range(len(entrsA)):
         for j in range(len(entrsA[i])):
@@ -337,7 +367,9 @@ btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=differe
 btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult).pack(fill=tk.X)
 btn4 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack(fill=tk.X)
 btn5 = tk.Button(frm1, font=k, text='След А', command=traceA).pack(fill=tk.X)
-btn6 = tk.Button(frm1, font=k, text='Выйти из программы', command=quit).pack(fill=tk.X)
+btn6 = tk.Button(frm1, font=k, text='Возведение А в степень', command=powerA).pack(fill=tk.X)
+ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=2, to=float('inf'), width=3).pack()
+btn7 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy).pack(fill=tk.X, pady=k[1]+2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.grid(row=1, column=1, columnspan=5)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
