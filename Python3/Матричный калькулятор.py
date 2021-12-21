@@ -147,10 +147,6 @@ class Matrices():  # Матрицы
 
 class SquareMatrices(Matrices):  # Квадрат
 
-    def __init__(self, nA, mA, nB, mB, matricA, matricB, pow=1):
-        super().__init__(nA, mA, nB, mB, matricA, matricB)
-        self.pow = pow
-
     @property
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
@@ -165,19 +161,14 @@ class SquareMatrices(Matrices):  # Квадрат
     def traceA(self, trace):
         self.trace = trace
 
-    @property
-    def powerA(self):  # Возведение в степень
+    def powerA(self, pow):  # Возведение в степень
         matricAp = self.matricA
         if self.nA != self.mA:
             return ' Возвести в степень можно только квадратную матрицу '
-        for i in range(1, self.pow):
+        for i in range(1, pow):
             matricCp = Matrices(self.nA, self.mA, self.nA, self.mA, matricAp, self.matricA)
             matricAp = matricCp.mult
         return matricAp
-
-    @powerA.setter
-    def powerA(self, matricAp):
-        self.matricAp = matricAp
 
 
 
@@ -335,8 +326,8 @@ def mult():  # Умножение А и В
 
 def powerA():  # Возведение в степень
     try:
-        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsA), power.get())
-        a = C.powerA
+        C = SquareMatrices(An.get(), Am.get(), Bn.get(), Bm.get(), translate(entrsA), translate(entrsA))
+        a = C.powerA(power.get())
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
             replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError):
