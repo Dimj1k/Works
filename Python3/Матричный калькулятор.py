@@ -287,7 +287,7 @@ def suma():  # Сумма
         a = C.suma
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
-    except NameError:
+    except (NameError, tk.TclError):
         res.set('Введите размерность матриц')
 
 
@@ -297,7 +297,7 @@ def difference():  # Разность
         a = C.difference
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
-    except NameError:
+    except (NameError, tk.TclError):
         res.set('Введите размерность матриц')
 
 
@@ -307,7 +307,7 @@ def transpA():  # Транспонирование
         a = C.transpA
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
                 replace('[', '', str(a).count('[')))
-    except NameError:
+    except (NameError, tk.TclError):
         res.set('Введите размерность матриц')
 
 
@@ -319,7 +319,7 @@ def traceA():  # След
             res.set('След матрицы А = ' + str(a))
         else:
             res.set(str(a))
-    except NameError:
+    except (NameError, tk.TclError):
         res.set('Введите размерность матриц')
 
 
@@ -329,7 +329,7 @@ def mult():  # Умножение А и В
         a = C.mult
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
             replace('[', '', str(a).count('[')))
-    except NameError:
+    except (NameError, tk.TclError):
         res.set('Введите размерность матриц')
 
 
@@ -339,7 +339,7 @@ def powerA():  # Возведение в степень
         a = C.powerA
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
             replace('[', '', str(a).count('[')))
-    except NameError:
+    except (NameError, tk.TclError):
         res.set('Введите размерность матриц')
 
 
