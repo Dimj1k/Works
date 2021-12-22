@@ -10,14 +10,15 @@ i = 0
 
 with open('file.txt', 'r', encoding='UTF-8') as f:
     for line in f:
-        fio, date = line.split(':')
-        if '\n' in date:
-            date = date[0:date.find('\n')]
-        if '\t' not in date:
-            dates.append(date)
-        else:
-            dates.append('2.1.1970')
-        copies.append(line.split('\n')[0])
+        if line != '\n':
+            fio, date = line.split(':')
+            if '\n' in date:
+                date = date[0:date.find('\n')]
+            if '\t' not in date:
+                dates.append(date)
+            else:
+                dates.append('2.1.1970')
+            copies.append(line.split('\n')[0])
 
 
 for i in range(len(dates)):
