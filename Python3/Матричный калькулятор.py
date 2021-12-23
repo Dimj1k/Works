@@ -1,15 +1,157 @@
 import tkinter as tk
 from random import randint
+import re
+
+
+class Calc:
+    # Сумма строк из списка
+    @classmethod
+    def summ(cls, lst):
+        lk = ''
+        for i in lst:
+            lk += i
+        return lk
+
+    # Скобки в примере
+    @classmethod
+    def changing(cls, out):
+        return re.search(r'[(][\d+^*-.,]+[)]', out).start() + 1, re.search(r'[(][\d+^*-.,]+[)]', out).end() - 1
+
+    # Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
+    @classmethod
+    def num_op2op(cls, lst):
+        p = r'\d*[.,]?\d+|[+-]\('
+        for i in range(len(lst)):
+            k = lst[i]
+            if not (re.search(p, k) is None):
+                k = re.sub(p, r'', k)
+                lst.pop(i)
+                lst.insert(i, k)
+        return lst
+
+    # Перебор полученных чисел
+    @classmethod
+    def str2int(cls, lst):
+        sk = []
+        for i in lst:
+            try:
+                sk.append(int(i))
+            except ValueError:
+                return 0
+        return sk
+
+    # Перебор операторов в списке
+    @classmethod
+    def equal(cls, n):
+        try: a1 = n.index('*')
+        except ValueError: a1 = float('inf')
+        try: a2 = n.index('^')
+        except ValueError: a2 = float('inf')
+        if a1 == float('inf') and a2 == float('inf'):
+            try: a3 = n.index('+')
+            except ValueError: a3 = float('inf')
+            try: a4 = n.index('-')
+            except ValueError: a4 = float('inf')
+            return min([a3, a4])
+        else:
+            return min([a1, a2])
+
+    # Перебор полученных операторов
+    @classmethod
+    def operator2act(cls, lst, lstnum):
+        ans = 0
+        while len(lstnum) != 1:
+            act = Calc.equal(lst)
+            if lst[act] == '*':
+                ans = lstnum[act] * lstnum[act + 1]
+            elif lst[act] == '^':
+                if lstnum[act] == 0 and lstnum[act + 1] == 0:
+                    return 0
+                else:
+                    ans = lstnum[act] ** lstnum[act + 1]
+            elif lst[act] == '+':
+                ans = lstnum[act] + lstnum[act + 1]
+            elif lst[act] == '-':
+                ans = lstnum[act] - abs(lstnum[act + 1])
+
+            lst.pop(act)
+            lstnum.pop(act)
+            lstnum.insert(act, ans)
+            lstnum.pop(act + 1)
+        return ans
+
+    # Основная функция
+    @classmethod
+    def calc(cls, given):
+        # Ввод данных
+        given = given.replace(' ', '', given.count(' '))
+
+        # Регулярные выражения
+        re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+'  # Числа
+        re_operators = r'[*^]|\d*[.,]?\d+[+-]|[+-]\('  # Операторы
+        re_parentheses = r'[()]'  # Скобки
+        re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses  # Операторы + Числа + Скобки
+
+        havenums = re.search(re_nums, given)  # Есть ли число в примере
+        re_oper = r'[-+*^]{2,}'  # Ловить больше двух операторов подряд
+
+        # Что нашлось из вводных данных по регулярным выражениям
+        out_lst = re.findall(re_all, given)
+        out = Calc.summ(out_lst)
+
+        # Проверка, того что нашлось из вводных данных по регулярным выражениям с вводными данными и прочее
+        if given == '':
+            return 0
+        elif havenums is None:
+            return 0
+        elif not (re.search(re_oper, given) is None):
+            return 0
+        elif not (re.match(r'[*^]', given) is None) or not (re.search(r'[-+*^]$', given, re.MULTILINE) is None) or \
+                not (re.search(r'\([*^]', given) is None) or not (re.search(r'[-+*^]\)', given) is None):
+            return 0
+        elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
+            return 0
+        elif '()' in given or '()' in given + ')':
+            return 0
+        elif out != given:
+            return 0
+
+        # Добавить ")", если кол-во "(" == кол-ву ")" - 1
+        if given.count('(') == given.count(')') + 1:
+            out += ')'
+
+        out = '(' + out + ')'  # Сам пример - огромная скобка
+
+        # Вычисления внутри скобок
+        j = 0
+        while '(' in out:
+            j = j + 1
+            st, end = Calc.changing(out)
+
+            if not (re.search(r'[\d.,]\(', out[st - 2:st]) is None):
+                out = out[0:st - 1] + '*(' + out[st:]
+                st, end = Calc.changing(out)
+            if not (re.search(r'\)[\d.,]', out[end:end + 2]) is None):
+                out = out[0:end] + ')*' + out[end + 1:]
+                st, end = Calc.changing(out)
+
+            change = out[st:end].replace('--', '+', out[st:end].count('--'))
+            lstnums, lstoperators = re.findall(re_nums, change), Calc.num_op2op(re.findall(re_operators, change))
+            lstnums = Calc.str2int(lstnums)
+
+            if len(lstnums) == 1:
+                change = lstnums[0]
+            else:
+                change = Calc.operator2act(lstoperators, lstnums)
+            out = out[0:st - 1] + str(change) + out[end + 1:]
+        return int(out)
 
 
 def translate(lst):
     lst1, lstes = [], []
     for i in range(len(lst)):
         for j in range(len(lst[i])):
-            try:
-                lst1.append(int(lst[i][j].get()))
-            except ValueError:
-                lst1.append(0)
+            lst1.append(Calc().calc(lst[i][j].get()))
         lstes.append(lst1)
         lst1 = []
     return lstes
@@ -19,7 +161,7 @@ class MatrixException(Exception):
     pass
 
 
-class Matrices():  # Матрицы
+class Matrices:  # Матрицы
 
     def __init__(self, matricA, matricB=[[]]):
         self.matricA = matricA
@@ -78,9 +220,9 @@ class Matrices():  # Матрицы
         self.matricB = matricB
 
     def suma(self):  # Сумма матриц А и В
-        matricCs, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
+        matricCs, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 lstes.append(self.matricA[i][j] + self.matricB[i][j])
@@ -89,9 +231,9 @@ class Matrices():  # Матрицы
         return matricCs
 
     def difference(self):  # Разность матриц А и В
-        matricCd, lstes = [], []
         if self.nA != self.nB or self.mA != self.mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
+        matricCd, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 lstes.append(self.matricA[i][j] - self.matricB[i][j])
@@ -109,9 +251,9 @@ class Matrices():  # Матрицы
         return matricCt
 
     def mult(self):  # Умножение матриц А и В
-        matricCm, lstes, lst = [], [], []
         if self.nA != self.mB:
             return ' Количество столбцов А должно равняться количеству строк В '
+        matricCm, lstes, lst = [], [], []
         for i in range(self.mA):
             for k in range(self.nB):
                 for j in range(self.mB):
@@ -127,7 +269,7 @@ class SquareMatrices(Matrices):  # Квадрат
 
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
-            return ' След матрицы можно вычислить только у квадратной матрицы '
+            return 'След матрицы можно вычислить только у квадратной матрицы'
         lst = []
         for i in range(len(self.matricA)):
             lst.append(self.matricA[i][i])
@@ -135,9 +277,9 @@ class SquareMatrices(Matrices):  # Квадрат
         return trace
 
     def powerA(self, pow):  # Возведение в степень
-        matricAp = self.matricA
         if self.nA != self.mA:
             return ' Возвести в степень можно только квадратную матрицу '
+        matricAp = self.matricA
         for i in range(1, pow):
             matricCp = Matrices(matricAp, self.matricA)
             matricAp = matricCp.mult()
@@ -338,6 +480,6 @@ btn6 = tk.Button(frm1, font=k, text='Возведение А в степень',
 ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=2, to=float('inf'), width=3).pack()
 btn7 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy).pack(fill=tk.X, pady=k[1]+2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
-frm4.grid(row=1, column=1, columnspan=5)
+frm4.grid(row=1, column=1, columnspan=2)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
 window.mainloop()
