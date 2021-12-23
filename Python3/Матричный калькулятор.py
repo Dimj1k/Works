@@ -471,6 +471,7 @@ btn0b = tk.Button(frm0, font=k, text='Получить размерность м
 frm1 = tk.LabelFrame(window, text='Операция', font=k)
 frm1.grid(row=1)
 res = tk.StringVar()
+res.set('Введите размерность матриц')
 btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack(fill=tk.X)
 btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack(fill=tk.X)
 btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult).pack(fill=tk.X)
