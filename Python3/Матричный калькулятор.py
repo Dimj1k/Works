@@ -209,13 +209,15 @@ class Matrices:  # Матрицы
         mB = len(matricB)
         if self.nA != nB or self.mA != mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
-        matricCs, lstes = [], []
+        matricCa, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
+                print(f'Суммирую {i+1} столбец {j+1} строку матриц: {self.matricA[i][j]} + {matricB[i][j]}')
                 lstes.append(self.matricA[i][j] + matricB[i][j])
-            matricCs.append(lstes)
+            matricCa.append(lstes)
             lstes = []
-        return matricCs
+        print('--------------------------------------------------------------------------------------')
+        return matricCa
 
     def __sub__(self, matricB):  # Разность матриц А и В
         nB = len(matricB[0])
@@ -225,18 +227,21 @@ class Matrices:  # Матрицы
         matricCs, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
+                print(f'Вычитаю {i + 1} столбец {j + 1} строку матриц: {self.matricA[i][j]} - {matricB[i][j]}')
                 lstes.append(self.matricA[i][j] - matricB[i][j])
             matricCs.append(lstes)
             lstes = []
+        print('--------------------------------------------------------------------------------------')
         return matricCs
 
     def transpA(self):  # Транспонирование матрицы А
-        matricCt, lstes, i = [], [], 0
+        matricCt, lstes = [], []
         for j in range(self.nA):
             for i in range(self.mA):
                 lstes.append(self.matricA[i][j])
             matricCt.append(lstes)
             lstes = []
+        print('--------------------------------------------------------------------------------------')
         return matricCt
 
     def __mul__(self, matricB):  # Умножение матриц А и В
@@ -248,11 +253,14 @@ class Matrices:  # Матрицы
         for i in range(self.mA):
             for k in range(nB):
                 for j in range(mB):
+                    print(f'Умножаю {i + 1} столбец {j + 1} строку с {j + 1} столбцом и {k + 1} строкой'
+                          f' матриц: {self.matricA[i][j]} * {matricB[j][k]}')
                     lst.append(self.matricA[i][j] * matricB[j][k])
                 lstes.append(sum(lst))
                 lst = []
             matricCm.append(lstes)
             lstes = []
+        print('--------------------------------------------------------------------------------------')
         return matricCm
 
 
@@ -263,6 +271,7 @@ class SquareMatrices(Matrices):  # Квадрат
             return 'След матрицы можно вычислить только у квадратной матрицы'
         lst = []
         for i in range(len(self.matricA)):
+            print(f'Суммирую {i + 1} диагональный элемент матрицы')
             lst.append(self.matricA[i][i])
         trace = sum(lst)
         return trace
@@ -305,6 +314,7 @@ class DiagonalMatrices(Matrices):  # По диагонали числа
     pass
 
 
+print('-------------Начало работы-------------')
 # Окно
 window = tk.Tk()
 screen_width = str(int(window.winfo_screenwidth() // 1.5))
@@ -377,7 +387,7 @@ def show2():  # Показать
     return show1()
 
 
-def suma():  # Сумма
+def add():  # Сумма
     try:
         C = Matrices(translate(entrsA)) + (translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
@@ -431,8 +441,7 @@ def mult():  # Умножение А и В
 
 def powerA():  # Возведение в степень
     try:
-        C = SquareMatrices(translate(entrsA))
-        a = re.sub(r"Decimal\('|'\)", '', str(C ** power.get()))
+        a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)) ** power.get()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
             replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -462,7 +471,7 @@ btn0b = tk.Button(frm0, font=k, text='Получить размерность м
 frm1 = tk.LabelFrame(window, text='Операция', font=k)
 frm1.grid(row=1)
 res = tk.StringVar()
-btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack(fill=tk.X)
+btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=add).pack(fill=tk.X)
 btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack(fill=tk.X)
 btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult).pack(fill=tk.X)
 btn4 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack(fill=tk.X)
@@ -474,3 +483,4 @@ frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.grid(row=1, column=1, columnspan=2)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
 window.mainloop()
+print('-------------Конец работы-------------')
