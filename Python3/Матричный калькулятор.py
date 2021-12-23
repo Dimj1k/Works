@@ -1,25 +1,28 @@
 import tkinter as tk
 from random import randint
 import re
+from decimal import Decimal, getcontext
+getcontext().prec = 5
 
 
 class Calc:
+
     # Сумма строк из списка
     @classmethod
-    def summ(cls, lst):
-        lk = ''
+    def summ(self, lst):
+        k = ''
         for i in lst:
-            lk += i
-        return lk
+            k += i
+        return k
 
     # Скобки в примере
     @classmethod
-    def changing(cls, out):
-        return re.search(r'[(][\d+^*-.,]+[)]', out).start() + 1, re.search(r'[(][\d+^*-.,]+[)]', out).end() - 1
+    def changing(self, out):
+        return re.search(r'[(][\d+/^*-.,]+[)]', out).start() + 1, re.search(r'[(][\d+/^*-.,]+[)]', out).end() - 1
 
     # Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
     @classmethod
-    def num_op2op(cls, lst):
+    def num_op2op(self, lst):
         p = r'\d*[.,]?\d+|[+-]\('
         for i in range(len(lst)):
             k = lst[i]
@@ -31,38 +34,45 @@ class Calc:
 
     # Перебор полученных чисел
     @classmethod
-    def str2int(cls, lst):
-        sk = []
+    def str2Decimal(self, lst):
+        k = []
         for i in lst:
             try:
-                sk.append(int(i))
+                k.append(Decimal(i))
             except ValueError:
                 return 0
-        return sk
+        return k
 
     # Перебор операторов в списке
     @classmethod
-    def equal(cls, n):
-        try: a1 = n.index('*')
+    def equal(self, n):
+        try: a1 = n.index('/')
         except ValueError: a1 = float('inf')
-        try: a2 = n.index('^')
+        try: a2 = n.index('*')
         except ValueError: a2 = float('inf')
-        if a1 == float('inf') and a2 == float('inf'):
-            try: a3 = n.index('+')
-            except ValueError: a3 = float('inf')
-            try: a4 = n.index('-')
+        try: a3 = n.index('^')
+        except ValueError: a3 = float('inf')
+        if a1 == float('inf') and a2 == float('inf') and a3 == float('inf'):
+            try: a4 = n.index('+')
             except ValueError: a4 = float('inf')
-            return min([a3, a4])
+            try: a5 = n.index('-')
+            except ValueError: a5 = float('inf')
+            return min([a4, a5])
         else:
-            return min([a1, a2])
+            return min([a1, a2, a3])
 
     # Перебор полученных операторов
     @classmethod
-    def operator2act(cls, lst, lstnum):
+    def operator2act(self, lst, lstnum):
         ans = 0
         while len(lstnum) != 1:
             act = Calc.equal(lst)
-            if lst[act] == '*':
+            if lst[act] == '/':
+                try:
+                    ans = lstnum[act] / lstnum[act + 1]
+                except ZeroDivisionError:
+                    return 0
+            elif lst[act] == '*':
                 ans = lstnum[act] * lstnum[act + 1]
             elif lst[act] == '^':
                 if lstnum[act] == 0 and lstnum[act + 1] == 0:
@@ -81,19 +91,18 @@ class Calc:
         return ans
 
     # Основная функция
-    @classmethod
-    def calc(cls, given):
+    def calc(self, given):
         # Ввод данных
         given = given.replace(' ', '', given.count(' '))
 
         # Регулярные выражения
         re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+'  # Числа
-        re_operators = r'[*^]|\d*[.,]?\d+[+-]|[+-]\('  # Операторы
+        re_operators = r'[/*^]|\d*[.,]?\d+[+-]|[+-]\('  # Операторы
         re_parentheses = r'[()]'  # Скобки
         re_all = re_nums + r'|' + re_operators + r'|' + re_parentheses  # Операторы + Числа + Скобки
 
         havenums = re.search(re_nums, given)  # Есть ли число в примере
-        re_oper = r'[-+*^]{2,}'  # Ловить больше двух операторов подряд
+        re_oper = r'[-+/*^]{2,}'  # Ловить больше двух операторов подряд
 
         # Что нашлось из вводных данных по регулярным выражениям
         out_lst = re.findall(re_all, given)
@@ -106,8 +115,8 @@ class Calc:
             return 0
         elif not (re.search(re_oper, given) is None):
             return 0
-        elif not (re.match(r'[*^]', given) is None) or not (re.search(r'[-+*^]$', given, re.MULTILINE) is None) or \
-                not (re.search(r'\([*^]', given) is None) or not (re.search(r'[-+*^]\)', given) is None):
+        elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
+                not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
             return 0
         elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
             return 0
@@ -137,14 +146,14 @@ class Calc:
 
             change = out[st:end].replace('--', '+', out[st:end].count('--'))
             lstnums, lstoperators = re.findall(re_nums, change), Calc.num_op2op(re.findall(re_operators, change))
-            lstnums = Calc.str2int(lstnums)
+            lstnums = Calc.str2Decimal(lstnums)
 
             if len(lstnums) == 1:
                 change = lstnums[0]
             else:
                 change = Calc.operator2act(lstoperators, lstnums)
             out = out[0:st - 1] + str(change) + out[end + 1:]
-        return int(out)
+        return Decimal(out)
 
 
 def translate(lst):
@@ -389,9 +398,9 @@ def show2():  # Показать
 def suma():  # Сумма
     try:
         C = Matrices(translate(entrsA), translate(entrsB))
-        a = C.suma()
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(',', ' ', str(a).count(',')). \
-                replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+        a = re.sub(r"Decimal\('|'\)", '', str(C.suma()))
+        res.set(a[1:-1].replace(r"], ", '\n', a.count(r"], ")).\
+                replace(']', '', a.count(']')).replace('[', '', a.count('[')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -399,7 +408,7 @@ def suma():  # Сумма
 def difference():  # Разность
     try:
         C = Matrices(translate(entrsA), translate(entrsB))
-        a = C.difference()
+        a = re.sub(r"Decimal\('|'\)", '', str(C.difference()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -409,7 +418,7 @@ def difference():  # Разность
 def transpA():  # Транспонирование
     try:
         C = Matrices(translate(entrsA))
-        a = C.transpA()
+        a = re.sub(r"Decimal\('|'\)", '', str(C.transpA()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
                 replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -419,7 +428,7 @@ def transpA():  # Транспонирование
 def traceA():  # След
     try:
         C = SquareMatrices(translate(entrsA))
-        a = C.traceA()
+        a = re.sub(r"Decimal\('|'\)", '', str(C.traceA()))
         if a != 'След матрицы можно вычислить только у квадратной матрицы':
             res.set('След матрицы А = ' + str(a))
         else:
@@ -431,7 +440,7 @@ def traceA():  # След
 def mult():  # Умножение А и В
     try:
         C = Matrices(translate(entrsA), translate(entrsB))
-        a = C.mult()
+        a = re.sub(r"Decimal\('|'\)", '', str(C.mult()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
             replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -441,7 +450,7 @@ def mult():  # Умножение А и В
 def powerA():  # Возведение в степень
     try:
         C = SquareMatrices(translate(entrsA))
-        a = C.powerA(power.get())
+        a = re.sub(r"Decimal\('|'\)", '', str(C.powerA(power.get())))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
             replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -471,7 +480,6 @@ btn0b = tk.Button(frm0, font=k, text='Получить размерность м
 frm1 = tk.LabelFrame(window, text='Операция', font=k)
 frm1.grid(row=1)
 res = tk.StringVar()
-res.set('Введите размерность матриц')
 btn1 = tk.Button(frm1, font=k, text='Сумма А и B', command=suma).pack(fill=tk.X)
 btn2 = tk.Button(frm1, font=k, text='Разность А и В', command=difference).pack(fill=tk.X)
 btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult).pack(fill=tk.X)
