@@ -2,6 +2,7 @@ import tkinter as tk
 from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
+
 getcontext().prec = 16
 
 
@@ -78,10 +79,10 @@ class Calc:
     # Сумма строк из списка
     @classmethod
     def summ(cls, lst):
-        k = ''
+        ks = ''
         for i in lst:
-            k += i
-        return k
+            ks += i
+        return ks
 
     # Скобки в примере
     @classmethod
@@ -93,38 +94,48 @@ class Calc:
     def num_op2op(cls, lst):
         p = r'\d*[.,]?\d+|[+-]\('
         for i in range(len(lst)):
-            k = lst[i]
-            if not (re.search(p, k) is None):
-                k = re.sub(p, r'', k)
+            kd = lst[i]
+            if not (re.search(p, kd) is None):
+                kd = re.sub(p, r'', kd)
                 lst.pop(i)
-                lst.insert(i, k)
+                lst.insert(i, kd)
         return lst
 
     # Перебор полученных чисел
     @classmethod
     def str2Decimal(cls, lst):
-        k = []
+        lk = []
         for i in lst:
             try:
-                k.append(Decimal(i))
+                lk.append(Decimal(i))
             except ValueError:
                 return 0
-        return k
+        return lk
 
     # Перебор операторов в списке
     @classmethod
     def equal(cls, n):
-        try: a1 = n.index('/')
-        except ValueError: a1 = float('inf')
-        try: a2 = n.index('*')
-        except ValueError: a2 = float('inf')
-        try: a3 = n.index('^')
-        except ValueError: a3 = float('inf')
+        try:
+            a1 = n.index('/')
+        except ValueError:
+            a1 = float('inf')
+        try:
+            a2 = n.index('*')
+        except ValueError:
+            a2 = float('inf')
+        try:
+            a3 = n.index('^')
+        except ValueError:
+            a3 = float('inf')
         if a1 == float('inf') and a2 == float('inf') and a3 == float('inf'):
-            try: a4 = n.index('+')
-            except ValueError: a4 = float('inf')
-            try: a5 = n.index('-')
-            except ValueError: a5 = float('inf')
+            try:
+                a4 = n.index('+')
+            except ValueError:
+                a4 = float('inf')
+            try:
+                a5 = n.index('-')
+            except ValueError:
+                a5 = float('inf')
             return min([a4, a5])
         else:
             return min([a1, a2, a3])
@@ -212,7 +223,7 @@ class Matrices:  # Матрицы
         matricCa, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
-                print(f'Суммирую {i+1} строку {j+1} столбец матриц: {self.matricA[i][j]} + {matricB[i][j]}')
+                print(f'Суммирую {i + 1} строку {j + 1} столбец матриц: {self.matricA[i][j]} + {matricB[i][j]}')
                 lstes.append(self.matricA[i][j] + matricB[i][j])
             matricCa.append(lstes)
             lstes = []
@@ -252,11 +263,11 @@ class Matrices:  # Матрицы
             return ' Количество столбцов А должно равняться количеству строк В '
         matricCm, lstes, lst = [], [], []
         for i in range(self.mA):
-            for k in range(nB):
+            for m in range(nB):
                 for j in range(mB):
-                    print(f'Умножаю {i + 1} строка {j + 1} столбец с {j + 1} строкой и {k + 1} столбцом'
-                          f' матриц: {self.matricA[i][j]} * {matricB[j][k]}')
-                    lst.append(self.matricA[i][j] * matricB[j][k])
+                    print(f'Умножаю {i + 1} строка {j + 1} столбец с {j + 1} строкой и {m + 1} столбцом'
+                          f' матриц: {self.matricA[i][j]} * {matricB[j][m]}')
+                    lst.append(self.matricA[i][j] * matricB[j][m])
                 lstes.append(sum(lst))
                 lst = []
             matricCm.append(lstes)
@@ -277,11 +288,11 @@ class SquareMatrices(Matrices):  # Квадрат
         trace = sum(lst)
         return trace
 
-    def __pow__(self, pow, modulo=None):  # Возведение в степень матрицы А
-        if self.nA != self.mA and pow != 1:
+    def __pow__(self, powm, modulo=None):  # Возведение в степень матрицы А
+        if self.nA != self.mA and powm != 1:
             return ' Возвести в степень можно только квадратную матрицу '
         matricAp = self.matricA
-        for i in range(1, pow):
+        for i in range(1, powm):
             matricCp = Matrices(matricAp)
             matricAp = matricCp * self.matricA
         return matricAp
@@ -315,7 +326,6 @@ class DiagonalMatrices(Matrices):  # По диагонали числа
     pass
 
 
-print('-------------Начало работы-------------')
 # Окно
 window = tk.Tk()
 screen_width = str(int(window.winfo_screenwidth() // 1.5))
@@ -345,6 +355,7 @@ power = tk.IntVar()
 
 
 # Матрица А и B
+# noinspection PyGlobalUndefined
 def show1():  # Показать
     frm2 = tk.LabelFrame(window, text='Матрица А', font=k)
     frm2.grid(row=0, column=1, padx=k[1])
@@ -355,16 +366,16 @@ def show1():  # Показать
 
     for i in range(Am.get()):
         for j in range(An.get()):
-            ent1 = tk.Entry(frm2, font=k, width=4)
-            ent1.grid(row=i+1, column=j+1)
-            entrs1.append(ent1)
+            ent1d = tk.Entry(frm2, font=k, width=4)
+            ent1d.grid(row=i + 1, column=j + 1)
+            entrs1.append(ent1d)
         entrsA.append(entrs1)
         entrs1 = []
     if Bn.get() != 0 and Bm.get() != 0:
         for i in range(Bm.get()):
             for j in range(Bn.get()):
                 ent2 = tk.Entry(frm3, font=k, width=4)
-                ent2.grid(row=i+1, column=j+1)
+                ent2.grid(row=i + 1, column=j + 1)
                 entrs2.append(ent2)
             entrsB.append(entrs2)
             entrs2 = []
@@ -392,7 +403,7 @@ def add():  # Сумма
     try:
         C = Matrices(translate(entrsA)) + (translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(a[1:-1].replace(r"], ", '\n', a.count(r"], ")).\
+        res.set(a[1:-1].replace(r"], ", '\n', a.count(r"], ")). \
                 replace(']', '', a.count(']')).replace('[', '', a.count('[')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
@@ -402,7 +413,7 @@ def difference():  # Разность
     try:
         C = Matrices(translate(entrsA)) - translate(entrsB)
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")). \
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
@@ -412,7 +423,7 @@ def transpA():  # Транспонирование
     try:
         C = Matrices(translate(entrsA))
         a = re.sub(r"Decimal\('|'\)", '', str(C.transpA()))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
                 replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
@@ -434,8 +445,8 @@ def mult():  # Умножение А и В
     try:
         C = Matrices(translate(entrsA)) * translate(entrsB)
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
-            replace('[', '', str(a).count('[')))
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
+                replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -444,7 +455,7 @@ def powerA():  # Возведение в степень
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)) ** power.get()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-            replace('[', '', str(a).count('[')))
+                replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -452,13 +463,17 @@ def powerA():  # Возведение в степень
 def rnd():  # Случайные значения в ячейках матриц
     try:
         for i in range(len(entrsA)):
-            for j in range(len(entrsA[i])): entrsA[i][j].delete(0, 'end')
+            for j in range(len(entrsA[i])):
+                entrsA[i][j].delete(0, 'end')
         for i in range(len(entrsB)):
-            for j in range(len(entrsB[i])): entrsB[i][j].delete(0, 'end')
+            for j in range(len(entrsB[i])):
+                entrsB[i][j].delete(0, 'end')
         for i in range(len(entrsA)):
-            for j in range(len(entrsA[i])): entrsA[i][j].insert(0, str(randint(-99, 99)))
+            for j in range(len(entrsA[i])):
+                entrsA[i][j].insert(0, str(randint(-99, 99)))
         for i in range(len(entrsB)):
-            for j in range(len(entrsB[i])): entrsB[i][j].insert(0, str(randint(-99, 99)))
+            for j in range(len(entrsB[i])):
+                entrsB[i][j].insert(0, str(randint(-99, 99)))
     except NameError:
         res.set('Введите размерность матриц')
 
@@ -479,9 +494,10 @@ btn4 = tk.Button(frm1, font=k, text='Транспонирование А', comma
 btn5 = tk.Button(frm1, font=k, text='След А', command=traceA).pack(fill=tk.X)
 btn6 = tk.Button(frm1, font=k, text='Возведение А в степень', command=powerA).pack(fill=tk.X)
 ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=1, to=float('inf'), width=3).pack()
-btn7 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy).pack(fill=tk.X, pady=k[1]+2)
+btn7 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy).pack(fill=tk.X, pady=k[1] + 2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.grid(row=1, column=1, columnspan=2)
 lbl1 = tk.Label(frm4, font=k, textvariable=res).grid(row=0, column=0)
+print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
