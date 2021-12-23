@@ -516,7 +516,7 @@ btn4 = tk.Button(frm1, font=k, text='Трансп. А', command=transpA, width=k
 btn5 = tk.Button(frm1, font=k, text='След А', command=traceA, width=k[1] + 1).grid(row=1, column=1)
 btn6 = tk.Button(frm1, font=k, text='А ^ степень       ', command=powerA, width=k[1] + 1).grid(row=1, column=2)
 ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=1, to=float('inf'), width=2).grid(row=1, column=2, sticky='e')
-btn7 = tk.Button(frm1, font=k, text='A * число    ', command=multnum, width=k[1] + 1).grid(row=2)
+btn7 = tk.Button(frm1, font=k, text='A * число      ', command=multnum, width=k[1] + 1).grid(row=2)
 ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float('inf'), width=2) \
     .grid(row=2, column=0, sticky='e')
 btn8 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy, width=k[1] + 5)
