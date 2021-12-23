@@ -238,6 +238,7 @@ class Matrices:  # Матрицы
         matricCt, lstes = [], []
         for j in range(self.nA):
             for i in range(self.mA):
+                print(f'Меняю {i + 1} столбец с {j + 1} строкой')
                 lstes.append(self.matricA[i][j])
             matricCt.append(lstes)
             lstes = []
@@ -271,7 +272,7 @@ class SquareMatrices(Matrices):  # Квадрат
             return 'След матрицы можно вычислить только у квадратной матрицы'
         lst = []
         for i in range(len(self.matricA)):
-            print(f'Суммирую {i + 1} диагональный элемент матрицы')
+            print(f'Суммирую {i + 1} c {sum(lst)} диагональный элемент матрицы')
             lst.append(self.matricA[i][i])
         trace = sum(lst)
         return trace
