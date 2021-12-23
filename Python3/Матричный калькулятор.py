@@ -31,18 +31,18 @@ class Calc:
         # Проверка, того что нашлось из вводных данных по регулярным выражениям с вводными данными и прочее
         if given == '':
             return 0
+        elif out != given:
+            return 0
         elif havenums is None:
             return 0
         elif not (re.search(re_oper, given) is None):
-            return 0
-        elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
-                not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
             return 0
         elif given.count('(') > given.count(')') + 1 or given.count(')') > given.count('('):
             return 0
         elif '()' in given or '()' in given + ')':
             return 0
-        elif out != given:
+        elif not (re.match(r'[*/^]', given) is None) or not (re.search(r'[-+*/^]$', given, re.MULTILINE) is None) or \
+                not (re.search(r'\([*/^]', given) is None) or not (re.search(r'[-+*/^]\)', given) is None):
             return 0
 
         # Добавить ")", если кол-во "(" == кол-ву ")" - 1
@@ -212,7 +212,7 @@ class Matrices:  # Матрицы
         matricCa, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
-                print(f'Суммирую {i+1} столбец {j+1} строку матриц: {self.matricA[i][j]} + {matricB[i][j]}')
+                print(f'Суммирую {i+1} строку {j+1} столбец матриц: {self.matricA[i][j]} + {matricB[i][j]}')
                 lstes.append(self.matricA[i][j] + matricB[i][j])
             matricCa.append(lstes)
             lstes = []
@@ -227,7 +227,7 @@ class Matrices:  # Матрицы
         matricCs, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
-                print(f'Вычитаю {i + 1} столбец {j + 1} строку матриц: {self.matricA[i][j]} - {matricB[i][j]}')
+                print(f'Вычитаю {i + 1} строку {j + 1} столбец матриц: {self.matricA[i][j]} - {matricB[i][j]}')
                 lstes.append(self.matricA[i][j] - matricB[i][j])
             matricCs.append(lstes)
             lstes = []
@@ -238,7 +238,7 @@ class Matrices:  # Матрицы
         matricCt, lstes = [], []
         for j in range(self.nA):
             for i in range(self.mA):
-                print(f'Меняю {i + 1} столбец с {j + 1} строкой')
+                print(f'Меняю {i + 1} строка с {j + 1} столбец')
                 lstes.append(self.matricA[i][j])
             matricCt.append(lstes)
             lstes = []
@@ -254,7 +254,7 @@ class Matrices:  # Матрицы
         for i in range(self.mA):
             for k in range(nB):
                 for j in range(mB):
-                    print(f'Умножаю {i + 1} столбец {j + 1} строку с {j + 1} столбцом и {k + 1} строкой'
+                    print(f'Умножаю {i + 1} строка {j + 1} столбец с {j + 1} строкой и {k + 1} столбцом'
                           f' матриц: {self.matricA[i][j]} * {matricB[j][k]}')
                     lst.append(self.matricA[i][j] * matricB[j][k])
                 lstes.append(sum(lst))
