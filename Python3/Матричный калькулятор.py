@@ -263,8 +263,10 @@ class Matrices:  # Матрицы
         except (TypeError, InvalidOperation):
             matricCmn = []
             for i in self.matricA:
-                print(f'Умножаю {list(map(float, i))} строку на число')
+                print(f'Умножаю:', list(map(lambda t: str(t), i)),
+                      'cтроку на число')
                 matricCmn.append(list(map(lambda x: x * matricB, i)))
+            print('--------------------------------------------------------------------------------------')
             return matricCmn
         if self.nA != mB:
             return ' Количество столбцов А должно равняться количеству строк В '
@@ -292,6 +294,7 @@ class SquareMatrices(Matrices):  # Квадрат
         for i in range(len(self.matricA)):
             print(f'Суммирую {i + 1} c {sum(lst)} диагональный элемент матрицы')
             lst.append(self.matricA[i][i])
+        print('--------------------------------------------------------------------------------------')
         trace = sum(lst)
         return trace
 
