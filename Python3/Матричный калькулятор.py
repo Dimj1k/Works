@@ -257,8 +257,15 @@ class Matrices:  # Матрицы
         return matricCt
 
     def __mul__(self, matricB):  # Умножение матриц А и В
-        nB = len(matricB[0])
-        mB = len(matricB)
+        try:
+            nB = len(matricB[0])
+            mB = len(matricB)
+        except (TypeError, InvalidOperation):
+            matricCmn = []
+            for i in self.matricA:
+                print(f'Умножаю {list(map(float, i))} строку на число')
+                matricCmn.append(list(map(lambda x: x * matricB, i)))
+            return matricCmn
         if self.nA != mB:
             return ' Количество столбцов А должно равняться количеству строк В '
         matricCm, lstes, lst = [], [], []
@@ -274,13 +281,6 @@ class Matrices:  # Матрицы
             lstes = []
         print('--------------------------------------------------------------------------------------')
         return matricCm
-
-    def multnum(self, n):
-        matricCmn = []
-        for i in self.matricA:
-            print(f'Умножаю {list(map(float, i))} строку на число')
-            matricCmn.append(list(map(lambda x: x * n, i)))
-        return matricCmn
 
 
 class SquareMatrices(Matrices):  # Квадрат
@@ -461,7 +461,8 @@ def mult():  # Умножение А и В
 
 def multnum():
     try:
-        C = Matrices(translate(entrsA)).multnum(Decimal(num.get()))
+        # noinspection PyTypeChecker
+        C = Matrices(translate(entrsA)) * Decimal(num.get())
         a = re.sub(r"Decimal\('|'\)", '', str(C))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
                 replace('[', '', str(a).count('[')))
@@ -513,7 +514,8 @@ btn5 = tk.Button(frm1, font=k, text='След А', command=traceA, width=k[1] + 
 btn6 = tk.Button(frm1, font=k, text='А ^ степень       ', command=powerA, width=k[1] + 1).grid(row=1, column=2)
 ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=1, to=float('inf'), width=2).grid(row=1, column=2, sticky='e')
 btn7 = tk.Button(frm1, font=k, text='A * число    ', command=multnum, width=k[1] + 1).grid(row=2)
-ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=1, to=float('inf'), width=2).grid(row=2, column=0, sticky='e')
+ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float('inf'), width=2) \
+    .grid(row=2, column=0, sticky='e')
 btn8 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy, width=k[1] + 5)
 btn8.grid(row=2, column=1, pady=k[1] + 2, columnspan=2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
