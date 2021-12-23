@@ -8,9 +8,9 @@ ages = []
 i = 0
 
 
-with open('file.txt', 'r', encoding='UTF-8') as f:
+with open('Auto.txt', 'r', encoding='UTF-8') as f:
     for line in f:
-        if line != '\n':
+        try:
             fio, date = line.split(':')
             if '\n' in date:
                 date = date[0:date.find('\n')]
@@ -19,6 +19,8 @@ with open('file.txt', 'r', encoding='UTF-8') as f:
             else:
                 dates.append('2.1.1970')
             copies.append(line.split('\n')[0])
+        except ValueError:
+            pass
 
 
 for i in range(len(dates)):
@@ -33,7 +35,7 @@ for i in range(len(dates)):
     ages.append(age)
 
 
-with open('file.txt', 'w', encoding='UTF-8') as f:
+with open('Auto.txt', 'w', encoding='UTF-8') as f:
     for i in range(len(copies)):
         if '\t' not in copies[i]:
             f.writelines([copies[i], '\t', str(ages[i])+' лет', '\n'])
