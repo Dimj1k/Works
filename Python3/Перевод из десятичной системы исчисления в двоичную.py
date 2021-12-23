@@ -1,5 +1,7 @@
 from decimal import Decimal, getcontext
 getcontext().prec = 2 ** 16
+
+
 n=Decimal(input())
 n1=n-n//1
 n=int(n)
@@ -8,12 +10,16 @@ p=[]
 F=0
 o1=0
 o2=0
+
+
 if n >= 1:
 	while n >= 1:
 		k=k+str(n%2)
 		n=n//2
 else:
 	k='0'
+
+
 k=k[::-1]
 we=len(k)
 if n1 > 0:
@@ -32,6 +38,8 @@ if n1 > 0:
                 if p[i]==p[j-1]:
                     o1=i
                     o2=j-1
+
+
 if o1 > 0 or o2 > 0:
 	o1=o1+we
 	o2=o2+we
