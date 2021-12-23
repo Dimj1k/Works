@@ -2,95 +2,13 @@ import tkinter as tk
 from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
-getcontext().prec = 5
+getcontext().prec = 16
 
 
 class Calc:
 
-    # Сумма строк из списка
-    @classmethod
-    def summ(self, lst):
-        k = ''
-        for i in lst:
-            k += i
-        return k
-
-    # Скобки в примере
-    @classmethod
-    def changing(self, out):
-        return re.search(r'[(][\d+/^*-.,]+[)]', out).start() + 1, re.search(r'[(][\d+/^*-.,]+[)]', out).end() - 1
-
-    # Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
-    @classmethod
-    def num_op2op(self, lst):
-        p = r'\d*[.,]?\d+|[+-]\('
-        for i in range(len(lst)):
-            k = lst[i]
-            if not (re.search(p, k) is None):
-                k = re.sub(p, r'', k)
-                lst.pop(i)
-                lst.insert(i, k)
-        return lst
-
-    # Перебор полученных чисел
-    @classmethod
-    def str2Decimal(self, lst):
-        k = []
-        for i in lst:
-            try:
-                k.append(Decimal(i))
-            except ValueError:
-                return 0
-        return k
-
-    # Перебор операторов в списке
-    @classmethod
-    def equal(self, n):
-        try: a1 = n.index('/')
-        except ValueError: a1 = float('inf')
-        try: a2 = n.index('*')
-        except ValueError: a2 = float('inf')
-        try: a3 = n.index('^')
-        except ValueError: a3 = float('inf')
-        if a1 == float('inf') and a2 == float('inf') and a3 == float('inf'):
-            try: a4 = n.index('+')
-            except ValueError: a4 = float('inf')
-            try: a5 = n.index('-')
-            except ValueError: a5 = float('inf')
-            return min([a4, a5])
-        else:
-            return min([a1, a2, a3])
-
-    # Перебор полученных операторов
-    @classmethod
-    def operator2act(self, lst, lstnum):
-        ans = 0
-        while len(lstnum) != 1:
-            act = Calc.equal(lst)
-            if lst[act] == '/':
-                try:
-                    ans = lstnum[act] / lstnum[act + 1]
-                except (ZeroDivisionError, InvalidOperation):
-                    return 0
-            elif lst[act] == '*':
-                ans = lstnum[act] * lstnum[act + 1]
-            elif lst[act] == '^':
-                if lstnum[act] == 0 and lstnum[act + 1] == 0:
-                    return 0
-                else:
-                    ans = lstnum[act] ** lstnum[act + 1]
-            elif lst[act] == '+':
-                ans = lstnum[act] + lstnum[act + 1]
-            elif lst[act] == '-':
-                ans = lstnum[act] - abs(lstnum[act + 1])
-
-            lst.pop(act)
-            lstnum.pop(act)
-            lstnum.insert(act, ans)
-            lstnum.pop(act + 1)
-        return ans
-
     # Основная функция
+    @classmethod
     def calc(self, given):
         # Ввод данных
         given = given.replace(' ', '', given.count(' '))
@@ -154,6 +72,89 @@ class Calc:
                 change = Calc.operator2act(lstoperators, lstnums)
             out = out[0:st - 1] + str(change) + out[end + 1:]
         return Decimal(out)
+
+    # Сумма строк из списка
+    @classmethod
+    def summ(cls, lst):
+        k = ''
+        for i in lst:
+            k += i
+        return k
+
+    # Скобки в примере
+    @classmethod
+    def changing(cls, out):
+        return re.search(r'[(][\d+/^*-.,]+[)]', out).start() + 1, re.search(r'[(][\d+/^*-.,]+[)]', out).end() - 1
+
+    # Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
+    @classmethod
+    def num_op2op(cls, lst):
+        p = r'\d*[.,]?\d+|[+-]\('
+        for i in range(len(lst)):
+            k = lst[i]
+            if not (re.search(p, k) is None):
+                k = re.sub(p, r'', k)
+                lst.pop(i)
+                lst.insert(i, k)
+        return lst
+
+    # Перебор полученных чисел
+    @classmethod
+    def str2Decimal(cls, lst):
+        k = []
+        for i in lst:
+            try:
+                k.append(Decimal(i))
+            except ValueError:
+                return 0
+        return k
+
+    # Перебор операторов в списке
+    @classmethod
+    def equal(cls, n):
+        try: a1 = n.index('/')
+        except ValueError: a1 = float('inf')
+        try: a2 = n.index('*')
+        except ValueError: a2 = float('inf')
+        try: a3 = n.index('^')
+        except ValueError: a3 = float('inf')
+        if a1 == float('inf') and a2 == float('inf') and a3 == float('inf'):
+            try: a4 = n.index('+')
+            except ValueError: a4 = float('inf')
+            try: a5 = n.index('-')
+            except ValueError: a5 = float('inf')
+            return min([a4, a5])
+        else:
+            return min([a1, a2, a3])
+
+    # Перебор полученных операторов
+    @classmethod
+    def operator2act(cls, lst, lstnum):
+        ans = 0
+        while len(lstnum) != 1:
+            act = Calc.equal(lst)
+            if lst[act] == '/':
+                try:
+                    ans = lstnum[act] / lstnum[act + 1]
+                except (ZeroDivisionError, InvalidOperation):
+                    return 0
+            elif lst[act] == '*':
+                ans = lstnum[act] * lstnum[act + 1]
+            elif lst[act] == '^':
+                if lstnum[act] == 0 and lstnum[act + 1] == 0:
+                    return 0
+                else:
+                    ans = lstnum[act] ** lstnum[act + 1]
+            elif lst[act] == '+':
+                ans = lstnum[act] + lstnum[act + 1]
+            elif lst[act] == '-':
+                ans = lstnum[act] - abs(lstnum[act + 1])
+
+            lst.pop(act)
+            lstnum.pop(act)
+            lstnum.insert(act, ans)
+            lstnum.pop(act + 1)
+        return ans
 
 
 def translate(lst):
