@@ -13,7 +13,7 @@ def s_fl(a, b, n, epsilon, s2=0):
     for i in range(0, int(k)):
         s1 += (y(a + i * n) * n)
     s1 += (k - int(k)) * n * (y(a + int(k) * n))
-    if abs(s2 - s1) <= epsilon:
+    if abs(s2 - s1) <= epsilon and s1 != 0:
         return s1
     else:
         return s_fl(a, b, n / 2, epsilon, s1)
@@ -27,7 +27,7 @@ def s_fc(a, b, n, epsilon, s2=0):
         s1 += (y(a + (2 * i - 1) * n / 2) * n)
     if int(k) != k:
         s1 += (y(((b - (a + int(k) * n)) / 2) + (a + int(k) * n)) * (b - (a + int(k) * n)))
-    if abs(s2 - s1) <= epsilon:
+    if abs(s2 - s1) <= epsilon and s1 != 0:
         return s1
     else:
         return s_fc(a, b, n / 2, epsilon, s1)
@@ -40,7 +40,7 @@ def s_fr(a, b, n, epsilon, s2=0):
     for i in range(0, int(k)):
         s1 += (y(b - i * n) * n)
     s1 += (k - int(k)) * n * (y(b - int(k) * n))
-    if abs(s2 - s1) <= epsilon:
+    if abs(s2 - s1) <= epsilon and s1 != 0:
         return s1
     else:
         return s_fr(a, b, n / 2, epsilon, s1)
@@ -56,7 +56,7 @@ def s_fm(a, b, c, n, epsilon, s2=0):
     for i in range(0, int(k2)):
         s1 += (y(c - i * n) * n)
     s1 += (k1 - int(k1)) * n * (y(c + int(k1) * n)) + (k2 - int(k2)) * n * (y(c - int(k1) * n))
-    if abs(s2 - s1) <= epsilon:
+    if abs(s2 - s1) <= epsilon and s1 != 0:
         return s1
     else:
         return s_fm(a, b, c, n / 2, epsilon, s1)
