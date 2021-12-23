@@ -7,11 +7,13 @@ getcontext().prec = 16
 
 class Calc:
 
+    def __init__(self, given):
+        self.given = given
+
     # Основная функция
-    @classmethod
-    def calc(self, given):
+    def calc(self):
         # Ввод данных
-        given = given.replace(' ', '', given.count(' '))
+        given = self.given.replace(' ', '', self.given.count(' '))
 
         # Регулярные выражения
         re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+'  # Числа
@@ -161,7 +163,7 @@ def translate(lst):
     lst1, lstes = [], []
     for i in range(len(lst)):
         for j in range(len(lst[i])):
-            lst1.append(Calc().calc(lst[i][j].get()))
+            lst1.append(Calc(lst[i][j].get()).calc())
         lstes.append(lst1)
         lst1 = []
     return lstes
@@ -173,13 +175,10 @@ class MatrixException(Exception):
 
 class Matrices:  # Матрицы
 
-    def __init__(self, matricA, matricB=[[]]):
+    def __init__(self, matricA):
         self.matricA = matricA
-        self.matricB = matricB
         self.mA = len(self.matricA)
         self.nA = len(self.matricA[0])
-        self.nB = len(self.matricB[0])
-        self.mB = len(self.matricB)
 
     @property
     def set_mA(self):
@@ -198,22 +197,6 @@ class Matrices:  # Матрицы
         self.nA = nA
 
     @property
-    def set_nB(self):
-        return self.nB
-
-    @set_nB.setter
-    def set_nB(self, nB):
-        self.nB = nB
-
-    @property
-    def set_mB(self):
-        return self.mB
-
-    @set_mB.setter
-    def set_mB(self, mB):
-        self.mB = mB
-
-    @property
     def set_matricA(self):
         return self.matricA
 
@@ -221,35 +204,31 @@ class Matrices:  # Матрицы
     def set_matricA(self, matricA):
         self.matricA = matricA
 
-    @property
-    def set_matricB(self):
-        return self.matricB
-
-    @set_matricB.setter
-    def set_matricB(self, matricB):
-        self.matricB = matricB
-
-    def suma(self):  # Сумма матриц А и В
-        if self.nA != self.nB or self.mA != self.mB:
+    def __add__(self, matricB):  # Сумма матриц А и В
+        nB = len(matricB[0])
+        mB = len(matricB)
+        if self.nA != nB or self.mA != mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
         matricCs, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
-                lstes.append(self.matricA[i][j] + self.matricB[i][j])
+                lstes.append(self.matricA[i][j] + matricB[i][j])
             matricCs.append(lstes)
             lstes = []
         return matricCs
 
-    def difference(self):  # Разность матриц А и В
-        if self.nA != self.nB or self.mA != self.mB:
+    def __sub__(self, matricB):  # Разность матриц А и В
+        nB = len(matricB[0])
+        mB = len(matricB)
+        if self.nA != nB or self.mA != mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
-        matricCd, lstes = [], []
+        matricCs, lstes = [], []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
-                lstes.append(self.matricA[i][j] - self.matricB[i][j])
-            matricCd.append(lstes)
+                lstes.append(self.matricA[i][j] - matricB[i][j])
+            matricCs.append(lstes)
             lstes = []
-        return matricCd
+        return matricCs
 
     def transpA(self):  # Транспонирование матрицы А
         matricCt, lstes, i = [], [], 0
@@ -260,14 +239,16 @@ class Matrices:  # Матрицы
             lstes = []
         return matricCt
 
-    def mult(self):  # Умножение матриц А и В
-        if self.nA != self.mB:
+    def __mul__(self, matricB):  # Умножение матриц А и В
+        nB = len(matricB[0])
+        mB = len(matricB)
+        if self.nA != mB:
             return ' Количество столбцов А должно равняться количеству строк В '
         matricCm, lstes, lst = [], [], []
         for i in range(self.mA):
-            for k in range(self.nB):
-                for j in range(self.mB):
-                    lst.append(self.matricA[i][j] * self.matricB[j][k])
+            for k in range(nB):
+                for j in range(mB):
+                    lst.append(self.matricA[i][j] * matricB[j][k])
                 lstes.append(sum(lst))
                 lst = []
             matricCm.append(lstes)
@@ -286,13 +267,13 @@ class SquareMatrices(Matrices):  # Квадрат
         trace = sum(lst)
         return trace
 
-    def powerA(self, pow):  # Возведение в степень
+    def __pow__(self, pow, modulo=None):
         if self.nA != self.mA:
             return ' Возвести в степень можно только квадратную матрицу '
         matricAp = self.matricA
         for i in range(1, pow):
-            matricCp = Matrices(matricAp, self.matricA)
-            matricAp = matricCp.mult()
+            matricCp = Matrices(matricAp)
+            matricAp = matricCp * self.matricA
         return matricAp
 
 
@@ -398,8 +379,8 @@ def show2():  # Показать
 
 def suma():  # Сумма
     try:
-        C = Matrices(translate(entrsA), translate(entrsB))
-        a = re.sub(r"Decimal\('|'\)", '', str(C.suma()))
+        C = Matrices(translate(entrsA)) + (translate(entrsB))
+        a = re.sub(r"Decimal\('|'\)", '', str(C))
         res.set(a[1:-1].replace(r"], ", '\n', a.count(r"], ")).\
                 replace(']', '', a.count(']')).replace('[', '', a.count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -408,8 +389,8 @@ def suma():  # Сумма
 
 def difference():  # Разность
     try:
-        C = Matrices(translate(entrsA), translate(entrsB))
-        a = re.sub(r"Decimal\('|'\)", '', str(C.difference()))
+        C = Matrices(translate(entrsA)) - translate(entrsB)
+        a = re.sub(r"Decimal\('|'\)", '', str(C))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).\
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -440,8 +421,8 @@ def traceA():  # След
 
 def mult():  # Умножение А и В
     try:
-        C = Matrices(translate(entrsA), translate(entrsB))
-        a = re.sub(r"Decimal\('|'\)", '', str(C.mult()))
+        C = Matrices(translate(entrsA)) * translate(entrsB)
+        a = re.sub(r"Decimal\('|'\)", '', str(C))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')).\
             replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -451,7 +432,7 @@ def mult():  # Умножение А и В
 def powerA():  # Возведение в степень
     try:
         C = SquareMatrices(translate(entrsA))
-        a = re.sub(r"Decimal\('|'\)", '', str(C.powerA(power.get())))
+        a = re.sub(r"Decimal\('|'\)", '', str(C ** power.get()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
             replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
