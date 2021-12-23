@@ -277,8 +277,8 @@ class SquareMatrices(Matrices):  # Квадрат
         trace = sum(lst)
         return trace
 
-    def __pow__(self, pow, modulo=None):
-        if self.nA != self.mA:
+    def __pow__(self, pow, modulo=None):  # Возведение в степень матрицы А
+        if self.nA != self.mA and pow != 1:
             return ' Возвести в степень можно только квадратную матрицу '
         matricAp = self.matricA
         for i in range(1, pow):
@@ -478,7 +478,7 @@ btn3 = tk.Button(frm1, font=k, text='Умножение А и В', command=mult)
 btn4 = tk.Button(frm1, font=k, text='Транспонирование А', command=transpA).pack(fill=tk.X)
 btn5 = tk.Button(frm1, font=k, text='След А', command=traceA).pack(fill=tk.X)
 btn6 = tk.Button(frm1, font=k, text='Возведение А в степень', command=powerA).pack(fill=tk.X)
-ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=2, to=float('inf'), width=3).pack()
+ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=1, to=float('inf'), width=3).pack()
 btn7 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy).pack(fill=tk.X, pady=k[1]+2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.grid(row=1, column=1, columnspan=2)
