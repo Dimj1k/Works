@@ -1,7 +1,7 @@
 import tkinter as tk
 from random import randint
 import re
-from decimal import Decimal, getcontext
+from decimal import Decimal, getcontext, InvalidOperation
 getcontext().prec = 5
 
 
@@ -70,7 +70,7 @@ class Calc:
             if lst[act] == '/':
                 try:
                     ans = lstnum[act] / lstnum[act + 1]
-                except ZeroDivisionError:
+                except (ZeroDivisionError, InvalidOperation):
                     return 0
             elif lst[act] == '*':
                 ans = lstnum[act] * lstnum[act + 1]
