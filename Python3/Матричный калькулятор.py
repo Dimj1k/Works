@@ -377,9 +377,9 @@ def show1():  # Показать
 
     for i in range(Am.get()):
         for j in range(An.get()):
-            ent1d = tk.Entry(frm2, font=k, width=4)
-            ent1d.grid(row=i + 1, column=j + 1)
-            entrs1.append(ent1d)
+            ent1 = tk.Entry(frm2, font=k, width=4)
+            ent1.grid(row=i + 1, column=j + 1)
+            entrs1.append(ent1)
         entrsA.append(entrs1)
         entrs1 = []
     if Bn.get() != 0 and Bm.get() != 0:
@@ -506,7 +506,7 @@ btn0a.pack(fill=tk.X)
 btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
 
 # Кнопки вычислений
-frm1 = tk.LabelFrame(window, text='Операция', font=k)
+frm1 = tk.LabelFrame(window, text='Основные операции над матрицами', font=k)
 frm1.pack(side='left', anchor='n')
 res = tk.StringVar()
 btn1 = tk.Button(frm1, font=k, text='А + В', command=add, width=k[1] + 1).grid()
