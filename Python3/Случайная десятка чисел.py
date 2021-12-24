@@ -18,9 +18,9 @@ while np.random.randint(1, 10) != random.randint(1, 10):
 # Плот
 fig, axs = plt.subplots(1, 3, figsize=(10, 3))
 # Случайные числа стандартной библиотеки random
-axs[0].bar(axisx, randintstd, width=w, color='grey', label='random')
+axs[0].bar(axisx, randintstd, width=w * 2, color='grey', label='random')
 # Случайные числа библиотеки NumPy
-axs[1].bar(axisx, randintnp, width=w, label='NumPy')
+axs[1].bar(axisx, randintnp, width=w * 2, label='NumPy')
 # Случайные числа, и NumPy, и random
 axs[2].bar(list(map(lambda x: x - w * 2, axisx)), randintstd, width=w, color='grey', label='random')
 axs[2].bar(list(map(lambda x: x + w / 2 - w * 1.5, axisx)), randintnp, width=w, label='NumPy')
