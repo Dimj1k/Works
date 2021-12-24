@@ -348,16 +348,16 @@ k = ('Times New Roman', int(window.winfo_screenwidth() // 130))
 
 # Ввод данных
 frm0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
-frm0.grid(row=0, column=0)
+frm0.pack(side='top', anchor='nw')
 lbl0Am = tk.Label(frm0, font=k, text='Количество строк матрицы А:').pack()
 Am = tk.IntVar()
-ent0Am = tk.Spinbox(frm0, font=k, textvariable=Am, from_=1, to=float('inf')).pack()
+ent0Am = tk.Spinbox(frm0, font=k, textvariable=Am, from_=1, to=11).pack()
 lbl0An = tk.Label(frm0, font=k, text='Количество столбцов матрицы А:').pack()
 An = tk.IntVar()
 ent0An = tk.Spinbox(frm0, font=k, textvariable=An, from_=1, to=float('inf')).pack()
 lbl0Bm = tk.Label(frm0, font=k, text='Количество строк матрицы B:').pack()
 Bm = tk.IntVar()
-ent0Bm = tk.Spinbox(frm0, font=k, textvariable=Bm, from_=0, to=float('inf')).pack()
+ent0Bm = tk.Spinbox(frm0, font=k, textvariable=Bm, from_=0, to=11).pack()
 lbl0Bn = tk.Label(frm0, font=k, text='Количество столбцов матрицы B:').pack()
 Bn = tk.IntVar()
 ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
@@ -369,9 +369,9 @@ num = tk.DoubleVar()
 # noinspection PyGlobalUndefined
 def show1():  # Показать
     frm2 = tk.LabelFrame(window, text='Матрица А', font=k)
-    frm2.grid(row=0, column=1, padx=k[1])
+    frm2.place(x=frm0.winfo_width() + 5)
     frm3 = tk.LabelFrame(window, text='Матрица В', font=k)
-    frm3.grid(row=0, column=2, padx=k[1])
+    frm3.place(x=frm0.winfo_width() + An.get() * (3 * k[1]) + k[1])
     global entrs1, entrs2, entrsA, entrsB, frms
     entrs1, entrs2, entrsA, entrsB = [], [], [], []
 
@@ -414,6 +414,7 @@ def add():  # Сумма
     try:
         C = Matrices(translate(entrsA)) + (translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
+        frmres()
         res.set(a[1:-1].replace(r"], ", '\n', a.count(r"], ")). \
                 replace(']', '', a.count(']')).replace('[', '', a.count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -424,6 +425,7 @@ def difference():  # Разность
     try:
         C = Matrices(translate(entrsA)) - translate(entrsB)
         a = re.sub(r"Decimal\('|'\)", '', str(C))
+        frmres()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")). \
                 replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -434,6 +436,7 @@ def transpA():  # Транспонирование
     try:
         C = Matrices(translate(entrsA))
         a = re.sub(r"Decimal\('|'\)", '', str(C.transpA()))
+        frmres()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
                 replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -444,6 +447,7 @@ def traceA():  # След
     try:
         C = SquareMatrices(translate(entrsA))
         a = re.sub(r"Decimal\('|'\)", '', str(C.traceA()))
+        frmres()
         if a != 'След матрицы можно вычислить только у квадратной матрицы':
             res.set('След матрицы А = ' + str(a))
         else:
@@ -456,6 +460,7 @@ def mult():  # Умножение А и В
     try:
         C = Matrices(translate(entrsA)) * translate(entrsB)
         a = re.sub(r"Decimal\('|'\)", '', str(C))
+        frmres()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
                 replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -467,6 +472,7 @@ def multnum():
         # noinspection PyTypeChecker
         C = Matrices(translate(entrsA)) * Decimal(num.get())
         a = re.sub(r"Decimal\('|'\)", '', str(C))
+        frmres()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
                 replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -476,6 +482,7 @@ def multnum():
 def powerA():  # Возведение в степень
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)) ** power.get()))
+        frmres()
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
                 replace('[', '', str(a).count('[')))
     except (NameError, tk.TclError, IndexError):
@@ -507,7 +514,7 @@ btn0b = tk.Button(frm0, font=k, text='Получить размерность м
 
 # Кнопки вычислений
 frm1 = tk.LabelFrame(window, text='Операция', font=k)
-frm1.grid(row=1)
+frm1.pack(side='left', anchor='n')
 res = tk.StringVar()
 btn1 = tk.Button(frm1, font=k, text='А + В', command=add, width=k[1] + 1).grid()
 btn2 = tk.Button(frm1, font=k, text='А - В', command=difference, width=k[1] + 1).grid(column=1, row=0)
@@ -522,7 +529,7 @@ ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float(
 btn8 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy, width=k[1] + 5)
 btn8.grid(row=2, column=1, pady=k[1] + 2, columnspan=2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
-frm4.grid(row=1, column=1, columnspan=1, sticky='s')
+frmres = lambda: frm4.pack(side='left', anchor='n')
 lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 print('-------------Начало работы-------------')
 window.mainloop()
