@@ -500,6 +500,18 @@ def rnd():  # Случайные значения в ячейках матриц
         res.set('Введите размерность матриц')
 
 
+def A2BB2A():
+    try:
+        global entrsA, entrsB, frms
+        entrsA, entrsB = entrsB, entrsA
+        frms[0].place(x=frm0.winfo_width() + An.get() * (3 * k[1]) + k[1])
+        frms[1].place(x=frm0.winfo_width() + 5)
+        frms[0].config(text="Матрица В"), frms[1].config(text="Матрица А")
+        frms = [frms[1], frms[0]]
+    except NameError:
+        res.set('Введите размерность матриц')
+
+
 btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
 btn0a.pack(fill=tk.X)
@@ -522,6 +534,7 @@ ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float(
 btn8 = tk.Button(frm1, font=k, text='det(A)', width=k[1] + 1).grid(row=2, column=1)
 btn6b = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1).grid(row=2, column=2)
 btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A', width=2 * k[1] + 1).grid(row=3, column=0, columnspan=2)
+btn10 = tk.Button(frm1, font=k, text='Поменять А и В', width=k[1] + 1, command=A2BB2A).grid(row=3, column=2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.pack(side='left', anchor='n')
 lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
@@ -529,10 +542,10 @@ lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 # Другие кнопки
 frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
-btn10 = tk.Button(frm5, font=k, text='Спроецировать параллелограммы матриц 2x2').pack(fill=tk.X)
-btn11 = tk.Button(frm5, font=k, text='Системы линейных уравнений').pack(fill=tk.X)
-btn12 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
-btn12.pack(fill=tk.X)
+btn11 = tk.Button(frm5, font=k, text='Спроецировать параллелограммы матриц 2x2').pack(fill=tk.X)
+btn12 = tk.Button(frm5, font=k, text='Системы линейных уравнений').pack(fill=tk.X)
+btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
+btn13.pack(fill=tk.X)
 print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
