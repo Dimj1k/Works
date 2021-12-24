@@ -344,7 +344,7 @@ window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(int(screen_width) * 1.5 // 5)) + '+' + str(int(int(screen_height) * 1.5 // 6)))
 
-k = ('Times New Roman', int(window.winfo_screenwidth() // 130))
+k = ('Times New Roman', 11)
 
 # Ввод данных
 frm0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
@@ -514,16 +514,25 @@ btn2 = tk.Button(frm1, font=k, text='А - В', command=difference, width=k[1] + 
 btn3 = tk.Button(frm1, font=k, text='А * В', command=mult, width=k[1] + 1).grid(column=2, row=0)
 btn4 = tk.Button(frm1, font=k, text='Трансп. А', command=transpA, width=k[1] + 1).grid(row=1)
 btn5 = tk.Button(frm1, font=k, text='След А', command=traceA, width=k[1] + 1).grid(row=1, column=1)
-btn6 = tk.Button(frm1, font=k, text='А ^ степень       ', command=powerA, width=k[1] + 1).grid(row=1, column=2)
+btn6a = tk.Button(frm1, font=k, text='А ^ степень       ', command=powerA, width=k[1] + 1).grid(row=1, column=2)
 ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=1, to=float('inf'), width=2).grid(row=1, column=2, sticky='e')
 btn7 = tk.Button(frm1, font=k, text='A * число      ', command=multnum, width=k[1] + 1).grid(row=2)
 ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float('inf'), width=2) \
     .grid(row=2, column=0, sticky='e')
-btn8 = tk.Button(frm1, font=k, text='Выйти из программы', command=window.destroy, width=k[1] + 5)
-btn8.grid(row=2, column=1, pady=k[1] + 2, columnspan=2)
+btn8 = tk.Button(frm1, font=k, text='det(A)', width=k[1] + 1).grid(row=2, column=1)
+btn6b = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1).grid(row=2, column=2)
+btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A', width=2 * k[1] + 1).grid(row=3, column=0, columnspan=2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.pack(side='left', anchor='n')
 lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
+
+# Другие кнопки
+frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
+frm5.pack(side='right', anchor='s')
+btn10 = tk.Button(frm5, font=k, text='Спроецировать параллелограммы матриц 2x2').pack(fill=tk.X)
+btn11 = tk.Button(frm5, font=k, text='Системы линейных уравнений').pack(fill=tk.X)
+btn12 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
+btn12.pack(fill=tk.X)
 print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
