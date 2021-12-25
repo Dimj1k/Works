@@ -3,7 +3,7 @@ from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
 
-getcontext().prec = 16
+getcontext().prec = 6
 
 
 class Calc:
@@ -216,7 +216,10 @@ class Matrices:  # Матрицы
         self.matricA = matricA
 
     def __add__(self, matricB):  # Сумма матриц А и В
-        nB = len(matricB[0])
+        try:
+            nB = len(matricB[0])
+        except TypeError:
+            return 'Введите сумму матриц'
         mB = len(matricB)
         if self.nA != nB or self.mA != mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
@@ -231,7 +234,10 @@ class Matrices:  # Матрицы
         return matricCa
 
     def __sub__(self, matricB):  # Разность матриц А и В
-        nB = len(matricB[0])
+        try:
+            nB = len(matricB[0])
+        except TypeError:
+            return 'Введите разность матриц'
         mB = len(matricB)
         if self.nA != nB or self.mA != mB:
             return ' Введите равное количество столбцов и строчек в матрицах А и B '
@@ -249,7 +255,7 @@ class Matrices:  # Матрицы
         matricCt, lstes = [], []
         for j in range(self.nA):
             for i in range(self.mA):
-                print(f'Меняю {i + 1} строка с {j + 1} столбец')
+                print(f'Меняю {i + 1} строка и {j + 1} столбец на {j + 1} строку и {i + 1} столбец')
                 lstes.append(self.matricA[i][j])
             matricCt.append(lstes)
             lstes = []
@@ -332,7 +338,7 @@ class ZeroMatrices(Matrices):  # Все нули
     pass
 
 
-class DiagonalMatrices(Matrices):  # По диагонали числа
+class DiagonalMatrices(UnitMatrices):  # По диагонали числа
     pass
 
 
@@ -369,9 +375,9 @@ num = tk.DoubleVar()
 # noinspection PyGlobalUndefined
 def show1():  # Показать
     frm2 = tk.LabelFrame(window, text='Матрица А', font=k)
-    frm2.place(x=frm0.winfo_width() + 5)
+    frm2.place(x=frm0.winfo_width())
     frm3 = tk.LabelFrame(window, text='Матрица В', font=k)
-    frm3.place(x=frm0.winfo_width() + An.get() * (3 * k[1]) + k[1])
+    frm3.place(x=frm0.winfo_width() + An.get() * (3 * k[1]) + k[1] + 40)
     global entrs1, entrs2, entrsA, entrsB, frms
     entrs1, entrs2, entrsA, entrsB = [], [], [], []
 
@@ -391,7 +397,7 @@ def show1():  # Показать
             entrsB.append(entrs2)
             entrs2 = []
     else:
-        lbl2 = tk.Label(frm3, text='Введите количество строк и количество столбцов\nв матрице В больше 0', font=k)
+        lbl2 = tk.Label(frm3, text='Введите количество строк\nи количество столбцов\nв матрице В больше 0', font=k)
         lbl2.grid()
     btn0b.pack(fill=tk.X)
     btn0a.destroy()
@@ -504,8 +510,9 @@ def A2BB2A():
     try:
         global entrsA, entrsB, frms
         entrsA, entrsB = entrsB, entrsA
-        frms[0].place(x=frm0.winfo_width() + An.get() * (3 * k[1]) + k[1])
-        frms[1].place(x=frm0.winfo_width() + 5)
+        frms[0].place(x=frm0.winfo_width() + An.get() * (3 * k[1]) + k[1] + 40)
+        print('Меняю местами')
+        frms[1].place(x=frm0.winfo_width())
         frms[0].config(text="Матрица В"), frms[1].config(text="Матрица А")
         frms = [frms[1], frms[0]]
     except NameError:
@@ -543,9 +550,8 @@ lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
 btn11 = tk.Button(frm5, font=k, text='Спроецировать параллелограммы матриц 2x2').pack(fill=tk.X)
-btn12 = tk.Button(frm5, font=k, text='Системы линейных уравнений').pack(fill=tk.X)
-btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
-btn13.pack(fill=tk.X)
+btn12 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
+btn12.pack(fill=tk.X)
 print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
