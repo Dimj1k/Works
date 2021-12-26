@@ -190,6 +190,7 @@ class Matrices:  # Матрицы
         self.matricA = matricA
         self.mA = len(self.matricA)
         self.nA = len(self.matricA[0])
+        self.__ans = []
 
     @property
     def set_mA(self):
@@ -219,37 +220,37 @@ class Matrices:  # Матрицы
         try:
             nB = len(matricB[0])
         except TypeError:
-            return 'Введите сумму матриц'
+            return 'Введите сумму матриц ([[]])'
         mB = len(matricB)
         if self.nA != nB or self.mA != mB:
-            return ' Введите равное количество столбцов и строчек в матрицах А и B '
-        matricCa, lstes = [], []
+            return ' Введите равное количество столбцов\n и строчек в матрицах А и B '
+        lstes = []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 print(f'Суммирую {i + 1} строку {j + 1} столбец матриц: {self.matricA[i][j]} + {matricB[i][j]}')
                 lstes.append(self.matricA[i][j] + matricB[i][j])
-            matricCa.append(lstes)
+            self.__ans.append(lstes)
             lstes = []
         print('--------------------------------------------------------------------------------------')
-        return matricCa
+        return self.__ans
 
     def __sub__(self, matricB):  # Разность матриц А и В
         try:
             nB = len(matricB[0])
         except TypeError:
-            return 'Введите разность матриц'
+            return 'Введите разность матриц ([[]])'
         mB = len(matricB)
         if self.nA != nB or self.mA != mB:
-            return ' Введите равное количество столбцов и строчек в матрицах А и B '
-        matricCs, lstes = [], []
+            return ' Введите равное количество столбцов\n и строчек в матрицах А и B '
+        lstes = []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
                 print(f'Вычитаю {i + 1} строку {j + 1} столбец матриц: {self.matricA[i][j]} - {matricB[i][j]}')
                 lstes.append(self.matricA[i][j] - matricB[i][j])
-            matricCs.append(lstes)
+            self.__ans.append(lstes)
             lstes = []
         print('--------------------------------------------------------------------------------------')
-        return matricCs
+        return self.__ans
 
     def transpA(self):  # Транспонирование матрицы А
         matricCt, lstes = [], []
@@ -257,26 +258,24 @@ class Matrices:  # Матрицы
             for i in range(self.mA):
                 print(f'Меняю {i + 1} строка и {j + 1} столбец на {j + 1} строку и {i + 1} столбец')
                 lstes.append(self.matricA[i][j])
-            matricCt.append(lstes)
+            self.__ans.append(lstes)
             lstes = []
         print('--------------------------------------------------------------------------------------')
-        return matricCt
+        return self.__ans
 
     def __mul__(self, matricB):  # Умножение матриц А и В
         try:
             nB = len(matricB[0])
             mB = len(matricB)
-        except (TypeError, InvalidOperation):
-            matricCmn = []
+        except TypeError:
             for i in self.matricA:
-                print(f'Умножаю:', list(map(lambda t: str(t), i)),
-                      'cтроку на число')
-                matricCmn.append(list(map(lambda x: x * matricB, i)))
+                print(f'Умножаю:', list(map(lambda t: str(t), i)), 'cтроку на число')
+                self.__ans.append(list(map(lambda x: x * matricB, i)))
             print('--------------------------------------------------------------------------------------')
-            return matricCmn
+            return self.__ans
         if self.nA != mB:
-            return ' Количество столбцов А должно равняться количеству строк В '
-        matricCm, lstes, lst = [], [], []
+            return ' Количество столбцов А должно\n равняться количеству строк В '
+        lstes, lst = [], []
         for i in range(self.mA):
             for m in range(nB):
                 for j in range(mB):
@@ -285,40 +284,41 @@ class Matrices:  # Матрицы
                     lst.append(self.matricA[i][j] * matricB[j][m])
                 lstes.append(sum(lst))
                 lst = []
-            matricCm.append(lstes)
+            self.__ans.append(lstes)
             lstes = []
         print('--------------------------------------------------------------------------------------')
-        return matricCm
+        return self.__ans
 
 
 class SquareMatrices(Matrices):  # Квадрат
 
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
-            return 'След матрицы можно вычислить только у квадратной матрицы'
+            return 'След матрицы можно вычислить\n только у квадратной матрицы'
         lst = []
         for i in range(len(self.matricA)):
-            print(f'Суммирую {i + 1} c {sum(lst)} диагональный элемент матрицы')
+            print(f'Суммирую c {sum(lst)} - {i + 1} ({self.matricA[i][i]}) диагональный элемент матрицы')
             lst.append(self.matricA[i][i])
         print('--------------------------------------------------------------------------------------')
-        trace = sum(lst)
-        return trace
+        self.__ans = sum(lst)
+        return self.__ans
 
     def __pow__(self, powm, modulo=None):  # Возведение в степень матрицы А
         if self.nA != self.mA and powm != 1:
-            return ' Возвести в степень можно только квадратную матрицу '
-        matricAp = self.matricA
+            return ' Возвести в степень можно\n только квадратную матрицу '
+        self.__ans = self.matricA
         for i in range(1, powm):
-            matricCp = Matrices(matricAp)
-            matricAp = matricCp * self.matricA
-        return matricAp
-
-
-class RectangleMatrices(Matrices):  # Прямоугольник
-    pass
+            self.__ans = SquareMatrices(self.__ans) * self.matricA
+        return self.__ans
 
 
 class TriangleMatrices(Matrices):  # Над или под главной диагональю нули
+
+    def totriangle(self):
+        pass
+
+
+class RectangleMatrices(Matrices):  # Прямоугольник
     pass
 
 
@@ -421,7 +421,7 @@ def add():  # Сумма
         C = Matrices(translate(entrsA)) + (translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
         res.set(a[1:-1].replace(r"], ", '\n', a.count(r"], ")). \
-                replace(']', '', a.count(']')).replace('[', '', a.count('[')))
+                replace(']', '', a.count(']')).replace('[', '', a.count('[')).replace(',', ',  ', a.count(',')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -430,8 +430,8 @@ def difference():  # Разность
     try:
         C = Matrices(translate(entrsA)) - translate(entrsB)
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")). \
-                replace(']', '', str(a).count(']')).replace('[', '', str(a).count('[')))
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')) \
+                .replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -441,7 +441,7 @@ def transpA():  # Транспонирование
         C = Matrices(translate(entrsA))
         a = re.sub(r"Decimal\('|'\)", '', str(C.transpA()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')))
+                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -460,10 +460,10 @@ def traceA():  # След
 
 def mult():  # Умножение А и В
     try:
-        C = Matrices(translate(entrsA)) * translate(entrsB)
+        C = (Matrices(translate(entrsA)) * translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')))
+                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -474,7 +474,7 @@ def multnum():
         C = Matrices(translate(entrsA)) * Decimal(num.get())
         a = re.sub(r"Decimal\('|'\)", '', str(C))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')))
+                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -483,7 +483,7 @@ def powerA():  # Возведение в степень
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)) ** power.get()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')))
+                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
