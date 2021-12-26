@@ -223,7 +223,7 @@ class Matrices:  # Матрицы
             return 'Введите сумму матриц ([[]])'
         mB = len(matricB)
         if self.nA != nB or self.mA != mB:
-            return ' Введите равное количество столбцов\n и строчек в матрицах А и B '
+            return ' Введите равное количество столбцов\nи строчек в матрицах А и B '
         lstes = []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
@@ -241,7 +241,7 @@ class Matrices:  # Матрицы
             return 'Введите разность матриц ([[]])'
         mB = len(matricB)
         if self.nA != nB or self.mA != mB:
-            return ' Введите равное количество столбцов\n и строчек в матрицах А и B '
+            return ' Введите равное количество столбцов\nи строчек в матрицах А и B '
         lstes = []
         for i in range(len(self.matricA)):
             for j in range(len(self.matricA[i])):
@@ -274,7 +274,7 @@ class Matrices:  # Матрицы
             print('--------------------------------------------------------------------------------------')
             return self.__ans
         if self.nA != mB:
-            return ' Количество столбцов А должно\n равняться количеству строк В '
+            return ' Количество столбцов А должно\nравняться количеству строк В '
         lstes, lst = [], []
         for i in range(self.mA):
             for m in range(nB):
@@ -294,7 +294,7 @@ class SquareMatrices(Matrices):  # Квадрат
 
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
-            return 'След матрицы можно вычислить\n только у квадратной матрицы'
+            return 'След матрицы можно вычислить\nтолько у квадратной матрицы'
         lst = []
         for i in range(len(self.matricA)):
             print(f'Суммирую c {sum(lst)} - {i + 1} ({self.matricA[i][i]}) диагональный элемент матрицы')
@@ -305,17 +305,81 @@ class SquareMatrices(Matrices):  # Квадрат
 
     def __pow__(self, powm, modulo=None):  # Возведение в степень матрицы А
         if self.nA != self.mA and powm != 1:
-            return ' Возвести в степень можно\n только квадратную матрицу '
+            return ' Возвести в степень можно\nтолько квадратную матрицу '
+        if powm == 0:
+            return UnitMatrices(self.matricA).toUnit()
         self.__ans = self.matricA
         for i in range(1, powm):
             self.__ans = SquareMatrices(self.__ans) * self.matricA
         return self.__ans
 
+    def detA(self):  # Определитель матрицы через треугольный вид матрицы А
+        if self.nA != self.mA:
+            return 'Вычислить определитель можно\nтолько у квадратной матрицы'
+        self.__ans = 1
+        self.matricA = TriangleMatrices(self.matricA).triangulationAU()
+        print('-----------Вычисляю определитель матрицы-----------')
+        for i in range(self.nA):
+            self.__ans *= self.matricA[i][i]
+        return self.__ans
+
+    @classmethod
+    def minor_a(cls, matricA, pop_i, pop_j):  # Минор элемента матрицы
+        if pop_i <= 0 or pop_j <= 0:
+            return 'Введите номер строки\nи номер столбца больше нуля'
+        print(f'-----------Вычисляю минор {pop_i} строки {pop_j} столбца-----------')
+        ansm = []
+        for i in range(len(matricA)):
+            d = matricA[i]
+            if i != pop_i - 1:
+                d.pop(pop_j - 1)
+                ansm.append(d)
+        return Matrices(ansm) * (-1) ** (pop_j + pop_i)
+
+    def invertA(self):  # Обратный вид матрицы
+        from copy import deepcopy
+        if self.nA != self.mA:
+            return ' Возвести в степень можно\nтолько квадратную матрицу '
+        if self.nA == 1:
+            return self.matricA[0][0] ** (-1)
+        copym, lst = deepcopy(self.matricA), []
+        det, ans = SquareMatrices(self.matricA).detA() ** (-1), []
+        if det == float('inf'):
+            return ' Определитель равен нулю\nобратной матрицы не существует '
+        for i in range(self.nA):
+            for j in range(self.nA):
+                self.matricA = deepcopy(copym)
+                print(copym)
+                mnr_a = SquareMatrices.minor_a(self.matricA, i + 1, j + 1)
+                lst.append(SquareMatrices(mnr_a).detA())
+            ans.append(lst)
+            lst = []
+        ans = Matrices(Matrices(ans).transpA()) * det
+        print(ans)
+        return ans
+
 
 class TriangleMatrices(Matrices):  # Над или под главной диагональю нули
 
-    def totriangle(self):
-        pass
+    def triangulationAU(self):  # Триангуляция матрицы А под главной диагональю нули
+        print('-----------Привожу матрицу к ступенчатому виду-----------')
+        for i in range(self.mA):  # Если 1 стр, 1 ст = 0, то поменяет местами строки
+            if self.matricA[i][0] != 0:
+                self.matricA[0], self.matricA[i] = self.matricA[i], self.matricA[0]
+                break
+        for i in range(self.nA):
+            m = i
+            for j in range(i + 1, self.mA + 1):
+                try:
+                    while self.matricA[i][m] == 0:
+                        m += 1
+                    self.matricA[j] = (Matrices([self.matricA[j]]) - (Matrices([self.matricA[i]]) *
+                                                                      (self.matricA[j][m] / self.matricA[i][m])))[0]
+                except IndexError:
+                    print(f'Пропускаю {i + 1} строку {j} столбец')
+        print('-----------Матрица приведена к ступенчатому виду-----------')
+        self.__ans = self.matricA
+        return self.__ans
 
 
 class RectangleMatrices(Matrices):  # Прямоугольник
@@ -331,7 +395,12 @@ class ColumnMatrices(Matrices):  # Столбец
 
 
 class UnitMatrices(Matrices):  # По диагонали единицы
-    pass
+
+    def toUnit(self):
+        self.__ans = [[0] * self.nA] * self.nA
+        for i in range(self.nA):
+            self.__ans[i] = [0] * i + [1] + [0] * (self.nA - i - 1)
+        return self.__ans
 
 
 class ZeroMatrices(Matrices):  # Все нули
@@ -450,7 +519,7 @@ def traceA():  # След
     try:
         C = SquareMatrices(translate(entrsA))
         a = re.sub(r"Decimal\('|'\)", '', str(C.traceA()))
-        if a != 'След матрицы можно вычислить только у квадратной матрицы':
+        if a != 'След матрицы можно вычислить\nтолько у квадратной матрицы':
             res.set('След матрицы А = ' + str(a))
         else:
             res.set(str(a))
@@ -482,6 +551,37 @@ def multnum():
 def powerA():  # Возведение в степень
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)) ** power.get()))
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
+                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+    except (NameError, tk.TclError, IndexError):
+        res.set('Введите размерность матриц')
+
+
+def triangulationAU():
+    try:
+        a = re.sub(r"Decimal\('|'\)", '', str(TriangleMatrices(translate(entrsA)).triangulationAU()))
+        a = re.sub(r'[-]?0[.]0{2,}\d+|0E[-]\d*', '0', a)
+        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
+                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+    except (NameError, tk.TclError, IndexError):
+        res.set('Введите размерность матриц')
+
+
+def detA():
+    try:
+        C = SquareMatrices(translate(entrsA))
+        a = re.sub(r"Decimal\('|'\)", '', str(C.detA()))
+        if a != 'Вычислить определитель можно\nтолько у квадратной матрицы':
+            res.set('Определитель матрицы А = ' + str(a))
+        else:
+            res.set(str(a))
+    except (NameError, tk.TclError, IndexError):
+        res.set('Введите размерность матриц')
+
+
+def invertA():
+    try:
+        a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)).invertA()))
         res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
                 replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
     except (NameError, tk.TclError, IndexError):
@@ -534,14 +634,16 @@ btn3 = tk.Button(frm1, font=k, text='А * В', command=mult, width=k[1] + 1).gri
 btn4 = tk.Button(frm1, font=k, text='Трансп. А', command=transpA, width=k[1] + 1).grid(row=1)
 btn5 = tk.Button(frm1, font=k, text='След А', command=traceA, width=k[1] + 1).grid(row=1, column=1)
 btn6a = tk.Button(frm1, font=k, text='А ^ степень       ', command=powerA, width=k[1] + 1).grid(row=1, column=2)
-ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=1, to=float('inf'), width=2).grid(row=1, column=2, sticky='e')
+ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=0, to=float('inf'), width=2)
+ent1.grid(row=1, column=2, sticky='e')
 btn7 = tk.Button(frm1, font=k, text='A * число      ', command=multnum, width=k[1] + 1).grid(row=2)
 ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float('inf'), width=2) \
     .grid(row=2, column=0, sticky='e')
-btn8 = tk.Button(frm1, font=k, text='det(A)', width=k[1] + 1).grid(row=2, column=1)
-btn6b = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1).grid(row=2, column=2)
-btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A', width=2 * k[1] + 1).grid(row=3, column=0, columnspan=2)
-btn10 = tk.Button(frm1, font=k, text='Поменять А и В', width=k[1] + 1, command=A2BB2A).grid(row=3, column=2)
+btn8 = tk.Button(frm1, font=k, text='det(A)', width=k[1] + 1, command=detA).grid(row=2, column=1)
+btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A (U)', width=2 * k[1] + 1, command=triangulationAU).grid \
+    (row=3, column=0, columnspan=2)
+btn10 = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1, command=invertA).grid(row=3, column=2)
+btn11 = tk.Button(frm1, font=k, text='Поменять А и В', width=k[1] + 1, command=A2BB2A).grid(row=2, column=2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.pack(side='left', anchor='n')
 lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
@@ -549,9 +651,9 @@ lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 # Другие кнопки
 frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
-btn11 = tk.Button(frm5, font=k, text='Спроецировать параллелограммы матриц 2x2').pack(fill=tk.X)
-btn12 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
-btn12.pack(fill=tk.X)
+btn12 = tk.Button(frm5, font=k, text='Спроецировать параллелограммы матриц 2x2').pack(fill=tk.X)
+btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
+btn13.pack(fill=tk.X)
 print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
