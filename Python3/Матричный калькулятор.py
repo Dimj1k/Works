@@ -4,6 +4,7 @@ import re
 from decimal import Decimal, getcontext, InvalidOperation
 
 getcontext().prec = 6
+k = ('Times New Roman', 11)
 
 
 class Calc:
@@ -431,8 +432,6 @@ window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(int(screen_width) * 1.5 // 5)) + '+' + str(int(int(screen_height) * 1.5 // 6)))
 
-k = ('Times New Roman', 11)
-
 # Ввод данных
 frm0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
 frm0.pack(side='top', anchor='nw')
@@ -667,19 +666,22 @@ canva.pack(side='top')
 
 def project2x2():  # Параллелограмм матрицы на Canvas
     try:
-        # for i in range(1000):
+        # for i in range(100):
         #     rnd()
-            a, b, c = abs(int(entrsA[0][0].get())), abs(int(entrsA[1][0].get())), abs(int(entrsA[0][1].get()))
-            d = abs(int(entrsA[1][1].get()))
+            a, b, c = int(entrsA[0][0].get()), int(entrsA[1][0].get()), int(entrsA[0][1].get())
+            d = int(entrsA[1][1].get())
             clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'\
-              f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+                  f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
             activeclr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'\
-                    f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
-            canva.create_line(0, 0, a, b, fill=clr, width=k[1] // 2, activefill=activeclr)
-            canva.create_line(a, b, a + c, b + d, fill=clr, width=k[1] // 2, activefill=activeclr)
-            canva.create_line(a + c, b + d, c, d, fill=clr, width=k[1] // 2, activefill=activeclr)
-            canva.create_line(c, d, 0, 0, fill=clr, width=k[1] // 2, activefill=activeclr)
+                        f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+            canva.create_line(100, 100, a + 100, b + 100, fill=clr, width=k[1] // 3, activefill=activeclr)
+            canva.create_line(a + 100, b + 100, a + 100 + c, b + 100 + d, fill=clr, width=k[1] // 3,
+                              activefill=activeclr)
+            canva.create_line(a + 100 + c, b + 100 + d, c + 100, d + 100, fill=clr, width=k[1] // 3,
+                              activefill=activeclr)
+            canva.create_line(c + 100, d + 100, 100, 100, fill=clr, width=k[1] // 3, activefill=activeclr)
             print('Рисую параллелограмм в Canvas')
+            res.set('')
     except NameError:
         res.set('Введите размерность матриц')
     except IndexError:
