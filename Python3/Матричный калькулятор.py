@@ -303,7 +303,7 @@ class SquareMatrices(Matrices):  # Квадрат
     def __pow__(self, powm, modulo=None):  # Возведение в степень матрицы А
         if self.nA != self.mA and powm != 1:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
-        if powm == 0:  # A * A^(-1) = E в Python не работает.
+        if powm == 0:
             return UnitMatrices(self.matricA).toUnit()
         if powm < 0:
             cop, powm = SquareMatrices(self.matricA).invertA(), abs(powm)
@@ -369,8 +369,8 @@ class TriangleMatrices(Matrices):  # Над или под главной диа�
             if self.matricA[i][0] != 0:
                 self.matricA[0], self.matricA[i] = self.matricA[i], self.matricA[0]
                 break
-        for i in range(self.mA):  # Работает, если последняя строка не нулевая
-            if self.matricA[i] == [0] * self.nA and self.matricA[self.mA - 1] != [0] * self.nA:
+        for i in range(self.mA):  # Для матриц с несколькими нулевыми строками не работает
+            if self.matricA[i] == [0] * self.nA:
                 print(f'Меняю местами {i + 1} строку с {self.mA} строкой')
                 self.matricA[i], self.matricA[self.mA - 1] = self.matricA[self.mA - 1], self.matricA[i]
         for i in range(self.nA):
@@ -649,8 +649,8 @@ btn7 = tk.Button(frm1, font=k, text='A * число      ', command=multnum, wid
 ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float('inf'), width=2) \
     .grid(row=2, column=0, sticky='e')
 btn8 = tk.Button(frm1, font=k, text='det(A)', width=k[1] + 1, command=detA).grid(row=2, column=1)
-btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A (U)', width=2 * k[1] + 1, command=triangulationAU).grid\
-    (row=3, column=0, columnspan=2)
+btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A (U)', width=2 * k[1] + 1, command=triangulationAU)\
+    .grid(row=3, column=0, columnspan=2)
 btn10 = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1, command=invertA).grid(row=2, column=2)
 btn11 = tk.Button(frm1, font=k, text='Поменять А и В', width=k[1] + 1, command=A2BB2A).grid(row=3, column=2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
@@ -669,15 +669,15 @@ def project2x2():  # Параллелограмм матрицы на Canvas
     try:
         a, b, c = abs(int(entrsA[0][0].get())), abs(int(entrsA[1][0].get())), abs(int(entrsA[0][1].get()))
         d = abs(int(entrsA[1][1].get()))
-        clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
-          f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
-        activeclr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
-                f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+        clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'\
+              f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+        activeclr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'\
+                    f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
         canva.create_line(0, 0, a, b, fill=clr, width=k[1] // 2, activefill=activeclr)
         canva.create_line(a, b, a + c, b + d, fill=clr, width=k[1] // 2, activefill=activeclr)
         canva.create_line(a + c, b + d, c, d, fill=clr, width=k[1] // 2, activefill=activeclr)
         canva.create_line(c, d, 0, 0, fill=clr, width=k[1] // 2, activefill=activeclr)
-        print('Рисую параллелограмм')
+        print('Рисую параллелограмм в Canvas')
     except NameError:
         res.set('Введите размерность матриц')
     except IndexError:
@@ -687,11 +687,12 @@ def project2x2():  # Параллелограмм матрицы на Canvas
 
 
 # Другие кнопки
-btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
-btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2)
-btn12.pack(fill=tk.X)
-btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
-btn13.pack(fill=tk.X)
+btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
+btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2).pack(fill=tk.X)
+btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',  # Очистить окно Canvas
+                  command=lambda: [canva.delete("all"), print('Очищаю Canvas')]).pack(fill=tk.X)
+btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
+btn14.pack(fill=tk.X)
 print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
