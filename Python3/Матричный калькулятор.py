@@ -660,7 +660,8 @@ frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
 
 # Окно Canvas
-canva = tk.Canvas(frm5, bg='white', height=200, width=200)
+canvah = canvaw = 200
+canva = tk.Canvas(frm5, bg='white', height=canvah, width=canvaw)
 canva.pack(side='top')
 
 
@@ -691,12 +692,14 @@ def project2x2():  # Параллелограмм матрицы на Canvas
 # Другие кнопки
 btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
 btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2).pack(fill=tk.X)
-btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',  # Очистить окно Canvas
-                  command=lambda: [canva.delete("all"), print('Очищаю Canvas'),
-                                   canva.create_oval(100, 100, 101, 101, width=3)]).pack(fill=tk.X)
-canva.create_oval(100, 100, 101, 101, width=3)
+btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',
+                  command=lambda: [canva.delete("all"), print('Очищаю Canvas'), Y(), X()]).pack(fill=tk.X)
+Y = lambda: [canva.create_line(canvaw / 2, 0, canvaw / 2, canvah, arrow='first'),
+             canva.create_text(canvah / 2 + 7, 9, text='y', font=k)]
+X = lambda: [canva.create_line(0, canvah / 2, canvaw, canvah / 2, arrow='last'),
+             canva.create_text(canvaw - 7, canvah / 2 - 9, text='x', font=k)]
 btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
-btn14.pack(fill=tk.X)
+btn14.pack(fill=tk.X), Y(), X()
 print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
