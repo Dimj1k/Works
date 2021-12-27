@@ -115,27 +115,17 @@ class Calc:
     # Перебор операторов в списке
     @classmethod
     def equal(cls, n):
-        try:
-            a1 = n.index('/')
-        except ValueError:
-            a1 = float('inf')
-        try:
-            a2 = n.index('*')
-        except ValueError:
-            a2 = float('inf')
-        try:
-            a3 = n.index('^')
-        except ValueError:
-            a3 = float('inf')
+        try:a1 = n.index('/')
+        except ValueError:a1 = float('inf')
+        try:a2 = n.index('*')
+        except ValueError:a2 = float('inf')
+        try:a3 = n.index('^')
+        except ValueError:a3 = float('inf')
         if a1 == float('inf') and a2 == float('inf') and a3 == float('inf'):
-            try:
-                a4 = n.index('+')
-            except ValueError:
-                a4 = float('inf')
-            try:
-                a5 = n.index('-')
-            except ValueError:
-                a5 = float('inf')
+            try:a4 = n.index('+')
+            except ValueError:a4 = float('inf')
+            try:a5 = n.index('-')
+            except ValueError:a5 = float('inf')
             return min([a4, a5])
         else:
             return min([a1, a2, a3])
@@ -292,6 +282,8 @@ class Matrices:  # Матрицы
 
 class SquareMatrices(Matrices):  # Квадрат
 
+    from copy import deepcopy
+
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
             return 'След матрицы можно вычислить\nтолько у квадратной матрицы'
@@ -308,6 +300,10 @@ class SquareMatrices(Matrices):  # Квадрат
             return ' Возвести в степень можно\nтолько квадратную матрицу '
         if powm == 0:
             return UnitMatrices(self.matricA).toUnit()
+        if powm < 0:
+            cop, powm = SquareMatrices(self.matricA).invertA(), abs(powm)
+            self.matricA = SquareMatrices.deepcopy(cop)
+            del cop
         self.__ans = self.matricA
         for i in range(1, powm):
             self.__ans = SquareMatrices(self.__ans) * self.matricA
@@ -334,28 +330,29 @@ class SquareMatrices(Matrices):  # Квадрат
             if i != pop_i - 1:
                 d.pop(pop_j - 1)
                 ansm.append(d)
+        print(f'---------Минор {pop_i} строки {pop_j} столбца:', Matrices(ansm) * (-1) ** (pop_j + pop_i), '---------')
         return Matrices(ansm) * (-1) ** (pop_j + pop_i)
 
     def invertA(self):  # Обратный вид матрицы
-        from copy import deepcopy
         if self.nA != self.mA:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
         if self.nA == 1:
             return self.matricA[0][0] ** (-1)
-        copym, lst = deepcopy(self.matricA), []
-        det, ans = SquareMatrices(self.matricA).detA() ** (-1), []
+        copym, lst = SquareMatrices.deepcopy(self.matricA), []
+        try:
+            det, ans = SquareMatrices(self.matricA).detA() ** (-1), []
+        except ZeroDivisionError:
+            return ' Определитель равен нулю\nобратной матрицы не существует '
         if det == float('inf'):
             return ' Определитель равен нулю\nобратной матрицы не существует '
         for i in range(self.nA):
             for j in range(self.nA):
-                self.matricA = deepcopy(copym)
-                print(copym)
+                self.matricA = SquareMatrices.deepcopy(copym)
                 mnr_a = SquareMatrices.minor_a(self.matricA, i + 1, j + 1)
                 lst.append(SquareMatrices(mnr_a).detA())
             ans.append(lst)
             lst = []
         ans = Matrices(Matrices(ans).transpA()) * det
-        print(ans)
         return ans
 
 
@@ -367,6 +364,9 @@ class TriangleMatrices(Matrices):  # Над или под главной диа�
             if self.matricA[i][0] != 0:
                 self.matricA[0], self.matricA[i] = self.matricA[i], self.matricA[0]
                 break
+        for i in range(self.mA):
+            if self.matricA[i] == [0] * self.mA:
+                self.matricA[i], self.matricA[self.mA - 1] = self.matricA[self.mA - 1], self.matricA[i]
         for i in range(self.nA):
             m = i
             for j in range(i + 1, self.mA + 1):
@@ -394,20 +394,24 @@ class ColumnMatrices(Matrices):  # Столбец
     pass
 
 
-class UnitMatrices(Matrices):  # По диагонали единицы
+class UnitMatrices(SquareMatrices):  # По диагонали единицы
 
     def toUnit(self):
+        if self.nA != self.mA:
+            return 'Привести матрицу к единичной\nможно только квадратную матрицу'
         self.__ans = [[0] * self.nA] * self.nA
+        print('-----------Привожу матрицу к единичной-----------')
         for i in range(self.nA):
             self.__ans[i] = [0] * i + [1] + [0] * (self.nA - i - 1)
+        print('--------------------------------------------------------------------------------------')
         return self.__ans
 
 
-class ZeroMatrices(Matrices):  # Все нули
+class DiagonalMatrices(UnitMatrices):  # По диагонали числа
     pass
 
 
-class DiagonalMatrices(UnitMatrices):  # По диагонали числа
+class ZeroMatrices(DiagonalMatrices, TriangleMatrices):  # Все нули
     pass
 
 
@@ -485,12 +489,16 @@ def show2():  # Показать
     return show1()
 
 
+def printres(p):  # Вывод
+    return p[1:-1].replace(r"], ", '\n', p.count(r"], ")). \
+                replace(']', '', p.count(']')).replace('[', '', p.count('[')).replace(',', ',  ', p.count(','))
+
+
 def add():  # Сумма
     try:
         C = Matrices(translate(entrsA)) + (translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(a[1:-1].replace(r"], ", '\n', a.count(r"], ")). \
-                replace(']', '', a.count(']')).replace('[', '', a.count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -499,8 +507,7 @@ def difference():  # Разность
     try:
         C = Matrices(translate(entrsA)) - translate(entrsB)
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')) \
-                .replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -509,8 +516,7 @@ def transpA():  # Транспонирование
     try:
         C = Matrices(translate(entrsA))
         a = re.sub(r"Decimal\('|'\)", '', str(C.transpA()))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -531,8 +537,7 @@ def mult():  # Умножение А и В
     try:
         C = (Matrices(translate(entrsA)) * translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -542,8 +547,7 @@ def multnum():
         # noinspection PyTypeChecker
         C = Matrices(translate(entrsA)) * Decimal(num.get())
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -551,8 +555,7 @@ def multnum():
 def powerA():  # Возведение в степень
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)) ** power.get()))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -561,8 +564,7 @@ def triangulationAU():
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(TriangleMatrices(translate(entrsA)).triangulationAU()))
         a = re.sub(r'[-]?0[.]0{2,}\d+|0E[-]\d*', '0', a)
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -582,8 +584,7 @@ def detA():
 def invertA():
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)).invertA()))
-        res.set(str(a)[1:-1].replace(r"], ", '\n', str(a).count(r"], ")).replace(']', '', str(a).count(']')). \
-                replace('[', '', str(a).count('[')).replace(',', ',  ', a.count(',')))
+        res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -634,13 +635,13 @@ btn3 = tk.Button(frm1, font=k, text='А * В', command=mult, width=k[1] + 1).gri
 btn4 = tk.Button(frm1, font=k, text='Трансп. А', command=transpA, width=k[1] + 1).grid(row=1)
 btn5 = tk.Button(frm1, font=k, text='След А', command=traceA, width=k[1] + 1).grid(row=1, column=1)
 btn6a = tk.Button(frm1, font=k, text='А ^ степень       ', command=powerA, width=k[1] + 1).grid(row=1, column=2)
-ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=0, to=float('inf'), width=2)
+ent1 = tk.Spinbox(frm1, font=k, textvariable=power, from_=-float('inf'), to=float('inf'), width=2)
 ent1.grid(row=1, column=2, sticky='e')
 btn7 = tk.Button(frm1, font=k, text='A * число      ', command=multnum, width=k[1] + 1).grid(row=2)
 ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float('inf'), width=2) \
     .grid(row=2, column=0, sticky='e')
 btn8 = tk.Button(frm1, font=k, text='det(A)', width=k[1] + 1, command=detA).grid(row=2, column=1)
-btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A (U)', width=2 * k[1] + 1, command=triangulationAU).grid \
+btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A (U)', width=2 * k[1] + 1, command=triangulationAU).grid\
     (row=3, column=0, columnspan=2)
 btn10 = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1, command=invertA).grid(row=3, column=2)
 btn11 = tk.Button(frm1, font=k, text='Поменять А и В', width=k[1] + 1, command=A2BB2A).grid(row=2, column=2)
