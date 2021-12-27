@@ -671,14 +671,15 @@ def project2x2():  # Параллелограмм матрицы на Canvas
         #     rnd()
             a, b, c = int(entrsA[0][0].get()), int(entrsA[1][0].get()), int(entrsA[0][1].get())
             d = int(entrsA[1][1].get())
-            clr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for i in range(6)])
-            activeclr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for i in range(6)])
-            canva.create_line(100, 100, a + 100, b + 100, fill=clr, width=k[1] // 3, activefill=activeclr)
-            canva.create_line(a + 100, b + 100, a + 100 + c, b + 100 + d, fill=clr, width=k[1] // 3,
+            clr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
+            activeclr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
+            half = canvaw / 2
+            canva.create_line(half, half, a + half, b + half, fill=clr, width=k[1] // 3, activefill=activeclr)
+            canva.create_line(a + half, b + half, a + half + c, b + half + d, fill=clr, width=k[1] // 3,
                               activefill=activeclr)
-            canva.create_line(a + 100 + c, b + 100 + d, c + 100, d + 100, fill=clr, width=k[1] // 3,
+            canva.create_line(a + half + c, b + half + d, c + half, d + half, fill=clr, width=k[1] // 3,
                               activefill=activeclr)
-            canva.create_line(c + 100, d + 100, 100, 100, fill=clr, width=k[1] // 3, activefill=activeclr)
+            canva.create_line(c + half, d + half, half, half, fill=clr, width=k[1] // 3, activefill=activeclr)
             print(f'Рисую параллелограмм в Canvas HEX-цвета {clr}')
             res.set('')
     except NameError:
