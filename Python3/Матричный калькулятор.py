@@ -369,7 +369,7 @@ class TriangleMatrices(Matrices):  # Над или под главной диа�
             if self.matricA[i][0] != 0:
                 self.matricA[0], self.matricA[i] = self.matricA[i], self.matricA[0]
                 break
-        for i in range(self.mA):  # Работает только с [..., [float, float, float, ...]]
+        for i in range(self.mA):  # Работает, если последняя строка не нулевая
             if self.matricA[i] == [0] * self.nA and self.matricA[self.mA - 1] != [0] * self.nA:
                 print(f'Меняю местами {i + 1} строку с {self.mA} строкой')
                 self.matricA[i], self.matricA[self.mA - 1] = self.matricA[self.mA - 1], self.matricA[i]
