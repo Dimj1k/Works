@@ -222,7 +222,7 @@ class Matrices:  # Матрицы
             self.__ans.append(lstes)
             lstes = []
         print('--------------------------------------------------------------------------------------')
-        return self.__ans
+        return Matrices(self.__ans)
 
     def __sub__(self, matricB):  # Разность матриц А и В
         try:
@@ -278,6 +278,11 @@ class Matrices:  # Матрицы
             lstes = []
         print('--------------------------------------------------------------------------------------')
         return self.__ans
+
+    def __str__(self):  # Работает только с __add__
+        return str(self.matricA)[1:-1].replace(r"], ", '\n', str(self.matricA).count(r"], ")) \
+                .replace(']', '', str(self.matricA).count(']')).replace('[', '', str(self.matricA).count('[')) \
+                .replace(',', ',  ', str(self.matricA).count(','))
 
 
 class SquareMatrices(Matrices):  # Квадрат
@@ -337,7 +342,7 @@ class SquareMatrices(Matrices):  # Квадрат
         if self.nA != self.mA:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
         if self.nA == 1:
-            return self.matricA[0][0] ** (-1)
+            return [[self.matricA[0][0] ** (-1)]]
         copym, lst = SquareMatrices.deepcopy(self.matricA), []
         try:
             det, ans = SquareMatrices(self.matricA).detA() ** (-1), []
@@ -364,8 +369,9 @@ class TriangleMatrices(Matrices):  # Над или под главной диа�
             if self.matricA[i][0] != 0:
                 self.matricA[0], self.matricA[i] = self.matricA[i], self.matricA[0]
                 break
-        for i in range(self.mA):
-            if self.matricA[i] == [0] * self.mA:
+        for i in range(self.mA):  # Работает только с [..., [float, float, float, ...]]
+            if self.matricA[i] == [0] * self.nA and self.matricA[self.mA - 1] != [0] * self.nA:
+                print(f'Меняю местами {i + 1} строку с {self.mA} строкой')
                 self.matricA[i], self.matricA[self.mA - 1] = self.matricA[self.mA - 1], self.matricA[i]
         for i in range(self.nA):
             m = i
@@ -412,7 +418,9 @@ class DiagonalMatrices(UnitMatrices):  # По диагонали числа
 
 
 class ZeroMatrices(DiagonalMatrices, TriangleMatrices):  # Все нули
-    pass
+
+    def __init__(self, nA, mA):
+        super().__init__([[0] * nA] * mA)
 
 
 # Окно
@@ -489,18 +497,18 @@ def show2():  # Показать
     return show1()
 
 
-def printres(p):  # Вывод
-    return p[1:-1].replace(r"], ", '\n', p.count(r"], ")). \
-                replace(']', '', p.count(']')).replace('[', '', p.count('[')).replace(',', ',  ', p.count(','))
-
-
 def add():  # Сумма
     try:
         C = Matrices(translate(entrsA)) + (translate(entrsB))
         a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(printres(a))
+        res.set(a)
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
+
+
+def printres(p):
+    return p[1:-1].replace(r"], ", '\n', p.count(r"], ")). \
+        replace(']', '', p.count(']')).replace('[', '', p.count('[')).replace(',', ',  ', p.count(','))
 
 
 def difference():  # Разность
@@ -542,7 +550,7 @@ def mult():  # Умножение А и В
         res.set('Введите размерность матриц')
 
 
-def multnum():
+def multnum():  # Умножение на число
     try:
         # noinspection PyTypeChecker
         C = Matrices(translate(entrsA)) * Decimal(num.get())
@@ -560,16 +568,16 @@ def powerA():  # Возведение в степень
         res.set('Введите размерность матриц')
 
 
-def triangulationAU():
+def triangulationAU():  # Треугольный вид матрицы
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(TriangleMatrices(translate(entrsA)).triangulationAU()))
-        a = re.sub(r'[-]?0[.]0{2,}\d+|0E[-]\d*', '0', a)
+        a = re.sub(r'[-]?0[.]0{1,}\d+|0E[-]\d*', '0', a)
         res.set(printres(a))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
-def detA():
+def detA():  # Определитель матрицы
     try:
         C = SquareMatrices(translate(entrsA))
         a = re.sub(r"Decimal\('|'\)", '', str(C.detA()))
@@ -581,7 +589,7 @@ def detA():
         res.set('Введите размерность матриц')
 
 
-def invertA():
+def invertA():  # Обратный вид матрицы
     try:
         a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)).invertA()))
         res.set(printres(a))
@@ -607,7 +615,7 @@ def rnd():  # Случайные значения в ячейках матриц
         res.set('Введите размерность матриц')
 
 
-def A2BB2A():
+def A2BB2A():  # Поменять местами матрицы А и В
     try:
         global entrsA, entrsB, frms
         entrsA, entrsB = entrsB, entrsA
@@ -643,16 +651,41 @@ ent2 = tk.Spinbox(frm1, font=k, textvariable=num, from_=-float('inf'), to=float(
 btn8 = tk.Button(frm1, font=k, text='det(A)', width=k[1] + 1, command=detA).grid(row=2, column=1)
 btn9 = tk.Button(frm1, font=k, text='Ступенчатый вид A (U)', width=2 * k[1] + 1, command=triangulationAU).grid\
     (row=3, column=0, columnspan=2)
-btn10 = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1, command=invertA).grid(row=3, column=2)
-btn11 = tk.Button(frm1, font=k, text='Поменять А и В', width=k[1] + 1, command=A2BB2A).grid(row=2, column=2)
+btn10 = tk.Button(frm1, font=k, text='Обратный вид А', width=k[1] + 1, command=invertA).grid(row=2, column=2)
+btn11 = tk.Button(frm1, font=k, text='Поменять А и В', width=k[1] + 1, command=A2BB2A).grid(row=3, column=2)
 frm4 = tk.LabelFrame(window, font=k, text='Ответ')
 frm4.pack(side='left', anchor='n')
 lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 
-# Другие кнопки
 frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
-btn12 = tk.Button(frm5, font=k, text='Спроецировать параллелограммы матриц 2x2').pack(fill=tk.X)
+
+# Окно Canvas
+canva = tk.Canvas(frm5, bg='white', height=200, width=200)
+canva.pack(side='top')
+
+
+def project2x2():
+    try:
+        a, b, c = abs(int(entrsA[0][0].get())) * 2, abs(int(entrsA[1][0].get())) * 2, abs(int(entrsA[0][1].get())) * 2
+        d = abs(int(entrsA[1][1].get())) * 2
+        clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
+              f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+        canva.create_line(0, 0, a, b, fill=clr)
+        canva.create_line(a, b, a + c, b + d, fill=clr)
+        canva.create_line(a + c, b + d, c, d, fill=clr)
+        canva.create_line(c, d, 0, 0, fill=clr)
+        print('Рисую параллелограмм')
+    except NameError:
+        res.set('Введите размерность матриц')
+    except IndexError:
+        res.set('Введите матрицу А, как минимум 2x2')
+    except ValueError:
+        res.set('Введите значения в ячейки матрицы A 2x2')
+
+# Другие кнопки
+btn12 = tk.Button(frm5, font=k, text='Спроецировать параллелограмм матрицы А (2x2) на окне Canvas', command=project2x2)
+btn12.pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
 btn13.pack(fill=tk.X)
 print('-------------Начало работы-------------')
