@@ -291,6 +291,11 @@ class SquareMatrices(Matrices):  # Квадрат
 
     from copy import deepcopy
 
+    # def __init__(self, matricA):
+    #     super().__init__(matricA)
+    #     if self.nA != self.mA:
+    #         raise MatrixException('Введите равное количество стобцов и строчек в матрице')
+
     def traceA(self):  # След матрицы А
         if self.nA != self.mA:
             return 'След матрицы можно вычислить\nтолько у квадратной матрицы'
