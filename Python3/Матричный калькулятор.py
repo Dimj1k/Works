@@ -670,10 +670,8 @@ def project2x2():  # Параллелограмм матрицы на Canvas
         #     rnd()
             a, b, c = int(entrsA[0][0].get()), int(entrsA[1][0].get()), int(entrsA[0][1].get())
             d = int(entrsA[1][1].get())
-            clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'\
-                  f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
-            activeclr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'\
-                        f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+            clr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for i in range(6)])
+            activeclr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for i in range(6)])
             canva.create_line(100, 100, a + 100, b + 100, fill=clr, width=k[1] // 3, activefill=activeclr)
             canva.create_line(a + 100, b + 100, a + 100 + c, b + 100 + d, fill=clr, width=k[1] // 3,
                               activefill=activeclr)
