@@ -665,16 +665,16 @@ canva = tk.Canvas(frm5, bg='white', height=200, width=200)
 canva.pack(side='top')
 
 
-def project2x2():  # Спроектировать параллелограмм матрицы А 2x2
+def project2x2():
     try:
-        a, b, c = abs(int(entrsA[0][0].get())) * 2, abs(int(entrsA[1][0].get())) * 2, abs(int(entrsA[0][1].get())) * 2
-        d = abs(int(entrsA[1][1].get())) * 2
+        a, b, c = abs(int(entrsA[0][0].get())), abs(int(entrsA[1][0].get())), abs(int(entrsA[0][1].get()))
+        d = abs(int(entrsA[1][1].get()))
         clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
               f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
-        canva.create_line(0, 0, a, b, fill=clr)
-        canva.create_line(a, b, a + c, b + d, fill=clr)
-        canva.create_line(a + c, b + d, c, d, fill=clr)
-        canva.create_line(c, d, 0, 0, fill=clr)
+        canva.create_line(0, 0, a, b, fill=clr, width=k[1] // 2)
+        canva.create_line(a, b, a + c, b + d, fill=clr, width=k[1] // 2)
+        canva.create_line(a + c, b + d, c, d, fill=clr, width=k[1] // 2)
+        canva.create_line(c, d, 0, 0, fill=clr, width=k[1] // 2)
         print('Рисую параллелограмм')
     except NameError:
         res.set('Введите размерность матриц')
@@ -683,7 +683,9 @@ def project2x2():  # Спроектировать параллелограмм �
     except ValueError:
         res.set('Введите целые значения в ячейки матрицы A 2x2')
 
+
 # Другие кнопки
+btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
 btn12 = tk.Button(frm5, font=k, text='Спроецировать параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2)
 btn12.pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
