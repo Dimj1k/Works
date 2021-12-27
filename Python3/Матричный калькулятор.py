@@ -423,7 +423,7 @@ class ZeroMatrices(DiagonalMatrices, TriangleMatrices):  # Все нули
         super().__init__([[0] * nA] * mA)
 
 
-# Окно
+# Окно ----------------------------------------------------------------------------------------------------------------
 window = tk.Tk()
 screen_width = str(int(window.winfo_screenwidth() // 1.5))
 screen_height = str(int(window.winfo_screenheight() // 1.5))
@@ -670,9 +670,9 @@ def project2x2():  # Параллелограмм матрицы на Canvas
         a, b, c = abs(int(entrsA[0][0].get())), abs(int(entrsA[1][0].get())), abs(int(entrsA[0][1].get()))
         d = abs(int(entrsA[1][1].get()))
         clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
-              f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+          f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
         activeclr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
-                    f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+                f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
         canva.create_line(0, 0, a, b, fill=clr, width=k[1] // 2, activefill=activeclr)
         canva.create_line(a, b, a + c, b + d, fill=clr, width=k[1] // 2, activefill=activeclr)
         canva.create_line(a + c, b + d, c, d, fill=clr, width=k[1] // 2, activefill=activeclr)
