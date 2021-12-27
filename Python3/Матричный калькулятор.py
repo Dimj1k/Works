@@ -680,21 +680,23 @@ def project2x2():  # Параллелограмм матрицы на Canvas
             canva.create_line(a + 100 + c, b + 100 + d, c + 100, d + 100, fill=clr, width=k[1] // 3,
                               activefill=activeclr)
             canva.create_line(c + 100, d + 100, 100, 100, fill=clr, width=k[1] // 3, activefill=activeclr)
-            print('Рисую параллелограмм в Canvas')
+            print(f'Рисую параллелограмм в Canvas HEX-цвета {clr}')
             res.set('')
     except NameError:
         res.set('Введите размерность матриц')
     except IndexError:
-        res.set('Введите матрицу А, как минимум 2x2')
+        res.set('Введите матрицу А,\nкак минимум 2x2')
     except ValueError:
-        res.set('Введите целые значения в ячейки матрицы A 2x2')
+        res.set('Введите целые числовые\nзначения в ячейки матрицы A 2x2')
 
 
 # Другие кнопки
 btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
 btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2).pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',  # Очистить окно Canvas
-                  command=lambda: [canva.delete("all"), print('Очищаю Canvas')]).pack(fill=tk.X)
+                  command=lambda: [canva.delete("all"), print('Очищаю Canvas'),
+                                   canva.create_oval(100, 100, 101, 101, width=3)]).pack(fill=tk.X)
+canva.create_oval(100, 100, 101, 101, width=3)
 btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
 btn14.pack(fill=tk.X)
 print('-------------Начало работы-------------')
