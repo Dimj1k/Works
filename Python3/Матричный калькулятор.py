@@ -303,7 +303,7 @@ class SquareMatrices(Matrices):  # Квадрат
     def __pow__(self, powm, modulo=None):  # Возведение в степень матрицы А
         if self.nA != self.mA and powm != 1:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
-        if powm == 0:
+        if powm == 0:  # A * A^(-1) = E в Python не работает.
             return UnitMatrices(self.matricA).toUnit()
         if powm < 0:
             cop, powm = SquareMatrices(self.matricA).invertA(), abs(powm)
@@ -665,7 +665,7 @@ canva = tk.Canvas(frm5, bg='white', height=200, width=200)
 canva.pack(side='top')
 
 
-def project2x2():
+def project2x2():  # Спроектировать параллелограмм матрицы А 2x2
     try:
         a, b, c = abs(int(entrsA[0][0].get())) * 2, abs(int(entrsA[1][0].get())) * 2, abs(int(entrsA[0][1].get())) * 2
         d = abs(int(entrsA[1][1].get())) * 2
@@ -681,10 +681,10 @@ def project2x2():
     except IndexError:
         res.set('Введите матрицу А, как минимум 2x2')
     except ValueError:
-        res.set('Введите значения в ячейки матрицы A 2x2')
+        res.set('Введите целые значения в ячейки матрицы A 2x2')
 
 # Другие кнопки
-btn12 = tk.Button(frm5, font=k, text='Спроецировать параллелограмм матрицы А (2x2) на окне Canvas', command=project2x2)
+btn12 = tk.Button(frm5, font=k, text='Спроецировать параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2)
 btn12.pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
 btn13.pack(fill=tk.X)
