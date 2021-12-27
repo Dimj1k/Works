@@ -671,10 +671,12 @@ def project2x2():  # Параллелограмм матрицы на Canvas
         d = abs(int(entrsA[1][1].get()))
         clr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
               f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
-        canva.create_line(0, 0, a, b, fill=clr, width=k[1] // 2)
-        canva.create_line(a, b, a + c, b + d, fill=clr, width=k[1] // 2)
-        canva.create_line(a + c, b + d, c, d, fill=clr, width=k[1] // 2)
-        canva.create_line(c, d, 0, 0, fill=clr, width=k[1] // 2)
+        activeclr = f'#{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}' \
+                    f'{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}{str(hex(randint(0, 15)))[2]}'
+        canva.create_line(0, 0, a, b, fill=clr, width=k[1] // 2, activefill=activeclr)
+        canva.create_line(a, b, a + c, b + d, fill=clr, width=k[1] // 2, activefill=activeclr)
+        canva.create_line(a + c, b + d, c, d, fill=clr, width=k[1] // 2, activefill=activeclr)
+        canva.create_line(c, d, 0, 0, fill=clr, width=k[1] // 2, activefill=activeclr)
         print('Рисую параллелограмм')
     except NameError:
         res.set('Введите размерность матриц')
