@@ -663,6 +663,17 @@ frm5.pack(side='right', anchor='s')
 canvah = canvaw = 200
 canva = tk.Canvas(frm5, bg='white', height=canvah, width=canvaw)
 canva.pack(side='top')
+k1 = ('Times New Roman', 6)
+Y = lambda: [canva.create_line(canvaw / 2, 0, canvaw / 2, canvah, arrow='first'),
+             canva.create_text(canvaw / 2 + 7, 9, text='y', font=k),
+    [canva.create_line(canvaw / 2 - 2, 25 * i, canvaw / 2 + 2, 25 * i) for i in range(1, int(canvah / 25))],
+    [canva.create_text(canvaw / 2 - 9, 25 * i, text=f'{int(canvah / 2) - 25 * i}', font=k1)
+     for i in range(1, int(canvah / 25)) if i * 25 - canvaw / 2 != 0]]
+X = lambda: [canva.create_line(0, canvah / 2, canvaw, canvah / 2, arrow='last'),
+             canva.create_text(canvaw - 7, canvah / 2 - 9, text='x', font=k),
+    [canva.create_line(25 * i, canvah / 2 - 2, 25 * i, canvah / 2 + 2) for i in range(1, int(canvaw / 25))],
+    [canva.create_text(25 * i, canvah / 2 - 5, text=f'{int(25 * i - canvaw / 2)}', font=k1)
+     for i in range(1, int(canvaw / 25)) if i * 25 - canvah / 2 != 0]]
 
 
 def project2x2():  # Параллелограмм матрицы на Canvas
@@ -694,13 +705,13 @@ def project2x2():  # Параллелограмм матрицы на Canvas
 btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
 btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2).pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',
-                  command=lambda: [canva.delete("all"), print('Очищаю Canvas'), Y(), X()]).pack(fill=tk.X)
-Y = lambda: [canva.create_line(canvaw / 2, 0, canvaw / 2, canvah, arrow='first'),
-             canva.create_text(canvah / 2 + 7, 9, text='y', font=k)]
-X = lambda: [canva.create_line(0, canvah / 2, canvaw, canvah / 2, arrow='last'),
-             canva.create_text(canvaw - 7, canvah / 2 - 9, text='x', font=k)]
+                  command=lambda: [canva.delete("all"), print('Очищаю Canvas от фигур'), Y(), X()]).pack(fill=tk.X)
 btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
 btn14.pack(fill=tk.X), Y(), X()
+from math import radians, sin, cos
+for i in range(0, 360, 20):
+    snezhinka = canva.create_line(canvaw / 2, canvah / 2, canvaw / 2 + 50 * cos(radians(i)),
+                                  canvah / 2 + 50 * sin(radians(i)), fill='#2db7e5')
 print('-------------Начало работы-------------')
 window.mainloop()
 print('-------------Конец работы-------------')
