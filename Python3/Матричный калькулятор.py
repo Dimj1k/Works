@@ -665,7 +665,7 @@ canva = tk.Canvas(frm5, bg='white', height=200, width=200)
 canva.pack(side='top')
 
 
-def project2x2():
+def project2x2():  # Параллелограмм матрицы на Canvas
     try:
         a, b, c = abs(int(entrsA[0][0].get())), abs(int(entrsA[1][0].get())), abs(int(entrsA[0][1].get()))
         d = abs(int(entrsA[1][1].get()))
@@ -686,7 +686,7 @@ def project2x2():
 
 # Другие кнопки
 btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
-btn12 = tk.Button(frm5, font=k, text='Спроецировать параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2)
+btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2)
 btn12.pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
 btn13.pack(fill=tk.X)
