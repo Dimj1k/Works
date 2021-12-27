@@ -3,6 +3,7 @@ from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
 
+# Точность чисел класса Decimal и шрифт текста
 getcontext().prec = 6
 k = ('Times New Roman', 11)
 
@@ -709,7 +710,7 @@ btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',
 btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
 btn14.pack(fill=tk.X), Y(), X()
 from math import radians, sin, cos
-for i in range(0, 360, 20):
+for i in range(0, 360, 15):
     snezhinka = canva.create_line(canvaw / 2, canvah / 2, canvaw / 2 + 50 * cos(radians(i)),
                                   canvah / 2 + 50 * sin(radians(i)), fill='#2db7e5')
 print('-------------Начало работы-------------')
