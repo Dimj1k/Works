@@ -80,21 +80,21 @@ class Calc:
         return Decimal(out)
 
     # Сумма строк из списка
-    @classmethod
-    def summ(cls, lst):
+    @staticmethod
+    def summ(lst):
         ks = ''
         for i in lst:
             ks += i
         return ks
 
     # Скобки в примере
-    @classmethod
-    def changing(cls, out):
+    @staticmethod
+    def changing(out):
         return re.search(r'[(][\d+/^*-.,]+[)]', out).start() + 1, re.search(r'[(][\d+/^*-.,]+[)]', out).end() - 1
 
     # Превращение "Число + Число" и "Число - Число" в "+" и "-" соответственно
-    @classmethod
-    def num_op2op(cls, lst):
+    @staticmethod
+    def num_op2op(lst):
         p = r'\d*[.,]?\d+|[+-]\('
         for i in range(len(lst)):
             kd = lst[i]
@@ -105,8 +105,8 @@ class Calc:
         return lst
 
     # Перебор полученных чисел
-    @classmethod
-    def str2Decimal(cls, lst):
+    @staticmethod
+    def str2Decimal(lst):
         lk = []
         for i in lst:
             try:
@@ -116,8 +116,8 @@ class Calc:
         return lk
 
     # Перебор операторов в списке
-    @classmethod
-    def equal(cls, n):
+    @staticmethod
+    def equal(n):
         try:a1 = n.index('/')
         except ValueError:a1 = float('inf')
         try:a2 = n.index('*')
@@ -134,8 +134,8 @@ class Calc:
             return min([a1, a2, a3])
 
     # Перебор полученных операторов
-    @classmethod
-    def operator2act(cls, lst, lstnum):
+    @staticmethod
+    def operator2act(lst, lstnum):
         ans = 0
         while len(lstnum) != 1:
             act = Calc.equal(lst)
@@ -179,7 +179,7 @@ def translate(lst):  # Перевод значений ячеек в числа
                 try:
                     lst1.append(Fraction(lst[i][j].get()))
                 except ValueError:
-                    lst1.append(Fraction(0, 1))
+                    lst1.append(0)
             lstes.append(lst1)
             lst1 = []
         return lstes
@@ -355,8 +355,8 @@ class SquareMatrices(Matrices):  # Квадрат
             self.__ans *= self.matricA[i][i]
         return self.__ans
 
-    @classmethod
-    def minor_a(cls, matricA, pop_i, pop_j):  # Минор элемента матрицы
+    @staticmethod
+    def minor_a(matricA, pop_i, pop_j):  # Минор элемента матрицы
         if pop_i <= 0 or pop_j <= 0:
             return 'Введите номер строки\nи номер столбца больше нуля'
         print(f'-----------Вычисляю минор {pop_i} строки {pop_j} столбца-----------')
