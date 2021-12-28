@@ -537,7 +537,7 @@ def printres(p):  # Вывод в виде матрицы
                 ans = ans + '/'.join(p[i:i + 2])
             else:
                 ans = ans + ';   '
-        return ans
+        return ans.replace(';   \n', '\n', ans.count(';   \n')).rstrip(';   ')
 
 
 def difference():  # Разность
@@ -643,7 +643,10 @@ def A2BB2A():  # Поменять местами матрицы А и В
     try:
         global entrsA, entrsB, frms
         entrsA, entrsB = entrsB, entrsA
-        frms[0].place(x=frm0.winfo_width() + An.get() * (3 * k[1]) + k[1] + 40)
+        if frms[0]['text'] == "Матрица В":
+            frms[0].place(x=frm0.winfo_width() + len(entrsB[0]) * (3 * k[1]) + k[1] + 40)
+        else:
+            frms[0].place(x=frm0.winfo_width() + len(entrsA[0]) * (3 * k[1]) + k[1] + 40)
         print('Меняю местами')
         frms[1].place(x=frm0.winfo_width())
         frms[0].config(text="Матрица В"), frms[1].config(text="Матрица А")
