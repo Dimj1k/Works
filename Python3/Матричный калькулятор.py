@@ -602,7 +602,7 @@ def invertA():  # Обратный вид матрицы
         res.set('Введите размерность матриц')
 
 
-def rnd():  # Случайные значения в ячейках матриц
+def rnd(event):  # Случайные значения в ячейках матриц
     try:
         for i in range(len(entrsA)):
             for j in range(len(entrsA[i])):
@@ -633,7 +633,15 @@ def A2BB2A():  # Поменять местами матрицы А и В
         res.set('Введите размерность матриц')
 
 
-btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
+def rndfg(event):
+    btnr['fg'] = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
+
+
+btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы')
+btnr.bind('<Enter>', rndfg)
+btnr.bind('<Button-1>', rnd)
+btnr.pack(fill=tk.X)
+window.bind('r', lambda event: [rnd(event), rndfg(event)])
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
 btn0a.pack(fill=tk.X)
 btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
@@ -666,20 +674,20 @@ frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
 
 # Окно Canvas
-canvah = canvaw = 200
-canva = tk.Canvas(frm5, bg='white', height=canvah, width=canvaw)
+size = 200
+canva = tk.Canvas(frm5, bg='white', height=size, width=size)
 canva.pack(side='top')
 k1 = ('Times New Roman', 6)
-Y = lambda: [canva.create_line(canvaw / 2, 0, canvaw / 2, canvah, arrow='first'),
-             canva.create_text(canvaw / 2 + 7, 9, text='y', font=k),
-    [canva.create_line(canvaw / 2 - 2, 25 * i, canvaw / 2 + 2, 25 * i) for i in range(1, int(canvah / 25))],
-    [canva.create_text(canvaw / 2 - 9, 25 * i, text=f'{int(canvah / 2) - 25 * i}', font=k1)
-     for i in range(1, int(canvah / 25)) if i * 25 - canvaw / 2 != 0]]
-X = lambda: [canva.create_line(0, canvah / 2, canvaw, canvah / 2, arrow='last'),
-             canva.create_text(canvaw - 7, canvah / 2 - 9, text='x', font=k),
-    [canva.create_line(25 * i, canvah / 2 - 2, 25 * i, canvah / 2 + 2) for i in range(1, int(canvaw / 25))],
-    [canva.create_text(25 * i, canvah / 2 - 5, text=f'{int(25 * i - canvaw / 2)}', font=k1)
-     for i in range(1, int(canvaw / 25)) if i * 25 - canvah / 2 != 0]]
+Y = lambda: [canva.create_line(size / 2, 0, size / 2, size, arrow='first'),
+             canva.create_text(size / 2 + 7, 9, text='y', font=k),
+             [canva.create_line(size / 2 - 2, 25 * i, size / 2 + 2, 25 * i) for i in range(1, int(size / 25))],
+             [canva.create_text(size / 2 - 9, 25 * i, text=f'{int(size / 2) - 25 * i}', font=k1)
+              for i in range(1, int(size / 25)) if i * 25 - size / 2 != 0]]
+X = lambda: [canva.create_line(0, size / 2, size, size / 2, arrow='last'),
+             canva.create_text(size - 7, size / 2 - 9, text='x', font=k),
+             [canva.create_line(25 * i, size / 2 - 2, 25 * i, size / 2 + 2) for i in range(1, int(size / 25))],
+             [canva.create_text(25 * i, size / 2 - 5, text=f'{int(25 * i - size / 2)}', font=k1)
+              for i in range(1, int(size / 25)) if i * 25 - size / 2 != 0]]
 
 
 def project2x2():  # Параллелограмм матрицы на Canvas
@@ -690,7 +698,7 @@ def project2x2():  # Параллелограмм матрицы на Canvas
             d = int(entrsA[1][1].get())
             clr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
             activeclr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
-            half = canvaw / 2
+            half = size / 2
             canva.create_line(half, half, a + half, b + half, fill=clr, width=k[1] // 3, activefill=activeclr)
             canva.create_line(a + half, b + half, a + half + c, b + half + d, fill=clr, width=k[1] // 3,
                               activefill=activeclr)
@@ -708,16 +716,23 @@ def project2x2():  # Параллелограмм матрицы на Canvas
 
 
 # Другие кнопки
-btnjoke = tk.Button(frm5, font=k, text='(Для Canvas) Случайные значения в ячейках матрицы', command=rnd).pack(fill=tk.X)
 btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2).pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',
                   command=lambda: [canva.delete("all"), print('Очищаю Canvas от фигур'), Y(), X()]).pack(fill=tk.X)
 btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
 btn14.pack(fill=tk.X), Y(), X()
-from math import radians, sin, cos
-for i in range(0, 360, 15):
-    snezhinka = canva.create_line(canvaw / 2, canvah / 2, canvaw / 2 + 50 * cos(radians(i)),
-                                  canvah / 2 + 50 * sin(radians(i)), fill='#2db7e5')
-print('-------------Начало работы-------------')
+
+
+def snezhinki(event):
+    from math import radians, sin, cos
+    for j in range(int(size / 5), size, int(size / 5)):
+        addy = randint(-int(size / 8), int(size / 8))
+        [canva.create_line(j, j + addy, j + size / 12 * cos(radians(i)), j + size / 12 * sin(radians(i))
+                           + addy, fill='#2db7e5') for i in range(0, 360, 15)]
+    print('Рисую снежинки')
+
+
+window.bind(',', snezhinki)
+print('-------------Начало работы-------------'), snezhinki(',')
 window.mainloop()
 print('-------------Конец работы-------------')
