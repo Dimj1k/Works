@@ -672,7 +672,7 @@ def A2BB2A():  # Поменять местами матрицы А и В
 
 
 def rndfg(event):  # Случайный цвет для кнопки, генерирующей случайные значения в ячейках матрицы
-    btnr['fg'] = '#' + ''.join([str(hex(randint(0, 15)))[2] for _ in range(6)])
+    btnr['fg'] = '#' + ''.join([str(hex(randint(0, 8)))[2] for _ in range(6)])
 
 
 btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы')
@@ -768,8 +768,8 @@ def project2x2():  # Параллелограмм матрицы на Canvas
         #     rnd()
             a, b, c = int(entrsA[0][0].get()), int(entrsA[1][0].get()), int(entrsA[0][1].get())
             d = int(entrsA[1][1].get())
-            clr = '#' + ''.join([str(hex(randint(0, 15)))[2] for _ in range(6)])
-            activeclr = '#' + ''.join([str(hex(randint(0, 15)))[2] for _ in range(6)])
+            clr = '#' + ''.join([str(hex(randint(0, 12)))[2] for _ in range(6)])
+            activeclr = '#' + ''.join([str(hex(randint(0, 12)))[2] for _ in range(6)])
             half = size / 2
             canva.create_line(half, half, a + half, b + half, fill=clr, width=k[1] // 3, activefill=activeclr)
             canva.create_line(a + half, b + half, a + half + c, b + half + d, fill=clr, width=k[1] // 3,
