@@ -694,6 +694,32 @@ frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
 
 
+# Тип чисел
+def chng():  # Изменяет тип чисел
+    global typenum
+    if r_var.get() == 1:
+        typenum = 'Decimal'
+        print(r'Изменяю тип чисел на "Decimal"')
+        btnFrac['fg'] = 'black'
+        btnDec['fg'] = 'green'
+    elif r_var.get() == 0:
+        typenum = 'Fraction'
+        print(r'Изменяю тип чисел на "Fraction"')
+        btnFrac['fg'] = 'green'
+        btnDec['fg'] = 'black'
+
+
+frm6 = tk.LabelFrame(window, font=k, text='Тип чисел')
+frm6.place(relx=0, rely=0.85)
+r_var = tk.IntVar()
+r_var.set(1)
+btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var, fg='green')
+btnDec.pack()
+btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var, fg='black')
+btnFrac.pack()
+btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fill=tk.X)
+
+
 # Окно Canvas ---------------------------------------------------------------------------------------------------------
 size = 200
 canva = tk.Canvas(frm5, bg='white', height=size, width=size)
@@ -744,45 +770,18 @@ btn14 = tk.Button(frm5, font=k, text='Выйти из программы', comma
 btn14.pack(fill=tk.X), Y(), X()
 
 
-def snezhinki(event):
+def snezhinki(event):  # Снежинки!
     from math import radians, sin, cos
     for j in range(int(size / 5), size, int(size / 5)):
-        addy = randint(-int(size / 3), int(size / 3))
-        [canva.create_line(j + addy / 2, j + addy, j + size / 12 * cos(radians(i)) + addy / 2, j + size / 12
-                           * sin(radians(i)) + addy, fill='#2db7e5') for i in range(0, 360, 15)]
-    print('Рисую снежинки в Canvas')
+        addy = randint(-int(size / 2), int(size / 2))
+        addx = randint(-int(size / 2), int(size / 2))
+        [canva.create_line(j + addx / 2, j + addy, j + size / 16 * cos(radians(i)) + addx / 2, j + size / 16
+                           * sin(radians(i)) + addy, fill='#2db7e5') for i in range(0, 360, 20)]
+    print('Рисую 4 снежинки в Canvas')
 
 
+# Начало работы окна Tkinter
 window.bind(',', snezhinki)
-
-
-# Тип чисел
-def chng():
-    global typenum
-    if r_var.get() == 1:
-        typenum = 'Decimal'
-        print(r'Изменяю тип чисел на "Decimal"')
-        btnFrac['fg'] = 'black'
-        btnDec['fg'] = 'green'
-    elif r_var.get() == 0:
-        typenum = 'Fraction'
-        print(r'Изменяю тип чисел на "Fraction"')
-        btnFrac['fg'] = 'green'
-        btnDec['fg'] = 'black'
-
-
-frm6 = tk.LabelFrame(window, font=k, text='Тип чисел')
-frm6.place(relx=0, rely=0.85)
-r_var = tk.IntVar()
-r_var.set(1)
-btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var, fg='green')
-btnDec.pack()
-btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var, fg='black')
-btnFrac.pack()
-btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fill=tk.X)
-
-
-# Начало работы окна tkinter
 print('-------------Начало работы-------------')
 print('Нарисовать снежинки в Canvas - кнопка <,>\nСгенерировать случайные элементы матриц - кнопка <r>')
 print('---------------------------------------'), snezhinki(',')
