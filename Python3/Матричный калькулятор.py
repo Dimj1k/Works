@@ -747,7 +747,7 @@ btn14.pack(fill=tk.X), Y(), X()
 def snezhinki(event):
     from math import radians, sin, cos
     for j in range(int(size / 5), size, int(size / 5)):
-        addy = randint(-int(size / 4), int(size / 4))
+        addy = randint(-int(size / 3), int(size / 3))
         [canva.create_line(j + addy / 2, j + addy, j + size / 12 * cos(radians(i)) + addy / 2, j + size / 12
                            * sin(radians(i)) + addy, fill='#2db7e5') for i in range(0, 360, 15)]
     print('Рисую снежинки в Canvas')
@@ -762,17 +762,23 @@ def chng():
     if r_var.get() == 1:
         typenum = 'Decimal'
         print(r'Изменяю тип чисел на "Decimal"')
+        btnFrac['fg'] = 'black'
+        btnDec['fg'] = 'green'
     elif r_var.get() == 0:
         typenum = 'Fraction'
         print(r'Изменяю тип чисел на "Fraction"')
+        btnFrac['fg'] = 'green'
+        btnDec['fg'] = 'black'
 
 
 frm6 = tk.LabelFrame(window, font=k, text='Тип чисел')
 frm6.place(relx=0, rely=0.85)
 r_var = tk.IntVar()
 r_var.set(1)
-btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var).pack()
-btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var).pack()
+btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var, fg='green')
+btnDec.pack()
+btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var, fg='black')
+btnFrac.pack()
 btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fill=tk.X)
 
 
