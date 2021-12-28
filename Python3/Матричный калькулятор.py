@@ -2,6 +2,7 @@ import tkinter as tk
 from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
+from fractions import Fraction
 
 # Точность чисел класса Decimal и шрифт текста
 getcontext().prec = 6
@@ -163,13 +164,25 @@ class Calc:
 
 
 def translate(lst):
-    lst1, lstes = [], []
-    for i in range(len(lst)):
-        for j in range(len(lst[i])):
-            lst1.append(Calc(lst[i][j].get()).calc())
-        lstes.append(lst1)
-        lst1 = []
-    return lstes
+    if typenum == 'Decimal':
+        lst1, lstes = [], []
+        for i in range(len(lst)):
+            for j in range(len(lst[i])):
+                lst1.append(Calc(lst[i][j].get()).calc())
+            lstes.append(lst1)
+            lst1 = []
+        return lstes
+    elif typenum == 'Fraction':
+        lst1, lstes = [], []
+        for i in range(len(lst)):
+            for j in range(len(lst[i])):
+                try:
+                    lst1.append(Fraction(lst[i][j].get()))
+                except ValueError:
+                    lst1.append(Fraction(0, 1))
+            lstes.append(lst1)
+            lst1 = []
+        return lstes
 
 
 class MatrixException(Exception):
@@ -282,9 +295,9 @@ class Matrices:  # Матрицы
         return self.__ans
 
     def __str__(self):  # Работает только с __add__
-        return str(self.matricA)[1:-1].replace(r"], ", '\n', str(self.matricA).count(r"], ")) \
-                .replace(']', '', str(self.matricA).count(']')).replace('[', '', str(self.matricA).count('[')) \
-                .replace(',', ',  ', str(self.matricA).count(','))
+        return str(self.matricA)  # [1:-1].replace(r"], ", '\n', str(self.matricA).count(r"], ")) \
+        #         .replace(']', '', str(self.matricA).count(']')).replace('[', '', str(self.matricA).count('[')) \
+        #         .replace(',', ';  ', str(self.matricA).count(','))
 
 
 class SquareMatrices(Matrices):  # Квадрат
@@ -439,6 +452,7 @@ window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(int(screen_width) * 1.5 // 5)) + '+' + str(int(int(screen_height) * 1.5 // 6)))
 
 # Ввод данных
+typenum = 'Decimal'
 frm0 = tk.LabelFrame(window, text='Ввод размерности матриц', font=k)
 frm0.pack(side='top', anchor='nw')
 lbl0Am = tk.Label(frm0, font=k, text='Количество строк матрицы А:').pack()
@@ -449,10 +463,10 @@ An = tk.IntVar()
 ent0An = tk.Spinbox(frm0, font=k, textvariable=An, from_=1, to=float('inf')).pack()
 lbl0Bm = tk.Label(frm0, font=k, text='Количество строк матрицы B:').pack()
 Bm = tk.IntVar()
-ent0Bm = tk.Spinbox(frm0, font=k, textvariable=Bm, from_=0, to=11).pack()
+ent0Bm = tk.Spinbox(frm0, font=k, textvariable=Bm, from_=1, to=11).pack()
 lbl0Bn = tk.Label(frm0, font=k, text='Количество столбцов матрицы B:').pack()
 Bn = tk.IntVar()
-ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=0, to=float('inf')).pack()
+ent0Bn = tk.Spinbox(frm0, font=k, textvariable=Bn, from_=1, to=float('inf')).pack()
 power = tk.IntVar()
 num = tk.DoubleVar()
 
@@ -474,17 +488,13 @@ def show1():  # Показать
             entrs1.append(ent1)
         entrsA.append(entrs1)
         entrs1 = []
-    if Bn.get() != 0 and Bm.get() != 0:
-        for i in range(Bm.get()):
-            for j in range(Bn.get()):
-                ent2 = tk.Entry(frm3, font=k, width=4)
-                ent2.grid(row=i + 1, column=j + 1)
-                entrs2.append(ent2)
-            entrsB.append(entrs2)
-            entrs2 = []
-    else:
-        lbl2 = tk.Label(frm3, text='Введите количество строк\nи количество столбцов\nв матрице В больше 0', font=k)
-        lbl2.grid()
+    for i in range(Bm.get()):
+        for j in range(Bn.get()):
+            ent2 = tk.Entry(frm3, font=k, width=4)
+            ent2.grid(row=i + 1, column=j + 1)
+            entrs2.append(ent2)
+        entrsB.append(entrs2)
+        entrs2 = []
     btn0b.pack(fill=tk.X)
     btn0a.destroy()
     frms = [frm2, frm3]
@@ -505,22 +515,35 @@ def show2():  # Показать
 def add():  # Сумма
     try:
         C = Matrices(translate(entrsA)) + (translate(entrsB))
-        a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(a)
+        res.set(printres(C))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
-def printres(p):
-    return p[1:-1].replace(r"], ", '\n', p.count(r"], ")). \
-        replace(']', '', p.count(']')).replace('[', '', p.count('[')).replace(',', ',  ', p.count(','))
+def printres(p):  # Вывод в виде матрицы
+    if typenum == 'Decimal':
+        p = re.sub(r"Decimal\('|'\)", '', str(p))
+        return p[1:-1].replace(r"], ", '\n', p.count(r"], ")). \
+            replace(']', '', p.count(']')).replace('[', '', p.count('[')).replace(',', ';  ', p.count(','))
+    elif typenum == 'Fraction':
+        p = str(p)
+        p = re.sub(r"Fraction\(|\)", '', p)
+        p = p[1:-1].replace(r"], ", ';   \n', p.count(r"], ")). \
+            replace(']', '', p.count(']')).replace('[', '', p.count('[')).replace(',', ';  ', p.count(','))
+        p, ans = p.split(';   '), ''
+        for i in range(len(p)):
+            if i % 2 == 0:
+                ans = ans + '/'.join(p[i:i + 2])
+            else:
+                ans = ans + ';   '
+        return ans
+
+
 
 
 def difference():  # Разность
     try:
-        C = Matrices(translate(entrsA)) - translate(entrsB)
-        a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(printres(a))
+        res.set(printres(Matrices(translate(entrsA)) - translate(entrsB)))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -528,8 +551,7 @@ def difference():  # Разность
 def transpA():  # Транспонирование
     try:
         C = Matrices(translate(entrsA))
-        a = re.sub(r"Decimal\('|'\)", '', str(C.transpA()))
-        res.set(printres(a))
+        res.set(printres(C.transpA()))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -548,36 +570,35 @@ def traceA():  # След
 
 def mult():  # Умножение А и В
     try:
-        C = (Matrices(translate(entrsA)) * translate(entrsB))
-        a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(printres(a))
+        res.set(printres((Matrices(translate(entrsA)) * translate(entrsB))))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def multnum():  # Умножение на число
     try:
-        # noinspection PyTypeChecker
-        C = Matrices(translate(entrsA)) * Decimal(num.get())
-        a = re.sub(r"Decimal\('|'\)", '', str(C))
-        res.set(printres(a))
+        if typenum == 'Decimal':
+            # noinspection PyTypeChecker
+            res.set(printres(Matrices(translate(entrsA)) * Decimal(num.get())))
+        else:
+            # noinspection PyTypeChecker
+            res.set(printres(Matrices(translate(entrsA)) * Fraction(str(num.get()))))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def powerA():  # Возведение в степень
     try:
-        a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)) ** power.get()))
-        res.set(printres(a))
+        res.set(printres(SquareMatrices(translate(entrsA)) ** power.get()))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def triangulationAU():  # Треугольный вид матрицы
     try:
-        a = re.sub(r"Decimal\('|'\)", '', str(TriangleMatrices(translate(entrsA)).triangulationAU()))
+        a = printres(TriangleMatrices(translate(entrsA)).triangulationAU())
         a = re.sub(r'[-]?0[.]0{1,}\d+|0E[-]\d*', '0', a)
-        res.set(printres(a))
+        res.set(a)
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -596,8 +617,7 @@ def detA():  # Определитель матрицы
 
 def invertA():  # Обратный вид матрицы
     try:
-        a = re.sub(r"Decimal\('|'\)", '', str(SquareMatrices(translate(entrsA)).invertA()))
-        res.set(printres(a))
+        res.set(printres(SquareMatrices(translate(entrsA)).invertA()))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -633,8 +653,8 @@ def A2BB2A():  # Поменять местами матрицы А и В
         res.set('Введите размерность матриц')
 
 
-def rndfg(event):
-    btnr['fg'] = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
+def rndfg(event):  # Случайный цвет для кнопки, генерирующей случайные значения в ячейках матрицы
+    btnr['fg'] = '#' + ''.join([str(hex(randint(0, 15)))[2] for _ in range(6)])
 
 
 btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы')
@@ -696,8 +716,8 @@ def project2x2():  # Параллелограмм матрицы на Canvas
         #     rnd()
             a, b, c = int(entrsA[0][0].get()), int(entrsA[1][0].get()), int(entrsA[0][1].get())
             d = int(entrsA[1][1].get())
-            clr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
-            activeclr = '#' + Calc.summ([str(hex(randint(0, 15)))[2] for _ in range(6)])
+            clr = '#' + ''.join([str(hex(randint(0, 15)))[2] for _ in range(6)])
+            activeclr = '#' + ''.join([str(hex(randint(0, 15)))[2] for _ in range(6)])
             half = size / 2
             canva.create_line(half, half, a + half, b + half, fill=clr, width=k[1] // 3, activefill=activeclr)
             canva.create_line(a + half, b + half, a + half + c, b + half + d, fill=clr, width=k[1] // 3,
@@ -726,13 +746,33 @@ btn14.pack(fill=tk.X), Y(), X()
 def snezhinki(event):
     from math import radians, sin, cos
     for j in range(int(size / 5), size, int(size / 5)):
-        addy = randint(-int(size / 8), int(size / 8))
-        [canva.create_line(j, j + addy, j + size / 12 * cos(radians(i)), j + size / 12 * sin(radians(i))
-                           + addy, fill='#2db7e5') for i in range(0, 360, 15)]
+        addy = randint(-int(size / 4), int(size / 4))
+        [canva.create_line(j + addy / 2, j + addy, j + size / 12 * cos(radians(i)) + addy / 2, j + size / 12
+                           * sin(radians(i)) + addy, fill='#2db7e5') for i in range(0, 360, 15)]
     print('Рисую снежинки в Canvas')
 
 
 window.bind(',', snezhinki)
+
+
+# Тип чисел
+def chng():
+    global typenum
+    if r_var.get() == 1:
+        typenum = 'Decimal'
+        print(r'Изменяю тип чисел на "Decimal"')
+    elif r_var.get() == 0:
+        typenum = 'Fraction'
+        print(r'Изменяю тип чисел на "Fraction"')
+
+
+frm6 = tk.LabelFrame(window, font=k, text='Тип чисел')
+frm6.place(relx=0, rely=0.85)
+r_var = tk.IntVar()
+r_var.set(1)
+btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var).pack()
+btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var).pack()
+btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fill=tk.X)
 print('-------------Начало работы-------------'), snezhinki(',')
 window.mainloop()
 print('-------------Конец работы-------------')
