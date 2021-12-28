@@ -183,6 +183,17 @@ def translate(lst):  # Перевод значений ячеек в числа
             lstes.append(lst1)
             lst1 = []
         return lstes
+    elif typenum == 'float':
+        lst1, lstes = [], []
+        for i in range(len(lst)):
+            for j in range(len(lst[i])):
+                try:
+                    lst1.append(float(lst[i][j].get()))
+                except ValueError:
+                    lst1.append(0)
+            lstes.append(lst1)
+            lst1 = []
+        return lstes
 
 
 class MatrixException(Exception):
@@ -358,7 +369,7 @@ class SquareMatrices(Matrices):  # Квадрат
         print(f'---------Минор {pop_i} строки {pop_j} столбца:', Matrices(ansm) * (-1) ** (pop_j + pop_i), '---------')
         return Matrices(ansm) * (-1) ** (pop_j + pop_i)
 
-    def invertA(self):  # Обратный вид матрицы
+    def invertA(self):  # Обратный вид матрицы (путает - и + на строка + столбец = нечетное число)
         if self.nA != self.mA:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
         if self.nA == 1:
@@ -370,6 +381,7 @@ class SquareMatrices(Matrices):  # Квадрат
             return ' Определитель равен нулю\nобратной матрицы не существует '
         if det == float('inf'):
             return ' Определитель равен нулю\nобратной матрицы не существует '
+        print('Определитель матрицы больше нуля. Считаю матрицу алгебраических дополнений')
         for i in range(self.nA):
             for j in range(self.nA):
                 self.matricA = SquareMatrices.deepcopy(copym)
@@ -538,6 +550,10 @@ def printres(p):  # Вывод в виде матрицы
             else:
                 ans = ans + ';   '
         return ans.replace(';   \n', '\n', ans.count(';   \n')).rstrip(';   ')
+    elif typenum == 'float':
+        p = str(p)
+        return p[1:-1].replace(r"], ", '\n', p.count(r"], ")). \
+            replace(']', '', p.count(']')).replace('[', '', p.count('[')).replace(',', ';  ', p.count(','))
 
 
 def difference():  # Разность
@@ -702,24 +718,31 @@ def chng():  # Изменяет тип чисел
     global typenum
     if r_var.get() == 1:
         typenum = 'Decimal'
-        print(r'Изменяю тип чисел на "Decimal"')
-        btnFrac['fg'] = 'black'
+        print('Изменяю тип чисел на "Decimal"')
+        btnFrac['fg'], btnfloat['fg'] = 'black', 'black'
         btnDec['fg'] = 'green'
     elif r_var.get() == 0:
         typenum = 'Fraction'
-        print(r'Изменяю тип чисел на "Fraction"')
+        print('Изменяю тип чисел на "Fraction"')
         btnFrac['fg'] = 'green'
-        btnDec['fg'] = 'black'
+        btnDec['fg'], btnfloat['fg'] = 'black', 'black'
+    elif r_var.get() == 2:
+        typenum = 'float'
+        print('Изменяю тип чисел на "float"')
+        btnfloat['fg'] = 'green'
+        btnDec['fg'], btnFrac['fg'] = 'black', 'black'
 
 
 frm6 = tk.LabelFrame(window, font=k, text='Тип чисел')
-frm6.place(relx=0, rely=0.85)
+frm6.place(relx=0, rely=0.8)
 r_var = tk.IntVar()
 r_var.set(1)
-btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var, fg='green')
+btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var, fg='green', font=k)
 btnDec.pack()
-btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var, fg='black')
+btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var, fg='black', font=k)
 btnFrac.pack()
+btnfloat = tk.Radiobutton(frm6, text='Простой float', value=2, variable=r_var, fg='black', font=k)
+btnfloat.pack()
 btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fill=tk.X)
 
 
