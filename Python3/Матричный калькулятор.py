@@ -369,7 +369,7 @@ class SquareMatrices(Matrices):  # Квадрат
         print(f'---------Минор {pop_i} строки {pop_j} столбца:', Matrices(ansm) * (-1) ** (pop_j + pop_i), '---------')
         return Matrices(ansm) * (-1) ** (pop_j + pop_i)
 
-    def invertA(self):  # Обратный вид матрицы (путает - и + на строка + столбец = нечетное число)
+    def invertA(self):  # Обратный вид матрицы (путает + и - в строка + столбец = нечетное число в матрицах 3x3)
         if self.nA != self.mA:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
         if self.nA == 1:
