@@ -163,7 +163,7 @@ class Calc:
         return ans
 
 
-def translate(lst):
+def translate(lst):  # Перевод значений ячеек в числа
     if typenum == 'Decimal':
         lst1, lstes = [], []
         for i in range(len(lst)):
@@ -297,7 +297,7 @@ class Matrices:  # Матрицы
     def __str__(self):  # Работает только с __add__
         return str(self.matricA)  # [1:-1].replace(r"], ", '\n', str(self.matricA).count(r"], ")) \
         #         .replace(']', '', str(self.matricA).count(']')).replace('[', '', str(self.matricA).count('[')) \
-        #         .replace(',', ';  ', str(self.matricA).count(','))
+        #         .replace(',', ';  ', str(self.matricA).count(','))  # Убрано, чтобы работали числа типа Fraction.
 
 
 class SquareMatrices(Matrices):  # Квадрат
@@ -422,7 +422,7 @@ class ColumnMatrices(Matrices):  # Столбец
 
 class UnitMatrices(SquareMatrices):  # По диагонали единицы
 
-    def toUnit(self):
+    def toUnit(self):  # При возведении матрицы в степень 0
         if self.nA != self.mA:
             return 'Привести матрицу к единичной\nможно только квадратную матрицу'
         self.__ans = [[0] * self.nA] * self.nA
@@ -450,6 +450,7 @@ screen_height = str(int(window.winfo_screenheight() // 1.5))
 window.title('Matrix')
 window.geometry(screen_width + 'x' + screen_height + '+' +
                 str(int(int(screen_width) * 1.5 // 5)) + '+' + str(int(int(screen_height) * 1.5 // 6)))
+
 
 # Ввод данных
 typenum = 'Decimal'
@@ -537,8 +538,6 @@ def printres(p):  # Вывод в виде матрицы
             else:
                 ans = ans + ';   '
         return ans
-
-
 
 
 def difference():  # Разность
@@ -666,6 +665,7 @@ btn0a = tk.Button(frm0, font=k, text='Получить размерность м
 btn0a.pack(fill=tk.X)
 btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
 
+
 # Кнопки вычислений
 frm1 = tk.LabelFrame(window, text='Основные операции над матрицами', font=k)
 frm1.pack(side='left', anchor='n')
@@ -693,7 +693,8 @@ lbl1 = tk.Label(frm4, font=k, textvariable=res).pack()
 frm5 = tk.LabelFrame(window, font=k, text='Другие операции')
 frm5.pack(side='right', anchor='s')
 
-# Окно Canvas
+
+# Окно Canvas ---------------------------------------------------------------------------------------------------------
 size = 200
 canva = tk.Canvas(frm5, bg='white', height=size, width=size)
 canva.pack(side='top')
@@ -773,6 +774,11 @@ r_var.set(1)
 btnDec = tk.Radiobutton(frm6, text='Десятичная дробь', value=1, variable=r_var).pack()
 btnFrac = tk.Radiobutton(frm6, text='Обыкновенная дробь', value=0, variable=r_var).pack()
 btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fill=tk.X)
-print('-------------Начало работы-------------'), snezhinki(',')
+
+
+# Начало работы окна tkinter
+print('-------------Начало работы-------------')
+print('Нарисовать снежинки в Canvas - кнопка <,>\nСгенерировать случайные элементы матриц - кнопка <r>')
+print('---------------------------------------'), snezhinki(',')
 window.mainloop()
 print('-------------Конец работы-------------')
