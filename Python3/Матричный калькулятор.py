@@ -511,6 +511,7 @@ def show1():  # Показать
     btn0b.pack(fill=tk.X)
     btn0a.destroy()
     frms = [frm2, frm3]
+    print('Устанавливаю ячейки матриц')
 
 
 def show2():  # Показать
@@ -651,6 +652,7 @@ def rnd(event):  # Случайные значения в ячейках мат�
         for i in range(len(entrsB)):
             for j in range(len(entrsB[i])):
                 entrsB[i][j].insert(0, str(randint(-99, 99)))
+        print('Генерирую числа в ячейках матриц')
     except NameError:
         res.set('Введите размерность матриц')
 
