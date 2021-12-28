@@ -678,7 +678,6 @@ def rndfg(event):  # Случайный цвет для кнопки, генер
 btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы')
 btnr.bind('<Button-1>', lambda event: [rnd(event), rndfg(event)])
 btnr.pack(fill=tk.X)
-window.bind('r', lambda event: [rnd(event), rndfg(event)])
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
 btn0a.pack(fill=tk.X)
 btn0b = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show2)
@@ -807,6 +806,7 @@ def snezhinki(event):  # Снежинки!
 
 # Начало работы окна Tkinter
 window.bind(',', snezhinki)
+window.bind('r', lambda event: [rnd(event), rndfg(event)])
 print('-------------Начало работы-------------')
 print('Нарисовать снежинки в Canvas - кнопка <,>\nСгенерировать случайные элементы матриц - кнопка <r>')
 print('---------------------------------------'), snezhinki(',')
