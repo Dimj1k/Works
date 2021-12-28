@@ -676,8 +676,7 @@ def rndfg(event):  # Случайный цвет для кнопки, генер
 
 
 btnr = tk.Button(frm0, font=k, text='Случайные значения в ячейках матрицы')
-btnr.bind('<Enter>', rndfg)
-btnr.bind('<Button-1>', rnd)
+btnr.bind('<Button-1>', lambda event: [rnd(event), rndfg(event)])
 btnr.pack(fill=tk.X)
 window.bind('r', lambda event: [rnd(event), rndfg(event)])
 btn0a = tk.Button(frm0, font=k, text='Получить размерность матриц', command=show1)
