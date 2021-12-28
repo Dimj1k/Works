@@ -729,7 +729,7 @@ def snezhinki(event):
         addy = randint(-int(size / 8), int(size / 8))
         [canva.create_line(j, j + addy, j + size / 12 * cos(radians(i)), j + size / 12 * sin(radians(i))
                            + addy, fill='#2db7e5') for i in range(0, 360, 15)]
-    print('Рисую снежинки')
+    print('Рисую снежинки в Canvas')
 
 
 window.bind(',', snezhinki)
