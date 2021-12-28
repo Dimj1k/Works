@@ -332,10 +332,10 @@ class SquareMatrices(Matrices):  # Квадрат
         return self.__ans
 
     def __pow__(self, powm, modulo=None):  # Возведение в степень матрицы А
-        if self.nA != self.mA and powm != 1:
-            return ' Возвести в степень можно\nтолько квадратную матрицу '
         if powm == 0:
             return UnitMatrices(self.matricA).toUnit()
+        if self.nA != self.mA and powm != 1:
+            return ' Возвести в степень можно\nтолько квадратную матрицу '
         if powm < 0:
             cop, powm = SquareMatrices(self.matricA).invertA(), abs(powm)
             self.matricA = SquareMatrices.deepcopy(cop)
@@ -435,12 +435,10 @@ class ColumnMatrices(Matrices):  # Столбец
 class UnitMatrices(SquareMatrices):  # По диагонали единицы
 
     def toUnit(self):  # При возведении матрицы в степень 0
-        if self.nA != self.mA:
-            return 'Привести матрицу к единичной\nможно только квадратную матрицу'
-        self.__ans = [[0] * self.nA] * self.nA
+        self.__ans = [[0] * max(self.nA, self.mA)] * max(self.nA, self.mA)
         print('-----------Привожу матрицу к единичной-----------')
-        for i in range(self.nA):
-            self.__ans[i] = [0] * i + [1] + [0] * (self.nA - i - 1)
+        for i in range(len(self.__ans)):
+            self.__ans[i] = [0] * i + [1] + [0] * (max(self.nA, self.mA) - i - 1)
         print('--------------------------------------------------------------------------------------')
         return self.__ans
 
@@ -813,7 +811,7 @@ print('-------------Начало работы-------------')
 print('<<---------------------------------------Горячие клавиши--------------------------------------->>')
 print('Нарисовать снежинки в Canvas - горячая клавиша <,>\n'
       'Сгенерировать случайные элементы матриц - горячая клавиша <r>')
-print('<<---------------------------------------Горячие клавиши--------------------------------------->>')
+print('>>---------------------------------------Горячие клавиши---------------------------------------<<')
 snezhinki(',')
 window.mainloop()
 print('-------------Конец работы-------------')
