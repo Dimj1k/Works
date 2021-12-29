@@ -439,10 +439,10 @@ class ColumnMatrices(Matrices):  # Столбец
 class UnitMatrices(SquareMatrices):  # По диагонали единицы
 
     def toUnit(self):  # При возведении матрицы в степень 0
-        self.__ans = [[0] * max(self.nA, self.mA)] * max(self.nA, self.mA)
+        self.__ans = [[0] * self.mA] * self.mA
         print('-----------Привожу матрицу к единичной-----------')
         for i in range(len(self.__ans)):
-            self.__ans[i] = [0] * i + [1] + [0] * (max(self.nA, self.mA) - i - 1)
+            self.__ans[i] = [0] * i + [1] + [0] * (self.mA - i - 1)
         print('--------------------------------------------------------------------------------------')
         return self.__ans
 
