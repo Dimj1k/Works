@@ -11,13 +11,21 @@ k = ('Times New Roman', 11)
 
 class Calc:
 
-    def __init__(self, given):
-        self.given = given
+    def __init__(self, typenum):
+        self.__typenum = typenum
+
+    @property
+    def set_typenum(self):
+        return self.__typenum
+
+    @set_typenum.setter
+    def set_typenum(self, typenum):
+        self.__typenum = typenum
 
     # Основная функция
-    def calc(self):
+    def calc(self, given):
         # Ввод данных
-        given = self.given.replace(' ', '', self.given.count(' '))
+        given = given.replace(' ', '', given.count(' '))
 
         # Регулярные выражения
         re_nums = r'[(]?[-+]?\d*[.,]?\d+[)]?|\d*[.,]?\d+'  # Числа
@@ -70,14 +78,19 @@ class Calc:
 
             change = out[st:end].replace('--', '+', out[st:end].count('--'))
             lstnums, lstoperators = re.findall(re_nums, change), Calc.num_op2op(re.findall(re_operators, change))
-            lstnums = Calc.str2Decimal(lstnums)
+            lstnums = Calc.str2Decimal(self, lstnums)
 
             if len(lstnums) == 1:
                 change = lstnums[0]
             else:
                 change = Calc.operator2act(lstoperators, lstnums)
             out = out[0:st - 1] + str(change) + out[end + 1:]
-        return Decimal(out)
+        if self.__typenum == 'Decimal':
+            return Decimal(out)
+        elif self.__typenum == 'Fraction':
+            return Fraction(out)
+        elif self.__typenum == 'float':
+            return float(out)
 
     # Сумма строк из списка
     @staticmethod
@@ -105,15 +118,29 @@ class Calc:
         return lst
 
     # Перебор полученных чисел
-    @staticmethod
-    def str2Decimal(lst):
+    def str2Decimal(self, lst):
         lk = []
-        for i in lst:
-            try:
-                lk.append(Decimal(i))
-            except ValueError:
-                return 0
-        return lk
+        if self.__typenum == 'Decimal':
+            for i in lst:
+                try:
+                    lk.append(Decimal(i))
+                except ValueError:
+                    return 0
+            return lk
+        elif self.__typenum == 'Fraction':
+            for i in lst:
+                try:
+                    lk.append(Fraction(i))
+                except ValueError:
+                    return 0
+            return lk
+        elif self.__typenum == 'float':
+            for i in lst:
+                try:
+                    lk.append(float(i))
+                except ValueError:
+                    return 0
+            return lk
 
     # Перебор операторов в списке
     @staticmethod
@@ -164,36 +191,13 @@ class Calc:
 
 
 def translate(lst):  # Перевод значений ячеек в числа
-    if typenum == 'Decimal':
-        lst1, lstes = [], []
-        for i in range(len(lst)):
-            for j in range(len(lst[i])):
-                lst1.append(Calc(lst[i][j].get()).calc())
-            lstes.append(lst1)
-            lst1 = []
-        return lstes
-    elif typenum == 'Fraction':
-        lst1, lstes = [], []
-        for i in range(len(lst)):
-            for j in range(len(lst[i])):
-                try:
-                    lst1.append(Fraction(lst[i][j].get()))
-                except ValueError:
-                    lst1.append(0)
-            lstes.append(lst1)
-            lst1 = []
-        return lstes
-    elif typenum == 'float':
-        lst1, lstes = [], []
-        for i in range(len(lst)):
-            for j in range(len(lst[i])):
-                try:
-                    lst1.append(float(lst[i][j].get()))
-                except ValueError:
-                    lst1.append(0)
-            lstes.append(lst1)
-            lst1 = []
-        return lstes
+    lst1, lstes = [], []
+    for i in range(len(lst)):
+        for j in range(len(lst[i])):
+            lst1.append(Calc(typenum).calc(lst[i][j].get()))
+        lstes.append(lst1)
+        lst1 = []
+    return lstes
 
 
 class MatrixException(Exception):
