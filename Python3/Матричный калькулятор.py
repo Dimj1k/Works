@@ -769,8 +769,8 @@ def project2x2():  # Параллелограмм матрицы на Canvas
     try:
         # for i in range(100):
         #     rnd()
-            a, b, c = int(entrsA[0][0].get()), int(entrsA[1][0].get()), int(entrsA[0][1].get())
-            d = int(entrsA[1][1].get())
+            a, b, c = int(entrsA[0][0].get()), -int(entrsA[1][0].get()), int(entrsA[0][1].get())
+            d = -int(entrsA[1][1].get())
             clr = '#' + ''.join([str(hex(randint(0, 12)))[2] for _ in range(6)])
             activeclr = '#' + ''.join([str(hex(randint(0, 12)))[2] for _ in range(6)])
             half = size / 2
@@ -808,13 +808,17 @@ def snezhinki(event):  # Снежинки!
     print('Рисую 4 снежинки в Canvas')
 
 
+# Горячие клавиши
+Keys = (',', 'r')
+window.bind(f'{Keys[0]}', snezhinki)
+window.bind(f'{Keys[1]}', lambda event: [rnd(event), rndfg(event)])
+
+
 # Начало работы окна Tkinter
-window.bind(',', snezhinki)
-window.bind('r', lambda event: [rnd(event), rndfg(event)])
 print('-------------Начало работы-------------')
 print('<<---------------------------------------Горячие клавиши--------------------------------------->>')
-print('Нарисовать снежинки в Canvas - горячая клавиша <,>\n'
-      'Сгенерировать случайные элементы матриц - горячая клавиша <r>')
+print(f'Нарисовать снежинки в Canvas - горячая клавиша <{Keys[0]}>\n'
+      f'Сгенерировать случайные элементы матриц - горячая клавиша <{Keys[1]}>')
 print('>>---------------------------------------Горячие клавиши---------------------------------------<<')
 snezhinki(',')
 window.mainloop()
