@@ -606,7 +606,13 @@ def multnum():  # Умножение на число
 
 def powerA():  # Возведение в степень
     try:
-        res.set(printres(SquareMatrices(translate(entrsA)) ** power.get()))
+        global typenum
+        if typenum == 'Fraction' and power.get() == 0:
+            typenum = 'float'
+            res.set(printres(SquareMatrices(translate(entrsA)) ** power.get()))
+            typenum = 'Fraction'
+        else:
+            res.set(printres(SquareMatrices(translate(entrsA)) ** power.get()))
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -751,7 +757,7 @@ btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fi
 size = 200
 canva = tk.Canvas(frm5, bg='white', height=size, width=size)
 canva.pack(side='top')
-k1 = ('Times New Roman', 6)
+k1 = (k[0], int(k[1] // 2 + 1))
 Y = lambda: [canva.create_line(size / 2, 0, size / 2, size, arrow='first'),
              canva.create_text(size / 2 + 7, 9, text='y', font=k),
              [canva.create_line(size / 2 - 2, 25 * i, size / 2 + 2, 25 * i) for i in range(1, int(size / 25))],
