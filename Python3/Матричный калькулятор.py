@@ -382,7 +382,7 @@ class SquareMatrices(Matrices):  # Квадрат
             det, ans = SquareMatrices(self.matricA).detA() ** (-1), []
         except ZeroDivisionError:
             return ' Определитель равен нулю\nобратной матрицы не существует '
-        if det == float('inf'):
+        if det == float('inf') or det == 0:
             return ' Определитель равен нулю\nобратной матрицы не существует '
         print('Определитель матрицы больше нуля. Считаю матрицу алгебраических дополнений')
         for i in range(self.nA):
@@ -404,10 +404,16 @@ class TriangleMatrices(Matrices):  # Над или под главной диа�
             if self.matricA[i][0] != 0:
                 self.matricA[0], self.matricA[i] = self.matricA[i], self.matricA[0]
                 break
-        for i in range(self.mA):  # Для матриц с несколькими нулевыми строками не работает
+        m = 1
+        for i in range(self.mA - 1):
             if self.matricA[i] == [0] * self.nA:
-                print(f'Меняю местами {i + 1} строку с {self.mA} строкой')
-                self.matricA[i], self.matricA[self.mA - 1] = self.matricA[self.mA - 1], self.matricA[i]
+                try:
+                    while self.matricA[i + m] == [0] * self.nA:
+                        m += 1
+                    print(f'Меняю местами {i + 1} строку с {i + m + 1} строкой')
+                    self.matricA[i], self.matricA[i + m] = self.matricA[i + m], self.matricA[i]
+                except IndexError:
+                    pass
         for i in range(self.nA):
             m = i
             for j in range(i + 1, self.mA + 1):
@@ -620,7 +626,7 @@ def powerA():  # Возведение в степень
 def triangulationAU():  # Треугольный вид матрицы
     try:
         a = printres(TriangleMatrices(translate(entrsA)).triangulationAU())
-        a = re.sub(r'[-]?0[.]0{1,}\d+|0E[-]\d*', '0', a)
+        a = re.sub(r'[-]?0[.]0+\d+|0E[-]\d*', '0', a)
         res.set(a)
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
@@ -772,8 +778,8 @@ X = lambda: [canva.create_line(0, size / 2, size, size / 2, arrow='last'),
 
 def project2x2():  # Параллелограмм матрицы на Canvas
     try:
-        for i in range(10000):
-            rnd('r')
+        # for i in range(10000):
+        #     rnd('r')
             a, b, c = int(entrsA[0][0].get()), -int(entrsA[1][0].get()), int(entrsA[0][1].get())
             d = -int(entrsA[1][1].get())
             clr = '#' + ''.join([str(hex(randint(0, 12)))[2] for _ in range(6)])
