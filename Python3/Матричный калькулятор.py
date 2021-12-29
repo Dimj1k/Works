@@ -370,10 +370,9 @@ class SquareMatrices(Matrices):  # Квадрат
             if i != pop_i - 1:
                 d.pop(pop_j - 1)
                 ansm.append(d)
-        print(f'---------Минор {pop_i} строки {pop_j} столбца:', Matrices(ansm) * (-1) ** (pop_j + pop_i), '---------')
-        return Matrices(ansm) * (-1) ** (pop_j + pop_i)
+        return SquareMatrices(ansm).detA() * (-1) ** (pop_i + pop_j)
 
-    def invertA(self):  # Обратный вид матрицы (путает + и - в матрицах nxn, при нечетных n)
+    def invertA(self):  # Обратный вид матрицы
         if self.nA != self.mA:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
         if self.nA == 1:
@@ -390,7 +389,7 @@ class SquareMatrices(Matrices):  # Квадрат
             for j in range(self.nA):
                 self.matricA = SquareMatrices.deepcopy(copym)
                 mnr_a = SquareMatrices.minor_a(self.matricA, i + 1, j + 1)
-                lst.append(SquareMatrices(mnr_a).detA())
+                lst.append(mnr_a)
             ans.append(lst)
             lst = []
         ans = Matrices(Matrices(ans).transpA()) * det
@@ -767,8 +766,8 @@ X = lambda: [canva.create_line(0, size / 2, size, size / 2, arrow='last'),
 
 def project2x2():  # Параллелограмм матрицы на Canvas
     try:
-        # for i in range(100):
-        #     rnd()
+        for i in range(10000):
+            rnd('r')
             a, b, c = int(entrsA[0][0].get()), -int(entrsA[1][0].get()), int(entrsA[0][1].get())
             d = -int(entrsA[1][1].get())
             clr = '#' + ''.join([str(hex(randint(0, 12)))[2] for _ in range(6)])
@@ -817,8 +816,8 @@ window.bind(f'{Keys[1]}', lambda event: [rnd(event), rndfg(event)])
 # Начало работы окна Tkinter
 print('-------------Начало работы-------------')
 print('<<---------------------------------------Горячие клавиши--------------------------------------->>')
-print(f'Нарисовать снежинки в Canvas - горячая клавиша <{Keys[0]}>\n'
-      f'Сгенерировать случайные элементы матриц - горячая клавиша <{Keys[1]}>')
+print(f'\tНарисовать снежинки в Canvas - горячая клавиша <{Keys[0]}>\n'
+      f'\tСгенерировать случайные элементы матриц - горячая клавиша <{Keys[1]}>')
 print('>>---------------------------------------Горячие клавиши---------------------------------------<<')
 snezhinki(',')
 window.mainloop()
