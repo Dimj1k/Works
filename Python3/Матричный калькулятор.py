@@ -4,7 +4,7 @@ import re
 from decimal import Decimal, getcontext, InvalidOperation
 from fractions import Fraction
 from os import path
-from subprocess import call
+from subprocess import Popen
 
 # Точность чисел класса Decimal и шрифт текста
 getcontext().prec = 6
@@ -13,7 +13,7 @@ k = ('Times New Roman', 11)
 # Переменные для истории калькулятора
 history = ''
 historydir = path.dirname(__file__)
-historyfile = "History_matrix.log"
+historyfile = "History_matrix.txt"
 historydirfile = path.join(historydir, historyfile)
 
 
@@ -815,18 +815,17 @@ btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fi
 # Сохранить ответ в текстовый документ
 def saving():  # Сохранение ответа в текстовый документ
     global history
-    if 'Рав' in history:
-        with open(historydirfile, 'a', encoding='UTF-8') as f:
-            f.writelines([history, '\n', '-------------------------------------------------------------------------\n'])
-            print(f'Записываю результат в:', f.name[f.name.rfind('\\') + 1:f.name.rfind('.log')])
+    with open(historydirfile, 'a', encoding='UTF-8') as f:
+        f.writelines([history, '\n', '-' * 74 + '\n'])
+        print('Записываю результат в:', (re.search(f'{historyfile}', f.name).group(0))[0:historyfile.find('.txt')])
 
 
 def showhistory():  # Показать текстовый документ с историей
     if path.exists(historydirfile):
-        call(f'{historydirfile}', shell=True)
+        Popen(f'{historydirfile}', shell=True)
         print('Открываю файл с историей калькулятора')
     else:
-        print('Не удалось открыть файл с историей калькулятора')
+        print('История калькулятора не найдена')
 
 
 def clearhistory():  # Очистить текстовый документ с историей
@@ -834,7 +833,7 @@ def clearhistory():  # Очистить текстовый документ с �
         open(historydirfile, 'w').close()
         print('Очищаю историю калькулятора')
     else:
-        print('Не удалось очистить историю калькулятора')
+        print('История калькулятора не найдена')
 
 
 frm7 = tk.LabelFrame(window, font=k, text='История калькулятора')
