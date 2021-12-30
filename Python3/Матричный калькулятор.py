@@ -14,7 +14,7 @@ history = ''
 historydir = path.dirname(__file__)
 historyfile = "History_matrix.log"
 historydirfile = historydir + '\\' + historyfile
-tome = historydir[0:historydir.find(':') + 1]
+pytome = historydir[0:historydir.find(':') + 1]
 
 
 class Calc:
@@ -823,7 +823,7 @@ def saving():  # Сохранение ответа в текстовый док�
 
 def showhistory():  # Показать текстовый документ с историей
     if path.exists(historydirfile):
-        system(f'{tome} & cd "{historydir}" & start {historyfile}')
+        system(f'{pytome} & cd "{historydir}" & start {historyfile}')
         print('Открываю файл с историей калькулятора')
     else:
         print('Не удалось открыть файл с историей калькулятора')
