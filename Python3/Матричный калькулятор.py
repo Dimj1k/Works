@@ -8,8 +8,13 @@ from os import system, path
 # Точность чисел класса Decimal и шрифт текста
 getcontext().prec = 6
 k = ('Times New Roman', 11)
+
+# Переменные для истории калькулятора
 history = ''
-historyfile = path.dirname(__file__) + r'\History_matrix.txt'
+historydir = path.dirname(__file__)
+historyfile = "History_matrix.log"
+historydirfile = historydir + '\\' + historyfile
+tome = historydir[0:historydir.find(':') + 1]
 
 
 class Calc:
@@ -646,7 +651,8 @@ def powerA():  # Возведение в степень
     try:
         global history, typenum
         if typenum == 'Fraction' and power.get() == 0:
-            typenum, history = 'float', printres(SquareMatrices(translate(entrsA)) ** power.get())
+            typenum = 'float'
+            history = printres(SquareMatrices(translate(entrsA)) ** power.get())
             res.set(history)
             typenum = 'Fraction'
         else:
@@ -806,6 +812,37 @@ btnfloat.pack()
 btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fill=tk.X)
 
 
+# Сохранить ответ в текстовый документ
+def saving():  # Сохранение ответа в текстовый документ
+    global history
+    if 'Рав' in history:
+        with open(historydirfile, 'a', encoding='UTF-8') as f:
+            f.writelines([history, '\n', '-------------------------------------------------------------------------\n'])
+            print(f'Записываю результат в:', f.name[f.name.rfind('\\') + 1:f.name.rfind('.log')])
+
+
+def showhistory():  # Показать текстовый документ с историей
+    if path.exists(historydirfile):
+        system(f'{tome} & cd "{historydir}" & start {historyfile}')
+        print('Открываю файл с историей калькулятора')
+    else:
+        print('Не удалось открыть файл с историей калькулятора')
+
+
+def clearhistory():  # Очистить текстовый документ с историей
+    if path.exists(historydirfile):
+        system(f'break > "{historydirfile}"')
+        print('Очищаю историю калькулятора')
+    else:
+        print('Не удалось очистить историю калькулятора')
+
+
+frm7 = tk.LabelFrame(window, font=k, text='История калькулятора')
+frm7.place(rely=0.7, relx=0)
+btnhist = tk.Button(frm7, font=k, text='Показать историю калькулятора', command=showhistory).pack(fill=tk.X)
+btnhistclear = tk.Button(frm7, font=k, text='Очистить историю калькулятора', command=clearhistory).pack(fill=tk.X)
+
+
 # Окно Canvas ---------------------------------------------------------------------------------------------------------
 size = 200
 canva = tk.Canvas(frm5, bg='white', height=size, width=size)
@@ -864,37 +901,6 @@ def snezhinki(event):  # Снежинки!
         [canva.create_line(j + addx / 2, j + addy, j + size / 16 * cos(radians(i)) + addx / 2, j + size / 16
                            * sin(radians(i)) + addy, fill='#2db7e5') for i in range(0, 360, 20)]
     print('Рисую 4 снежинки в Canvas')
-
-
-# Сохранить ответ в текстовый документ
-def saving():  # Сохранение ответа в текстовый документ
-    global history
-    if 'Рав' in history:
-        with open(historyfile, 'a', encoding='UTF-8') as f:
-            f.writelines([history, '\n', '-------------------------------------------------------------------------\n'])
-            print(f'Записываю результат в файл:', f.name[f.name.rfind('\\') + 1:])
-
-
-def showhistory():  # Показать текстовый документ с историей
-    if path.exists(historyfile):
-        system('start %s' % historyfile)
-        print('Открываю файл с историей калькулятора')
-    else:
-        print('Не удалось открыть файл с историей калькулятора')
-
-
-def clearhistory():  # Очистить текстовый документ с историей
-    if path.exists(historyfile):
-        system('break > %s' % historyfile)
-        print('Очищаю историю калькулятора')
-    else:
-        print('Не удалось очистить историю калькулятора')
-
-
-frm7 = tk.LabelFrame(window, font=k, text='История калькулятора')
-frm7.place(rely=0.66, relx=0)
-btnhist = tk.Button(frm7, font=k, text='Показать историю калькулятора', command=showhistory).pack(fill=tk.X)
-btnhistclear = tk.Button(frm7, font=k, text='Очистить историю калькулятора', command=clearhistory).pack(fill=tk.X)
 
 
 # Начало работы окна Tkinter -------------------------------------------------------------------------------------------
