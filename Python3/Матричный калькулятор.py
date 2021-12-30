@@ -3,7 +3,8 @@ from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
 from fractions import Fraction
-from os import system, path
+from os import path
+from subprocess import call
 
 # Точность чисел класса Decimal и шрифт текста
 getcontext().prec = 6
@@ -13,8 +14,7 @@ k = ('Times New Roman', 11)
 history = ''
 historydir = path.dirname(__file__)
 historyfile = "History_matrix.log"
-historydirfile = historydir + '\\' + historyfile
-pytome = historydir[0:historydir.find(':') + 1]
+historydirfile = path.join(historydir, historyfile)
 
 
 class Calc:
@@ -823,7 +823,7 @@ def saving():  # Сохранение ответа в текстовый док�
 
 def showhistory():  # Показать текстовый документ с историей
     if path.exists(historydirfile):
-        system(f'{pytome} & cd "{historydir}" & start {historyfile}')
+        call(f'{historydirfile}', shell=True)
         print('Открываю файл с историей калькулятора')
     else:
         print('Не удалось открыть файл с историей калькулятора')
@@ -831,7 +831,7 @@ def showhistory():  # Показать текстовый документ с и
 
 def clearhistory():  # Очистить текстовый документ с историей
     if path.exists(historydirfile):
-        system(f'break > "{historydirfile}"')
+        open(historydirfile, 'w').close()
         print('Очищаю историю калькулятора')
     else:
         print('Не удалось очистить историю калькулятора')
