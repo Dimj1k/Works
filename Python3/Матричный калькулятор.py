@@ -3,10 +3,13 @@ from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
 from fractions import Fraction
+from os import system, path
 
 # Точность чисел класса Decimal и шрифт текста
 getcontext().prec = 6
 k = ('Times New Roman', 11)
+history = ''
+historyfile = path.dirname(__file__) + r'\History_matrix.txt'
 
 
 class Calc:
@@ -535,8 +538,13 @@ def show2():  # Показать
 
 def add():  # Сумма
     try:
-        C = Matrices(translate(entrsA)) + (translate(entrsB))
-        res.set(printres(C))
+        global history
+        history = printres(Matrices(translate(entrsA)) + translate(entrsB))
+        res.set(history)
+        if history[0] != 'В':
+            history = 'Сумма матриц:\n' + printres(translate(entrsA)) + '\n--------И\n' + printres(translate(entrsB)) +\
+                      '\n--------Равна:\n' + history
+            saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -566,25 +574,37 @@ def printres(p):  # Вывод в виде матрицы
 
 def difference():  # Разность
     try:
-        res.set(printres(Matrices(translate(entrsA)) - translate(entrsB)))
+        global history
+        history = printres(Matrices(translate(entrsA)) - translate(entrsB))
+        res.set(history)
+        if history[0] != 'В':
+            history = 'Разность матриц:\n' + printres(translate(entrsA)) + '\n--------И\n' + \
+                      printres(translate(entrsB)) + '\n--------Равна:\n' + history
+            saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def transpA():  # Транспонирование
     try:
-        C = Matrices(translate(entrsA))
-        res.set(printres(C.transpA()))
+        global history
+        history = printres(Matrices(translate(entrsA)).transpA())
+        res.set(history)
+        history = 'Транспонированная матрица:\n' + printres(translate(entrsA)) + '\n--------Равна:\n' + history
+        saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def traceA():  # След
     try:
+        global history
         C = SquareMatrices(translate(entrsA))
-        a = re.sub(r"Decimal\('|'\)", '', str(C.traceA()))
-        if a != 'След матрицы можно вычислить\nтолько у квадратной матрицы':
+        a = history = re.sub(r"Decimal\('|'\)", '', str(C.traceA()))
+        if a[0] != 'С':
             res.set('След матрицы А = ' + str(a))
+            history = 'След матрицы:\n' + printres(translate(entrsA)) + '\n--------Равен: ' + str(a)
+            saving()
         else:
             res.set(str(a))
     except (NameError, tk.TclError, IndexError):
@@ -593,60 +613,87 @@ def traceA():  # След
 
 def mult():  # Умножение А и В
     try:
-        res.set(printres((Matrices(translate(entrsA)) * translate(entrsB))))
+        global history
+        history = printres(Matrices(translate(entrsA)) * translate(entrsB))
+        res.set(history)
+        if history[0] != 'К':
+            history = 'Умножение матриц:\n'+ printres(translate(entrsA)) + '\n--------И\n' + \
+                      printres(translate(entrsB)) + '\n--------Равно:\n' + history
+            saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def multnum():  # Умножение на число
     try:
+        global history
         if typenum == 'Decimal':
             # noinspection PyTypeChecker
-            res.set(printres(Matrices(translate(entrsA)) * Decimal(num.get())))
+            history = printres(Matrices(translate(entrsA)) * Decimal(num.get()))
+            res.set(history)
         else:
             # noinspection PyTypeChecker
-            res.set(printres(Matrices(translate(entrsA)) * Fraction(str(num.get()))))
+            history = printres(Matrices(translate(entrsA)) * Fraction(num.get()))
+            res.set(history)
+        history = f'Умножение матрицы на {num.get()}:\n' + printres(translate(entrsA)) + '\n--------Равно:\n' \
+                  + str(history)
+        saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def powerA():  # Возведение в степень
     try:
-        global typenum
+        global history, typenum
         if typenum == 'Fraction' and power.get() == 0:
-            typenum = 'float'
-            res.set(printres(SquareMatrices(translate(entrsA)) ** power.get()))
+            typenum, history = 'float', printres(SquareMatrices(translate(entrsA)) ** power.get())
+            res.set(history)
             typenum = 'Fraction'
         else:
-            res.set(printres(SquareMatrices(translate(entrsA)) ** power.get()))
+            history = printres(SquareMatrices(translate(entrsA)) ** power.get())
+            res.set(history)
+        if history[0] != 'В':
+            history = f'Возведение в степень матрицы на {power.get()}:\n' + printres(translate(entrsA)) + \
+                      '\n--------Равно:\n' + history
+            saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def triangulationAU():  # Треугольный вид матрицы
     try:
-        a = printres(TriangleMatrices(translate(entrsA)).triangulationAU())
-        a = re.sub(r'[-]?0[.]0+\d+|0E[-]\d*', '0', a)
-        res.set(a)
+        global history
+        history = printres(TriangleMatrices(translate(entrsA)).triangulationAU())
+        history = re.sub(r'[-]?0[.]0+\d+|0E[-]\d*', '0', history)
+        res.set(history)
+        history = 'Треугольный вид матрицы:\n' + printres(translate(entrsA)) + '\n--------Равен:\n' + history
+        saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def detA():  # Определитель матрицы
     try:
-        C = SquareMatrices(translate(entrsA))
-        a = re.sub(r"Decimal\('|'\)", '', str(C.detA()))
-        if a != 'Вычислить определитель можно\nтолько у квадратной матрицы':
-            res.set('Определитель матрицы А = ' + str(a))
+        global history
+        history = str(SquareMatrices(translate(entrsA)).detA())
+        if history[0] != 'В':
+            res.set('Определитель матрицы А = ' + str(history))
+            history = 'Определитель матрицы:\n' + printres(translate(entrsA)) + '\n--------Равен: ' + history
+            saving()
         else:
-            res.set(str(a))
+            res.set('Вычислить определитель можно\nтолько у квадратной матрицы')
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
 
 def invertA():  # Обратный вид матрицы
     try:
-        res.set(printres(SquareMatrices(translate(entrsA)).invertA()))
+        global history
+        history = printres(SquareMatrices(translate(entrsA)).invertA())
+        res.set(history)
+        if history[0] != 'В':
+            history = 'Обратный вид матрицы:\n' + printres(translate(entrsA)) + '\n--------Равен:\n' + history
+            saving()
     except (NameError, tk.TclError, IndexError):
         res.set('Введите размерность матриц')
 
@@ -819,13 +866,42 @@ def snezhinki(event):  # Снежинки!
     print('Рисую 4 снежинки в Canvas')
 
 
+# Сохранить ответ в текстовый документ
+def saving():  # Сохранение ответа в текстовый документ
+    global history
+    if 'Рав' in history:
+        with open(historyfile, 'a', encoding='UTF-8') as f:
+            f.writelines([history, '\n', '-------------------------------------------------------------------------\n'])
+            print(f'Записываю результат в файл:', f.name[f.name.rfind('\\') + 1:])
+
+
+def showhistory():  # Показать текстовый документ с историей
+    if path.exists(historyfile):
+        system('start %s' % historyfile)
+        print('Открываю файл с историей калькулятора')
+    else:
+        print('Не удалось открыть файл с историей калькулятора')
+
+
+def clearhistory():  # Очистить текстовый документ с историей
+    if path.exists(historyfile):
+        system('break > %s' % historyfile)
+        print('Очищаю историю калькулятора')
+    else:
+        print('Не удалось очистить историю калькулятора')
+
+
+frm7 = tk.LabelFrame(window, font=k, text='История калькулятора')
+frm7.place(rely=0.66, relx=0)
+btnhist = tk.Button(frm7, font=k, text='Показать историю калькулятора', command=showhistory).pack(fill=tk.X)
+btnhistclear = tk.Button(frm7, font=k, text='Очистить историю калькулятора', command=clearhistory).pack(fill=tk.X)
+
+
+# Начало работы окна Tkinter -------------------------------------------------------------------------------------------
 # Горячие клавиши
 Keys = (',', 'r')
 window.bind(f'{Keys[0]}', snezhinki)
 window.bind(f'{Keys[1]}', lambda event: [rnd(event), rndfg(event)])
-
-
-# Начало работы окна Tkinter
 print('-------------Начало работы-------------')
 print('<<---------------------------------------Горячие клавиши--------------------------------------->>')
 print(f'\tНарисовать снежинки в Canvas - горячая клавиша <{Keys[0]}>\n'
