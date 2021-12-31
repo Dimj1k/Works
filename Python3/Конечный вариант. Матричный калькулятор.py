@@ -3,7 +3,7 @@ from random import randint
 import re
 from decimal import Decimal, getcontext, InvalidOperation
 from fractions import Fraction
-from os import path
+from os import path, makedirs
 from subprocess import Popen
 
 # Точность чисел класса Decimal и шрифт текста
@@ -12,7 +12,7 @@ k = ('Times New Roman', 11)
 
 # Переменные для истории калькулятора
 history = ''
-historydir = path.dirname(__file__)
+historydir = path.join(path.dirname(__file__), "History matrix")
 historyfile = "History_matrix.txt"
 historydirfile = path.join(historydir, historyfile)
 
@@ -815,6 +815,8 @@ btnchng = tk.Button(frm6, text='Изменить', font=k, command=chng).pack(fi
 # Сохранить ответ в текстовый документ
 def saving():  # Сохранение ответа в текстовый документ
     global history
+    if not path.exists(historydir):
+        makedirs(historydir)
     with open(historydirfile, 'a', encoding='UTF-8') as f:
         f.writelines([history, '\n', '-' * 74 + '\n'])
         print('Записываю результат в:', (re.search(f'{historyfile}', f.name).group(0))[0:historyfile.find('.txt')])
@@ -888,7 +890,7 @@ def project2x2():  # Параллелограмм матрицы на Canvas
 btn12 = tk.Button(frm5, font=k, text='Параллелограмм матрицы А (2x2) в окне Canvas', command=project2x2).pack(fill=tk.X)
 btn13 = tk.Button(frm5, font=k, text='Очистить окно Canvas',
                   command=lambda: [canva.delete("all"), print('Очищаю Canvas от фигур'), Y(), X()]).pack(fill=tk.X)
-btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.destroy)
+btn14 = tk.Button(frm5, font=k, text='Выйти из программы', command=window.quit)
 btn14.pack(fill=tk.X), Y(), X()
 
 
