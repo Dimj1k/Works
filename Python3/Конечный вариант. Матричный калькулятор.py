@@ -383,8 +383,6 @@ class SquareMatrices(Matrices):  # Квадрат
     def invertA(self):  # Обратный вид матрицы
         if self.nA != self.mA:
             return ' Возвести в степень можно\nтолько квадратную матрицу '
-        if self.nA == 1:
-            return [[self.matricA[0][0] ** (-1)]]
         copym, lst = SquareMatrices.deepcopy(self.matricA), []
         try:
             det, ans = SquareMatrices(self.matricA).detA() ** (-1), []
@@ -392,6 +390,8 @@ class SquareMatrices(Matrices):  # Квадрат
             return ' Определитель равен нулю\nобратной матрицы не существует '
         if det == float('inf') or det == 0:
             return ' Определитель равен нулю\nобратной матрицы не существует '
+        if self.nA == 1:
+            return [[self.matricA[0][0] ** (-1)]]
         print('Определитель матрицы больше нуля. Считаю матрицу алгебраических дополнений')
         for i in range(self.nA):
             for j in range(self.nA):
@@ -697,7 +697,7 @@ def invertA():  # Обратный вид матрицы
         global history
         history = printres(SquareMatrices(translate(entrsA)).invertA())
         res.set(history)
-        if history[0] != 'В':
+        if history[0] != 'В' and history[0] != 'О':
             history = 'Обратный вид матрицы:\n' + printres(translate(entrsA)) + '\n--------Равен:\n' + history
             saving()
     except (NameError, tk.TclError, IndexError):
