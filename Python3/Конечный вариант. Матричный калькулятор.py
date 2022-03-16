@@ -281,7 +281,7 @@ class Matrices:  # Матрицы
         return self.__ans
 
     def transpA(self):  # Транспонирование матрицы А
-        matricCt, lstes = [], []
+        lstes = []
         for j in range(self.nA):
             for i in range(self.mA):
                 print(f'Меняю {i + 1} строка и {j + 1} столбец на {j + 1} строку и {i + 1} столбец')
