@@ -1,4 +1,5 @@
 from math import *
+import re
 
 
 class Func:
@@ -50,20 +51,20 @@ class Equation(Func):
     def secant(self, a: float):
         b = a + self.eps * 2
         while abs(b - a) > self.eps and self.lim != 1000:
-            a, b, self.lim = b - (self.f(b) * (a - b) / (self.f(a) - self.f(b))), a, self.lim + 1
+            try: a, b, self.lim = b - (self.f(b) * (a - b) / (self.f(a) - self.f(b))), a, self.lim + 1
+            except ZeroDivisionError: return f"Решение {self.fx} = 0 не найдено"
         if abs(self.f(a)) > self.eps * 10: return f"Решение {self.fx} = 0 не найдено"
         else: return f"Ответ {self.fx} = 0 при x = {a}"
 
     def Newton(self, a: float):
         b = a + self.eps * 2
         while abs(b - a) > self.eps and self.lim != 1000:
-            try:
-                a, b, self.lim = b - self.f(b) / Func(self.fx).diffx(b), a, self.lim + 1
+            try: a, b, self.lim = b - self.f(b) / Func(self.fx).diffx(b), a, self.lim + 1
             except ZeroDivisionError: return f"Решение {self.fx} = 0 не найдено"
         return f"Ответ {self.fx} = 0 при x = {b}"
 
 
-Fx = input("Введите уравнение вида f(x) = 0: ")
+Fx = re.sub(r"[a-zA-Zа-яА-Я]", 'x', input("Введите уравнение вида f(x) = 0: "))
 Eq = Equation(Fx, abs(float(input("Введите точность: "))))
 print("-" * 60)
 method = input("Введите метод решения уравнения:\n1)Метод дихтомии\n2)Метод хорд\n3)Метод Ньютона\nМетод ")
