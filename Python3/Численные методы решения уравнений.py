@@ -20,7 +20,7 @@ class Func:
 
     functionofx = lambda self, a: self.f(a)
 
-    diffx = lambda self, a: (self.f(a + 2 ** -32) - self.f(a)) / 2 ** -32
+    diffofx = lambda self, a: (self.f(a + 2 ** -32) - self.f(a)) / 2 ** -32
 
 class Equation(Func):
 
@@ -59,12 +59,12 @@ class Equation(Func):
     def Newton(self, a: float):
         b = a + self.eps * 2
         while abs(b - a) > self.eps and self.lim != 1000:
-            try: a, b, self.lim = b - self.f(b) / Func(self.fx).diffx(b), a, self.lim + 1
+            try: a, b, self.lim = b - self.f(b) / Func(self.fx).diffofx(b), a, self.lim + 1
             except ZeroDivisionError: return f"Решение {self.fx} = 0 не найдено"
         return f"Ответ {self.fx} = 0 при x = {b}"
 
 
-Fx = re.sub(r"[a-zA-Zа-яА-Я]", 'x', input("Введите уравнение вида f(x) = 0: "))
+Fx = re.sub(r"[a-zA-Zа-яА-Я]{4,}", "x", input("Введите уравнение вида f(x) = 0: "))
 Eq = Equation(Fx, abs(float(input("Введите точность: "))))
 print("-" * 60)
 method = input("Введите метод решения уравнения:\n1)Метод дихтомии\n2)Метод хорд\n3)Метод Ньютона\nМетод ")
