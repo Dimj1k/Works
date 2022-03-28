@@ -59,7 +59,7 @@ class Equation(Func):
     def Newton(self, a: float):
         b = a + self.eps * 2
         while abs(b - a) > self.eps and self.lim != 10e3:
-            try: a, b, self.lim = b - self.f(b) / Func(self.fx).diffofx(b), a, self.lim + 1
+            try: a, b, self.lim = b - self.f(b) / self.diffofx(b), a, self.lim + 1
             except ZeroDivisionError: return f"Решение {self.fx} = 0 не найдено"
         return f"Ответ {self.fx} = 0 при x = {b}"
 
