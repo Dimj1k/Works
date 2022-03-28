@@ -39,7 +39,7 @@ class Equation(Func):
         self.eps = eps
 
     def dichotomy(self, a: float, b: float):
-        while (abs(b - a) > self.eps) and self.lim != 1000:
+        while (abs(b - a) > self.eps) and self.lim != 10e3:
             c, self.lim = (a + b) / 2, self.lim + 1
             if self.f(b) * self.f(c) < 0: a = c
             else: b = c
@@ -50,7 +50,7 @@ class Equation(Func):
 
     def secant(self, a: float):
         b = a + self.eps * 2
-        while abs(b - a) > self.eps and self.lim != 1000:
+        while abs(b - a) > self.eps and self.lim != 10e3:
             try: a, b, self.lim = b - (self.f(b) * (a - b) / (self.f(a) - self.f(b))), a, self.lim + 1
             except ZeroDivisionError: return f"Решение {self.fx} = 0 не найдено"
         if abs(self.f(a)) > self.eps * 10: return f"Решение {self.fx} = 0 не найдено"
@@ -58,7 +58,7 @@ class Equation(Func):
 
     def Newton(self, a: float):
         b = a + self.eps * 2
-        while abs(b - a) > self.eps and self.lim != 1000:
+        while abs(b - a) > self.eps and self.lim != 10e3:
             try: a, b, self.lim = b - self.f(b) / Func(self.fx).diffofx(b), a, self.lim + 1
             except ZeroDivisionError: return f"Решение {self.fx} = 0 не найдено"
         return f"Ответ {self.fx} = 0 при x = {b}"
