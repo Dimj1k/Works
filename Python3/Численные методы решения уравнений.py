@@ -64,7 +64,7 @@ class Equation(Func):
         return f"Ответ {self.fx} = 0 при x = {b}"
 
 
-Fx = re.sub(r"[a-zA-Zа-яА-Я]{4,}", "x", input("Введите уравнение вида f(x) = 0: "))
+Fx = input("Введите уравнение вида f(x) = 0: ")
 Eq = Equation(Fx, abs(float(input("Введите точность: "))))
 print("-" * 60)
 method = input("Введите метод решения уравнения:\n1)Метод дихтомии\n2)Метод хорд\n3)Метод Ньютона\nМетод ")
