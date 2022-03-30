@@ -179,4 +179,7 @@ def main(given):
             return main(input('Введите пример: '))
 
 
-main(input('Введите пример: '))
+try:
+    main(input('Введите пример: '))
+except:
+    main(input('Произошла ошибка введите пример снова: '))
