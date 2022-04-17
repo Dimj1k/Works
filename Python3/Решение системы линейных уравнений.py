@@ -141,18 +141,20 @@ class SysLinearEq:
     __repr__ = lambda self:'Матрица:' + str(self.matrix)+' Вектор:'+str(self.vector)+' Набор:'+' '.join(self.keys)
 
 parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
-parser.add_argument('-i', '--input', type=str, help='Укажите файл с СЛАУ', dest='i', required=True,
+parser.add_argument('-i', type=str, help='Укажите файл с СЛАУ', dest='i', required=True,
                     nargs='?', metavar='file')
-parser.add_argument('-o', '--output', type=str, help='Укажите, где вывести решение СЛАУ. По-умолчанию file_output.txt',
+parser.add_argument('-o','--output',type=str, help='Укажите, где вывести результат СЛАУ. По-умолчанию file_output.txt',
                     dest='o', nargs='?', metavar='file')
 inp, out = parser.parse_args().i, parser.parse_args().o
-if inp is None: print('Укажите название файла'), quit()
-if out is None or out == '': output = inp[:inp.rfind('.')] + '_output' + '.txt'
-else: output = out
-with open(os.path.join(os.path.dirname(__file__), inp), 'r') as input:
+directory = os.path.dirname(__file__)
+output = os.path.join(directory, 'output')
+if not(os.path.exists(output)): os.makedirs(output)
+if inp[:len(directory)] == directory: inp = inp[len(directory) + 1:]
+if out is None or out == '': out = inp
+with open(os.path.join(directory, inp), 'r') as input:
     try: mat = SysLinearEq(input.read().strip())
     except: raise('Произошла ошибка, введите СЛАУ правильно.')
-with open(os.path.join(os.path.dirname(__file__), output), 'w', encoding='UTF-8') as output:
+with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('-' * 5, str(mat), '-' * 5, file=output)
     matAndvec = [mat.get_matrix[i] + [mat.get_vector[i]] for i in range(len(mat.get_vector))]
     print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{Matrix(matAndvec)}', file=output)
@@ -169,3 +171,4 @@ with open(os.path.join(os.path.dirname(__file__), output), 'w', encoding='UTF-8'
     mat.setsimpllin([i[-1] for i in matAndvec], [i[:-1] for i in matAndvec])
     print('Решение системы линейных уравнений:', file=output)
     print(mat.solution(), file=output)
+    print('Результат сохранен в', output.name)
