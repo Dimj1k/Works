@@ -57,6 +57,7 @@ class Matrix:
 class SysLinearEq:
 
     import re
+    from random import randint
 
     def __init__(self, linear: str):
         self.vector, self.matrix = [], []
@@ -117,17 +118,23 @@ class SysLinearEq:
         for i in firstvars:
             for j in range(len(variables)):
                 if type(variables[j][1]) == str: firstvars[j][1] = variables[j][1].replace(i[0], '(' + str(i[1]) + ')')
-        k, quest = False, []
+        a = []
+        k, quest, randoms, a = False, [], [], a + [self.re.findall('[A-Z]', i[1]) for i in firstvars if len(i[1]) == 1]
+        randoms = [str(self.randint(-10, 10)) for _ in range(len(a))]
         for i in firstvars:
             try:
                 quest.append(eval(str(i[1])))
             except (NameError, SyntaxError):
                 k = True
-                quest.append(str(i[1]))
-                ans = [f'{firstvars[i][0]} = {quest[i]}' for i in range(len(quest))]
+                exec(f"{', '.join([j[0] for j in a])} = {', '.join(randoms)}")
+                quest.append(eval(str(i[1])))
         ans = [f'{firstvars[i][0]} = {quest[i]}' for i in range(len(quest))]
-        if k: return 'СЛАУ имеет бесконечное количество решений. Все решения:\n' + \
-             '\n'.join([f'{firstvars[i][0]} = {firstvars[i][1]}' for i in range(len(firstvars))])
+        if k:
+            infans = ', '.join([firstvars[e][1] + ' = ' + i for e, i in enumerate(randoms)])
+            return 'СЛАУ имеет бесконечное количество решений. Все решения:\n' + \
+             '\n'.join([f'{firstvars[i][0]} = {firstvars[i][1]}' for i in range(len(firstvars))]) + '\n' + \
+                'Одно из решений при ' + infans + '\n' + '\n'.join([f'{firstvars[i][0]} = {quest[i]}'
+                for i in range(len(firstvars))])
         return 'СЛАУ имеет одно решение:\n' + '\n'.join(ans)
                 
     __repr__ = lambda self:'Матрица:' + str(self.matrix)+' Вектор:'+str(self.vector)+' Набор:'+' '.join(self.keys)
