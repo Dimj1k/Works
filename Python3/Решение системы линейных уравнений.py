@@ -98,14 +98,15 @@ class SysLinearEq:
             try:
                 while self.matrix[-i][m] == 0: m += 1
             except: continue
-            a = " + ".join([(str(self.matrix[-i][j] / self.matrix[-i][m]) + "*" + self.keys[j])
+            a = " + ".join([(str(-self.matrix[-i][j] / self.matrix[-i][m]) + "*" + self.keys[j])
                             for j in range(len(self.keys)) if j != m])
             variables.append([vectors[m][0], f'{self.vector[-i] / self.matrix[-i][m]} - ({a})'])
+            print(a, variables)
         firstvars = []
         for i in range(len(variables)):
             a = variables[i][1][variables[i][1].find('(') + 1:-1]
             a = self.re.sub('-?0.0\*[a-z]\d*', '', a).replace(' ', '').strip('+')
-            a = (variables[i][1][:variables[i][1].find('(')] + a).strip(' - ')
+            a = (variables[i][1][:variables[i][1].find('(')] + a).strip(' - ').replace('+-', '-').replace('- -', '-')
             try: firstvars, variables[i][1] = [[variables[i][0], float(a)]] + firstvars, a
             except ValueError:
                 if len(variables[i][1]) == 1: firstvars = [[variables[i][0], a]] + firstvars
@@ -142,7 +143,7 @@ class SysLinearEq:
 parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
 parser.add_argument('-i', '--input', type=str, help='Укажите файл с СЛАУ', dest='i', required=True,
                     nargs='?', metavar='file')
-parser.add_argument('-o', '--output', type=str, help='Укажите, где вывести решение СЛАУ. По-умолчанию [file]_output.txt',
+parser.add_argument('-o', '--output', type=str, help='Укажите, где вывести решение СЛАУ. По-умолчанию file_output.txt',
                     dest='o', nargs='?', metavar='file')
 inp, out = parser.parse_args().i, parser.parse_args().o
 if inp is None: print('Укажите название файла'), quit()
