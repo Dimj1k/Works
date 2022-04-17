@@ -146,7 +146,7 @@ parser.add_argument('-o', '--output', type=str, help='Укажите, где в�
                     dest='o', nargs='?', metavar='file')
 inp, out = parser.parse_args().i, parser.parse_args().o
 if inp is None: print('Укажите название файла'), quit()
-if out is None: output = inp[:inp.rfind('.')] + '_output' + '.txt'
+if out is None or out == '': output = inp[:inp.rfind('.')] + '_output' + '.txt'
 else: output = out
 with open(os.path.join(os.path.dirname(__file__), inp), 'r') as input:
     try: mat = SysLinearEq(input.read().strip())
