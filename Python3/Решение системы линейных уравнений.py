@@ -140,9 +140,15 @@ class SysLinearEq:
     __repr__ = lambda self:'Матрица:' + str(self.matrix)+' Вектор:'+str(self.vector)+' Набор:'+' '.join(self.keys)
 
 parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
-parser.add_argument('-i', type=str, help='Укажите файл с СЛАУ', dest='i', required=True)
-inp = parser.parse_args().i
-output = inp[:inp.rfind('.')] + '_output' + '.txt'
+parser.add_argument('-i', '--input', type=str, help='Укажите файл с СЛАУ', dest='i', required=True,
+                    nargs='?', metavar='file')
+parser.add_argument('-o','--output', type=str, help='Укажите, где вывести решение СЛАУ. По-умолчанию [file]_output.txt',
+                    dest='o', nargs='?', metavar='file')
+inp, out = parser.parse_args().i, parser.parse_args().o
+if inp is None: print('Укажите название файла'), quit()
+if out is None: output = inp[:inp.rfind('.')] + '_output' + '.txt'
+elif out == 'None'.lower(): output = None
+else: output = out
 with open(os.path.join(os.path.dirname(__file__), inp), 'r') as input:
     try: mat = SysLinearEq(input.read().strip())
     except: raise('Произошла ошибка, введите СЛАУ правильно.')
