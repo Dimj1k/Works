@@ -128,7 +128,7 @@ class SysLinearEq:
         ans = [f'{firstvars[i][0]} = {quest[i]}' for i in range(len(quest))]
         if k: return 'СЛАУ имеет бесконечное количество решений. Все решения:\n' + \
              '\n'.join([f'{firstvars[i][0]} = {firstvars[i][1]}' for i in range(len(firstvars))])
-        return '\n'.join(ans)
+        return 'СЛАУ имеет одно решение:\n' + '\n'.join(ans)
                 
     __repr__ = lambda self:'Матрица:' + str(self.matrix)+' Вектор:'+str(self.vector)+' Набор:'+' '.join(self.keys)
 
