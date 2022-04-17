@@ -1,0 +1,158 @@
+import os
+import argparse as ag
+
+class Matrix:
+
+    def __init__(self, matrixA: list):
+        self.matrixA = matrixA
+        self.mA = len(matrixA)
+        try: self.nA = len(matrixA[0])
+        except TypeError: self.nA = 0
+
+    __str__ = lambda self:str(self.matrixA).replace('], ', '\n').replace(', ', '\t').replace('[', '').replace(']', '')
+
+    def __mul__(self, a: float):
+        if self.nA != 0: return ([[j * a for j in i] for i in self.matrixA])
+        else: return [i * a for i in self.matrixA]
+
+    def __sub__(self, lst: list):
+        if self.nA != 0:
+            return [[self.matrixA[i][j] - lst[i][j] for j in range(self.nA)] for i in range(self.mA)]
+        else: return [self.matrixA[i] - lst[i] for i in range(self.nA)]
+
+    def tri_one_step(self):
+        for i in range(self.mA):
+            if self.matrixA[i][0] != 0:
+                self.matrixA[0], self.matrixA[i] = self.matrixA[i], self.matrixA[0]
+                break
+        m = 1
+        for i in range(self.mA - 1):
+            if self.matrixA[i] == [0] * self.nA:
+                try:
+                    while self.matrixA[i + m] == [0] * self.nA:
+                        m += 1
+                    self.matrixA[i], self.matrixA[i + m] = self.matrixA[i + m], self.matrixA[i]
+                except IndexError:
+                    continue
+        for i in range(self.nA):
+            m = i
+            for j in range(i + 1, self.mA + 1):
+                try:
+                    while self.matrixA[i][m] == 0:
+                        m += 1
+                    if self.matrixA[j][m] / self.matrixA[i][m] == 0:
+                        continue
+                    self.matrixA[j] = (Matrix([self.matrixA[j]]) - (Matrix([self.matrixA[i]]) * \
+                                                                    (self.matrixA[j][m] / self.matrixA[i][m])))[0]
+                    return Matrix(self.matrixA)
+                except (IndexError, ZeroDivisionError):
+                    continue
+        return None
+
+    @property
+    def get_Tri(self):
+        return self.matrixA
+
+
+class SysLinearEq:
+
+    import re
+
+    def __init__(self, linear: str):
+        self.vector, self.matrix = [], []
+        linear = linear.replace(',', '.').replace(' ', '').replace('\t', '').split('\n')
+        for i in linear:
+            lineqvar = self.re.findall(r'[a-z]\d*', i)
+            lineq = self.re.split('|'.join(lineqvar), i.strip('.').strip(';'))
+            for i in range(len(lineq)):
+                if lineq[i] == '' or lineq[i] == '+': lineq[i] = '+1'
+                elif lineq[i] == '-': lineq[i] = '-1'
+            self.matrix.append({lineqvar[j]:float(lineq[j]) for j in range(len(lineq[:-1]))})
+            self.vector.append(float(lineq[-1][1:]))
+        self.keys = tuple(set([j for i in [k.keys() for k in self.matrix] for j in i]))
+        matincl = []
+        for i in range(len(self.matrix)):
+            for j in self.keys:
+                if j in self.matrix[i]: matincl.append(self.matrix[i][j])
+                else: matincl.append(0)
+        self.matrix = [matincl[k:len(self.keys) + k] for k in range(0, len(matincl), len(self.keys))]
+
+    @property
+    def get_matrix(self): return self.matrix
+    @property
+    def get_keys(self): return self.keys
+    @property
+    def get_vector(self): return self.vector
+    def setsimpllin(self, vector: list, matrix: list): self.vector, self.matrix = vector, matrix
+
+    def solution(self):
+        for i in range(len(self.vector)):
+            if self.matrix[i] == [0] * len(self.matrix[0]) and self.vector[i] != 0:
+                return 'Система несовместна.\nРешений данной системы нет'
+        matrixT = [[self.matrix[i][j] for i in range(len(self.matrix))] for j in range(len(self.matrix[0]))]
+        vectors = list(zip(self.keys, matrixT))
+        variables = []
+        for i in range(1, len(self.vector) + 1):
+            m = 0
+            try:
+                while self.matrix[-i][m] == 0: m += 1
+            except: continue
+            a = " + ".join([(str(self.matrix[-i][j] / self.matrix[-i][m]) + "*" + self.keys[j])
+                            for j in range(len(self.keys)) if j != m])
+            variables.append([vectors[m][0], f'{self.vector[-i] / self.matrix[-i][m]} - ({a})'])
+        firstvars = []
+        for i in range(len(variables)):
+            a = variables[i][1][variables[i][1].find('(') + 1:-1]
+            a = self.re.sub('-?0.0\*[a-z]\d*', '', a).replace(' ', '').strip('+')
+            a = (variables[i][1][:variables[i][1].find('(')] + a).strip(' - ')
+            try: firstvars, variables[i][1] = [[variables[i][0], float(a)]] + firstvars, a
+            except ValueError:
+                if len(variables[i][1]) == 1: firstvars = [[variables[i][0], a]] + firstvars
+                else: firstvars += [[variables[i][0], a]]
+                variables[i][1] = a
+        keys_var = [i[0] for i in variables]
+        if keys_var != self.keys:
+            firstvars = [[a, chr(ord("A") + i)] for (i, a) in enumerate(self.keys) if a not in keys_var] + firstvars
+        variables = firstvars
+        for i in firstvars:
+            for j in range(len(variables)):
+                if type(variables[j][1]) == str: firstvars[j][1] = variables[j][1].replace(i[0], '(' + str(i[1]) + ')')
+        k, quest = False, []
+        for i in firstvars:
+            try:
+                quest.append(eval(str(i[1])))
+            except (NameError, SyntaxError):
+                k = True
+                quest.append(str(i[1]))
+                ans = [f'{firstvars[i][0]} = {quest[i]}' for i in range(len(quest))]
+        ans = [f'{firstvars[i][0]} = {quest[i]}' for i in range(len(quest))]
+        if k: return 'СЛАУ имеет бесконечное количество решений. Все решения:\n' + \
+             '\n'.join([f'{firstvars[i][0]} = {firstvars[i][1]}' for i in range(len(firstvars))])
+        return '\n'.join(ans)
+                
+    __repr__ = lambda self:'Матрица:' + str(self.matrix)+' Вектор:'+str(self.vector)+' Набор:'+' '.join(self.keys)
+
+parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
+parser.add_argument('-i', type=str, help='Укажите файл с СЛАУ', dest='i', required=True)
+inp = parser.parse_args().i
+output = inp[:inp.rfind('.')] + '_output' + '.txt'
+with open(os.path.join(os.path.dirname(__file__), inp), 'r') as input:
+    try: mat = SysLinearEq(input.read().strip())
+    except: raise('Произошла ошибка, введите СЛАУ правильно.')
+with open(os.path.join(os.path.dirname(__file__), output), 'w', encoding='UTF-8') as output:
+    print('-' * 5, str(mat), '-' * 5, file=output)
+    matAndvec = [mat.get_matrix[i] + [mat.get_vector[i]] for i in range(len(mat.get_vector))]
+    print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{Matrix(matAndvec)}', file=output)
+    print('Упрощение СЛАУ в виде матрицы пошагово:', file=output)
+    for i in range(len(mat.get_keys) * len(mat.get_vector)):
+        matAndvec2 = Matrix(matAndvec).tri_one_step()
+        try:
+            matAndvec = matAndvec2.get_Tri
+            print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
+            print(Matrix(matAndvec), file=output)
+        except AttributeError:
+            print('-' * 5, 'Система линейных уравнений упрощена', '-' * 5, file=output)
+            break
+    mat.setsimpllin([i[-1] for i in matAndvec], [i[:-1] for i in matAndvec])
+    print('Решение системы линейных уравнений:', file=output)
+    print(mat.solution(), file=output)
