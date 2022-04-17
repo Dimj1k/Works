@@ -100,13 +100,12 @@ class SysLinearEq:
             except: continue
             a = " + ".join([(str(-self.matrix[-i][j] / self.matrix[-i][m]) + "*" + self.keys[j])
                             for j in range(len(self.keys)) if j != m])
-            variables.append([vectors[m][0], f'{self.vector[-i] / self.matrix[-i][m]} - ({a})'])
-            print(a, variables)
+            variables.append([vectors[m][0], f'{self.vector[-i] / self.matrix[-i][m]} + ({a})'])
         firstvars = []
         for i in range(len(variables)):
             a = variables[i][1][variables[i][1].find('(') + 1:-1]
             a = self.re.sub('-?0.0\*[a-z]\d*', '', a).replace(' ', '').strip('+')
-            a = (variables[i][1][:variables[i][1].find('(')] + a).strip(' - ').replace('+-', '-').replace('- -', '-')
+            a = (variables[i][1][:variables[i][1].find('(')] + a).strip(' + ')
             try: firstvars, variables[i][1] = [[variables[i][0], float(a)]] + firstvars, a
             except ValueError:
                 if len(variables[i][1]) == 1: firstvars = [[variables[i][0], a]] + firstvars
@@ -119,8 +118,10 @@ class SysLinearEq:
         for i in firstvars:
             for j in range(len(variables)):
                 if type(variables[j][1]) == str: firstvars[j][1] = variables[j][1].replace(i[0], '(' + str(i[1]) + ')')
+        print(firstvars)
         a = []
-        k, quest, randoms, a = False, [], [], a + [self.re.findall('[A-Z]', i[1]) for i in firstvars if len(i[1]) == 1]
+        k, quest, randoms, a = False, [], [], a + [self.re.findall('[A-Z]', i[1]) for i in firstvars 
+                                                    if type(i[1]) != float and len(i[1]) == 1]
         randoms = [str(self.randint(-10, 10)) for _ in range(len(a))]
         for i in firstvars:
             try:
