@@ -118,7 +118,6 @@ class SysLinearEq:
         for i in firstvars:
             for j in range(len(variables)):
                 if type(variables[j][1]) == str: firstvars[j][1] = variables[j][1].replace(i[0], '(' + str(i[1]) + ')')
-        print(firstvars)
         a = []
         k, quest, randoms, a = False, [], [], a + [self.re.findall('[A-Z]', i[1]) for i in firstvars 
                                                     if type(i[1]) != float and len(i[1]) == 1]
