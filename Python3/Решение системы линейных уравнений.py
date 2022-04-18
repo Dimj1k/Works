@@ -6,21 +6,17 @@ class Matrix:
     def __init__(self, matrixA: list):
         self.matrixA = matrixA
         self.mA = len(matrixA)
-        try: self.nA = len(matrixA[0])
-        except TypeError: self.nA = 0
+        self.nA = len(matrixA[0])
 
     __str__ = lambda self:str(self.matrixA).replace('], ', '\n').replace(', ', '\t').replace('[', '').replace(']', '')
 
     def __mul__(self, a: float):
-        if self.nA != 0: return ([[j * a for j in i] for i in self.matrixA])
-        else: return [i * a for i in self.matrixA]
+        return ([[j * a for j in i] for i in self.matrixA])
 
     def __sub__(self, lst: list):
-        if self.nA != 0:
-            return [[self.matrixA[i][j] - lst[i][j] for j in range(self.nA)] for i in range(self.mA)]
-        else: return [self.matrixA[i] - lst[i] for i in range(self.nA)]
+        return [[self.matrixA[i][j] - lst[i][j] for j in range(self.nA)] for i in range(self.mA)]
 
-    def tri_one_step(self, st):
+    def tri_one_step(self, st: int):
         for i in range(st, self.mA):
             if self.matrixA[i][st] != 0:
                 self.matrixA[st], self.matrixA[i] = self.matrixA[i], self.matrixA[st]
