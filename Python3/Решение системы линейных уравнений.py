@@ -20,20 +20,12 @@ class Matrix:
             return [[self.matrixA[i][j] - lst[i][j] for j in range(self.nA)] for i in range(self.mA)]
         else: return [self.matrixA[i] - lst[i] for i in range(self.nA)]
 
-    def tri_one_step(self):
-        for i in range(self.mA):
-            if self.matrixA[i][0] != 0:
-                self.matrixA[0], self.matrixA[i] = self.matrixA[i], self.matrixA[0]
+    def tri_one_step(self, st):
+        for i in range(st, self.mA):
+            if self.matrixA[i][st] != 0:
+                self.matrixA[st], self.matrixA[i] = self.matrixA[i], self.matrixA[st]
                 break
         m = 1
-        for i in range(self.mA - 1):
-            if self.matrixA[i] == [0] * self.nA:
-                try:
-                    while self.matrixA[i + m] == [0] * self.nA:
-                        m += 1
-                    self.matrixA[i], self.matrixA[i + m] = self.matrixA[i + m], self.matrixA[i]
-                except IndexError:
-                    continue
         for i in range(self.nA):
             m = i
             for j in range(i + 1, self.mA + 1):
@@ -140,10 +132,11 @@ class SysLinearEq:
                 
     __repr__ = lambda self:'Матрица:' + str(self.matrix)+' Вектор:'+str(self.vector)+' Набор:'+' '.join(self.keys)
 
+
 parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
 parser.add_argument('-i', type=str, help='Укажите файл с СЛАУ', dest='i', required=True,
                     nargs='?', metavar='file')
-parser.add_argument('-o','--output',type=str, help='Укажите, где вывести результат СЛАУ. По-умолчанию file_output.txt',
+parser.add_argument('-o','--output',type=str, help='Укажите, где вывести решение СЛАУ. По-умолчанию file_output.txt',
                     dest='o', nargs='?', metavar='file')
 inp, out = parser.parse_args().i, parser.parse_args().o
 directory = os.path.dirname(__file__)
@@ -160,7 +153,7 @@ with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{Matrix(matAndvec)}', file=output)
     print('Упрощение СЛАУ в виде матрицы пошагово:', file=output)
     for i in range(len(mat.get_keys) * len(mat.get_vector)):
-        matAndvec2 = Matrix(matAndvec).tri_one_step()
+        matAndvec2 = Matrix(matAndvec).tri_one_step(i)
         try:
             matAndvec = matAndvec2.get_Tri
             print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
