@@ -132,8 +132,7 @@ class SysLinearEq:
 parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
 parser.add_argument('input', help='Укажите файл с СЛАУ', nargs='?', metavar='inputfile')
 parser.add_argument('-o','--output',type=str, help='Укажите с каким именем файла вывести решение СЛАУ в директорию'
-                    ' output. По-умолчанию: [inputfile].txt',
-                    dest='o', nargs='?', metavar='file')
+                    ' output. По-умолчанию: [inputfile].txt', dest='o', nargs='?', metavar='file')
 inp, out = parser.parse_args().input, parser.parse_args().o
 
 if inp == None:
@@ -146,11 +145,13 @@ inputfr = os.path.join(inp[0], inp[1])
 if not(os.path.exists(inputfr)): print('Файл', inputfr, 'не найден'), exit()
 
 output = os.path.join(inp[0], 'output')
-if not(os.path.exists(output)): os.makedirs(output)
 if out is None or out == '': out = inp[1]
+
 with open(inputfr, 'r') as input:
     try: mat = SysLinearEq(input.read().strip())
     except: raise('Произошла ошибка, введите СЛАУ правильно.')
+
+if not(os.path.exists(output)): os.makedirs(output)
 with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('-' * 5, str(mat), '-' * 5, file=output)
     matAndvec = [mat.get_matrix[i] + [mat.get_vector[i]] for i in range(len(mat.get_vector))]
@@ -161,7 +162,7 @@ with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
         try:
             matAndvec = matAndvec2.get_Tri
             print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
-            print(Matrix(matAndvec), file=output)
+            print(matAndvec2, file=output)
         except AttributeError:
             print('-' * 5, 'Система линейных уравнений упрощена', '-' * 5, file=output)
             break
