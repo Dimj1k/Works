@@ -132,7 +132,8 @@ class SysLinearEq:
 parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
 parser.add_argument('input', help='Укажите файл с СЛАУ', nargs='?', metavar='inputfile')
 parser.add_argument('-o','--output',type=str, help='Укажите с каким именем файла вывести решение СЛАУ в директорию'
-                    r' \output. По-умолчанию: [inputfile].txt', dest='o', nargs='?', metavar='file')
+                    f' {os.path.join(os.path.dirname(__file__), "output")}. По-умолчанию: [inputfile].txt',
+                    dest='o', nargs='?', metavar='file')
 inp, out = parser.parse_args().input, parser.parse_args().o
 directory = os.path.dirname(__file__)
 output = os.path.join(directory, 'output')
