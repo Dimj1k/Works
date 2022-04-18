@@ -115,9 +115,9 @@ class SysLinearEq:
                                                     if type(i[1]) != float and len(i[1]) == 1]
         randoms = [str(self.randint(-10, 10)) for _ in range(len(a))]
         for i in firstvars:
-            try:
+            if len(a) == 0:
                 quest.append(eval(str(i[1])))
-            except (NameError, SyntaxError):
+            else:
                 k = True
                 exec(f"{', '.join([j[0] for j in a])} = {', '.join(randoms)}")
                 quest.append(eval(str(i[1])))
@@ -134,15 +134,15 @@ class SysLinearEq:
 
 
 parser = ag.ArgumentParser(description='Решение системы линейных уравнений.')
-parser.add_argument('-i', type=str, help='Укажите файл с СЛАУ', dest='i', required=True,
-                    nargs='?', metavar='file')
-parser.add_argument('-o','--output',type=str, help='Укажите, где вывести решение СЛАУ. По-умолчанию file_output.txt',
-                    dest='o', nargs='?', metavar='file')
-inp, out = parser.parse_args().i, parser.parse_args().o
+parser.add_argument('input', help='Укажите файл с СЛАУ', nargs='?', metavar='inputfile')
+parser.add_argument('-o','--output',type=str, help='Укажите с каким именем файла вывести решение СЛАУ в директорию'
+                    r' \output. По-умолчанию: [inputfile].txt', dest='o', nargs='?', metavar='file')
+inp, out = parser.parse_args().input, parser.parse_args().o
 directory = os.path.dirname(__file__)
 output = os.path.join(directory, 'output')
 if not(os.path.exists(output)): os.makedirs(output)
-if inp[:len(directory)] == directory: inp = inp[len(directory) + 1:]
+if inp is None: raise('Введите имя файла, в котором нужно считать ситему линейных уравнеий')
+elif inp[:len(directory)] == directory: inp = inp[len(directory) + 1:]
 if out is None or out == '': out = inp
 with open(os.path.join(directory, inp), 'r') as input:
     try: mat = SysLinearEq(input.read().strip())
