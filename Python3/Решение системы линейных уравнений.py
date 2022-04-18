@@ -138,7 +138,9 @@ inp, out = parser.parse_args().input, parser.parse_args().o
 directory = os.path.dirname(__file__)
 output = os.path.join(directory, 'output')
 if not(os.path.exists(output)): os.makedirs(output)
-if inp is None: print('Введите имя файла, в котором нужно считать систему линейных уравнеий'), exit()
+if inp is None:
+    print('Введите имя файла, в котором нужно решить систему линейных уравнеий')
+    print(f'Используйте py {__file__} -h для получения подсказки'), exit()
 elif inp[:len(directory)] == directory: inp = inp[len(directory) + 1:]
 if out is None or out == '': out = inp
 with open(os.path.join(directory, inp), 'r') as input:
