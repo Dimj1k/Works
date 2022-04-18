@@ -134,16 +134,17 @@ parser.add_argument('input', help='Укажите файл с СЛАУ', nargs='
 parser.add_argument('-o','--output',type=str, help='Укажите с каким именем файла вывести решение СЛАУ в директорию'
                     f' {os.path.join(os.path.dirname(__file__), "output")}. По-умолчанию: [inputfile].txt',
                     dest='o', nargs='?', metavar='file')
-inp, out = parser.parse_args().input, parser.parse_args().o
-directory = os.path.dirname(__file__)
-output = os.path.join(directory, 'output')
-if not(os.path.exists(output)): os.makedirs(output)
-if inp is None:
+try:
+    inp, out = os.path.split(parser.parse_args().input), parser.parse_args().o
+except:
     print('Введите имя файла, в котором нужно решить систему линейных уравнеий')
     print(f'Используйте py {__file__} -h для получения подсказки'), exit()
-elif inp[:len(directory)] == directory: inp = inp[len(directory) + 1:]
-if out is None or out == '': out = inp
-with open(os.path.join(directory, inp), 'r') as input:
+if inp[0] == '': inp = (os.path.dirname(__file__), inp[1])
+output = os.path.join(inp[0], 'output')
+if not(os.path.exists(output)): os.makedirs(output)
+if out is None or out == '': out = inp[1]
+if not(os.path.exists(os.path.join(inp[0], inp[1]))): print('Файл не найден'), exit()
+with open(os.path.join(inp[0], inp[1]), 'r') as input:
     try: mat = SysLinearEq(input.read().strip())
     except: raise('Произошла ошибка, введите СЛАУ правильно.')
 with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
