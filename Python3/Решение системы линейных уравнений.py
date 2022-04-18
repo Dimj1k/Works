@@ -111,7 +111,7 @@ class SysLinearEq:
             for j in range(len(variables)):
                 if type(variables[j][1]) == str: firstvars[j][1] = variables[j][1].replace(i[0], '(' + str(i[1]) + ')')
         a = []
-        k, quest, randoms, a = False, [], [], a + [self.re.findall('[A-Z]', i[1]) for i in firstvars 
+        k, quest, randoms, a = False, [], [], a + [self.re.findall('[A-Z]', i[1]) for i in firstvars
                                                     if type(i[1]) != float and len(i[1]) == 1]
         randoms = [str(self.randint(-10, 10)) for _ in range(len(a))]
         for i in firstvars:
@@ -141,7 +141,7 @@ inp, out = parser.parse_args().input, parser.parse_args().o
 directory = os.path.dirname(__file__)
 output = os.path.join(directory, 'output')
 if not(os.path.exists(output)): os.makedirs(output)
-if inp is None: raise('Введите имя файла, в котором нужно считать ситему линейных уравнеий')
+if inp is None: print('Введите имя файла, в котором нужно считать систему линейных уравнеий'), exit()
 elif inp[:len(directory)] == directory: inp = inp[len(directory) + 1:]
 if out is None or out == '': out = inp
 with open(os.path.join(directory, inp), 'r') as input:
