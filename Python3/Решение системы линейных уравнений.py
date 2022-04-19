@@ -139,18 +139,18 @@ if inp == None:
     print('Введите имя файла, в котором нужно решить систему линейных уравнеий')
     print(f'Используйте py {__file__} -h для получения подсказки'), exit()
 else: inp = os.path.split(inp)
-if inp[0] == '': inp = (os.path.dirname(__file__), inp[1])
+if inp[0] == '' and inp[1] != '' and os.path.exists(os.path.join(os.getcwd(), inp[1])): inp = (os.getcwd(), inp[1])
+elif inp[0] == '': inp = (os.path.dirname(__file__), inp[1])
 elif inp[1] == '': print(f'Файл {inp[0]} не найден'), exit()
 inputfr = os.path.join(inp[0], inp[1])
 if not(os.path.exists(inputfr)): print('Файл', inputfr, 'не найден'), exit()
-
-output = os.path.join(inp[0], 'output')
-if out is None or out == '': out = inp[1]
 
 with open(inputfr, 'r') as input:
     try: mat = SysLinearEq(input.read().strip())
     except: raise('Произошла ошибка, введите СЛАУ правильно.')
 
+output = os.path.join(inp[0], 'output')
+if out is None or out == '': out = inp[1]
 if not(os.path.exists(output)): os.makedirs(output)
 with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('-' * 5, str(mat), '-' * 5, file=output)
