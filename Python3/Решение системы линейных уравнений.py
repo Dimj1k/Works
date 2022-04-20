@@ -17,6 +17,7 @@ class Matrix:
         return [[self.matrixA[i][j] - lst[i][j] for j in range(self.nA)] for i in range(self.mA)]
 
     def tri_one_step(self, st: int):
+        if st >= self.nA: st = 0
         for i in range(st, self.mA):
             if self.matrixA[i][st] != 0:
                 self.matrixA[st], self.matrixA[i] = self.matrixA[i], self.matrixA[st]
