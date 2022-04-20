@@ -17,7 +17,6 @@ class Matrix:
         return [[self.matrixA[i][j] - lst[i][j] for j in range(self.nA)] for i in range(self.mA)]
 
     def tri_one_step(self, st: int):
-        if st >= self.nA: st = 0
         for i in range(st, self.mA):
             if self.matrixA[i][st] != 0:
                 self.matrixA[st], self.matrixA[i] = self.matrixA[i], self.matrixA[st]
@@ -159,7 +158,7 @@ with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{Matrix(matAndvec)}', file=output)
     print('Упрощение СЛАУ в виде матрицы пошагово:', file=output)
     for i in range(len(mat.get_keys) * len(mat.get_vector)):
-        matAndvec2 = Matrix(matAndvec).tri_one_step(i)
+        matAndvec2 = Matrix(matAndvec).tri_one_step(i // len(matAndvec))
         try:
             matAndvec = matAndvec2.get_Tri
             print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
