@@ -147,5 +147,5 @@ int main() {
         maxi = max(a);
         ans2 -= maxi; a.remove(maxi);
     }
-    cout << "Сумма больших чисел: " << ans1 << "\nСумма меньших чисел: " << ans2 << endl;
+    cout << "Sum of maximum numbers: " << ans1 << "\nSum of minimum numbers: " << ans2 << endl;
 }
