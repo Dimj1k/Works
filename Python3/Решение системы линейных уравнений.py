@@ -58,6 +58,7 @@ class SysLinearEq:
                 elif lineq[i] == '-': lineq[i] = '-1'
             self.matrix.append({lineqvar[j]:float(lineq[j]) for j in range(len(lineq[:-1]))})
             self.vector.append(float(lineq[-1][1:]))
+        del lineqvar, lineq
         self.keys = tuple(set([j for i in [k.keys() for k in self.matrix] for j in i]))
         matincl = []
         for i in range(len(self.matrix)):
@@ -78,8 +79,8 @@ class SysLinearEq:
         for i in range(len(self.vector)):
             if self.matrix[i] == [0] * len(self.matrix[0]) and self.vector[i] != 0:
                 return 'Система несовместна.\nРешений данной системы нет'
-        matrixT = [[self.matrix[i][j] for i in range(len(self.matrix))] for j in range(len(self.matrix[0]))]
-        vectors = list(zip(self.keys, matrixT))
+        vectors = list(zip(self.keys, [[self.matrix[i][j] for i in range(len(self.matrix))]
+                                        for j in range(len(self.matrix[0]))]))
         variables = []
         for i in range(1, len(self.vector) + 1):
             m = 0
@@ -89,6 +90,7 @@ class SysLinearEq:
             a = " + ".join([(str(-self.matrix[-i][j] / self.matrix[-i][m]) + "*" + self.keys[j])
                             for j in range(len(self.keys)) if j != m])
             variables.append([vectors[m][0], f'{self.vector[-i] / self.matrix[-i][m]} + ({a})'])
+        del vectors
         firstvars = []
         for i in range(len(variables)):
             a = variables[i][1][variables[i][1].find('(') + 1:-1]
@@ -99,6 +101,7 @@ class SysLinearEq:
                 if len(variables[i][1]) == 1: firstvars = [[variables[i][0], a]] + firstvars
                 else: firstvars += [[variables[i][0], a]]
                 variables[i][1] = a
+        del a
         keys_var = [i[0] for i in variables]
         if keys_var != self.keys:
             firstvars = [[a, chr(ord("A") + i)] for (i, a) in enumerate(self.keys) if a not in keys_var] + firstvars
@@ -106,8 +109,8 @@ class SysLinearEq:
         for i in firstvars:
             for j in range(len(variables)):
                 if type(variables[j][1]) == str: firstvars[j][1] = variables[j][1].replace(i[0], '(' + str(i[1]) + ')')
-        a = []
-        k, quest, randoms, a = False, [], [], a + [self.re.findall('[A-Z]', i[1]) for i in firstvars
+        del variables
+        k, quest, randoms, a = False, [], [], [self.re.findall('[A-Z]', i[1]) for i in firstvars
                                                     if type(i[1]) != float and len(i[1]) == 1]
         randoms = [str(self.randint(-10, 10)) for _ in range(len(a))]
         for i in firstvars:
@@ -122,8 +125,7 @@ class SysLinearEq:
             infans = ', '.join([firstvars[e][1] + ' = ' + i for e, i in enumerate(randoms)])
             return 'СЛАУ имеет бесконечное количество решений. Все решения:\n' + \
              '\n'.join([f'{firstvars[i][0]} = {firstvars[i][1]}' for i in range(len(firstvars))]) + '\n' + \
-                'Одно из решений при ' + infans + '\n' + '\n'.join([f'{firstvars[i][0]} = {quest[i]}'
-                for i in range(len(firstvars))])
+                'Одно из решений при ' + infans + '\n' + '\n'.join(ans)
         return 'СЛАУ имеет одно решение:\n' + '\n'.join(ans)
                 
     __repr__ = lambda self:'Матрица:' + str(self.matrix)+' Вектор:'+str(self.vector)+' Набор:'+' '.join(self.keys)
@@ -158,7 +160,7 @@ with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{Matrix(matAndvec)}', file=output)
     print('Упрощение СЛАУ в виде матрицы пошагово:', file=output)
     for i in range(len(mat.get_keys) * len(mat.get_vector)):
-        matAndvec2 = Matrix(matAndvec).tri_one_step(i // len(matAndvec))
+        matAndvec2 = Matrix(matAndvec).tri_one_step((i * len(matAndvec[0])) // len(matAndvec))
         try:
             matAndvec = matAndvec2.get_Tri
             print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
@@ -166,7 +168,9 @@ with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
         except AttributeError:
             print('-' * 5, 'Система линейных уравнений упрощена', '-' * 5, file=output)
             break
+    del matAndvec2
     mat.setsimpllin([i[-1] for i in matAndvec], [i[:-1] for i in matAndvec])
+    del matAndvec
     print('Решение системы линейных уравнений:', file=output)
     print(mat.solution(), file=output)
     print('Результат сохранен в', output.name)
