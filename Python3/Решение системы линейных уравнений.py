@@ -164,10 +164,10 @@ with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('Упрощение СЛАУ в виде матрицы пошагово:', file=output)
     matAndvec2, i = [], 0
     while matAndvec2 != matAndvec.get_Tri:
+        print('-' * 5, f'Шаг {i}:', '-' * 5, file=output)
+        print(matAndvec, file=output)
         matAndvec2 = [[j for j in i] for i in matAndvec.get_Tri]
         matAndvec.tri_one_step((i * len(matAndvec.get_Tri[0])) // len(matAndvec))
-        print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
-        print(matAndvec, file=output)
         i += 1
     print('-' * 5, 'Система линейных уравнений упрощена', '-' * 5, file=output)
     del matAndvec2
