@@ -35,11 +35,14 @@ class Matrix:
                     return Matrix(self.matrixA)
                 except (IndexError, ZeroDivisionError):
                     continue
-        return None
+        return Matrix(self.matrixA)
 
     @property
     def get_Tri(self):
         return self.matrixA
+
+    def __len__(self):
+        return len(self.matrixA)
 
 
 class SysLinearEq:
@@ -156,20 +159,19 @@ if out is None or out == '': out = inp[1]
 if not(os.path.exists(output)): os.makedirs(output)
 with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('-' * 5, str(mat), '-' * 5, file=output)
-    matAndvec = [mat.get_matrix[i] + [mat.get_vector[i]] for i in range(len(mat.get_vector))]
-    print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{Matrix(matAndvec)}', file=output)
+    matAndvec = Matrix([mat.get_matrix[i] + [mat.get_vector[i]] for i in range(len(mat.get_vector))])
+    print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{matAndvec}', file=output)
     print('Упрощение СЛАУ в виде матрицы пошагово:', file=output)
-    for i in range(len(mat.get_keys) * len(mat.get_vector)):
-        matAndvec2 = Matrix(matAndvec).tri_one_step((i * len(matAndvec[0])) // len(matAndvec))
-        try:
-            matAndvec = matAndvec2.get_Tri
-            print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
-            print(matAndvec2, file=output)
-        except AttributeError:
-            print('-' * 5, 'Система линейных уравнений упрощена', '-' * 5, file=output)
-            break
+    matAndvec2, i = [], 0
+    while matAndvec2 != matAndvec.get_Tri:
+        matAndvec2 = [[j for j in i] for i in matAndvec.get_Tri]
+        matAndvec.tri_one_step((i * len(matAndvec.get_Tri[0])) // len(matAndvec))
+        print('-' * 5, f'Шаг {i + 1}:', '-' * 5, file=output)
+        print(matAndvec, file=output)
+        i += 1
+    print('-' * 5, 'Система линейных уравнений упрощена', '-' * 5, file=output)
     del matAndvec2
-    mat.setsimpllin([i[-1] for i in matAndvec], [i[:-1] for i in matAndvec])
+    mat.setsimpllin([i[-1] for i in matAndvec.get_Tri], [i[:-1] for i in matAndvec.get_Tri])
     del matAndvec
     print('Решение системы линейных уравнений:', file=output)
     print(mat.solution(), file=output)
