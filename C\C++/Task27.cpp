@@ -1,24 +1,27 @@
 #include <fstream>
 #include <iostream>
-#include <string>
 using namespace std;
 
-template < class t >
-class Array {
+class Arrayint {
     private:
-    t *arr;
+    int *arr;
     int n, vol;
+    float incrin = 1.1;
 
     void set_Array(int r) {
         if (r >= 0) {
-            n = 0; vol = r; arr = new t[vol];
+            n = 0; vol = r; arr = new int[vol];
         } else
             throw("Write an Array < type > name(num), where num >= 0 and Integer");
     }
 
     public:
-    Array(int k) {
+    Arrayint(int k) {
         set_Array(k);
+    }
+
+    ~Arrayint() {
+        delete []arr;
     }
 
     int volume() {
@@ -29,7 +32,7 @@ class Array {
         return n;
     }
 
-    t operator [](int index) {
+    int operator [](int index) {
         return arr[index];
     }
 
@@ -39,7 +42,6 @@ class Array {
             return;
         }
         vol += addvol;
-        delete addvol;
         set_volume(vol);
             
     }
@@ -47,35 +49,40 @@ class Array {
     void increase_In(int mulvol) {
         if (mulvol <= 1) { cout << endl << "increase_In take an argument > 1" << endl; return; }
         vol *= mulvol;
-        delete mulvol;
         set_volume(vol);
     }
 
     void set_volume(int newvol) {
         if (newvol < n) { cout << endl << "set_volume take an argument newvolume > length arr"; return; }
         vol = newvol;
-        t *tmp = arr;
-        arr = new t[vol];
+        int *tmp = arr;
+        arr = new int[vol];
         for (int i = 0; i < n; i++)
             arr[i] = tmp[i];
         return;
     }
 
-    void append(t el) {
-        if (n == vol) { cout << endl << "\nIncrease array. For append: " << el << endl; return; }
+    void set_incrin(float num) {
+        if (num < 1) { cout << endl << "set_incrin take an argument > 1"; return; }
+        incrin = num;
+    }
+
+    void append(int el) {
+        if (n == vol)
+            set_volume(vol * incrin);
         arr[n] = el;
         n++;
     }
 
-    void operator +(t el) {
+    void operator +(int el) {
         append(el);
     }
 
-    void remove(t el, int num = 1) {
+    void remove(int el, int num = 1) {
         if (num < 1) { return; } 
         int removed = 0;
-        t *tmp = arr;
-        arr = new t[vol];
+        int *tmp = arr;
+        arr = new int[vol];
         for (int i = 0; i < n; i++) {
             if (tmp[i] == el && removed != num) { removed++; continue; }
             arr[i - removed] = tmp[i];
@@ -94,6 +101,21 @@ class Array {
     }
 };
 
+class MyStringWithSplit : public string {
+    // public:
+    // string *split(char splitter = '\n', int items = 10) {
+    //     string *spliten = new string[items];
+    //     int j = 0;
+    //     for (int i = 0; i < strlen(basic_string); i++) {
+    //         if (basic_string[i] != splitter)
+    //             spliten[j] = basic_string[i];
+    //         else
+    //             j++;
+    //     }
+    //     return spliten;
+    // }
+};
+
 int max2(int *a) {
     if (a[0] > a[1]) 
         return a[0];
@@ -106,7 +128,7 @@ int min2(int *a) {
     return a[0];
 }
 
-int max(Array < int > das) {
+int max(Arrayint das) {
     int max = -1;
     for (int i = 0; i < das.length(); i++){
         if (das[i] > max) max = das[i];
@@ -114,7 +136,7 @@ int max(Array < int > das) {
     return max;
 }
 
-int min(Array < int > das) {
+int min(Arrayint das) {
     int min = 10001;
     for (int i = 0; i < das.length(); i++){
         if (das[i] < min) min = das[i];
@@ -123,11 +145,11 @@ int min(Array < int > das) {
 }
 
 int main() {
-    Array < int > a(30110); Array < int > b(30110);
+    Arrayint a(30110); Arrayint b(30110);
     long long ans1 = 0, ans2 = 0;
     int values[2], mini, maxi;
     ifstream f("4.txt");
-    string line;
+    MyStringWithSplit line;
     while (getline(f, line)) {
         values[0] = stoi(line.substr(0, line.find(' ')));
         if (values[0] % 2 != 0) {
@@ -139,13 +161,13 @@ int main() {
     for (int i = 0; i < a.length(); i++) {
         ans1 += a[i]; ans2 += b[i];
     }
-    while (ans1 % 2 != 0) {
+    if (ans1 % 2 != 0) {
         mini = min(a);
         ans1 -= mini; a.remove(mini);
     }
-    while (ans2 % 2 == 0) {
-        maxi = max(a);
-        ans2 -= maxi; a.remove(maxi);
+    if (ans2 % 2 == 0) {
+        maxi = max(b);
+        ans2 -= maxi; b.remove(maxi);
     }
     cout << "Sum of maximum numbers: " << ans1 << "\nSum of minimum numbers: " << ans2 << endl;
 }
