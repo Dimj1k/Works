@@ -32,10 +32,10 @@ class Matrix:
                         continue
                     self.matrixA[j] = (Matrix([self.matrixA[j]]) - (Matrix([self.matrixA[i]]) * \
                                                                     (self.matrixA[j][m] / self.matrixA[i][m])))[0]
-                    return Matrix(self.matrixA)
+                    return
                 except (IndexError, ZeroDivisionError):
                     continue
-        return Matrix(self.matrixA)
+        return
 
     @property
     def get_Tri(self):
@@ -118,7 +118,7 @@ class SysLinearEq:
         randoms = [str(self.randint(-10, 10)) for _ in range(len(a))]
         for i in firstvars:
             if len(a) == 0:
-                quest.append(eval(str(i[1])))
+                quest.append(eval(str(i[1]).replace(')1', ')')))
             else:
                 k = True
                 exec(f"{', '.join([j[0] for j in a])} = {', '.join(randoms)}")
