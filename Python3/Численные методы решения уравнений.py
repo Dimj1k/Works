@@ -44,20 +44,21 @@ class Equation:
 
     def secant(self, a: float):
         b = a + self.eps * 2
+        a = a if a != 0 else 1
         while abs(b - a) > self.eps and self.lim != 10e3:
             try:
-                a, b = b - (self.F(b) * (a - b) / (self.F(a) - self.F(b))), a
+                a = b - (self.F(b) * (b - a) / (self.F(b) - self.F(a)))
+                b = a - ((a - b) * self.F(a) / (self.F(a) - self.F(b)))
                 self.lim = self.lim + 1
             except ZeroDivisionError: return f"Решение {self.F} = 0 не найдено"
         if abs(self.F(a)) > self.eps * 10: return f"Решение {self.F} = 0 не найдено"
         else: return f"Ответ {self.F} = 0 при x = {a}"
 
     def Newton(self, a: float):
-        b = a + self.eps * 2
-        while abs(b - a) > self.eps and self.lim != 10e3:
-            try: a, b, self.lim = b - self.F(b) / self.F.diffofx(b), a, self.lim + 1
+        while abs(self.F(a)) > self.eps and self.lim != 10e3:
+            try: a, self.lim = a - self.F(a) / self.F.diffofx(a), self.lim + 1
             except ZeroDivisionError: return f"Решение {self.F} = 0 не найдено"
-        return f"Ответ {self.F} = 0 при x = {b}"
+        return f"Ответ {self.F} = 0 при x = {a}"
 
     __str__ = lambda self: str(self.F)
 
