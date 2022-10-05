@@ -143,6 +143,8 @@ class SysLinearEq:
         if k:
             self.solutions = float('inf')
             infans = ', '.join([firstvars[e][1] + ' = ' + i for e, i in enumerate(randoms)])
+            self.switchindexes = [list(zip(*firstvars))[0].index(i) for i in self.keys]
+            self.ans = quest
             return 'СЛАУ имеет бесконечное количество решений. Все решения:\n' + \
                    '\n'.join([f'{firstvars[i][0]} = {firstvars[i][1]}' for i in range(len(firstvars))]) + '\n' + \
                    'Одно из решений при ' + infans + '\n' + '\n'.join(ans)
@@ -155,14 +157,12 @@ class SysLinearEq:
         return [el * ans[self.switchindexes[i]] for i, el in enumerate(matrix)]
 
     def residual(self):
-        if self.solutions == 1:
+        if self.solutions == 1 or self.solutions == float('inf'):
             self.resid = [abs(sum(self.__mult(self.origmatrix[i], self.ans)) - self.origvector[i])
                           for i in range(len(self.origvector))]
             resid = '\n'.join([f'{i + 1} строка матрицы: {self.resid[i]}' for i in range(len(self.resid))])
             return resid
-        elif self.solutions == 0:
-            return "Невязки нет, так как СЛАУ не имеет решения"
-        return "Невязки нет, так как СЛАУ имеет бесконечное количество решений"
+        return "Невязки нет, так как СЛАУ не имеет решения"
 
     __repr__ = lambda self: 'Матрица:' + str(self.matrix) + ' Вектор:' + str(self.vector) + ' Набор:' + ' '.join(
         self.keys)
