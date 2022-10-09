@@ -17,7 +17,7 @@ class Matrix:
     def __sub__(self, lst: list):
         return [[self.matrixA[i][j] - lst[i][j] for j in range(self.nA)] for i in range(self.mA)]
 
-    def tri_one_step(self, st: int):
+    def triup_one_step(self, st: int):
         for i in range(st, self.mA):
             if self.matrixA[i][st] != 0:
                 self.matrixA[st], self.matrixA[i] = self.matrixA[i], self.matrixA[st]
@@ -73,7 +73,7 @@ class SysLinearEq:
                     matincl.append(0)
         self.matrix = [matincl[k:len(self.keys) + k] for k in range(0, len(matincl), len(self.keys))]
         self.origvector, self.origmatrix = [i for i in self.vector], [i for i in self.matrix]
-        self.solutions, self.ans, self.switchindexes, self.resid = 0, [], [], []
+        self.solutions, self.ans, self.switchindexes, self.resid, self.havesol = 0, [], [], [], None
 
     @property
     def get_matrix(self):
@@ -90,10 +90,16 @@ class SysLinearEq:
     def setsimpllin(self, vector: list, matrix: list):
         self.vector, self.matrix = vector, matrix
 
-    def solution(self):
+    def havesolution(self):
         for i in range(len(self.vector)):
             if self.matrix[i] == [0] * len(self.matrix[0]) and self.vector[i] != 0:
-                return 'Система несовместна.\nРешений данной системы нет'
+                self.havesol = False
+                return
+        self.havesol = True
+
+    def solution(self):
+        if not self.havesol:
+            return 'Система несовместна.\nРешений данной системы нет'
         vectors = list(zip(self.keys, [[self.matrix[i][j] for i in range(len(self.matrix))]
                                        for j in range(len(self.matrix[0]))]))
         variables = []
@@ -173,9 +179,11 @@ parser.add_argument('input', help='Укажите файл с СЛАУ', nargs='
 parser.add_argument('-o', '--output', type=str, help='Укажите с каким именем файла вывести решение СЛАУ в директорию'
                                                      ' output. По-умолчанию: [inputfile].txt', dest='o', nargs='?',
                     metavar='file')
-inp, out = parser.parse_args().input, parser.parse_args().o
+parser.add_argument('-s', '-sol', '--solution', help='Показывать решение в файле. По-умолчанию: Да',
+                    type=str, dest='sol', nargs='?', metavar="bool")
+inp, out, bol = parser.parse_args().input, parser.parse_args().o, parser.parse_args().sol
 
-if inp == None:
+if inp is None:
     print('Введите имя файла, в котором нужно решить систему линейных уравнеий')
     print(f'Используйте py {__file__} -h для получения подсказки'), exit()
 else:
@@ -186,6 +194,7 @@ elif inp[0] == '':
     inp = (os.path.dirname(__file__), inp[1])
 elif inp[1] == '':
     print(f'Файл {inp[0]} не найден'), exit()
+sol = False if bol and (bol[0].lower() == 'f' or bol[0].lower() == "н" or bol[0].lower() == "n") else True
 inputfr = os.path.join(inp[0], inp[1])
 if not (os.path.exists(inputfr)): print('Файл', inputfr, 'не найден'), exit()
 
@@ -197,27 +206,36 @@ with open(inputfr, 'r') as input:
 
 output = os.path.join(inp[0], 'output')
 if out is None or out == '': out = inp[1]
-if not (os.path.exists(output)): os.makedirs(output)
+if not (os.path.exists(output)):
+    os.makedirs(output)
 with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     print('-' * 5, str(mat), '-' * 5, file=output)
     matAndvec = Matrix([mat.get_matrix[i] + [mat.get_vector[i]] for i in range(len(mat.get_vector))])
     print('СЛАУ в виде матрицы:\n' + '\t'.join(mat.get_keys) + '\tВектор' + f'\n{matAndvec}', file=output)
-    print('Упрощение СЛАУ в виде матрицы пошагово:', file=output)
+    print('Упрощение СЛАУ в виде матрицы', "пошагово :" if sol else "", file=output)
     matAndvec2, i = [], 0
-    while matAndvec2 != matAndvec.get_Tri:
-        print('-' * 5, f'Шаг {i}:', '-' * 5, file=output)
-        print(matAndvec, file=output)
-        matAndvec2 = [[j for j in i] for i in matAndvec.get_Tri]
-        matAndvec.tri_one_step((i * len(matAndvec.get_Tri[0])) // len(matAndvec))
-        i += 1
+    if sol:
+        while matAndvec2 != matAndvec.get_Tri:
+            print('-' * 5, f'Шаг {i}:', '-' * 5, file=output)
+            print(matAndvec, file=output)
+            matAndvec2 = [[j for j in i] for i in matAndvec.get_Tri]
+            matAndvec.triup_one_step((i * len(matAndvec.get_Tri[0])) // len(matAndvec))
+            i += 1
+    else:
+        while matAndvec2 != matAndvec.get_Tri:
+            matAndvec2 = [[j for j in i] for i in matAndvec.get_Tri]
+            matAndvec.triup_one_step((i * len(matAndvec.get_Tri[0])) // len(matAndvec))
+            i += 1
     print('-' * 5, 'Система линейных уравнений упрощена', '-' * 5, file=output)
     del matAndvec2
     mat.setsimpllin([i[-1] for i in matAndvec.get_Tri], [i[:-1] for i in matAndvec.get_Tri])
     del matAndvec
     print('Решение системы линейных уравнений:', file=output)
+    mat.havesolution()
     print(mat.solution(), file=output)
-    print('-' * 5, 'Невязка:', '-' * 5, file=output)
-    print(mat.residual(), file=output)
-    print(f'Максимальная невязка равна: {max(mat.resid)}\n{"-" * 30}'
-          if mat.solutions == 1 else '-' * 30, file=output)
+    if mat.havesol:
+        print('-' * 5, 'Невязка:', '-' * 5, file=output)
+        print(mat.residual(), file=output)
+        print(f'Максимальная невязка равна: {max(mat.resid)}\n{"-" * 30}'
+              if mat.solutions == 1 else '-' * 30, file=output)
     print('Результат сохранен в', output.name)
