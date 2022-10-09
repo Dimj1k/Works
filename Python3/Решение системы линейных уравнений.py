@@ -236,6 +236,5 @@ with open(os.path.join(output, out), 'w', encoding='UTF-8') as output:
     if mat.havesol:
         print('-' * 5, 'Невязка:', '-' * 5, file=output)
         print(mat.residual(), file=output)
-        print(f'Максимальная невязка равна: {max(mat.resid)}\n{"-" * 30}'
-              if mat.solutions == 1 else '-' * 30, file=output)
+        print(f'Максимальная невязка равна: {max(mat.resid)}\n{"-" * 30}', file=output)
     print('Результат сохранен в', output.name)
