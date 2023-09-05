@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-05T08:45:27.746Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="CgjVWIJ40GYAHD6zlPKh" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-05T08:54:52.080Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="CXSA7xoj2MgWZm_Xc21A" version="21.7.2" type="github">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
-    <mxGraphModel dx="1509" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="869" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -24,7 +24,7 @@
         <mxCell id="64bh6hLLo012Qr4FLgpR-13" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;Цель: Смоделировать установление цены товара&lt;/p&gt;&lt;p style=&quot;line-height: 50%;&quot;&gt;Точка зрения: Продавец&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="64bh6hLLo012Qr4FLgpR-6">
           <mxGeometry x="46" y="650" width="200" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="64bh6hLLo012Qr4FLgpR-29" value="Прибыль" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
+        <mxCell id="64bh6hLLo012Qr4FLgpR-29" value="Выручка" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="585" y="229" as="sourcePoint" />
             <mxPoint x="744" y="229" as="targetPoint" />
@@ -47,15 +47,27 @@
         </mxCell>
         <mxCell id="64bh6hLLo012Qr4FLgpR-34" value="Район" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
           <mxGeometry x="-0.0046" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="36" y="329" as="sourcePoint" />
-            <mxPoint x="195" y="329" as="targetPoint" />
+            <mxPoint x="36" y="379" as="sourcePoint" />
+            <mxPoint x="195" y="379" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="64bh6hLLo012Qr4FLgpR-36" value="Инфляция" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6" target="64bh6hLLo012Qr4FLgpR-1">
+        <mxCell id="64bh6hLLo012Qr4FLgpR-42" value="Инфляция" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="293" y="79" as="sourcePoint" />
-            <mxPoint x="319" y="79" as="targetPoint" />
+            <mxPoint x="36" y="199" as="sourcePoint" />
+            <mxPoint x="195" y="199" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64bh6hLLo012Qr4FLgpR-43" value="Конкуренция" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="36" y="239" as="sourcePoint" />
+            <mxPoint x="195" y="239" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64bh6hLLo012Qr4FLgpR-22" value="Затраты на товар" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="36" y="329" as="sourcePoint" />
+            <mxPoint x="195" y="329" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="64bh6hLLo012Qr4FLgpR-4" value="" style="group" vertex="1" connectable="0" parent="1">
@@ -89,16 +101,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="64bh6hLLo012Qr4FLgpR-22" value="Цены у других" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="64bh6hLLo012Qr4FLgpR-1">
+        <mxCell id="64bh6hLLo012Qr4FLgpR-44" value="Стандарты" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="64bh6hLLo012Qr4FLgpR-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="60" y="315" as="sourcePoint" />
-            <mxPoint x="450" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="64bh6hLLo012Qr4FLgpR-37" value="Конкуренция" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="64bh6hLLo012Qr4FLgpR-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="512" y="100" as="sourcePoint" />
-            <mxPoint x="327" y="200" as="targetPoint" />
+            <mxPoint x="317" y="120" as="sourcePoint" />
+            <mxPoint x="229" y="230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
