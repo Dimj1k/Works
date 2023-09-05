@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-05T08:32:21.339Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="_IO1vXEEJABbZv9E2t_L" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-05T08:39:37.868Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="I8ZM-BxvWun3b3gKD0KD" version="21.7.2" type="github">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
-    <mxGraphModel dx="1509" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1062" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,6 +23,24 @@
         </mxCell>
         <mxCell id="64bh6hLLo012Qr4FLgpR-13" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;Цель: Смоделировать установление цены товара&lt;/p&gt;&lt;p style=&quot;line-height: 50%;&quot;&gt;Точка зрения: Продавец&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="64bh6hLLo012Qr4FLgpR-6">
           <mxGeometry x="46" y="650" width="200" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="64bh6hLLo012Qr4FLgpR-25" value="" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pointed_oval;fontFamily=Helvetica;fontSize=11;fontColor=default;rotation=90;flipH=1;flipV=0;" vertex="1" parent="64bh6hLLo012Qr4FLgpR-6">
+          <mxGeometry x="283" y="412" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="64bh6hLLo012Qr4FLgpR-28" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;fontFamily=Helvetica;fontSize=11;fontColor=default;strokeColor=none;" vertex="1" parent="64bh6hLLo012Qr4FLgpR-6">
+          <mxGeometry x="268" y="427" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="64bh6hLLo012Qr4FLgpR-29" value="Прибыль" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="585" y="229" as="sourcePoint" />
+            <mxPoint x="744" y="229" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64bh6hLLo012Qr4FLgpR-30" value="Цена у товара" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="585" y="364.63" as="sourcePoint" />
+            <mxPoint x="744" y="364.63" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="64bh6hLLo012Qr4FLgpR-4" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="219" y="190" width="390" height="250" as="geometry" />
@@ -53,6 +71,12 @@
         <mxCell id="64bh6hLLo012Qr4FLgpR-17" value="Кассир" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="64bh6hLLo012Qr4FLgpR-16">
           <mxGeometry x="-0.4947" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64bh6hLLo012Qr4FLgpR-22" value="" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="64bh6hLLo012Qr4FLgpR-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="315" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
