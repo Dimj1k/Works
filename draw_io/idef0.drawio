@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-05T09:53:34.369Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="lKVUdwE9e81KDiNbMCNC" version="21.7.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-05T09:57:34.488Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="YiqCYfxuSOUFTauIqHKz" version="21.7.2" type="github" pages="2">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
-    <mxGraphModel dx="1687" dy="892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -118,7 +118,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PCnVTsPdo4tjADDi-1n_" name="Страница — 2">
-    <mxGraphModel dx="869" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1247" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -172,6 +172,20 @@
         </mxCell>
         <mxCell id="pGwfKDDTQR-bq-8G-joo-12" value="A4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="pGwfKDDTQR-bq-8G-joo-10">
           <mxGeometry x="90" y="40" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WRkx41axc2L-K42l-Qc0-1" value="Местоположение" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;horizontal=0;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1">
+          <mxGeometry x="-0.5017" y="-15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="16" y="126" as="sourcePoint" />
+            <mxPoint x="96" y="125.63" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WRkx41axc2L-K42l-Qc0-2" value="Затраты на товар" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;verticalAlign=middle;horizontal=0;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1">
+          <mxGeometry x="0.0025" y="22" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="16" y="95" as="sourcePoint" />
+            <mxPoint x="96" y="94.63" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
