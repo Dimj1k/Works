@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-05T10:11:27.997Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="SdinQ69-pO1FudeWNdWA" version="21.7.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-05T10:13:40.086Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="we5x3S7xS7hYlk_rZyf5" version="21.7.2" type="github" pages="2">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1434" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -118,7 +118,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PCnVTsPdo4tjADDi-1n_" name="Страница — 2">
-    <mxGraphModel dx="989" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="819" dy="433" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -190,8 +190,8 @@
         </mxCell>
         <mxCell id="alNmY6HWHky_iUcOem-5-3" value="Конкуренция" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=#d6b656;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;verticalAlign=middle;horizontal=1;fillColor=#fff2cc;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1">
           <mxGeometry x="-0.2208" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="16" y="240" as="sourcePoint" />
-            <mxPoint x="247" y="240" as="targetPoint" />
+            <mxPoint x="16" y="229" as="sourcePoint" />
+            <mxPoint x="247" y="229" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -213,6 +213,16 @@
               <mxPoint x="626" y="110" />
             </Array>
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fiy2pK3P5Eo8GJvmXR0O-1" value="" style="endArrow=classic;html=1;rounded=1;labelBackgroundColor=default;strokeColor=#b85450;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1" source="pGwfKDDTQR-bq-8G-joo-5" target="pGwfKDDTQR-bq-8G-joo-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="486" y="270" as="sourcePoint" />
+            <mxPoint x="536" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="386" y="230" />
+              <mxPoint x="386" y="350" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="alNmY6HWHky_iUcOem-5-2" value="" style="endArrow=classic;html=1;rounded=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="pGwfKDDTQR-bq-8G-joo-8">
