@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-07T11:07:58.288Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="or9h2B3JW2smG16DNjp6" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-07T11:17:27.238Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="NfvD5FjtRN2V2BcOcW6g" version="21.7.2" type="github">
   <diagram name="Страница — 1" id="sGeUlYy9vwEeiNY2uGgN">
     <mxGraphModel dx="1363" dy="853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -199,7 +199,7 @@
             <mxPoint x="250" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CjT55AzK4gLORZBcBDs--51" value="Изучить" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="CjT55AzK4gLORZBcBDs--51" value="Освоить на всю жизнь (по желанию)" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="450" y="320" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="CjT55AzK4gLORZBcBDs--52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="CjT55AzK4gLORZBcBDs--51" target="CjT55AzK4gLORZBcBDs--24">
