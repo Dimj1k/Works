@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-07T10:39:58.593Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="yMAh1vDCCD1RH2b2Tn7U" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-07T10:40:31.788Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="84A6UQSELGcC44ejwln9" version="21.7.2" type="github">
   <diagram name="Страница — 1" id="sGeUlYy9vwEeiNY2uGgN">
     <mxGraphModel dx="954" dy="597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -92,9 +92,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="CjT55AzK4gLORZBcBDs--22" value="Ученая должность" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="10" y="120" width="110" height="40" as="geometry" />
+          <mxGeometry x="30" y="120" width="110" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CjT55AzK4gLORZBcBDs--23" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CjT55AzK4gLORZBcBDs--22" target="CjT55AzK4gLORZBcBDs--6">
+        <mxCell id="CjT55AzK4gLORZBcBDs--23" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CjT55AzK4gLORZBcBDs--22" target="CjT55AzK4gLORZBcBDs--6">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="115" y="120" as="sourcePoint" />
             <mxPoint x="245" y="170" as="targetPoint" />
