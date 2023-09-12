@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-12T08:51:26.371Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="jyKP8bMxgPFvqg5qlmQI" version="21.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-12T08:55:28.180Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="PlVtgP2OvYUmAGQyptaq" version="21.7.4" type="github">
   <diagram name="Страница — 1" id="sGeUlYy9vwEeiNY2uGgN">
-    <mxGraphModel dx="1083" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1052" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -685,7 +685,7 @@
         <mxCell id="xjru_JlM3HzQDR_qYYpm-66" value="id группы" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="1689" y="150" width="110" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xjru_JlM3HzQDR_qYYpm-67" value="id кафедры" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="xjru_JlM3HzQDR_qYYpm-67" value="id преподавателя" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="1559" y="150" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xjru_JlM3HzQDR_qYYpm-68" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xjru_JlM3HzQDR_qYYpm-67">
@@ -710,12 +710,21 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="xjru_JlM3HzQDR_qYYpm-73" value="Тип занятия" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="1755" y="200" width="110" height="40" as="geometry" />
+          <mxGeometry x="1760" y="200" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xjru_JlM3HzQDR_qYYpm-74" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xjru_JlM3HzQDR_qYYpm-73" target="xjru_JlM3HzQDR_qYYpm-59">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1883" y="300" as="sourcePoint" />
             <mxPoint x="1803" y="329" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xjru_JlM3HzQDR_qYYpm-75" value="Время" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="260" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xjru_JlM3HzQDR_qYYpm-76" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xjru_JlM3HzQDR_qYYpm-75" target="xjru_JlM3HzQDR_qYYpm-59">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1781" y="244" as="sourcePoint" />
+            <mxPoint x="1730" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
