@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T19:06:24.509Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="fBtnxsnfSWh8jJGUnxQz" version="21.6.8" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T19:06:55.419Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="qPlzhEanOLMZJI6WJrjh" version="21.6.8" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -367,13 +367,14 @@
         <mxCell id="7k-3xfqGC5j5otF5jtwy-1" value="" style="group" vertex="1" connectable="0" parent="RWR73GOMRbYbBOoSkMBg-1">
           <mxGeometry x="297" y="189" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EkU9dxk1wcv2mxC09lRB-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.001;exitY=0.158;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#00FF00;" edge="1" parent="7k-3xfqGC5j5otF5jtwy-1" source="7k-3xfqGC5j5otF5jtwy-3">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="EkU9dxk1wcv2mxC09lRB-2" value="Заключение&lt;br&gt;эксперта" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.001;exitY=0.158;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#00FF00;" edge="1" parent="7k-3xfqGC5j5otF5jtwy-1" source="7k-3xfqGC5j5otF5jtwy-3">
+          <mxGeometry x="0.1271" relative="1" as="geometry">
             <mxPoint x="160" y="130" as="targetPoint" />
             <Array as="points">
               <mxPoint x="140" y="10" />
               <mxPoint x="140" y="130" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7k-3xfqGC5j5otF5jtwy-3" value="Работа n-ого эксперта" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7k-3xfqGC5j5otF5jtwy-1">
