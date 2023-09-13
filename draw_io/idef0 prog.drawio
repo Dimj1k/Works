@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T21:08:08.958Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="ZuxD8j37ZQTq11I4NuSK" version="21.6.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-13T21:09:02.655Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="oyakKcaEjgrJbWKAjQ_3" version="21.6.8" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -101,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2049" dy="1129" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -589,7 +589,7 @@
         <mxCell id="-5JTnPu0ODjV_CeIKEp3-3" value="А322" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="-5JTnPu0ODjV_CeIKEp3-1">
           <mxGeometry x="90" y="44" width="30" height="16" as="geometry" />
         </mxCell>
-        <mxCell id="-5JTnPu0ODjV_CeIKEp3-4" value="Матрицы&lt;br&gt;решений" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#FFFF66;endArrow=block;endFill=1;" edge="1" parent="P_emKmW7A5pSrtwgPLMN-1" source="hR7w_iYyYy1LM_3Q_ss9-2" target="-5JTnPu0ODjV_CeIKEp3-2">
+        <mxCell id="-5JTnPu0ODjV_CeIKEp3-4" value="Матрицы&lt;br&gt;решений" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#6D1F00;endArrow=block;endFill=1;fillColor=#a0522d;" edge="1" parent="P_emKmW7A5pSrtwgPLMN-1" source="hR7w_iYyYy1LM_3Q_ss9-2" target="-5JTnPu0ODjV_CeIKEp3-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="-5JTnPu0ODjV_CeIKEp3-5" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Обработанные статистические показатели&lt;/font&gt;" style="endArrow=block;html=1;rounded=0;entryX=-0.006;entryY=0.826;entryDx=0;entryDy=0;strokeColor=#9AC7BF;endFill=1;entryPerimeter=0;" edge="1" parent="P_emKmW7A5pSrtwgPLMN-1" target="-5JTnPu0ODjV_CeIKEp3-2">
