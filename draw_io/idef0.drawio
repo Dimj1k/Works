@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T10:34:13.651Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="aU-cbDMbQL99UxEbDqTX" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T10:36:27.662Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="2onqMkoeQkD0uy-qa48D" version="21.7.5" type="github" pages="3">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -107,7 +107,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PCnVTsPdo4tjADDi-1n_" name="Страница — 2">
-    <mxGraphModel dx="2074" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="988" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -240,7 +240,7 @@
         <mxCell id="vn4PmHRYv63XcPkDkBaM-5" value="A5" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="vn4PmHRYv63XcPkDkBaM-3">
           <mxGeometry x="90" y="40" width="30" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="vn4PmHRYv63XcPkDkBaM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#B85450;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1" source="pGwfKDDTQR-bq-8G-joo-11" target="vn4PmHRYv63XcPkDkBaM-4">
+        <mxCell id="vn4PmHRYv63XcPkDkBaM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#1ba1e2;strokeColor=#006EAF;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1" source="pGwfKDDTQR-bq-8G-joo-11" target="vn4PmHRYv63XcPkDkBaM-4">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="746" y="170.0000000000001" as="targetPoint" />
           </mxGeometry>
@@ -383,6 +383,15 @@
           <mxGeometry x="-0.4722" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="qDWXjoZE3adlOefqzPPl-2" value="`" style="group" vertex="1" connectable="0" parent="aTAhiD47NeJxjI5WAey6-1">
+          <mxGeometry x="496" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qDWXjoZE3adlOefqzPPl-3" value="Заставление кассира работать" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="qDWXjoZE3adlOefqzPPl-2">
+          <mxGeometry width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qDWXjoZE3adlOefqzPPl-4" value="A3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="qDWXjoZE3adlOefqzPPl-2">
+          <mxGeometry x="90" y="40" width="30" height="20" as="geometry" />
         </mxCell>
         <mxCell id="16n-OlY1CQ9vcngmwRol-4" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#6a00ff;strokeColor=#B85450;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" target="fPjY3ZcBZts0TVkwt7mD-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
