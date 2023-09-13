@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T21:07:10.637Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="kGma600FdSAu2E1DDEtJ" version="21.6.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-13T21:08:08.958Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="ZuxD8j37ZQTq11I4NuSK" version="21.6.8" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -360,7 +360,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FqEnTdHPgZsYN0w2MfE4" name="А3">
-    <mxGraphModel dx="683" dy="376" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -496,7 +496,7 @@
         <mxCell id="EkU9dxk1wcv2mxC09lRB-3" value="" style="group" vertex="1" connectable="0" parent="RWR73GOMRbYbBOoSkMBg-1">
           <mxGeometry x="457" y="259" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EkU9dxk1wcv2mxC09lRB-4" value="Переход к следующему эксперту" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="EkU9dxk1wcv2mxC09lRB-3">
+        <mxCell id="EkU9dxk1wcv2mxC09lRB-4" value="Переход к следующему эксперту&lt;br&gt;или конец" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="EkU9dxk1wcv2mxC09lRB-3">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EkU9dxk1wcv2mxC09lRB-5" value="А33" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EkU9dxk1wcv2mxC09lRB-3">
@@ -537,7 +537,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="53hJzm69GLmLmKsDJLpW" name="А32">
-    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
