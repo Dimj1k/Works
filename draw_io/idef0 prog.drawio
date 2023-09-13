@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T20:59:45.852Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="S9CVdIgHHvyE83TMSy0i" version="21.6.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-13T20:59:55.723Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="P8DGJfeBdpEL1y2BO5WQ" version="21.6.8" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -445,7 +445,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ktnC6HVrhDzEttXAfJTP-3" value="Новое состояние проверки" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FF3399;exitX=1.002;exitY=0.167;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="RWR73GOMRbYbBOoSkMBg-1" source="EkU9dxk1wcv2mxC09lRB-4" target="7k-3xfqGC5j5otF5jtwy-3">
+        <mxCell id="ktnC6HVrhDzEttXAfJTP-3" value="Состояние проверки" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FF3399;exitX=1.002;exitY=0.167;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="RWR73GOMRbYbBOoSkMBg-1" source="EkU9dxk1wcv2mxC09lRB-4" target="7k-3xfqGC5j5otF5jtwy-3">
           <mxGeometry x="0.3686" relative="1" as="geometry">
             <mxPoint x="577" y="299" as="sourcePoint" />
             <mxPoint x="377" y="189" as="targetPoint" />
