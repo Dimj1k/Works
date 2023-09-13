@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T17:26:08.889Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="tcIu89JixmXR1-xQMeTk" version="21.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-13T17:35:57.231Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="KD62RO9ivCRqL1TOs32Z" version="21.6.8" type="github" pages="2">
   <diagram name="Контекстная A0" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -101,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="574" dy="316" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -175,7 +175,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cvx9FWdufjz_VrrL6LEs-2" value="Вывод общей числовой информации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cvx9FWdufjz_VrrL6LEs-1">
+        <mxCell id="cvx9FWdufjz_VrrL6LEs-2" value="Вывод общих числовых данных" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cvx9FWdufjz_VrrL6LEs-1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cvx9FWdufjz_VrrL6LEs-3" value="А2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="cvx9FWdufjz_VrrL6LEs-1">
