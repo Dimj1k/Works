@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T15:32:04.817Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="CkL_p4RxWzR-nLLLYWHy" version="21.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-13T15:36:37.225Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="92e6nswhnotROwj0x8IF" version="21.6.8" type="github" pages="2">
   <diagram name="Страница — 1" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -25,7 +25,7 @@
           <mxGeometry x="80" y="707" width="620" height="23" as="geometry" />
         </mxCell>
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-15" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;Цель: Проверка весовых коэффициентов&lt;/p&gt;&lt;p style=&quot;line-height: 50%;&quot;&gt;Точка зрения: Пользователь&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" vertex="1">
-          <mxGeometry x="46" y="650" width="200" height="57" as="geometry" />
+          <mxGeometry x="46" y="650" width="174" height="57" as="geometry" />
         </mxCell>
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-28" value="Алгоритмы" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1" target="UwtVmJWAxAAU6NyaN8vT-24">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
