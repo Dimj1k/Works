@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T10:40:11.328Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="xvA7djnFgm33-O-QlC1x" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T10:41:28.681Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="FvytzIk30MVfMdCzPu8n" version="21.7.5" type="github" pages="3">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -392,7 +392,7 @@
             <mxPoint x="240" y="30" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qDWXjoZE3adlOefqzPPl-3" value="Вычисление выручки за товар" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="qDWXjoZE3adlOefqzPPl-2">
+        <mxCell id="qDWXjoZE3adlOefqzPPl-3" value="Получение выручки за покупку" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="qDWXjoZE3adlOefqzPPl-2">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qDWXjoZE3adlOefqzPPl-4" value="A3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="qDWXjoZE3adlOefqzPPl-2">
