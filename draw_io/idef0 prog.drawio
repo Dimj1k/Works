@@ -1,9 +1,38 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T10:00:04.658Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" version="21.7.5" etag="vVhM6GUusC2v_3vs8n7d" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-13T11:01:42.785Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="FQXwNPE_S7mejoHkyY8F" version="21.7.5" type="github">
   <diagram name="Страница — 1" id="ZWv0XQIptHX5wj8FlSW1">
-    <mxGraphModel>
+    <mxGraphModel dx="1728" dy="932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-10" value="" style="swimlane;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="24" y="21" width="780" height="730" as="geometry">
+            <mxRectangle x="24" y="21" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-11" value="ВЕТКА: А0" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="UwtVmJWAxAAU6NyaN8vT-10">
+          <mxGeometry y="707" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-12" value="НОМЕР: 1" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="UwtVmJWAxAAU6NyaN8vT-10">
+          <mxGeometry x="700" y="707" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-13" value="ЗАГОЛОВОК:&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="UwtVmJWAxAAU6NyaN8vT-10">
+          <mxGeometry x="80" y="707" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-14" value="А-0 Разработка программного обеспечения" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="UwtVmJWAxAAU6NyaN8vT-10">
+          <mxGeometry x="80" y="707" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-15" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;Цель: Разработка программного обеспечения&lt;/p&gt;&lt;p style=&quot;line-height: 50%;&quot;&gt;Точка зрения: Разработчик&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="UwtVmJWAxAAU6NyaN8vT-10">
+          <mxGeometry x="46" y="650" width="200" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-23" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="219" y="190" width="390" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-24" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;Разработка программного обеспечения&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UwtVmJWAxAAU6NyaN8vT-23">
+          <mxGeometry width="390" height="249.99999999999997" as="geometry" />
+        </mxCell>
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-25" value="A0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="UwtVmJWAxAAU6NyaN8vT-23">
+          <mxGeometry x="360" y="224.13793103448273" width="30" height="25.86206896551724" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
