@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T17:52:34.406Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="LN5F5mxMOVi0s--smTMd" version="21.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-13T18:00:18.248Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="zAUyLFOwJ83W6L5yIUZp" version="21.6.8" type="github" pages="2">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -101,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="683" dy="376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -219,6 +219,26 @@
         </mxCell>
         <mxCell id="b3FNv-wAoaL1VZP3wihv-4" value="А3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="b3FNv-wAoaL1VZP3wihv-2">
           <mxGeometry x="98" y="44" width="22" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="0eJCPtATK-8SuqpVmD6R-2" value="" style="group" vertex="1" connectable="0" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry x="577" y="459" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0eJCPtATK-8SuqpVmD6R-3" value="Работа n-ого эксперта" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0eJCPtATK-8SuqpVmD6R-2">
+          <mxGeometry width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0eJCPtATK-8SuqpVmD6R-4" value="А4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="0eJCPtATK-8SuqpVmD6R-2">
+          <mxGeometry x="98" y="44" width="22" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="0eJCPtATK-8SuqpVmD6R-5" value="Состояние проверки" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;strokeColor=#999900;" edge="1" parent="743_yrjDaTubIG02njix-1" source="b3FNv-wAoaL1VZP3wihv-3" target="0eJCPtATK-8SuqpVmD6R-3">
+          <mxGeometry x="-0.317" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="637" y="354" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o6tU-HVTQFZvvttwpbp4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fillColor=#ffcccc;strokeColor=#0000CC;" edge="1" parent="743_yrjDaTubIG02njix-1" source="b3FNv-wAoaL1VZP3wihv-3" target="0eJCPtATK-8SuqpVmD6R-3">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KIGGaa_QOLiGXRH8PAZ8-4" value="" style="edgeStyle=isometricEdgeStyle;endArrow=none;html=1;elbow=vertical;rounded=0;labelBackgroundColor=default;strokeColor=#81FF03;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;" edge="1" parent="1">
           <mxGeometry width="50" height="100" relative="1" as="geometry">
