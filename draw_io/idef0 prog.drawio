@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T18:28:02.082Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="ubbtwovGEHD-VX3639t3" version="21.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-13T18:29:31.163Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="0E8RJ6Xt_aTU-oVty1_V" version="21.6.8" type="github" pages="2">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -101,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2390" dy="1317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -129,7 +129,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="743_yrjDaTubIG02njix-1" value="" style="swimlane;direction=west;fillColor=none;swimlaneFillColor=none;shadow=0;swimlaneLine=1;" vertex="1" parent="1">
-          <mxGeometry x="23" y="21" width="1137" height="730" as="geometry">
+          <mxGeometry x="23" y="21" width="917" height="730" as="geometry">
             <mxRectangle x="23" y="21" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -154,13 +154,13 @@
           <mxGeometry y="707" width="80" height="23" as="geometry" />
         </mxCell>
         <mxCell id="743_yrjDaTubIG02njix-3" value="НОМЕР: 2" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="743_yrjDaTubIG02njix-1">
-          <mxGeometry x="1057" y="707" width="80" height="23" as="geometry" />
+          <mxGeometry x="837" y="707" width="80" height="23" as="geometry" />
         </mxCell>
         <mxCell id="743_yrjDaTubIG02njix-4" value="ЗАГОЛОВОК:&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="743_yrjDaTubIG02njix-1">
           <mxGeometry x="80" y="707" width="80" height="23" as="geometry" />
         </mxCell>
         <mxCell id="743_yrjDaTubIG02njix-5" value="А-0 Проверка весовых коэффициентов на надёжность" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="743_yrjDaTubIG02njix-1">
-          <mxGeometry x="80" y="707" width="976" height="23" as="geometry" />
+          <mxGeometry x="80" y="707" width="756" height="23" as="geometry" />
         </mxCell>
         <mxCell id="vVMwirhITabyw-ek5xzt-4" value="" style="group" vertex="1" connectable="0" parent="743_yrjDaTubIG02njix-1">
           <mxGeometry x="97" y="99" width="120" height="60" as="geometry" />
@@ -230,7 +230,7 @@
           <mxGeometry x="577" y="459" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="o6tU-HVTQFZvvttwpbp4-6" value="Графические изображения" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fillColor=#fa6800;strokeColor=#C73500;" edge="1" parent="0eJCPtATK-8SuqpVmD6R-2" source="0eJCPtATK-8SuqpVmD6R-3">
-          <mxGeometry x="0.1167" y="50" relative="1" as="geometry">
+          <mxGeometry x="-0.1022" y="50" relative="1" as="geometry">
             <mxPoint x="320" y="30" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
@@ -271,8 +271,8 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="159.99999999999977" y="-330" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="140" y="30" />
-              <mxPoint x="140" y="-330" />
+              <mxPoint x="130" y="30" />
+              <mxPoint x="130" y="-330" />
             </Array>
           </mxGeometry>
         </mxCell>
