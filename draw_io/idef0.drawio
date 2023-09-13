@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T10:41:36.139Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="DR0JBhvTVw5POkrs5HUW" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T10:41:56.351Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ZaTw4PbEoMPToi6ZMRBa" version="21.7.5" type="github" pages="3">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -55,10 +55,10 @@
             <mxPoint x="195" y="294" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="64bh6hLLo012Qr4FLgpR-44" value="Стандарты ценообразования" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="64bh6hLLo012Qr4FLgpR-6" edge="1">
+        <mxCell id="64bh6hLLo012Qr4FLgpR-44" value="Стандарты &lt;br&gt;ценообразования" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="64bh6hLLo012Qr4FLgpR-6" edge="1">
           <mxGeometry x="-0.0075" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="231" y="99" as="sourcePoint" />
-            <mxPoint x="231" y="169" as="targetPoint" />
+            <mxPoint x="316" y="99" as="sourcePoint" />
+            <mxPoint x="316" y="169" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -67,8 +67,8 @@
         </mxCell>
         <mxCell id="V-wa51J8TmYOqcNqesyu-1" value="Отношение к&lt;br&gt;людям" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="64bh6hLLo012Qr4FLgpR-6">
           <mxGeometry x="-0.1527" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="536" y="99" as="sourcePoint" />
-            <mxPoint x="536" y="169" as="targetPoint" />
+            <mxPoint x="456" y="99" as="sourcePoint" />
+            <mxPoint x="456" y="169" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -335,7 +335,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="-AG3mw6h3vnjEoqJ1LGG" name="Страница — 3">
-    <mxGraphModel dx="1430" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1728" dy="932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
