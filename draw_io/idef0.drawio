@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T10:37:27.123Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="W_-Z3LPwcUS4reE4kcK3" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T10:38:17.407Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="gLwtmVzvJrm_BgW7Jsbm" version="21.7.5" type="github" pages="3">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -393,7 +393,7 @@
         <mxCell id="qDWXjoZE3adlOefqzPPl-4" value="A3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="qDWXjoZE3adlOefqzPPl-2">
           <mxGeometry x="90" y="40" width="30" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="7vmf1kx-k14dc7Y97d56-1" value="Информация о покупке" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;" edge="1" parent="aTAhiD47NeJxjI5WAey6-1" source="fPjY3ZcBZts0TVkwt7mD-2" target="qDWXjoZE3adlOefqzPPl-3">
+        <mxCell id="7vmf1kx-k14dc7Y97d56-1" value="Покупка" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#6D1F00;fillColor=#a0522d;" edge="1" parent="aTAhiD47NeJxjI5WAey6-1" source="fPjY3ZcBZts0TVkwt7mD-2" target="qDWXjoZE3adlOefqzPPl-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="16n-OlY1CQ9vcngmwRol-4" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#6a00ff;strokeColor=#B85450;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" target="fPjY3ZcBZts0TVkwt7mD-2">
