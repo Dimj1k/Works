@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T11:00:53.944Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="pDT3VeoItiSnQ7GHim8l" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T11:01:26.996Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="889ROC7L6m-YJagvyIMf" version="21.7.5" type="github" pages="3">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -349,7 +349,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="aTAhiD47NeJxjI5WAey6-1" value="" style="swimlane;direction=west;" vertex="1" parent="1">
-          <mxGeometry x="24" y="40" width="586" height="410" as="geometry" />
+          <mxGeometry x="24" y="40" width="536" height="410" as="geometry" />
         </mxCell>
         <mxCell id="2tTkd1xRjNLc9cdXoHFL-1" value="`" style="group" vertex="1" connectable="0" parent="aTAhiD47NeJxjI5WAey6-1">
           <mxGeometry x="116" y="80" width="120" height="60" as="geometry" />
@@ -406,14 +406,14 @@
         <mxCell id="aTAhiD47NeJxjI5WAey6-4" value="ЗАГОЛОВОК:&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="aTAhiD47NeJxjI5WAey6-1">
           <mxGeometry x="80" y="387" width="80" height="23" as="geometry" />
         </mxCell>
+        <mxCell id="aTAhiD47NeJxjI5WAey6-3" value="НОМЕР: 3" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="aTAhiD47NeJxjI5WAey6-1">
+          <mxGeometry x="456" y="387" width="80" height="23" as="geometry" />
+        </mxCell>
         <mxCell id="aTAhiD47NeJxjI5WAey6-2" value="ВЕТКА: A5" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="1">
           <mxGeometry x="24" y="427" width="80" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="aTAhiD47NeJxjI5WAey6-3" value="НОМЕР: 3" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="1">
-          <mxGeometry x="530" y="427" width="80" height="23" as="geometry" />
-        </mxCell>
         <mxCell id="aTAhiD47NeJxjI5WAey6-5" value="Продажа товара" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="1">
-          <mxGeometry x="104" y="427" width="426" height="23" as="geometry" />
+          <mxGeometry x="104" y="427" width="376" height="23" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
