@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T10:10:23.005Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="dNqBQMdxrZFJncEa1ciq" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T10:13:11.705Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="3F9JJAunu4CggZjLFYTi" version="21.7.5" type="github" pages="3">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1430" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -236,7 +236,7 @@
         <mxCell id="vn4PmHRYv63XcPkDkBaM-5" value="A5" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="vn4PmHRYv63XcPkDkBaM-3">
           <mxGeometry x="90" y="40" width="30" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="vn4PmHRYv63XcPkDkBaM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1" source="pGwfKDDTQR-bq-8G-joo-11" target="vn4PmHRYv63XcPkDkBaM-4">
+        <mxCell id="vn4PmHRYv63XcPkDkBaM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#B85450;" edge="1" parent="2Q3NriW11z9L6a3Y88-q-1" source="pGwfKDDTQR-bq-8G-joo-11" target="vn4PmHRYv63XcPkDkBaM-4">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="746" y="170.0000000000001" as="targetPoint" />
           </mxGeometry>
@@ -276,7 +276,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="-AG3mw6h3vnjEoqJ1LGG" name="Страница — 3">
-    <mxGraphModel dx="1430" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -294,6 +294,22 @@
         </mxCell>
         <mxCell id="aTAhiD47NeJxjI5WAey6-5" value="Расставление цены товара" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="aTAhiD47NeJxjI5WAey6-1">
           <mxGeometry x="80" y="567" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="2tTkd1xRjNLc9cdXoHFL-1" value="`" style="group" vertex="1" connectable="0" parent="aTAhiD47NeJxjI5WAey6-1">
+          <mxGeometry x="116" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2tTkd1xRjNLc9cdXoHFL-2" value="Расставление кассиром цены товара" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2tTkd1xRjNLc9cdXoHFL-1">
+          <mxGeometry width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2tTkd1xRjNLc9cdXoHFL-3" value="A1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="2tTkd1xRjNLc9cdXoHFL-1">
+          <mxGeometry x="90" y="40" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yh685P7sRUKJmuJzY7Zg-1" value="Цена товара" style="endArrow=block;html=1;rounded=0;labelBackgroundColor=default;strokeColor=#B85450;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;verticalAlign=middle;horizontal=1;fillColor=#a20025;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="aTAhiD47NeJxjI5WAey6-1" target="2tTkd1xRjNLc9cdXoHFL-2">
+          <mxGeometry x="-0.1111" y="10" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="26" y="110" as="sourcePoint" />
+            <mxPoint x="60" y="109.66000000000003" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
