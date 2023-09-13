@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T16:01:17.232Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="W7XRmspZ1V-yQL3v4AKB" version="21.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-13T16:06:07.106Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="A9S0NlRR4enaOPJ6BAkt" version="21.6.8" type="github" pages="2">
   <diagram name="Страница — 1" id="ZWv0XQIptHX5wj8FlSW1">
-    <mxGraphModel dx="1687" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -104,7 +104,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="Страница — 2">
-    <mxGraphModel dx="819" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="478" dy="263" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -142,6 +142,32 @@
         </mxCell>
         <mxCell id="cvx9FWdufjz_VrrL6LEs-3" value="А2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="cvx9FWdufjz_VrrL6LEs-1">
           <mxGeometry x="98" y="44" width="22" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="KIGGaa_QOLiGXRH8PAZ8-1" value="Количество экспертов" style="endArrow=block;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endFill=1;verticalAlign=middle;align=center;horizontal=1;labelPosition=center;verticalLabelPosition=middle;strokeColor=#81FF03;" edge="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry x="0.532" y="-31" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="17" y="149" as="sourcePoint" />
+            <mxPoint x="97" y="149.70999999999998" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIGGaa_QOLiGXRH8PAZ8-2" value="Весовые коэффициенты" style="endArrow=block;html=1;rounded=0;entryX=-0.001;entryY=0.162;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;strokeColor=#FF9900;" edge="1" parent="743_yrjDaTubIG02njix-1" target="vVMwirhITabyw-ek5xzt-1">
+          <mxGeometry x="1" y="31" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="17" y="109" as="sourcePoint" />
+            <mxPoint x="97" y="107.70999999999998" as="targetPoint" />
+            <mxPoint x="10" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIGGaa_QOLiGXRH8PAZ8-6" value="" style="edgeStyle=isometricEdgeStyle;endArrow=none;html=1;rounded=0;labelBackgroundColor=default;strokeColor=#FF9900;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;" edge="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry width="50" height="100" relative="1" as="geometry">
+            <mxPoint x="43" y="109" as="sourcePoint" />
+            <mxPoint x="93" y="84" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIGGaa_QOLiGXRH8PAZ8-4" value="" style="edgeStyle=isometricEdgeStyle;endArrow=none;html=1;elbow=vertical;rounded=0;labelBackgroundColor=default;strokeColor=#81FF03;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;" edge="1" parent="1">
+          <mxGeometry width="50" height="100" relative="1" as="geometry">
+            <mxPoint x="60" y="170" as="sourcePoint" />
+            <mxPoint x="100" y="200" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
