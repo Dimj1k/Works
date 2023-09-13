@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T15:31:27.104Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="JApYQT4EtteqN8Jin7aW" version="21.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-13T15:32:04.817Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="CkL_p4RxWzR-nLLLYWHy" version="21.6.8" type="github" pages="2">
   <diagram name="Страница — 1" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -108,6 +108,23 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="743_yrjDaTubIG02njix-1" value="" style="swimlane;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="23" y="21" width="780" height="730" as="geometry">
+            <mxRectangle x="24" y="21" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="743_yrjDaTubIG02njix-2" value="ВЕТКА: А0" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry y="707" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="743_yrjDaTubIG02njix-3" value="НОМЕР: 2" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry x="700" y="707" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="743_yrjDaTubIG02njix-4" value="ЗАГОЛОВОК:&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry x="80" y="707" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="743_yrjDaTubIG02njix-5" value="А-0 Проверка весовых коэффициентов на надёжность" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry x="80" y="707" width="620" height="23" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
