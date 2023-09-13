@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T20:18:52.302Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="7SZqumWkbST6QFprF45y" version="21.6.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-13T20:21:11.288Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="e9B75m9boeDeXz2equQ4" version="21.6.8" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -337,21 +337,21 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="RWR73GOMRbYbBOoSkMBg-1" value="" style="swimlane;direction=west;fillColor=none;swimlaneFillColor=none;shadow=0;swimlaneLine=1;" vertex="1" parent="1">
-          <mxGeometry x="23" y="21" width="657" height="472" as="geometry">
+          <mxGeometry x="23" y="21" width="657" height="382" as="geometry">
             <mxRectangle x="23" y="21" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RWR73GOMRbYbBOoSkMBg-4" value="ВЕТКА: А3" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="RWR73GOMRbYbBOoSkMBg-1">
-          <mxGeometry y="449" width="80" height="23" as="geometry" />
+          <mxGeometry y="359" width="80" height="23" as="geometry" />
         </mxCell>
         <mxCell id="RWR73GOMRbYbBOoSkMBg-5" value="НОМЕР: 3" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="RWR73GOMRbYbBOoSkMBg-1">
-          <mxGeometry x="577" y="449" width="80" height="23" as="geometry" />
+          <mxGeometry x="577" y="359" width="80" height="23" as="geometry" />
         </mxCell>
         <mxCell id="RWR73GOMRbYbBOoSkMBg-6" value="ЗАГОЛОВОК:&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="RWR73GOMRbYbBOoSkMBg-1">
-          <mxGeometry x="80" y="449" width="80" height="23" as="geometry" />
+          <mxGeometry x="80" y="359" width="80" height="23" as="geometry" />
         </mxCell>
         <mxCell id="RWR73GOMRbYbBOoSkMBg-7" value="А-3 Работа экспертов" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" vertex="1" parent="RWR73GOMRbYbBOoSkMBg-1">
-          <mxGeometry x="80" y="449" width="496" height="23" as="geometry" />
+          <mxGeometry x="80" y="359" width="496" height="23" as="geometry" />
         </mxCell>
         <mxCell id="89j-cGsNDzae82FznDw--1" value="" style="group" vertex="1" connectable="0" parent="RWR73GOMRbYbBOoSkMBg-1">
           <mxGeometry x="138" y="59" width="120" height="60" as="geometry" />
