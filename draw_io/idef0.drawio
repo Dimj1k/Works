@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T10:56:46.071Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="M2h89AmTTfRWqk7hXKf8" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-13T10:57:55.786Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ZPqbjOcMN_nuZ7AHK-o4" version="21.7.5" type="github" pages="3">
   <diagram name="Страница — 1" id="T-3xD0DyzHITFq4uGjCN">
     <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -344,7 +344,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="-AG3mw6h3vnjEoqJ1LGG" name="Страница — 3">
-    <mxGraphModel dx="847" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1481" dy="799" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -399,12 +399,12 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_a3KZsEof5aXQ31vVPEw-1" value="Чек" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#6a00ff;strokeColor=#3700CC;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="aTAhiD47NeJxjI5WAey6-1" source="2tTkd1xRjNLc9cdXoHFL-3" target="fPjY3ZcBZts0TVkwt7mD-2">
+        <mxCell id="_a3KZsEof5aXQ31vVPEw-1" value="Чек с товаром" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#6a00ff;strokeColor=#3700CC;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="aTAhiD47NeJxjI5WAey6-1" source="2tTkd1xRjNLc9cdXoHFL-2" target="fPjY3ZcBZts0TVkwt7mD-2">
           <mxGeometry x="-0.4722" relative="1" as="geometry">
             <mxPoint x="246" y="140" as="sourcePoint" />
             <mxPoint x="377" y="311" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="286" y="120" />
+              <mxPoint x="286" y="110" />
               <mxPoint x="286" y="270" />
             </Array>
             <mxPoint as="offset" />
