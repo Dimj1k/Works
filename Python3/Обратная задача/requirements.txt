@@ -1,0 +1,9 @@
+pandas
+numpy
+scipy
+matplotlib
+openpyxl
+odfpy
+xlrd
+xlsxwriter
+jinja2
