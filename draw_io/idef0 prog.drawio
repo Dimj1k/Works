@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-14T05:41:33.900Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="imbb-WtY3T8eq3URRpfA" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T02:16:45.130Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="LksmrD6EHFME_i5z3azx" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -84,7 +84,7 @@
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-23" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="219" y="190" width="390" height="265" as="geometry" />
         </mxCell>
-        <mxCell id="UwtVmJWAxAAU6NyaN8vT-24" value="&lt;span style=&quot;font-size: 28px;&quot;&gt;Проверка весовых коэффициентов на надёжность&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="UwtVmJWAxAAU6NyaN8vT-23" vertex="1">
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-24" value="&lt;span style=&quot;font-size: 28px;&quot;&gt;Проверка весовых коэффициентов&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="UwtVmJWAxAAU6NyaN8vT-23" vertex="1">
           <mxGeometry width="390" height="249.99999999999997" as="geometry" />
         </mxCell>
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-25" value="A0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="UwtVmJWAxAAU6NyaN8vT-23" vertex="1">
@@ -101,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
