@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T09:17:02.736Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="4eQigYvmLmSkokwGfQce" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T09:17:16.787Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="pCY2XqzbCubHPWfyKeSp" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -268,7 +268,7 @@
         <mxCell id="aFnh8GW0OJa8cc7-wk0_-3" value="А2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="aFnh8GW0OJa8cc7-wk0_-1">
           <mxGeometry x="98" y="44" width="22" height="16" as="geometry" />
         </mxCell>
-        <mxCell id="aFnh8GW0OJa8cc7-wk0_-11" value="" style="endArrow=classic;html=1;rounded=1;exitX=1.004;exitY=0.61;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#00FFFF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="743_yrjDaTubIG02njix-1" source="5ahT-SYsGyvmFBpI2IyX-2" target="aFnh8GW0OJa8cc7-wk0_-2">
+        <mxCell id="aFnh8GW0OJa8cc7-wk0_-11" value="" style="endArrow=classic;html=1;rounded=1;exitX=1.004;exitY=0.61;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#00FFFF;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="743_yrjDaTubIG02njix-1" source="5ahT-SYsGyvmFBpI2IyX-2" target="aFnh8GW0OJa8cc7-wk0_-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="256.99999999999994" y="176.42" as="sourcePoint" />
             <mxPoint x="296.51" y="220" as="targetPoint" />
