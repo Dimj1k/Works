@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T21:00:34.835Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="3kNRZA7-8-lmsJmL7jE7" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T21:00:50.090Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="zZjzjUM3vfOwDj_78n0a" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -312,7 +312,7 @@
         <mxCell id="5ahT-SYsGyvmFBpI2IyX-1" value="" style="group;fontSize=10;" parent="743_yrjDaTubIG02njix-1" vertex="1" connectable="0">
           <mxGeometry x="137" y="140" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="5ahT-SYsGyvmFBpI2IyX-2" value="Обработка входных данных" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="5ahT-SYsGyvmFBpI2IyX-1" vertex="1">
+        <mxCell id="5ahT-SYsGyvmFBpI2IyX-2" value="Обработка входных данных" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" parent="5ahT-SYsGyvmFBpI2IyX-1" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="5ahT-SYsGyvmFBpI2IyX-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;А1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="5ahT-SYsGyvmFBpI2IyX-1" vertex="1">
@@ -349,7 +349,7 @@
         <mxCell id="aFnh8GW0OJa8cc7-wk0_-1" value="" style="group;fontSize=10;" parent="743_yrjDaTubIG02njix-1" vertex="1" connectable="0">
           <mxGeometry x="337" y="300" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="aFnh8GW0OJa8cc7-wk0_-2" value="Расчёт количества экспертов" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="aFnh8GW0OJa8cc7-wk0_-1" vertex="1">
+        <mxCell id="aFnh8GW0OJa8cc7-wk0_-2" value="Расчёт количества экспертов" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" parent="aFnh8GW0OJa8cc7-wk0_-1" vertex="1">
           <mxGeometry width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="aFnh8GW0OJa8cc7-wk0_-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;А2&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="aFnh8GW0OJa8cc7-wk0_-1" vertex="1">
@@ -424,7 +424,7 @@
         <mxCell id="swCZicpM5G-BZDFf6zmv-1" value="" style="group;fontSize=10;" parent="743_yrjDaTubIG02njix-1" vertex="1" connectable="0">
           <mxGeometry x="537" y="460" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="swCZicpM5G-BZDFf6zmv-2" value="Проверка допустимости решения" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="swCZicpM5G-BZDFf6zmv-1" vertex="1">
+        <mxCell id="swCZicpM5G-BZDFf6zmv-2" value="Проверка допустимости решения" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" parent="swCZicpM5G-BZDFf6zmv-1" vertex="1">
           <mxGeometry width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="swCZicpM5G-BZDFf6zmv-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;А3&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="swCZicpM5G-BZDFf6zmv-1" vertex="1">
