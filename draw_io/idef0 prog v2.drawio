@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T13:17:54.482Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="S3p87wPfOfzWdDWARjT2" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T13:19:30.721Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="C-n6E-DifFnU36jCHn6p" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -187,7 +187,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SuHji1JUfY4mNwCukmQ_-9" value="Ранжирование матриц" style="endArrow=block;html=1;rounded=0;exitX=1.003;exitY=0.371;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=10;endFill=1;strokeColor=#FF0080;" parent="1" edge="1">
+        <mxCell id="SuHji1JUfY4mNwCukmQ_-9" value="Ранжировка матриц" style="endArrow=block;html=1;rounded=0;exitX=1.003;exitY=0.371;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=10;endFill=1;strokeColor=#FF0080;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="680" y="536.76" as="sourcePoint" />
             <mxPoint x="920" y="536.76" as="targetPoint" />
