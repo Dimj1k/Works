@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T10:02:06.273Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="4jy43qCnZdmE29l2ltav" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T10:02:56.244Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="yMOak5RC2SosMNlAOH-z" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -183,14 +183,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="683" dy="376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="F-KDv2YsbYm4zEEXJvgU-4" value="Весовые коэффициенты матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#b85450;labelBackgroundColor=default;fillColor=#f8cecc;" edge="1" parent="1">
+        <mxCell id="F-KDv2YsbYm4zEEXJvgU-4" value="Весовые коэффициенты матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#6600CC;labelBackgroundColor=default;fillColor=#f8cecc;" edge="1" parent="1">
           <mxGeometry x="-0.5909" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="395" as="sourcePoint" />
-            <mxPoint x="920" y="395" as="targetPoint" />
+            <mxPoint x="480" y="393" as="sourcePoint" />
+            <mxPoint x="920" y="393" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
