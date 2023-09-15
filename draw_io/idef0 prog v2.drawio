@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T20:47:59.317Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="XCMgxSXVFb_lrNf2LjzW" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T20:48:55.002Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="DbM8APGNljldLHr2KxFe" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -247,7 +247,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="swCZicpM5G-BZDFf6zmv-6" value="Неудовлетворительный&lt;br style=&quot;font-size: 10px;&quot;&gt;результат" style="endArrow=classic;html=1;rounded=1;exitX=1;exitY=0.122;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;jumpStyle=gap;strokeColor=#333333;fontSize=10;" parent="743_yrjDaTubIG02njix-1" source="swCZicpM5G-BZDFf6zmv-2" target="aFnh8GW0OJa8cc7-wk0_-2" edge="1">
-          <mxGeometry x="-0.7566" width="50" height="50" relative="1" as="geometry">
+          <mxGeometry x="-0.7253" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="657" y="470" as="sourcePoint" />
             <mxPoint x="597" y="350" as="targetPoint" />
             <Array as="points">
