@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T22:25:09.596Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="o1jIAihLJRaEG9XQ7e0q" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T22:25:23.969Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="I93hNLCgFSRzunxsLN18" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -714,10 +714,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="WnniEpmSHg4MwNNZd9bN-1" value="Значение&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;значимости&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;матриц" style="edgeStyle=isometricEdgeStyle;endArrow=none;html=1;rounded=0;elbow=vertical;strokeColor=#b85450;fontSize=10;" edge="1" parent="1">
-          <mxGeometry x="-0.9358" y="14" width="50" height="100" relative="1" as="geometry">
+          <mxGeometry x="-1" y="14" width="50" height="100" relative="1" as="geometry">
             <mxPoint x="500" y="150" as="sourcePoint" />
             <mxPoint x="420" y="237" as="targetPoint" />
-            <mxPoint as="offset" />
+            <mxPoint x="-17" y="2" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
