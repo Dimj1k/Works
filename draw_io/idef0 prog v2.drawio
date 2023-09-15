@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T20:45:36.643Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="sSvQqh8Hpbk6OEF_v_9J" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T20:47:29.124Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="LyIKCyKgwMe_xbvyHgmE" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -176,7 +176,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="956" dy="527" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1147" dy="632" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -246,20 +246,20 @@
             <mxRectangle x="23" y="21" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="swCZicpM5G-BZDFf6zmv-6" value="Неудовлетворительный&lt;br style=&quot;font-size: 10px;&quot;&gt;результат" style="endArrow=classic;html=1;rounded=1;exitX=1;exitY=0.122;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;jumpStyle=gap;strokeColor=#333333;fontSize=10;" parent="743_yrjDaTubIG02njix-1" source="swCZicpM5G-BZDFf6zmv-2" target="aFnh8GW0OJa8cc7-wk0_-2" edge="1">
+        <mxCell id="swCZicpM5G-BZDFf6zmv-6" value="Неудовлетворительный&lt;br style=&quot;font-size: 10px;&quot;&gt;результат" style="endArrow=classic;html=1;rounded=1;exitX=1;exitY=0.122;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;jumpStyle=gap;strokeColor=#333333;fontSize=10;" parent="743_yrjDaTubIG02njix-1" source="swCZicpM5G-BZDFf6zmv-2" target="aFnh8GW0OJa8cc7-wk0_-2" edge="1">
           <mxGeometry x="-0.7566" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="657" y="470" as="sourcePoint" />
             <mxPoint x="597" y="350" as="targetPoint" />
             <Array as="points">
               <mxPoint x="707" y="470" />
               <mxPoint x="707" y="260" />
-              <mxPoint x="307" y="260" />
-              <mxPoint x="307" y="320" />
+              <mxPoint x="287" y="260" />
+              <mxPoint x="287" y="360" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFnh8GW0OJa8cc7-wk0_-11" value="" style="endArrow=block;html=1;rounded=1;exitX=1.004;exitY=0.61;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#00FFFF;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endFill=1;jumpStyle=gap;fontSize=10;" parent="743_yrjDaTubIG02njix-1" source="5ahT-SYsGyvmFBpI2IyX-2" target="aFnh8GW0OJa8cc7-wk0_-2" edge="1">
+        <mxCell id="aFnh8GW0OJa8cc7-wk0_-11" value="" style="endArrow=block;html=1;rounded=1;exitX=1.004;exitY=0.61;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#00FFFF;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endFill=1;jumpStyle=gap;fontSize=10;" parent="743_yrjDaTubIG02njix-1" source="5ahT-SYsGyvmFBpI2IyX-2" target="aFnh8GW0OJa8cc7-wk0_-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="256.99999999999994" y="176.42" as="sourcePoint" />
             <mxPoint x="296.51" y="220" as="targetPoint" />
@@ -532,7 +532,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FqEnTdHPgZsYN0w2MfE4" name="А2">
-    <mxGraphModel dx="683" dy="376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
