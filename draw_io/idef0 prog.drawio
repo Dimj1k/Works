@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T11:46:22.380Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="zq7Zi9cSoZE3DzCBcuu8" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T11:47:03.308Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="TSDjs31yG4pGbHUBFzEl" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -187,20 +187,6 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F-KDv2YsbYm4zEEXJvgU-4" value="Весовые коэффициенты матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#6600CC;labelBackgroundColor=default;fillColor=#f8cecc;" edge="1" parent="1">
-          <mxGeometry x="-0.5909" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="393" as="sourcePoint" />
-            <mxPoint x="920" y="393" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="F-KDv2YsbYm4zEEXJvgU-2" value="Значение значимости матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#b85450;labelBackgroundColor=default;fillColor=#f8cecc;" edge="1" parent="1">
-          <mxGeometry x="-0.6364" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="375" as="sourcePoint" />
-            <mxPoint x="920" y="375" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="aFnh8GW0OJa8cc7-wk0_-7" value="" style="endArrow=block;html=1;rounded=0;exitX=1.004;exitY=0.16;exitDx=0;exitDy=0;exitPerimeter=0;endFill=1;strokeColor=#00FFFF;" edge="1" parent="1">
           <mxGeometry x="-1" y="-43" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="280.48" y="196.60000000000014" as="sourcePoint" />
@@ -234,13 +220,13 @@
             <mxRectangle x="23" y="21" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SuHji1JUfY4mNwCukmQ_-2" value="" style="endArrow=block;html=1;rounded=1;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#FFB570;labelBackgroundColor=default;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="743_yrjDaTubIG02njix-1" source="aFnh8GW0OJa8cc7-wk0_-2" target="swCZicpM5G-BZDFf6zmv-2">
+        <mxCell id="SuHji1JUfY4mNwCukmQ_-2" value="" style="endArrow=block;html=1;rounded=1;endFill=1;strokeColor=#FFB570;labelBackgroundColor=default;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="743_yrjDaTubIG02njix-1" target="swCZicpM5G-BZDFf6zmv-2">
           <mxGeometry x="-0.7674" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="467" y="349" as="sourcePoint" />
+            <mxPoint x="457" y="339" as="sourcePoint" />
             <mxPoint x="907" y="349" as="targetPoint" />
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="510" y="340" />
+              <mxPoint x="510" y="339" />
               <mxPoint x="510" y="480" />
             </Array>
           </mxGeometry>
@@ -249,13 +235,6 @@
           <mxGeometry x="-0.3333" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="17" y="190" as="sourcePoint" />
             <mxPoint x="137" y="190" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="F-KDv2YsbYm4zEEXJvgU-1" value="Хи-квадрат матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FFB570;labelBackgroundColor=default;" edge="1" parent="743_yrjDaTubIG02njix-1">
-          <mxGeometry x="-0.7674" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="457" y="339" as="sourcePoint" />
-            <mxPoint x="897" y="339" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -374,11 +353,11 @@
         <mxCell id="aFnh8GW0OJa8cc7-wk0_-3" value="А2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="aFnh8GW0OJa8cc7-wk0_-1">
           <mxGeometry x="98" y="60" width="22" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="SuHji1JUfY4mNwCukmQ_-3" value="Значение значимости матриц" style="endArrow=block;html=1;rounded=1;endFill=1;exitX=1.003;exitY=0.687;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#b85450;labelBackgroundColor=default;fillColor=#f8cecc;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="743_yrjDaTubIG02njix-1" source="aFnh8GW0OJa8cc7-wk0_-2" target="swCZicpM5G-BZDFf6zmv-2">
-          <mxGeometry x="-0.6364" width="50" height="50" relative="1" as="geometry">
+        <mxCell id="SuHji1JUfY4mNwCukmQ_-3" value="" style="endArrow=block;html=1;rounded=1;endFill=1;exitX=1.003;exitY=0.687;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#b85450;labelBackgroundColor=default;fillColor=#f8cecc;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="743_yrjDaTubIG02njix-1" source="aFnh8GW0OJa8cc7-wk0_-2" target="swCZicpM5G-BZDFf6zmv-2">
+          <mxGeometry x="-0.6382" y="7" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="467" y="365" as="sourcePoint" />
             <mxPoint x="907" y="365" as="targetPoint" />
-            <mxPoint as="offset" />
+            <mxPoint y="-1" as="offset" />
             <Array as="points">
               <mxPoint x="498" y="355" />
               <mxPoint x="498" y="500" />
@@ -394,6 +373,13 @@
               <mxPoint x="479" y="373" />
               <mxPoint x="479" y="520" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F-KDv2YsbYm4zEEXJvgU-1" value="Хи-квадрат матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FFB570;labelBackgroundColor=default;" edge="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry x="-0.7674" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="457" y="339" as="sourcePoint" />
+            <mxPoint x="897" y="339" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="aFnh8GW0OJa8cc7-wk0_-6" value="Табличный хи-квадрат" style="endArrow=block;html=1;rounded=0;exitX=1.004;exitY=0.16;exitDx=0;exitDy=0;exitPerimeter=0;endFill=1;strokeColor=#660033;" edge="1" parent="1">
@@ -432,6 +418,20 @@
               <mxPoint x="140" y="270" />
               <mxPoint x="390" y="270" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F-KDv2YsbYm4zEEXJvgU-2" value="Значение значимости матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#b85450;labelBackgroundColor=default;fillColor=#f8cecc;" edge="1" parent="1">
+          <mxGeometry x="-0.6364" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="375" as="sourcePoint" />
+            <mxPoint x="920" y="375" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F-KDv2YsbYm4zEEXJvgU-4" value="Весовые коэффициенты матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#6600CC;labelBackgroundColor=default;fillColor=#f8cecc;" edge="1" parent="1">
+          <mxGeometry x="-0.5909" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="393" as="sourcePoint" />
+            <mxPoint x="920" y="393" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
