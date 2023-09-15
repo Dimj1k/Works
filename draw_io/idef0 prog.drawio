@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T12:05:10.990Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="FRG_YBpr31raDHd1YASR" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T12:05:47.029Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="oRrkQXRSg3a7er7U5v6L" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -176,7 +176,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -232,6 +232,16 @@
         <mxCell id="743_yrjDaTubIG02njix-1" value="" style="swimlane;direction=west;fillColor=none;swimlaneFillColor=none;shadow=0;swimlaneLine=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="23" y="20" width="917" height="730" as="geometry">
             <mxRectangle x="23" y="21" width="50" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F-KDv2YsbYm4zEEXJvgU-3" value="Длительность&lt;br style=&quot;font-size: 10px;&quot;&gt;расчёта" style="endArrow=block;html=1;rounded=1;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#9ac7bf;labelBackgroundColor=none;edgeStyle=elbowEdgeStyle;jumpStyle=none;fontSize=10;" edge="1" parent="743_yrjDaTubIG02njix-1">
+          <mxGeometry x="-0.8179" y="14" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="457" y="303.99999999999994" as="sourcePoint" />
+            <mxPoint x="897" y="195" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="774" y="255" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="F-KDv2YsbYm4zEEXJvgU-1" value="Хи-квадрат&lt;br style=&quot;font-size: 10px;&quot;&gt;матриц" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FFB570;labelBackgroundColor=none;fontSize=10;" edge="1" parent="743_yrjDaTubIG02njix-1">
@@ -374,16 +384,6 @@
             <Array as="points">
               <mxPoint x="523" y="320" />
               <mxPoint x="523" y="464" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="F-KDv2YsbYm4zEEXJvgU-3" value="Длительность&lt;br style=&quot;font-size: 10px;&quot;&gt;расчёта" style="endArrow=block;html=1;rounded=1;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#9ac7bf;labelBackgroundColor=none;edgeStyle=elbowEdgeStyle;jumpStyle=gap;fontSize=10;" edge="1" parent="743_yrjDaTubIG02njix-1">
-          <mxGeometry x="-0.8179" y="14" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="457" y="303.99999999999994" as="sourcePoint" />
-            <mxPoint x="897" y="195" as="targetPoint" />
-            <mxPoint as="offset" />
-            <Array as="points">
-              <mxPoint x="774" y="255" />
             </Array>
           </mxGeometry>
         </mxCell>
