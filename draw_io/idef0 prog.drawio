@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T10:05:53.340Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="ZO1GGMJWtpMC1NXOEXaB" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T10:06:26.955Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="ckygrsIfcOQZBd5totFy" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -334,7 +334,7 @@
             <mxPoint x="17" y="150" as="sourcePoint" />
             <mxPoint x="537" y="499" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="87" y="319" />
+              <mxPoint x="107" y="330" />
             </Array>
           </mxGeometry>
         </mxCell>
