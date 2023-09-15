@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T10:02:56.244Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="yMOak5RC2SosMNlAOH-z" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T10:03:14.777Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Iea-0LsxgZW0YpPWs5sV" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -301,10 +301,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="F-KDv2YsbYm4zEEXJvgU-3" value="Длительность&lt;br&gt;расчёта" style="endArrow=block;html=1;rounded=1;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#9ac7bf;labelBackgroundColor=default;edgeStyle=elbowEdgeStyle;" edge="1" parent="743_yrjDaTubIG02njix-1">
-          <mxGeometry x="-0.1184" width="50" height="50" relative="1" as="geometry">
+          <mxGeometry x="-0.4026" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="457" y="303.99999999999994" as="sourcePoint" />
             <mxPoint x="897" y="195" as="targetPoint" />
             <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="597" y="250" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="aFnh8GW0OJa8cc7-wk0_-1" value="" style="group" vertex="1" connectable="0" parent="743_yrjDaTubIG02njix-1">
