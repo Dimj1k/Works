@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-15T12:29:20.005Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="ENqQ0ZmsjgpK-bLbJ_h6" version="21.7.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-09-15T12:30:51.492Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="jkLDh6GXLhBVgLAmlSoL" version="21.7.5" type="github" pages="4">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -176,7 +176,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="1195" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -423,7 +423,7 @@
         <mxCell id="swCZicpM5G-BZDFf6zmv-9" value="Длительность" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;labelBackgroundColor=default;" vertex="1" parent="743_yrjDaTubIG02njix-1">
           <mxGeometry x="786" y="179" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="myjEKPWiFId4UAK0u5nU-1" value="Заданная&lt;br&gt;точность" style="endArrow=block;html=1;rounded=0;entryX=0.582;entryY=-0.001;entryDx=0;entryDy=0;strokeColor=#99004D;jumpStyle=gap;endFill=1;fontSize=10;entryPerimeter=0;" edge="1" parent="743_yrjDaTubIG02njix-1" target="swCZicpM5G-BZDFf6zmv-2">
+        <mxCell id="myjEKPWiFId4UAK0u5nU-1" value="Заданная&lt;br&gt;точность" style="endArrow=block;html=1;rounded=0;entryX=0.582;entryY=-0.001;entryDx=0;entryDy=0;strokeColor=#C40606;jumpStyle=gap;endFill=1;fontSize=10;entryPerimeter=0;" edge="1" parent="743_yrjDaTubIG02njix-1" target="swCZicpM5G-BZDFf6zmv-2">
           <mxGeometry x="-0.7037" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="607" y="30" as="sourcePoint" />
             <mxPoint x="610" y="300" as="targetPoint" />
