@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T10:45:23.650Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="x8IOP9POGqMr252K2uX2" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T10:48:16.440Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Hf0X205evMMo0MJVH3nX" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -176,7 +176,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="989" dy="545" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="574" dy="316" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -186,10 +186,10 @@
             <mxPoint x="920" y="515" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Q9lZHT5AtO2CSBCrtwc4-2" value="Используемые&lt;br style=&quot;font-size: 10px;&quot;&gt;комбинации&lt;br style=&quot;font-size: 10px;&quot;&gt;рангов в&lt;br style=&quot;font-size: 10px;&quot;&gt;удовлетворяющих&lt;br style=&quot;font-size: 10px;&quot;&gt;матрицах" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=block;html=1;rounded=1;endSize=8;startSize=8;endFill=1;strokeColor=#B5739D;exitX=1.003;exitY=0.174;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=gap;fontSize=10;" parent="1" source="swCZicpM5G-BZDFf6zmv-2" edge="1">
+        <mxCell id="Q9lZHT5AtO2CSBCrtwc4-2" value="Используемые&lt;br style=&quot;font-size: 10px;&quot;&gt;комбинации&lt;br style=&quot;font-size: 10px;&quot;&gt;рангов в&lt;br style=&quot;font-size: 10px;&quot;&gt;удовлетворяющих&lt;br style=&quot;font-size: 10px;&quot;&gt;матрицах" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=none;html=1;rounded=1;endSize=8;startSize=8;endFill=0;strokeColor=#B5739D;exitX=1.003;exitY=0.174;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=gap;fontSize=10;strokeWidth=1;" parent="1" source="swCZicpM5G-BZDFf6zmv-2" edge="1">
           <mxGeometry x="0.3847" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="681" y="494" as="sourcePoint" />
-            <mxPoint x="920" y="181" as="targetPoint" />
+            <mxPoint x="919" y="181" as="targetPoint" />
             <Array as="points">
               <mxPoint x="840" y="347" />
             </Array>
