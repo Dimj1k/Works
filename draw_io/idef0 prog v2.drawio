@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T09:04:42.672Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="FJH510UV7qQj9T1QzqyT" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T09:26:48.924Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="557Te7zj1ocAbZS6RSnO" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1687" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -24,8 +24,8 @@
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-14" value="А-0 Проверка весовых коэффициентов" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" vertex="1">
           <mxGeometry x="80" y="660" width="620" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="UwtVmJWAxAAU6NyaN8vT-15" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;Цель: Проверка весовых коэффициентов&lt;/p&gt;&lt;p style=&quot;line-height: 50%;&quot;&gt;Точка зрения: Разработчик ПО&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" vertex="1">
-          <mxGeometry x="46" y="603" width="174" height="57" as="geometry" />
+        <mxCell id="UwtVmJWAxAAU6NyaN8vT-15" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;Цель: Смоделировать процесс проверки весовых коэффициентов&lt;/p&gt;&lt;p style=&quot;line-height: 50%;&quot;&gt;Точка зрения: Разработчик ПО&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" vertex="1">
+          <mxGeometry x="46" y="599" width="184" height="57" as="geometry" />
         </mxCell>
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-34" value="Табличный хи-квадрат" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.12;exitDx=0;exitDy=0;exitPerimeter=0;endFill=1;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
