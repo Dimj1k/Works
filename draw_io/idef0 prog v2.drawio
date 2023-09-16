@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T11:31:44.385Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="IYEQhAJ3E5RF6obQsx-L" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T12:05:37.742Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="YCieViHyp-8-JNAYbBgo" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
-    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="819" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -46,10 +46,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_nZTojiyE76JTHtSft5U-13" value="Максимальное&lt;br&gt;количество&lt;br&gt;экспертов" style="endArrow=block;html=1;rounded=0;entryX=0.105;entryY=0;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
-          <mxGeometry x="0.0072" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="297.05" y="59" as="sourcePoint" />
-            <mxPoint x="297.00000000000006" y="169" as="targetPoint" />
-            <mxPoint x="-1" as="offset" />
+          <mxGeometry x="-0.6364" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="283.05" y="60" as="sourcePoint" />
+            <mxPoint x="283.00000000000006" y="170" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_nZTojiyE76JTHtSft5U-14" value="Уровень&lt;br&gt;значимости" style="endArrow=block;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endFill=1;labelBackgroundColor=none;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
@@ -126,9 +126,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-28" value="Алгоритмы" style="endArrow=block;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=1;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxGeometry x="-0.818" y="1" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="413" y="80" as="sourcePoint" />
             <mxPoint x="414" y="190" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SbHf0pWlJhlHCsWusG1j-4" value="Значения согласованности&lt;br&gt;матриц" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;labelBackgroundColor=none;" parent="1" edge="1">
@@ -172,11 +173,18 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="DK0oPpI6x5ODJI8xNsBI-2" value="Сохраняемое&lt;br&gt;количество&lt;br&gt;матриц" style="endArrow=block;html=1;rounded=0;entryX=0.105;entryY=0;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry x="0.0909" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="362.05" y="80" as="sourcePoint" />
+            <mxPoint x="362.00000000000006" y="190" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="uLG6Z2e0YkIsBCWtMbWG" name="А0">
-    <mxGraphModel dx="1195" dy="658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -502,10 +510,10 @@
             <mxPoint x="490" y="393" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFnh8GW0OJa8cc7-wk0_-15" value="Максимальное&lt;br style=&quot;font-size: 10px;&quot;&gt;количество&lt;br style=&quot;font-size: 10px;&quot;&gt;экспертов" style="endArrow=block;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#99004D;jumpStyle=gap;endFill=1;fontSize=10;" parent="1" target="aFnh8GW0OJa8cc7-wk0_-2" edge="1">
+        <mxCell id="aFnh8GW0OJa8cc7-wk0_-15" value="Максимальное&lt;br style=&quot;font-size: 10px;&quot;&gt;количество&lt;br style=&quot;font-size: 10px;&quot;&gt;экспертов" style="endArrow=block;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#99004D;jumpStyle=gap;endFill=1;fontSize=10;" parent="1" edge="1">
           <mxGeometry x="-0.7037" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="420" y="50" as="sourcePoint" />
-            <mxPoint x="444" y="186" as="targetPoint" />
+            <mxPoint x="380" y="50" as="sourcePoint" />
+            <mxPoint x="380" y="320" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
