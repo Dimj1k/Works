@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T10:13:25.929Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="G5LPwwkSmEnSpuWGFWS4" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T10:14:52.866Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="VBJSXxlWH5rMxJlMZkuR" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -180,7 +180,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Q9lZHT5AtO2CSBCrtwc4-2" value="Используемые&lt;br style=&quot;font-size: 10px;&quot;&gt;комбинации&lt;br style=&quot;font-size: 10px;&quot;&gt;рангов в&lt;br style=&quot;font-size: 10px;&quot;&gt;удовлетворяющих&lt;br style=&quot;font-size: 10px;&quot;&gt;ранжировках" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=block;html=1;rounded=1;endSize=8;startSize=8;endFill=1;strokeColor=#B5739D;exitX=1.003;exitY=0.174;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=gap;fontSize=10;" parent="1" source="swCZicpM5G-BZDFf6zmv-2" edge="1">
+        <mxCell id="Q9lZHT5AtO2CSBCrtwc4-2" value="Используемые&lt;br style=&quot;font-size: 10px;&quot;&gt;комбинации&lt;br style=&quot;font-size: 10px;&quot;&gt;рангов в&lt;br style=&quot;font-size: 10px;&quot;&gt;удовлетворяющих&lt;br style=&quot;font-size: 10px;&quot;&gt;матрицах" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=block;html=1;rounded=1;endSize=8;startSize=8;endFill=1;strokeColor=#B5739D;exitX=1.003;exitY=0.174;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=gap;fontSize=10;" parent="1" source="swCZicpM5G-BZDFf6zmv-2" edge="1">
           <mxGeometry x="0.3847" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="681" y="494" as="sourcePoint" />
             <mxPoint x="920" y="181" as="targetPoint" />
@@ -257,7 +257,7 @@
             <mxRectangle x="23" y="21" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4OjvdSPwqboArH00UvB0-1" value="Матрицы" style="endArrow=block;html=1;rounded=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.608;entryDx=0;entryDy=0;entryPerimeter=0;endFill=1;edgeStyle=elbowEdgeStyle;strokeColor=#ff0080;" edge="1" parent="743_yrjDaTubIG02njix-1" source="aFnh8GW0OJa8cc7-wk0_-2" target="swCZicpM5G-BZDFf6zmv-2">
+        <mxCell id="4OjvdSPwqboArH00UvB0-1" value="Матрицы" style="endArrow=block;html=1;rounded=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.608;entryDx=0;entryDy=0;entryPerimeter=0;endFill=1;edgeStyle=elbowEdgeStyle;strokeColor=#ff0080;fontSize=10;" edge="1" parent="743_yrjDaTubIG02njix-1" source="aFnh8GW0OJa8cc7-wk0_-2" target="swCZicpM5G-BZDFf6zmv-2">
           <mxGeometry x="-0.7898" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="551" y="406" as="sourcePoint" />
             <mxPoint x="601" y="356" as="targetPoint" />
