@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T12:10:37.199Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="tW2SVfrOer7bqDKF06i5" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T12:12:51.359Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="MOGiCshmIkM-T5qt6W_0" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -46,9 +46,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_nZTojiyE76JTHtSft5U-13" value="Максимальное&lt;br&gt;количество&lt;br&gt;экспертов" style="endArrow=block;html=1;rounded=0;entryX=0.105;entryY=0;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
-          <mxGeometry x="-0.6364" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="283.05" y="60" as="sourcePoint" />
-            <mxPoint x="283.00000000000006" y="170" as="targetPoint" />
+          <mxGeometry x="-0.0909" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="297.05" y="60" as="sourcePoint" />
+            <mxPoint x="297.00000000000006" y="170" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -83,9 +83,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Q9Z6t221oSEV2i7YVVHM-2" value="Заданная&lt;br&gt;точность" style="endArrow=block;html=1;rounded=0;entryX=0.105;entryY=0;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
-          <mxGeometry x="0.0078" y="-1" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="477.04999999999995" y="59" as="sourcePoint" />
-            <mxPoint x="477" y="169" as="targetPoint" />
+          <mxGeometry x="-0.6182" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="497.04999999999995" y="59" as="sourcePoint" />
+            <mxPoint x="497" y="169" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -175,8 +175,8 @@
         </mxCell>
         <mxCell id="DK0oPpI6x5ODJI8xNsBI-2" value="Сохраняемое&lt;br&gt;количество&lt;br&gt;матриц" style="endArrow=block;html=1;rounded=0;entryX=0.105;entryY=0;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry x="0.0909" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="362.05" y="80" as="sourcePoint" />
-            <mxPoint x="362.00000000000006" y="190" as="targetPoint" />
+            <mxPoint x="467.05" y="80" as="sourcePoint" />
+            <mxPoint x="467.00000000000006" y="190" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
