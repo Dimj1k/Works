@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T09:04:27.325Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="IOUGBNwUOkcwW-JEvtuX" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T09:04:42.672Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="FJH510UV7qQj9T1QzqyT" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1687" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -618,7 +618,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7DCThQh7MZ2TbdlC2tx_-3" value="Значение согласованности&lt;br style=&quot;border-color: var(--border-color); font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;матриц&lt;/span&gt;" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#999900;labelBackgroundColor=none;fontSize=10;" parent="1" edge="1">
+        <mxCell id="7DCThQh7MZ2TbdlC2tx_-3" value="Значения согласованности&lt;br style=&quot;border-color: var(--border-color); font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;матриц&lt;/span&gt;" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.08;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#999900;labelBackgroundColor=none;fontSize=10;" parent="1" edge="1">
           <mxGeometry x="0.36" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="208.79999999999995" as="sourcePoint" />
             <mxPoint x="650" y="209" as="targetPoint" />
