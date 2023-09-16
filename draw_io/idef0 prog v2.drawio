@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T08:24:42.332Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Rp3VtYoWh5g3T5C2wV_3" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T08:24:56.107Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="rBIoqcMpDoM-RY3l04G_" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
-    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1687" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,7 +25,7 @@
           <mxGeometry x="80" y="660" width="620" height="23" as="geometry" />
         </mxCell>
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-15" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;Цель: Проверка весовых коэффициентов&lt;/p&gt;&lt;p style=&quot;line-height: 50%;&quot;&gt;Точка зрения: Разработчик ПО&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" vertex="1">
-          <mxGeometry x="46" y="590" width="174" height="57" as="geometry" />
+          <mxGeometry x="46" y="603" width="174" height="57" as="geometry" />
         </mxCell>
         <mxCell id="UwtVmJWAxAAU6NyaN8vT-34" value="Табличный хи-квадрат" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.12;exitDx=0;exitDy=0;exitPerimeter=0;endFill=1;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
