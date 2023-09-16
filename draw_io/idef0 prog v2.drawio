@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T12:14:10.081Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="UoD9bsw_Wb0WeXmGDKx2" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T12:14:15.530Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="LUcLqcxyT81OeU0LVYjb" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -502,10 +502,10 @@
             <mxPoint x="490" y="393" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFnh8GW0OJa8cc7-wk0_-15" value="Максимальное&lt;br style=&quot;font-size: 10px;&quot;&gt;количество&lt;br style=&quot;font-size: 10px;&quot;&gt;экспертов" style="endArrow=block;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#99004D;jumpStyle=gap;endFill=1;fontSize=10;" parent="1" edge="1">
+        <mxCell id="aFnh8GW0OJa8cc7-wk0_-15" value="Максимальное&lt;br style=&quot;font-size: 10px;&quot;&gt;количество&lt;br style=&quot;font-size: 10px;&quot;&gt;экспертов" style="endArrow=block;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#99004D;jumpStyle=gap;endFill=1;fontSize=10;" parent="1" target="aFnh8GW0OJa8cc7-wk0_-2" edge="1">
           <mxGeometry x="-0.7037" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="50" as="sourcePoint" />
-            <mxPoint x="380" y="320" as="targetPoint" />
+            <mxPoint x="420" y="50" as="sourcePoint" />
+            <mxPoint x="444" y="186" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
