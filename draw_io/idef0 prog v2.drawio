@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-16T09:58:21.774Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="xtdIw1bks5EUe2o4cClI" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-16T09:58:45.003Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="a1-8xNInR0I1xvO2guGV" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
-    <mxGraphModel dx="1687" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -146,29 +146,29 @@
         </mxCell>
         <mxCell id="SbHf0pWlJhlHCsWusG1j-8" value="Весовые коэффициенты&lt;br&gt;матриц" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;labelBackgroundColor=none;" parent="1" edge="1">
           <mxGeometry x="0.0009" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="609" y="360" as="sourcePoint" />
-            <mxPoint x="770" y="361" as="targetPoint" />
+            <mxPoint x="609" y="389" as="sourcePoint" />
+            <mxPoint x="770" y="390" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SbHf0pWlJhlHCsWusG1j-9" value="Точность расчёта" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;labelBackgroundColor=default;" parent="1" edge="1">
           <mxGeometry x="0.0009" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="609" y="390" as="sourcePoint" />
-            <mxPoint x="770" y="391" as="targetPoint" />
+            <mxPoint x="609" y="419" as="sourcePoint" />
+            <mxPoint x="770" y="420" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SbHf0pWlJhlHCsWusG1j-10" value="Количество экспертов" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;labelBackgroundColor=default;" parent="1" edge="1">
           <mxGeometry x="0.0009" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="609" y="421" as="sourcePoint" />
-            <mxPoint x="770" y="422" as="targetPoint" />
+            <mxPoint x="609" y="450" as="sourcePoint" />
+            <mxPoint x="770" y="451" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SbHf0pWlJhlHCsWusG1j-11" value="Матрицы ранжировок" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;labelBackgroundColor=default;" parent="1" edge="1">
           <mxGeometry x="0.0009" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="609" y="450" as="sourcePoint" />
-            <mxPoint x="770" y="451" as="targetPoint" />
+            <mxPoint x="609" y="360" as="sourcePoint" />
+            <mxPoint x="770" y="361" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
