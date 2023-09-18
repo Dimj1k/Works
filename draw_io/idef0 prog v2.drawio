@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-18T10:37:29.671Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="8WE1jRf-ppVXx7n94C0U" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-18T10:48:27.365Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="YwA9DUXOnN1lx9pUFc7G" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1426" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -44,8 +44,8 @@
         </mxCell>
         <mxCell id="_nZTojiyE76JTHtSft5U-13" value="Максимальное&lt;br&gt;количество&lt;br&gt;экспертов" style="endArrow=block;html=1;rounded=0;entryX=0.105;entryY=0;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
           <mxGeometry x="0.0072" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="297.05" y="59" as="sourcePoint" />
-            <mxPoint x="297.00000000000006" y="169" as="targetPoint" />
+            <mxPoint x="337.05" y="59" as="sourcePoint" />
+            <mxPoint x="337.00000000000006" y="169" as="targetPoint" />
             <mxPoint x="-1" as="offset" />
           </mxGeometry>
         </mxCell>
@@ -81,8 +81,8 @@
         </mxCell>
         <mxCell id="Q9Z6t221oSEV2i7YVVHM-2" value="Заданная&lt;br&gt;точность" style="endArrow=block;html=1;rounded=0;entryX=0.105;entryY=0;entryDx=0;entryDy=0;endFill=1;entryPerimeter=0;" parent="UwtVmJWAxAAU6NyaN8vT-10" edge="1">
           <mxGeometry x="0.0078" y="-1" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="477.04999999999995" y="59" as="sourcePoint" />
-            <mxPoint x="477" y="169" as="targetPoint" />
+            <mxPoint x="417.04999999999995" y="59" as="sourcePoint" />
+            <mxPoint x="417" y="169" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
