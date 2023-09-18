@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-18T10:48:48.843Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="pbKXR29NS0sfcg1xuHkI" version="21.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-18T10:52:33.289Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="xUTz0IijDfTqMGV3Dxvh" version="21.7.5" type="github" pages="2">
   <diagram name="БД по легенде" id="sGeUlYy9vwEeiNY2uGgN">
-    <mxGraphModel dx="679" dy="378" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="328" dy="182" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -50,6 +50,27 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="300" y="210" as="sourcePoint" />
             <mxPoint x="280" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HR05W4g9eiC7M7KnaOL6-1" value="Кафедра" style="whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="880" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HR05W4g9eiC7M7KnaOL6-2" value="id&lt;br&gt;кафедры" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="130" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HR05W4g9eiC7M7KnaOL6-3" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="HR05W4g9eiC7M7KnaOL6-2" source="HR05W4g9eiC7M7KnaOL6-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="200" as="sourcePoint" />
+            <mxPoint x="1280" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fau7_6ZUzu-b7s0-0D0c-1" value="Название&lt;br&gt;кафедры" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="930" y="85" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Fau7_6ZUzu-b7s0-0D0c-2" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Fau7_6ZUzu-b7s0-0D0c-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="200" as="sourcePoint" />
+            <mxPoint x="1180" y="215" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
