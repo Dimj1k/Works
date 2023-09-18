@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-18T11:15:35.128Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="E3Gvk1A_D-2H3dBqiAwQ" version="21.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-18T11:15:43.482Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="Q99LGdP9d6opnY0NxLGl" version="21.7.5" type="github" pages="2">
   <diagram name="БД по легенде" id="sGeUlYy9vwEeiNY2uGgN">
     <mxGraphModel dx="1188" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -94,7 +94,7 @@
             <mxPoint x="448" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xo1l-9qeEOo4T0VHLbzQ-6" value="Дисциплину" style="whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="xo1l-9qeEOo4T0VHLbzQ-6" value="Занятие" style="whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="259" y="370" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="jxvkgZLHbUTIYKdbFFEf-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="xo1l-9qeEOo4T0VHLbzQ-7" target="uCGw5AGLY04dyCAMHAdB-1">
