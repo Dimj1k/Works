@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-18T10:52:33.289Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="xUTz0IijDfTqMGV3Dxvh" version="21.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-18T10:52:59.851Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="Zl8EyX4KAzUPar4zO6wY" version="21.7.5" type="github" pages="2">
   <diagram name="БД по легенде" id="sGeUlYy9vwEeiNY2uGgN">
-    <mxGraphModel dx="328" dy="182" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="570" dy="317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -82,7 +82,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="OV-ImqMgPUlQ57Cr1s2j-1" value="Распределение учебной нагрузки. Необходимо распределять &#xa;нагрузку между преподавателями кафедры. Имеются сведения о &#xa;преподавателях, включающие наряду с анкетными данными сведения об их &#xa;ученой степени, занимаемой должности и стаже работы. Преподаватели &#xa;кафедры должны обеспечить проведение занятий по некоторым &#xa;дисциплинам. По каждой из них существует определенное количество часов. &#xa;В результате распределения нагрузки необходимо получить информацию &#xa;следующего рода: «Такой-то преподаватель проводит занятия по такой-то &#xa;дисциплине с такой-то группой». Все проводимые занятия делятся на &#xa;лекционные и практические. По каждому виду занятий устанавливается свое &#xa;количество часов. Кроме того, данные по нагрузке нужно хранить несколько &#xa;лет." style="text;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="10" y="10" width="470" height="200" as="geometry" />
+          <mxGeometry x="10" y="10" width="470" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
