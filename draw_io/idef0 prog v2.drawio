@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-18T10:36:35.553Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="VZdsnqbAN589CDiduV0s" version="21.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-18T10:37:29.671Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="8WE1jRf-ppVXx7n94C0U" version="21.7.5" type="github" pages="3">
   <diagram name="Контекстная" id="ZWv0XQIptHX5wj8FlSW1">
     <mxGraphModel dx="1426" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -129,7 +129,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SbHf0pWlJhlHCsWusG1j-6" value="Значения значимости&lt;br&gt;матриц" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;labelBackgroundColor=none;" parent="1" edge="1">
+        <mxCell id="SbHf0pWlJhlHCsWusG1j-6" value="Уровни значимости&lt;br&gt;матриц" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;labelBackgroundColor=none;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="609" y="330" as="sourcePoint" />
             <mxPoint x="770" y="331" as="targetPoint" />
