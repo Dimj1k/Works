@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-19T08:40:51.029Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="VIeQMyreGE3fi6aKd3sI" version="21.7.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-19T08:42:00.073Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="OfKMIdlfyWl1wu_9_XCR" version="21.7.5" type="github">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
-    <mxGraphModel dx="477" dy="257" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="691" dy="373" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -39,10 +39,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.59;entryY=-0.001;entryDx=0;entryDy=0;endArrow=open;endFill=0;exitX=1.002;exitY=0.418;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-1" target="oWTbGT4PJ1LRHprJ6aO2-2">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-10" value="Заданная точность" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.59;entryY=-0.001;entryDx=0;entryDy=0;endArrow=open;endFill=0;exitX=1.002;exitY=0.418;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-1" target="oWTbGT4PJ1LRHprJ6aO2-2">
+          <mxGeometry x="-0.3956" relative="1" as="geometry">
             <mxPoint x="270" y="103" as="sourcePoint" />
             <mxPoint x="455" y="220" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="oWTbGT4PJ1LRHprJ6aO2-11" value="Количество комбинаций рангов" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;exitX=1.002;exitY=0.579;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.483;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-1" target="oWTbGT4PJ1LRHprJ6aO2-2">
