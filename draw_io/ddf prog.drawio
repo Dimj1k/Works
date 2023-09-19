@@ -1,11 +1,32 @@
-<mxfile host="app.diagrams.net" modified="2023-09-19T08:23:05.465Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="SBfAmb5AvHzAmczMm6-m" version="21.7.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-19T08:28:52.838Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="98W1DxKaAnsUBV57lubn" version="21.7.5" type="github">
   <diagram name="Page-1" id="52a04d89-c75d-2922-d76d-85b35f80e030">
-    <mxGraphModel dx="1430" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="830" dy="447" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-1" value="Лицо,&lt;br&gt;принимающее&lt;br&gt;решение" style="html=1;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-4" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="340" y="205" width="153" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-2" value="Исследование применимости весовых коэффициентов с использованием ранжировок" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;" vertex="1" parent="oWTbGT4PJ1LRHprJ6aO2-4">
+          <mxGeometry y="5" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-3" value="0" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" vertex="1" parent="oWTbGT4PJ1LRHprJ6aO2-4">
+          <mxGeometry x="123" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-6" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="160" y="80" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-1" value="Лицо,&lt;br&gt;принимающее&lt;br&gt;решение" style="html=1;dashed=0;whiteSpace=wrap;" vertex="1" parent="oWTbGT4PJ1LRHprJ6aO2-6">
+          <mxGeometry width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-5" value="E1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="oWTbGT4PJ1LRHprJ6aO2-6">
+          <mxGeometry width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-1" target="oWTbGT4PJ1LRHprJ6aO2-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-2" target="oWTbGT4PJ1LRHprJ6aO2-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
