@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-19T10:10:49.212Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="MF-XORGkO89tBYejmrtb" version="21.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-19T10:45:45.643Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="-UCCMdo8rvcnGuJfnIce" version="21.7.5" type="github" pages="2">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1195" dy="658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="478" dy="263" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -110,7 +110,7 @@
             <mxPoint x="111" y="125" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-1" value="Весовые коэффициенты" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="ZBRSyutQxxAG7Q9DfjHJ-3">
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-1" value="Весовые коэффициенты" style="endArrow=none;html=1;rounded=0;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="ZBRSyutQxxAG7Q9DfjHJ-3">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="230" y="140" as="sourcePoint" />
             <mxPoint x="440" y="140" as="targetPoint" />
@@ -119,16 +119,14 @@
         <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-3" value="D1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="1">
           <mxGeometry x="440" y="160" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-4" value="Электронная таблица&lt;br&gt;&quot;общая_информация&quot;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="460" y="152.5" width="150" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-5" value="Ранги исходных данных" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-3">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxGeometry x="-0.3333" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="240" y="150" as="sourcePoint" />
             <mxPoint x="450" y="185" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-6" value="Матрица из комбинаций рангов" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-3">
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-6" value="Матрица из комбинаций рангов" style="endArrow=none;html=1;rounded=0;endFill=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-3">
           <mxGeometry x="-0.1437" y="-1" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="240" y="185" as="sourcePoint" />
             <mxPoint x="450" y="185" as="targetPoint" />
@@ -138,15 +136,42 @@
         <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-8" value="D4" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="1">
           <mxGeometry x="550" y="307.5" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-9" value="Текстовый файл&lt;br&gt;&quot;отчет&quot;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="585" y="300" width="120" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-10" value="Длительность обработки" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-8">
           <mxGeometry x="-0.1437" y="-1" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="240" y="210" as="sourcePoint" />
             <mxPoint x="450" y="185" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-12" value="Ранги исходных данных" style="endArrow=open;html=1;rounded=1;endFill=0;exitX=1.001;exitY=0.863;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.2;entryY=1.3;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-13">
+          <mxGeometry x="-0.3333" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="185" as="sourcePoint" />
+            <mxPoint x="530" y="140" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="370" y="211" />
+              <mxPoint x="370" y="210" />
+              <mxPoint x="500" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-13" value="&#xa;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Электронная таблица&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&quot;общая_информация&quot;&lt;/span&gt;&#xa;&#xa;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="177" width="50" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-14" value="Текстовый файл&amp;nbsp;&lt;br&gt;&quot;отчет&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="317.5" width="130" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-15" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="190" y="300" width="153" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-16" value="Расчёт количества экспертов" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;" vertex="1" parent="ZBRSyutQxxAG7Q9DfjHJ-15">
+          <mxGeometry y="5" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-17" value="1" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" vertex="1" parent="ZBRSyutQxxAG7Q9DfjHJ-15">
+          <mxGeometry x="123" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-16">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
