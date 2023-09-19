@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-19T08:38:59.386Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="zwWIX83dh3XkDDgn2IFk" version="21.7.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-19T08:40:42.143Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ZHxLuXyFIK7h3Prv6tt6" version="21.7.5" type="github">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
-    <mxGraphModel dx="691" dy="373" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="988" dy="532" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -27,8 +27,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-8" value="Документы" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-2" target="oWTbGT4PJ1LRHprJ6aO2-1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-8" value="Графические&lt;br&gt;изображения" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-2" target="oWTbGT4PJ1LRHprJ6aO2-1">
+          <mxGeometry x="-0.3548" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="oWTbGT4PJ1LRHprJ6aO2-9" value="Максимальное количество экспертов" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.697;entryY=-0.002;entryDx=0;entryDy=0;endArrow=open;endFill=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-1" target="oWTbGT4PJ1LRHprJ6aO2-2">
           <mxGeometry x="-0.3442" relative="1" as="geometry">
@@ -61,6 +63,13 @@
           <mxGeometry x="0.5655" relative="1" as="geometry">
             <mxPoint x="270" y="130" as="sourcePoint" />
             <mxPoint x="410" y="220" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oWTbGT4PJ1LRHprJ6aO2-27" value="Электронные&lt;br&gt;таблицы" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="oWTbGT4PJ1LRHprJ6aO2-2" target="oWTbGT4PJ1LRHprJ6aO2-1">
+          <mxGeometry x="-0.4476" relative="1" as="geometry">
+            <mxPoint x="350" y="270" as="sourcePoint" />
+            <mxPoint x="180" y="140" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
