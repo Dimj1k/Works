@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-19T08:50:16.861Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="YGRF8bhQQ9utMTgAsrN6" version="21.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-19T08:53:09.080Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="_HMYePWVc84f3oJd9byY" version="21.7.5" type="github" pages="2">
   <diagram name="БД по легенде" id="sGeUlYy9vwEeiNY2uGgN">
-    <mxGraphModel dx="988" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -123,6 +123,22 @@
             <mxPoint x="290" y="310" as="sourcePoint" />
             <mxPoint x="260" y="390" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="zT57nBC1JAkwECwFhO36-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="zT57nBC1JAkwECwFhO36-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="309" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zT57nBC1JAkwECwFhO36-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=doubleBlock;endFill=1;" edge="1" parent="1" source="zT57nBC1JAkwECwFhO36-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="309" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zT57nBC1JAkwECwFhO36-5" value="Состоит" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="274" y="460" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pz72w7irPA9RNBYeY9ZA-1" value="Дисциплина" style="whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="259" y="540" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
