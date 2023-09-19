@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-19T10:08:27.139Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="0-_3UZOwFsoJl3gVDL7A" version="21.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-19T10:10:49.212Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="MF-XORGkO89tBYejmrtb" version="21.7.5" type="github" pages="2">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1195" dy="658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="683" dy="376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="478" dy="263" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -131,6 +131,19 @@
         <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-6" value="Матрица из комбинаций рангов" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-3">
           <mxGeometry x="-0.1437" y="-1" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="240" y="185" as="sourcePoint" />
+            <mxPoint x="450" y="185" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-8" value="D4" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="1">
+          <mxGeometry x="550" y="307.5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-9" value="Текстовый файл&lt;br&gt;&quot;отчет&quot;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="585" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-10" value="Длительность обработки" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="ZBRSyutQxxAG7Q9DfjHJ-8">
+          <mxGeometry x="-0.1437" y="-1" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="210" as="sourcePoint" />
             <mxPoint x="450" y="185" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
