@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-21T12:33:06.483Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="BSJ2Zy-P25sbMVotpxsH" version="21.8.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-21T12:34:33.829Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="YRzSduhzfCU6-ALVsg3E" version="21.8.0" type="github" pages="3">
   <diagram name="БД по легенде" id="sGeUlYy9vwEeiNY2uGgN">
     <mxGraphModel dx="1519" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -264,7 +264,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="S7iNEk8m3sL0lIuxWxQi" name="Нормальная форма">
-    <mxGraphModel dx="723" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1048" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -321,6 +321,24 @@
         </mxCell>
         <mxCell id="LuwUjrIt7en6xP5eT8Jp-1" value="(PK)" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;size=0.5;" vertex="1" parent="1">
           <mxGeometry x="740" y="250" width="20" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="icrRM3E0OQoVjdw1NXZb-1" value="Дисциплина" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="380" width="140" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="icrRM3E0OQoVjdw1NXZb-2" value="id дисциплины&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;(РК)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="icrRM3E0OQoVjdw1NXZb-1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="icrRM3E0OQoVjdw1NXZb-3" value="Количество часов лекций" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="icrRM3E0OQoVjdw1NXZb-1">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="icrRM3E0OQoVjdw1NXZb-4" value="Итог" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="icrRM3E0OQoVjdw1NXZb-1">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9bbeilQZEkZaKVRySie1-2" value="Количество часов практик" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="icrRM3E0OQoVjdw1NXZb-1">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4YreYwNGz-yEO5Iplj5t-1" value="Количество часов лекций" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="icrRM3E0OQoVjdw1NXZb-1">
+          <mxGeometry y="150" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
