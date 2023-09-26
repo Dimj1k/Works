@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-26T17:43:44.484Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="bb1EzVvY1lgSa3UCztXU" version="21.8.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-26T17:48:26.117Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="rkt2BKB6P6Emi59hSs83" version="21.8.1" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="989" dy="545" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="333" dy="184" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -438,6 +438,25 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="kYNXlCYoRxAUwQLYBaoS-1" value="Неудовлетворительный результат" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;" edge="1" parent="1" source="EWxJyevyDxl_vBNgvt2L-9" target="ZBRSyutQxxAG7Q9DfjHJ-16">
+          <mxGeometry x="-0.1468" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="510" />
+              <mxPoint x="580" y="721" />
+              <mxPoint x="97" y="721" />
+              <mxPoint x="97" y="380" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="SKCIcvAI3RmWdlULbRTb" name="Уровень 2 Процесс2">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
