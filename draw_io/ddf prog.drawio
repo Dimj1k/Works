@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-26T17:48:37.869Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="cOS_Ii_uczZLQXFrXypt" version="21.8.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-26T17:51:20.325Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="a5Tas77-MVgYogKsFllj" version="21.8.1" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="989" dy="545" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="1195" dy="658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -448,6 +448,15 @@
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="P8uqClvPOzKiS5UQ_5oF-1" value="" style="group;fontSize=9;shadow=1;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="539" y="692" width="153" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="P8uqClvPOzKiS5UQ_5oF-3" value="Сохранение файлов на компьютере пользователя" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;shadow=1;perimeterSpacing=0;strokeWidth=1;" vertex="1" parent="P8uqClvPOzKiS5UQ_5oF-1">
+          <mxGeometry y="5" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="P8uqClvPOzKiS5UQ_5oF-4" value="4" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" vertex="1" parent="P8uqClvPOzKiS5UQ_5oF-1">
+          <mxGeometry x="123" width="30" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
