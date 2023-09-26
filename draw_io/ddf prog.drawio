@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-26T16:59:54.802Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="9LrPa5FDi5hIuAmlXGrz" version="21.8.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-09-26T17:03:23.143Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="OiOV3SjX_UTsJ94o2sKz" version="21.8.1" type="github" pages="2">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="623" dy="343" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="195" dy="107" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -267,7 +267,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EWxJyevyDxl_vBNgvt2L-28" value="Матрицы" style="endArrow=none;html=1;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;fontSize=6;" edge="1" parent="1">
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-28" value="Матрицы" style="endArrow=openThin;html=1;endFill=0;edgeStyle=orthogonalEdgeStyle;curved=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;fontSize=6;entryX=0.001;entryY=0.344;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="EWxJyevyDxl_vBNgvt2L-9">
           <mxGeometry x="-0.4595" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="305" y="405" as="sourcePoint" />
             <mxPoint x="336" y="519" as="targetPoint" />
@@ -308,6 +308,12 @@
             <mxPoint x="336" y="520" as="sourcePoint" />
             <mxPoint x="388" y="448" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-33" value="D4" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="618" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-34" value="Электронная таблица&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="628" width="130" height="10" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
