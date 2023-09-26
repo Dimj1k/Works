@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-26T17:58:13.101Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="UBxDnkg8z8jt7syW0iz3" version="21.8.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-09-26T18:00:25.378Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="MoY1f-gJrVpgxAk3ezY4" version="21.8.1" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="989" dy="545" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="1509" dy="832" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="598" dy="329" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -337,7 +337,7 @@
         <mxCell id="EWxJyevyDxl_vBNgvt2L-33" value="D3" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="1">
           <mxGeometry x="365" y="655" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EWxJyevyDxl_vBNgvt2L-34" value="Электронная таблица&lt;br&gt;выбор_№_эксперта" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-34" value="Электронная таблица&lt;br&gt;&quot;выбор_№_эксперта&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="395" y="665" width="130" height="10" as="geometry" />
         </mxCell>
         <mxCell id="EWxJyevyDxl_vBNgvt2L-35" value="" style="endArrow=openThin;html=1;rounded=0;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" target="EWxJyevyDxl_vBNgvt2L-33">
@@ -467,7 +467,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="IASmJn2q9I9iI0z0U0fi-2" value="Заданная точность" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.633;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;entryPerimeter=0;fontSize=6;" edge="1" parent="1" target="EWxJyevyDxl_vBNgvt2L-9">
-          <mxGeometry x="-0.3956" relative="1" as="geometry">
+          <mxGeometry x="-0.1617" y="1" relative="1" as="geometry">
             <mxPoint x="720" y="550" as="sourcePoint" />
             <mxPoint x="800" y="642" as="targetPoint" />
             <mxPoint as="offset" />
@@ -517,7 +517,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SKCIcvAI3RmWdlULbRTb" name="Уровень 2 Процесс2">
-    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
