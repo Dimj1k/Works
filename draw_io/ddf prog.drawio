@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-09T15:52:11.686Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="_of8mb2k0BfEZzVWu3Je" version="21.8.2" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-09T15:52:44.519Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="zY8UEqM9lkQshfAXnT1f" version="21.8.2" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -440,11 +440,14 @@
           <mxGeometry x="123" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KR_2kdo7gi1sBD5RWe87-1" value="Агрегационные&lt;br style=&quot;font-size: 9px;&quot;&gt;диаграммы" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;fontSize=9;" parent="1" target="wM3EJiI2qsp5RDD22HrX-11" edge="1">
-          <mxGeometry x="-0.0213" y="13" relative="1" as="geometry">
-            <mxPoint x="112" y="214" as="sourcePoint" />
+          <mxGeometry x="-0.021" y="1" relative="1" as="geometry">
+            <mxPoint x="96" y="179" as="sourcePoint" />
             <mxPoint x="207" y="358" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="112" y="428" />
+              <mxPoint x="97" y="179" />
+              <mxPoint x="97" y="196" />
+              <mxPoint x="98" y="196" />
+              <mxPoint x="98" y="428" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
@@ -519,7 +522,7 @@
           <mxGeometry x="432" y="115" width="130" height="10" as="geometry" />
         </mxCell>
         <mxCell id="SvM56uUqxFVhVxjvvVP9-2" value="Диаграммы&lt;br&gt;от экспертов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=9;" edge="1" parent="1">
-          <mxGeometry x="0.6723" y="9" relative="1" as="geometry">
+          <mxGeometry x="0.5822" y="16" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="87" y="247" />
             </Array>
