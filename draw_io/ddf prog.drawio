@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-09T15:22:13.238Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="qC_cKMs1Eq6OUORwaX1v" version="21.8.2" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-09T15:52:11.686Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="_of8mb2k0BfEZzVWu3Je" version="21.8.2" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="1687" dy="929" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -389,7 +389,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SKCIcvAI3RmWdlULbRTb" name="Уровень 2 Процесс4">
-    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="545" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -411,11 +411,12 @@
         <mxCell id="ActSyLFxgaK-SZaVAzq7-3" value="41" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" parent="ActSyLFxgaK-SZaVAzq7-1" vertex="1">
           <mxGeometry x="123" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="wM3EJiI2qsp5RDD22HrX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" source="wM3EJiI2qsp5RDD22HrX-1" target="ActSyLFxgaK-SZaVAzq7-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="wM3EJiI2qsp5RDD22HrX-3" value="Диаграммы" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=9;" parent="1" source="wM3EJiI2qsp5RDD22HrX-1" target="ActSyLFxgaK-SZaVAzq7-2" edge="1">
+          <mxGeometry x="-0.7395" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="87" y="247" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="wM3EJiI2qsp5RDD22HrX-1" value="D4" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" parent="1" vertex="1">
@@ -438,13 +439,14 @@
         <mxCell id="wM3EJiI2qsp5RDD22HrX-12" value="42" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" parent="wM3EJiI2qsp5RDD22HrX-9" vertex="1">
           <mxGeometry x="123" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="KR_2kdo7gi1sBD5RWe87-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;" parent="1" target="wM3EJiI2qsp5RDD22HrX-11" edge="1">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="KR_2kdo7gi1sBD5RWe87-1" value="Агрегационные&lt;br style=&quot;font-size: 9px;&quot;&gt;диаграммы" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;fontSize=9;" parent="1" target="wM3EJiI2qsp5RDD22HrX-11" edge="1">
+          <mxGeometry x="-0.0213" y="13" relative="1" as="geometry">
             <mxPoint x="112" y="214" as="sourcePoint" />
             <mxPoint x="207" y="358" as="targetPoint" />
             <Array as="points">
               <mxPoint x="112" y="428" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RiEPKLeCXByrApDP3RQd-1" value="" style="group;fontSize=9;shadow=1;" parent="1" vertex="1" connectable="0">
@@ -515,6 +517,16 @@
         </mxCell>
         <mxCell id="tr1GQt2aLnVzZD4c9WNG-2" value="Текстовый файл&amp;nbsp;&lt;br&gt;&quot;отчет&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="432" y="115" width="130" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="SvM56uUqxFVhVxjvvVP9-2" value="Диаграммы&lt;br&gt;от экспертов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=9;" edge="1" parent="1">
+          <mxGeometry x="0.6723" y="9" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="87" y="247" />
+            </Array>
+            <mxPoint x="87" y="102" as="sourcePoint" />
+            <mxPoint x="180" y="247" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
