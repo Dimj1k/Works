@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-09T18:05:33.078Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="MbLUgjh4LsuOjQCupBqY" version="21.8.2" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-09T18:05:58.462Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="oCB8HvkKZkn-cfymlNmD" version="21.8.2" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -461,7 +461,7 @@
             <mxPoint x="323.8333333333335" y="55" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RiEPKLeCXByrApDP3RQd-3" value="Сохранение электронных таблиц" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;shadow=1;perimeterSpacing=0;strokeWidth=1;" parent="RiEPKLeCXByrApDP3RQd-1" vertex="1">
+        <mxCell id="RiEPKLeCXByrApDP3RQd-3" value="Сохранение электронных таблиц на компьютере пользователя" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;shadow=1;perimeterSpacing=0;strokeWidth=1;" parent="RiEPKLeCXByrApDP3RQd-1" vertex="1">
           <mxGeometry y="5" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="RiEPKLeCXByrApDP3RQd-4" value="43" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" parent="RiEPKLeCXByrApDP3RQd-1" vertex="1">
@@ -510,7 +510,7 @@
             <mxPoint x="323.8333333333335" y="55" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="DofmmxDFOqtcvgh7j7Ci-3" value="Сохранение текстовых файлов" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;shadow=1;perimeterSpacing=0;strokeWidth=1;" parent="DofmmxDFOqtcvgh7j7Ci-1" vertex="1">
+        <mxCell id="DofmmxDFOqtcvgh7j7Ci-3" value="Сохранение текстовых файлов на компьютере пользователя" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;shadow=1;perimeterSpacing=0;strokeWidth=1;" parent="DofmmxDFOqtcvgh7j7Ci-1" vertex="1">
           <mxGeometry y="5" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="DofmmxDFOqtcvgh7j7Ci-4" value="44" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" parent="DofmmxDFOqtcvgh7j7Ci-1" vertex="1">
