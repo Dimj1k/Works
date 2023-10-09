@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-09T18:02:10.880Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="YynWjmoBikaYA1JOKK3M" version="21.8.2" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-09T18:02:32.681Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="rkTerMHP7t48mOPnRw0l" version="21.8.2" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -112,7 +112,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-3" value="D1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;D1&lt;/font&gt;" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="480" y="160" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DRrfU3QE0jib7lfwXf2O-4" value="Текстовый&lt;br style=&quot;font-size: 8px;&quot;&gt;файл" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;endArrow=openThin;endFill=0;exitX=0.785;exitY=0.973;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=8;" parent="1" source="ZBRSyutQxxAG7Q9DfjHJ-8" target="P8uqClvPOzKiS5UQ_5oF-3" edge="1">
@@ -125,7 +125,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-8" value="D2" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
+        <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-8" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;D2&lt;/font&gt;" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="584" y="270" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-13" value="&#xa;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Электронная таблица&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&quot;общая_информация&quot;&lt;/span&gt;&#xa;&#xa;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
@@ -235,7 +235,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EWxJyevyDxl_vBNgvt2L-33" value="D3" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-33" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;D3&lt;/font&gt;" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="365" y="655" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="EWxJyevyDxl_vBNgvt2L-34" value="Электронная таблица&lt;br style=&quot;font-size: 12px;&quot;&gt;&quot;выбор_№_экспертов&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
@@ -292,7 +292,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EWxJyevyDxl_vBNgvt2L-42" value="D4" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-42" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;D4&lt;/font&gt;" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="136" y="599" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="EWxJyevyDxl_vBNgvt2L-43" value="Директория&lt;br style=&quot;font-size: 12px;&quot;&gt;&quot;Диаграммы&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
