@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-10T09:13:54.250Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="BJ38d3foQxoZJzxVHrHV" version="22.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-10T09:14:02.325Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="xFMY1s6tmUQvKpZ3RCU4" version="22.0.4" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1562" dy="813" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -384,7 +384,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SKCIcvAI3RmWdlULbRTb" name="Уровень 2 Процесс4">
-    <mxGraphModel dx="1562" dy="813" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1302" dy="678" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -437,7 +437,7 @@
         </mxCell>
         <mxCell id="KR_2kdo7gi1sBD5RWe87-1" value="Агрегационные&lt;br style=&quot;font-size: 9px;&quot;&gt;диаграммы" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=9;elbow=vertical;" parent="1" target="wM3EJiI2qsp5RDD22HrX-11" edge="1">
           <mxGeometry x="-0.021" y="1" relative="1" as="geometry">
-            <mxPoint x="97" y="182" as="sourcePoint" />
+            <mxPoint x="87" y="242" as="sourcePoint" />
             <mxPoint x="207" y="358" as="targetPoint" />
             <Array as="points">
               <mxPoint x="118" y="428" />
