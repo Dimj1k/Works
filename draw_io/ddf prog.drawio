@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-10T09:10:08.577Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="WFBUACZlLXmbH3A7jv7D" version="22.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-10T09:12:40.238Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="wuutkaRwhYro_IKhHSLA" version="22.0.4" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1562" dy="813" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -151,7 +151,7 @@
         <mxCell id="ZBRSyutQxxAG7Q9DfjHJ-24" value="Матрица из&lt;br style=&quot;font-size: 8px;&quot;&gt;комбинаций&lt;br style=&quot;font-size: 8px;&quot;&gt;рангов" style="endArrow=none;html=1;endFill=0;edgeStyle=elbowEdgeStyle;elbow=vertical;jumpStyle=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=openThin;startFill=0;fontSize=8;rounded=0;" parent="1" source="ZBRSyutQxxAG7Q9DfjHJ-16" edge="1">
           <mxGeometry x="0.1903" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="256" y="278" as="sourcePoint" />
-            <mxPoint x="409" y="175" as="targetPoint" />
+            <mxPoint x="392" y="175" as="targetPoint" />
             <Array as="points">
               <mxPoint x="364" y="220" />
             </Array>
