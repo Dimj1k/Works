@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-10T09:14:02.325Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="xFMY1s6tmUQvKpZ3RCU4" version="22.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-10T09:14:37.589Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="G8d_YimoQhBy04Q4sGxP" version="22.0.4" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1562" dy="813" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -384,7 +384,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SKCIcvAI3RmWdlULbRTb" name="Уровень 2 Процесс4">
-    <mxGraphModel dx="1302" dy="678" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="813" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -508,10 +508,10 @@
         <mxCell id="DofmmxDFOqtcvgh7j7Ci-4" value="44" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;" parent="DofmmxDFOqtcvgh7j7Ci-1" vertex="1">
           <mxGeometry x="123" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="tr1GQt2aLnVzZD4c9WNG-3" value="Текстовый файл" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;endArrow=openThin;endFill=0;curved=1;" parent="1" source="tr1GQt2aLnVzZD4c9WNG-1" target="DofmmxDFOqtcvgh7j7Ci-3" edge="1">
+        <mxCell id="tr1GQt2aLnVzZD4c9WNG-3" value="Текстовый файл" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;endArrow=openThin;endFill=0;elbow=vertical;" parent="1" source="tr1GQt2aLnVzZD4c9WNG-1" target="DofmmxDFOqtcvgh7j7Ci-3" edge="1">
           <mxGeometry x="-0.269" y="16" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="421" y="241" />
+              <mxPoint x="453" y="241" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
