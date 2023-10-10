@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-10T09:09:54.982Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="3M2rLEKnMNVtphu0dVKj" version="22.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-10T09:10:08.577Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="WFBUACZlLXmbH3A7jv7D" version="22.0.4" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1562" dy="813" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -213,13 +213,12 @@
             <mxPoint x="557" y="267" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EWxJyevyDxl_vBNgvt2L-31" value="Статистические показатели матриц,&lt;br style=&quot;font-size: 8px;&quot;&gt;Матрицы,&lt;br style=&quot;font-size: 8px;&quot;&gt;Весовые коэффициенты матриц" style="endArrow=openThin;html=1;rounded=0;endFill=0;entryX=-0.001;entryY=0.347;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;entryPerimeter=0;fontSize=8;" parent="1" source="ZBRSyutQxxAG7Q9DfjHJ-16" target="EWxJyevyDxl_vBNgvt2L-9" edge="1">
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-31" value="Статистические показатели матриц,&lt;br style=&quot;font-size: 8px;&quot;&gt;Матрицы,&lt;br style=&quot;font-size: 8px;&quot;&gt;Весовые коэффициенты матриц" style="endArrow=openThin;html=1;rounded=0;endFill=0;entryX=-0.001;entryY=0.347;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=elbowEdgeStyle;entryPerimeter=0;fontSize=8;elbow=vertical;" parent="1" source="ZBRSyutQxxAG7Q9DfjHJ-16" target="EWxJyevyDxl_vBNgvt2L-9" edge="1">
           <mxGeometry x="-0.6487" y="2" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="336" y="520" as="sourcePoint" />
             <mxPoint x="388" y="448" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="305" y="520" />
-              <mxPoint x="372" y="520" />
+              <mxPoint x="325" y="520" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
