@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T10:49:19.438Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="CmSZEBePDE1CvUN3IyK_" version="22.0.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-16T10:49:38.576Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="FY_U-JWrO0G09Zx0mVr1" version="22.0.4" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -529,7 +529,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Cw3jwqkLRC7YWcQ4dzhv" name="Страница — 4">
-    <mxGraphModel dx="1195" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="231" dy="122" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -694,7 +694,7 @@
         <mxCell id="v4Kd_sKqclb4cI3gP24C-31" value="Директория&lt;br style=&quot;font-size: 12px;&quot;&gt;&quot;Диаграммы&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="590" y="430" width="130" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="v4Kd_sKqclb4cI3gP24C-32" value="" style="endArrow=openThin;html=1;rounded=0;endFill=0;fontSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="v4Kd_sKqclb4cI3gP24C-30">
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-32" value="" style="endArrow=openThin;html=1;rounded=0;endFill=0;fontSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.451;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v4Kd_sKqclb4cI3gP24C-30">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="480" y="270" as="sourcePoint" />
             <mxPoint x="640" y="310" as="targetPoint" />
@@ -703,7 +703,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="v4Kd_sKqclb4cI3gP24C-33" value="Оптимальные&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;весовые&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;коэффициенты" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;elbow=vertical;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.443;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-30">
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-33" value="Оптимальные&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;весовые&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;коэффициенты" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;elbow=vertical;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.443;entryY=1.009;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-30">
           <mxGeometry x="0.5946" relative="1" as="geometry">
             <mxPoint x="740" y="480" as="sourcePoint" />
             <mxPoint x="610" y="450" as="targetPoint" />
