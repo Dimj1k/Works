@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T10:55:20.231Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="-wO0AmssF6XjN_-HmZDk" version="22.0.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-16T10:58:28.808Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="3DcLRJHXuOnc48Ggofx5" version="22.0.4" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -529,7 +529,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Cw3jwqkLRC7YWcQ4dzhv" name="Страница — 4">
-    <mxGraphModel dx="1195" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1195" dy="632" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -786,7 +786,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="v4Kd_sKqclb4cI3gP24C-47" value="Длительность&lt;br style=&quot;font-size: 9px;&quot;&gt;расчёта" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=9;jumpStyle=none;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;labelBackgroundColor=none;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-10" target="v4Kd_sKqclb4cI3gP24C-44">
-          <mxGeometry x="-0.0888" y="2" relative="1" as="geometry">
+          <mxGeometry x="-0.1134" y="-2" relative="1" as="geometry">
             <mxPoint x="499" y="277" as="targetPoint" />
             <mxPoint as="offset" />
             <mxPoint x="390" y="329" as="sourcePoint" />
