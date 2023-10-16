@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T11:02:50.816Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="4oTL2gDStsxgGAq7CVXt" version="22.0.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-16T11:08:18.570Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="pF6dUBmTuxCdywhbbRsN" version="22.0.4" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -829,6 +829,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <UserObject label="https://systems.education/data-flow-diagrams#example1" link="https://systems.education/data-flow-diagrams#example1" id="v4Kd_sKqclb4cI3gP24C-54">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="20" y="710" width="330" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
