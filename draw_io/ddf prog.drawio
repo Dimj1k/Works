@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T10:16:13.162Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="upVBiHemoM0xS8-svX9m" version="22.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-16T10:17:09.394Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="vCmz7nac2xmUkmJ-PneO" version="22.0.4" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -215,12 +215,12 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EWxJyevyDxl_vBNgvt2L-37" value="Точность расчёта" style="endArrow=openThin;html=1;rounded=0;endFill=0;entryX=0.836;entryY=0.027;entryDx=0;entryDy=0;fontSize=8;entryPerimeter=0;" parent="1" target="EWxJyevyDxl_vBNgvt2L-33" edge="1">
+        <mxCell id="EWxJyevyDxl_vBNgvt2L-37" value="Точность расчёта" style="endArrow=openThin;html=1;rounded=0;endFill=0;entryX=0.836;entryY=0.027;entryDx=0;entryDy=0;fontSize=8;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" target="EWxJyevyDxl_vBNgvt2L-33" edge="1" source="ZBRSyutQxxAG7Q9DfjHJ-16">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="476" y="349" as="sourcePoint" />
             <mxPoint x="489" y="472" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="598" y="349" />
+              <mxPoint x="598" y="357" />
               <mxPoint x="596" y="606" />
               <mxPoint x="499" y="604" />
             </Array>
@@ -341,13 +341,6 @@
             <mxPoint x="-86" y="-86" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uoD_TEHZXoY820mjEK_B-2" value="Длительности&lt;br style=&quot;font-size: 8px;&quot;&gt;процессов,&lt;br style=&quot;font-size: 8px;&quot;&gt;Точность расчёта" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;entryX=0.894;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=8;" parent="1" target="EWxJyevyDxl_vBNgvt2L-42" edge="1">
-          <mxGeometry x="-0.4455" relative="1" as="geometry">
-            <mxPoint x="499" y="277" as="targetPoint" />
-            <mxPoint x="488" y="267" as="sourcePoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="WG2xdITexDKhXLt_3LFH-1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;D2&lt;/font&gt;" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="29" y="270" width="160" height="30" as="geometry" />
         </mxCell>
@@ -374,10 +367,13 @@
         <mxCell id="WG2xdITexDKhXLt_3LFH-5" value="Длительность&lt;br style=&quot;font-size: 8px;&quot;&gt;обработки" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=8;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="WG2xdITexDKhXLt_3LFH-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uoD_TEHZXoY820mjEK_B-1" value="Длительность проверки&lt;br style=&quot;font-size: 8px;&quot;&gt;Точность расчёта&lt;br style=&quot;font-size: 8px;&quot;&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;fontSize=8;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="EWxJyevyDxl_vBNgvt2L-9" edge="1" target="ZBRSyutQxxAG7Q9DfjHJ-8">
-          <mxGeometry x="-0.3307" relative="1" as="geometry">
+        <mxCell id="uoD_TEHZXoY820mjEK_B-1" value="Длительность проверки&lt;br style=&quot;font-size: 8px;&quot;&gt;Точность расчёта&lt;br style=&quot;font-size: 8px;&quot;&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="EWxJyevyDxl_vBNgvt2L-9" edge="1" target="ZBRSyutQxxAG7Q9DfjHJ-8">
+          <mxGeometry x="-0.165" relative="1" as="geometry">
             <mxPoint x="489" y="267" as="targetPoint" />
             <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="562" y="329" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
