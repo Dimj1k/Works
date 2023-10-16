@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T10:48:59.036Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="92OYOo-xTSQjsdsY5SCa" version="22.0.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-16T10:49:19.438Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="CmSZEBePDE1CvUN3IyK_" version="22.0.4" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -716,7 +716,7 @@
         <mxCell id="v4Kd_sKqclb4cI3gP24C-34" value="Допустимый&lt;br&gt;диапазон&lt;br&gt;согласованности" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=8;" edge="1" parent="1">
           <mxGeometry x="-0.2525" relative="1" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="415" y="420" as="sourcePoint" />
+            <mxPoint x="415" y="390" as="sourcePoint" />
             <mxPoint x="414.5" y="485" as="targetPoint" />
           </mxGeometry>
         </mxCell>
