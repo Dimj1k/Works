@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T10:52:17.124Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="P85SknIqYDr8rpiSTofe" version="22.0.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-16T10:52:52.453Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="lAPT-mhI9d4KKU99M2kz" version="22.0.4" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -631,7 +631,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="v4Kd_sKqclb4cI3gP24C-22" value="Электронная таблица&lt;br style=&quot;font-size: 8px;&quot;&gt;с решением экспертов" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=8;elbow=vertical;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-23" target="v4Kd_sKqclb4cI3gP24C-38">
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-22" value="Электронная таблица&lt;br style=&quot;font-size: 8px;&quot;&gt;с решением экспертов" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=8;elbow=vertical;labelBackgroundColor=none;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-23" target="v4Kd_sKqclb4cI3gP24C-38">
           <mxGeometry x="0.0822" y="-1" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="445" y="739" />
@@ -785,7 +785,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="v4Kd_sKqclb4cI3gP24C-47" value="Длительность&lt;br style=&quot;font-size: 8px;&quot;&gt;расчёта" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;jumpStyle=none;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-10" target="v4Kd_sKqclb4cI3gP24C-44">
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-47" value="Длительность&lt;br style=&quot;font-size: 8px;&quot;&gt;расчёта" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;jumpStyle=none;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;labelBackgroundColor=none;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-10" target="v4Kd_sKqclb4cI3gP24C-44">
           <mxGeometry x="-0.0888" y="2" relative="1" as="geometry">
             <mxPoint x="499" y="277" as="targetPoint" />
             <mxPoint as="offset" />
@@ -803,8 +803,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="v4Kd_sKqclb4cI3gP24C-49" value="Длительность проверки&lt;br style=&quot;font-size: 8px;&quot;&gt;Точность расчёта&lt;br style=&quot;font-size: 8px;&quot;&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-6">
-          <mxGeometry x="-0.037" relative="1" as="geometry">
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-49" value="Длительность проверки&lt;br style=&quot;font-size: 8px;&quot;&gt;Точность расчёта&lt;br style=&quot;font-size: 8px;&quot;&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-6">
+          <mxGeometry x="-0.1605" relative="1" as="geometry">
             <mxPoint x="489" y="267" as="targetPoint" />
             <mxPoint as="offset" />
             <Array as="points">
