@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T10:20:02.560Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="1TO9xKPxQ9GrGU5TgdGB" version="22.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-10-16T10:21:20.249Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="DGu6Xft6uYt1QdvRhZsq" version="22.0.4" type="github" pages="3">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="758" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nEhlRCSoVh1ugewXg1Bu" name="Уровень 1">
-    <mxGraphModel dx="478" dy="253" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="683" dy="361" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -289,13 +289,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kYNXlCYoRxAUwQLYBaoS-1" value="Неудовлетворительный&lt;br style=&quot;font-size: 8px;&quot;&gt;результат" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=8;elbow=vertical;" parent="1" source="EWxJyevyDxl_vBNgvt2L-9" target="ZBRSyutQxxAG7Q9DfjHJ-16" edge="1">
-          <mxGeometry x="0.6439" y="3" relative="1" as="geometry">
+        <mxCell id="kYNXlCYoRxAUwQLYBaoS-1" value="Неудовлетворительный&lt;br style=&quot;font-size: 8px;&quot;&gt;результат" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=8;elbow=vertical;" parent="1" source="EWxJyevyDxl_vBNgvt2L-9" target="ZBRSyutQxxAG7Q9DfjHJ-16" edge="1">
+          <mxGeometry x="-0.7777" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="548" y="510" />
-              <mxPoint x="548" y="463" />
-              <mxPoint x="187" y="459" />
-              <mxPoint x="187" y="380" />
+              <mxPoint x="410" y="459" />
+              <mxPoint x="410" y="355" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
@@ -363,7 +361,7 @@
         <mxCell id="WG2xdITexDKhXLt_3LFH-5" value="Длительность&lt;br style=&quot;font-size: 8px;&quot;&gt;обработки" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=8;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="TvzHAY7ZZ8JFt3XVQWxm-3" target="WG2xdITexDKhXLt_3LFH-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uoD_TEHZXoY820mjEK_B-1" value="Длительность проверки&lt;br style=&quot;font-size: 8px;&quot;&gt;Точность расчёта&lt;br style=&quot;font-size: 8px;&quot;&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="EWxJyevyDxl_vBNgvt2L-9" edge="1" target="ZBRSyutQxxAG7Q9DfjHJ-8">
+        <mxCell id="uoD_TEHZXoY820mjEK_B-1" value="Длительность проверки&lt;br style=&quot;font-size: 8px;&quot;&gt;Точность расчёта&lt;br style=&quot;font-size: 8px;&quot;&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="EWxJyevyDxl_vBNgvt2L-9" edge="1" target="ZBRSyutQxxAG7Q9DfjHJ-8">
           <mxGeometry x="0.1891" relative="1" as="geometry">
             <mxPoint x="489" y="267" as="targetPoint" />
             <mxPoint as="offset" />
