@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-25T12:05:27.947Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="1JvKvw8qxjIepqR6qMzs" version="22.0.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-25T12:05:45.507Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="PnZcYsLvaUk7yEC_-0PC" version="22.0.8" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Cw3jwqkLRC7YWcQ4dzhv" name="Страница — 4">
-    <mxGraphModel dx="819" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2876" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -388,7 +388,7 @@
         </mxCell>
         <UserObject label="https://systems.education/data-flow-diagrams#example1" link="https://systems.education/data-flow-diagrams#example1" id="v4Kd_sKqclb4cI3gP24C-54">
           <mxCell style="text;whiteSpace=wrap;" parent="1" vertex="1">
-            <mxGeometry x="9" y="684" width="330" height="40" as="geometry" />
+            <mxGeometry x="-600" y="500" width="330" height="40" as="geometry" />
           </mxCell>
         </UserObject>
       </root>
