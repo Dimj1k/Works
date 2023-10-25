@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-25T12:02:59.368Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="M8r0lTW4WFXyq65XcguB" version="22.0.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-25T12:04:02.691Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="dsxUswSliRMaTsGBaGep" version="22.0.8" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Cw3jwqkLRC7YWcQ4dzhv" name="Страница — 4">
-    <mxGraphModel dx="2876" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2049" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -176,6 +176,17 @@
         <mxCell id="v4Kd_sKqclb4cI3gP24C-20" value="3" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;strokeColor=none;fillColor=none;fontSize=13;" parent="v4Kd_sKqclb4cI3gP24C-18" vertex="1">
           <mxGeometry x="123" width="30" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-21" value="Статистические&lt;br style=&quot;font-size: 9px;&quot;&gt;показатели матриц,&lt;br style=&quot;font-size: 9px;&quot;&gt;матрицы и их&lt;br style=&quot;font-size: 9px;&quot;&gt;весовые коэффициенты" style="endArrow=openThin;html=1;rounded=0;endFill=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;fontSize=9;labelBackgroundColor=none;" parent="1" source="v4Kd_sKqclb4cI3gP24C-10" edge="1">
+          <mxGeometry x="-0.471" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="385" y="335" as="sourcePoint" />
+            <mxPoint x="480" y="485" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="342" y="270" />
+              <mxPoint x="480" y="270" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="v4Kd_sKqclb4cI3gP24C-22" value="Электронная таблица&lt;br style=&quot;font-size: 9px;&quot;&gt;с решением экспертов" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=9;elbow=vertical;labelBackgroundColor=none;" parent="1" source="v4Kd_sKqclb4cI3gP24C-23" target="v4Kd_sKqclb4cI3gP24C-38" edge="1">
           <mxGeometry x="0.0822" y="-1" relative="1" as="geometry">
             <Array as="points">
@@ -240,14 +251,13 @@
         <mxCell id="v4Kd_sKqclb4cI3gP24C-31" value="Директория&lt;br style=&quot;font-size: 12px;&quot;&gt;&quot;Диаграммы&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="590" y="430" width="130" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="v4Kd_sKqclb4cI3gP24C-32" value="Статистические&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;показатели матриц,&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;матрицы и их&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;весовые коэффициенты&lt;/span&gt;" style="endArrow=openThin;html=1;rounded=0;endFill=0;fontSize=9;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.435;entryY=-0.011;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;" parent="1" target="v4Kd_sKqclb4cI3gP24C-30" edge="1" source="v4Kd_sKqclb4cI3gP24C-10">
-          <mxGeometry x="-0.2687" width="50" height="50" relative="1" as="geometry">
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-32" value="" style="endArrow=openThin;html=1;rounded=0;endFill=0;fontSize=9;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.435;entryY=-0.011;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="v4Kd_sKqclb4cI3gP24C-30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="480" y="270" as="sourcePoint" />
             <mxPoint x="640" y="310" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="520" y="355" />
+              <mxPoint x="570" y="270" />
             </Array>
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="v4Kd_sKqclb4cI3gP24C-33" value="Оптимальные&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;весовые&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;коэффициенты" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=9;elbow=vertical;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.435;entryY=1.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-30" edge="1">
@@ -267,15 +277,13 @@
             <mxPoint x="414.5" y="485" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <object label="Заданная точность" id="v4Kd_sKqclb4cI3gP24C-35">
-          <mxCell style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=9;" parent="1" edge="1">
-            <mxGeometry x="-0.1617" y="1" relative="1" as="geometry">
-              <mxPoint x="250" y="537" as="sourcePoint" />
-              <mxPoint x="372" y="536" as="targetPoint" />
-              <mxPoint as="offset" />
-            </mxGeometry>
-          </mxCell>
-        </object>
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-35" value="Заданная точность" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=9;" parent="1" edge="1">
+          <mxGeometry x="-0.1617" y="1" relative="1" as="geometry">
+            <mxPoint x="250" y="559" as="sourcePoint" />
+            <mxPoint x="372" y="558" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="v4Kd_sKqclb4cI3gP24C-36" value="Неудовлетворительный&lt;br style=&quot;font-size: 9px;&quot;&gt;результат" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;fontSize=9;elbow=vertical;edgeStyle=orthogonalEdgeStyle;" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-10" edge="1">
           <mxGeometry x="0.3605" relative="1" as="geometry">
             <Array as="points">
@@ -361,14 +369,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vk7yQXehUuh7rMV54azP-1" value="Весовые коэффициенты&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;&lt;span style=&quot;font-size: 9px;&quot;&gt;матриц&lt;/span&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=9;labelBackgroundColor=none;endArrow=classicThin;endFill=1;endArrow=openThin;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-50" target="v4Kd_sKqclb4cI3gP24C-19">
-          <mxGeometry x="-0.1963" relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="540" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="v4Kd_sKqclb4cI3gP24C-50" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;D3&lt;/font&gt;" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="9" y="490" width="160" height="30" as="geometry" />
         </mxCell>
@@ -387,7 +387,7 @@
         </mxCell>
         <UserObject label="https://systems.education/data-flow-diagrams#example1" link="https://systems.education/data-flow-diagrams#example1" id="v4Kd_sKqclb4cI3gP24C-54">
           <mxCell style="text;whiteSpace=wrap;" parent="1" vertex="1">
-            <mxGeometry x="-430" y="584" width="330" height="40" as="geometry" />
+            <mxGeometry x="9" y="684" width="330" height="40" as="geometry" />
           </mxCell>
         </UserObject>
       </root>
