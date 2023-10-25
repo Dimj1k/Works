@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-25T12:01:10.920Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="nSx5xEXXpGhpo5j71kj0" version="22.0.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-25T12:01:33.226Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="EIWYWfvvAsR7L1_idBu3" version="22.0.8" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Cw3jwqkLRC7YWcQ4dzhv" name="Страница — 4">
-    <mxGraphModel dx="819" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -359,7 +359,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Vk7yQXehUuh7rMV54azP-1" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-50" target="v4Kd_sKqclb4cI3gP24C-19">
+        <mxCell id="Vk7yQXehUuh7rMV54azP-1" value="Весовые коэффициенты&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;&lt;span style=&quot;font-size: 9px;&quot;&gt;матриц&lt;/span&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=9;labelBackgroundColor=none;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-50" target="v4Kd_sKqclb4cI3gP24C-19">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="90" y="540" />
