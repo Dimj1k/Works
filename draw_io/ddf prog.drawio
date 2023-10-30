@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-30T10:55:57.527Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76" etag="nRqDmDvRamz2InyuWjU_" version="22.0.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-10-30T10:57:35.384Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76" etag="tJ3ltGAjcTooHIpEI41v" version="22.0.8" type="github" pages="4">
   <diagram name="Уровень 0" id="52a04d89-c75d-2922-d76d-85b35f80e030">
     <mxGraphModel dx="1426" dy="793" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -260,7 +260,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="v4Kd_sKqclb4cI3gP24C-33" value="Оптимальные&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;весовые&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;коэффициенты и&lt;br&gt;длительность проверки" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=9;elbow=vertical;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.435;entryY=1.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-30" edge="1">
+        <mxCell id="v4Kd_sKqclb4cI3gP24C-33" value="Оптимальные&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;весовые&lt;br style=&quot;border-color: var(--border-color); font-size: 9px;&quot;&gt;коэффициенты и&lt;br&gt;длительность расчёта" style="edgeStyle=elbowEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;endArrow=openThin;endFill=0;fontSize=9;elbow=vertical;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.435;entryY=1.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="v4Kd_sKqclb4cI3gP24C-30" edge="1">
           <mxGeometry x="0.5946" relative="1" as="geometry">
             <mxPoint x="740" y="480" as="sourcePoint" />
             <mxPoint x="610" y="450" as="targetPoint" />
@@ -390,12 +390,6 @@
             <mxGeometry x="-410" y="589" width="330" height="40" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="LD2lohr-GI0b7jVPG7yr-1" value="Проверка допустимости решения" style="html=1;dashed=0;whiteSpace=wrap;border-radius=5px;rounded=1;shadow=1;perimeterSpacing=0;strokeWidth=1;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="235" y="390" width="150" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="LD2lohr-GI0b7jVPG7yr-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="v4Kd_sKqclb4cI3gP24C-19" target="LD2lohr-GI0b7jVPG7yr-1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
