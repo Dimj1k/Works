@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T11:56:51.082Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="SA9xHEyzaBQdB9ip37i6" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-16T11:58:46.043Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="9X3h3HGfym_epBI9Zl7N" version="22.1.2" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="521" dy="279" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="744" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-9" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="100" y="200" width="120" height="60" as="geometry" />
+          <mxGeometry x="30" y="200" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-9">
           <mxGeometry width="120" height="60" as="geometry" />
@@ -24,10 +24,28 @@
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-24" value="&lt;div&gt;Матрицы&lt;/div&gt;&lt;div&gt;решений&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;strokeColor=#FF0080;startFill=1;labelBackgroundColor=none;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="250" y="220" as="sourcePoint" />
-            <mxPoint x="320" y="230" as="targetPoint" />
+            <mxPoint x="180" y="220" as="sourcePoint" />
+            <mxPoint x="250" y="230" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-26" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="250" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-26">
+          <mxGeometry width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-28" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-26">
+          <mxGeometry y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-29" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-26">
+          <mxGeometry x="60" y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-30" value="А32" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-26">
+          <mxGeometry y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-31" value="Расчёт статистических показателей матриц" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-26">
+          <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
