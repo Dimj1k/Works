@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T12:39:44.377Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="tBY38JyWMxwSY64l8nFm" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-16T12:40:06.650Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="eCGq5P7khTB3uSUDM8-z" version="22.1.2" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="3905" dy="2093" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -156,12 +156,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="rHtwVeTPGvIX2-GxLPoe-81" value="Удовлетворительный результат" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.008;entryY=0.925;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=1;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-76" target="rHtwVeTPGvIX2-GxLPoe-88">
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-81" value="Удовлетворительный результат" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-76" target="rHtwVeTPGvIX2-GxLPoe-88">
           <mxGeometry x="-0.0159" relative="1" as="geometry">
             <mxPoint x="970" y="320" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="930" y="318" />
-            </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
