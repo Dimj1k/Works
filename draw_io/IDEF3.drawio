@@ -1,9 +1,34 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T11:14:37.027Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" version="22.1.2" etag="kbPwxpj9RQ3QLHCAnzm7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-16T11:56:51.082Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="SA9xHEyzaBQdB9ip37i6" version="22.1.2" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel>
+    <mxGraphModel dx="521" dy="279" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-9" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-9">
+          <mxGeometry width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-9">
+          <mxGeometry y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-9">
+          <mxGeometry x="60" y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-6" value="А31" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-9">
+          <mxGeometry y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-8" value="Получение матриц решений" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-9">
+          <mxGeometry width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-24" value="&lt;div&gt;Матрицы&lt;/div&gt;&lt;div&gt;решений&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;strokeColor=#FF0080;startFill=1;labelBackgroundColor=none;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="220" as="sourcePoint" />
+            <mxPoint x="320" y="230" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
