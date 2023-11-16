@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T12:47:42.684Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="wrwFCcYCQJgvv6esJwE7" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-16T12:49:19.668Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="cQ_V4By4uM1mFeAZT8F1" version="22.1.2" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="744" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1077" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -117,10 +117,10 @@
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-73" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-70">
           <mxGeometry x="60" y="40" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="rHtwVeTPGvIX2-GxLPoe-74" value="А31" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-70">
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-74" value="А33" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-70">
           <mxGeometry y="40" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="rHtwVeTPGvIX2-GxLPoe-75" value="Проверка " style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-70">
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-75" value="Проверка на выполнение условий" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-70">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-79" value="Неудовлетворительный результат" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-76" target="rHtwVeTPGvIX2-GxLPoe-47">
