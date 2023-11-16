@@ -1,9 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T12:26:18.427Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="yHzMVV4rLDvCKCcWO2sl" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-16T12:29:51.983Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="hc18129lINZQ_YLePUBS" version="22.1.2" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="521" dy="279" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="363" dy="195" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-50" value="&lt;div&gt;Данные для&lt;/div&gt;&lt;div&gt;генерации&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#FFBB54;labelBackgroundColor=none;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-49" target="rHtwVeTPGvIX2-GxLPoe-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-61" value="Дополнительные&lt;br style=&quot;font-size: 10px;&quot;&gt;строки в матрице" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#FF99CC;endArrow=block;endFill=1;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-47" target="rHtwVeTPGvIX2-GxLPoe-49">
           <mxGeometry x="0.115" relative="1" as="geometry">
             <Array as="points">
@@ -16,8 +21,8 @@
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-24" value="&lt;div&gt;Матрицы&lt;/div&gt;&lt;div&gt;решений&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;strokeColor=#FF0080;startFill=1;labelBackgroundColor=none;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="300" as="sourcePoint" />
-            <mxPoint x="450" y="310" as="targetPoint" />
+            <mxPoint x="430" y="300" as="sourcePoint" />
+            <mxPoint x="500" y="310" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -33,7 +38,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-9" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="230" y="280" width="120" height="60" as="geometry" />
+          <mxGeometry x="280" y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-9">
           <mxGeometry width="120" height="60" as="geometry" />
@@ -52,13 +57,13 @@
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-33" value="&lt;div&gt;Матрицы&lt;/div&gt;&lt;div&gt;решений&lt;/div&gt;" style="endArrow=block;html=1;rounded=0;endFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;strokeColor=#FF0080;startFill=1;labelBackgroundColor=none;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="309.76" as="sourcePoint" />
-            <mxPoint x="670" y="309.76" as="targetPoint" />
+            <mxPoint x="620" y="309.76" as="sourcePoint" />
+            <mxPoint x="720" y="309.76" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-26" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="450" y="280" width="120" height="60" as="geometry" />
+          <mxGeometry x="500" y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-26">
           <mxGeometry width="120" height="60" as="geometry" />
@@ -92,9 +97,6 @@
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-47" value="Увеличение числа экспертов" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="rHtwVeTPGvIX2-GxLPoe-42">
           <mxGeometry width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="rHtwVeTPGvIX2-GxLPoe-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-49" target="rHtwVeTPGvIX2-GxLPoe-8">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-49" value="O" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="170" y="295" width="30" height="30" as="geometry" />
