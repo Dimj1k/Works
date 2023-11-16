@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T12:23:31.910Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="xqavhheJ8HjKIBlXEGCj" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-16T12:24:24.624Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="ylXIr3EkOAhOpYr1F5D9" version="22.1.2" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
     <mxGraphModel dx="434" dy="233" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="rHtwVeTPGvIX2-GxLPoe-61" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#FF99CC;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-47" target="rHtwVeTPGvIX2-GxLPoe-49">
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-61" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#FF99CC;endArrow=block;endFill=1;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-47" target="rHtwVeTPGvIX2-GxLPoe-49">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="150" y="210" />
