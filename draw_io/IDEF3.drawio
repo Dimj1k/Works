@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T12:06:54.028Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="weNrkkd8cIf1nAd4gXEk" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T12:07:22.990Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="AEX3fH2hLTxt8pXII2W6" version="22.1.4" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="398" dy="217" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="819" dy="446" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -298,7 +298,7 @@
         <mxCell id="lcVxslAkRvURmsZlSyza-21" value="А312" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-17">
           <mxGeometry y="40" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-22" value="Расчёт хи-квадрата" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-17">
+        <mxCell id="lcVxslAkRvURmsZlSyza-22" value="Расчёт хи-квадратов" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-17">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-33" value="Уровни&lt;br&gt;значимости&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#B85450;" edge="1" parent="1" source="lcVxslAkRvURmsZlSyza-31" target="lcVxslAkRvURmsZlSyza-8">
@@ -321,7 +321,7 @@
         <mxCell id="lcVxslAkRvURmsZlSyza-30" value="А313" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-26">
           <mxGeometry y="40" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-31" value="Расчёт хи-квадрата" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-26">
+        <mxCell id="lcVxslAkRvURmsZlSyza-31" value="Расчёт уровней&lt;br&gt;значимости" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-26">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
       </root>
