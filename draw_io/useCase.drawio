@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T20:50:59.785Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="lUm2MVqncnvyvSN6a8ao" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T20:51:40.228Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="OWVjI-4S14ktmE007SWK" version="22.1.4" type="github">
   <diagram name="Страница — 1" id="13ZsyIA3A2PHv1gfF3Tv">
     <mxGraphModel dx="683" dy="371" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -119,6 +119,15 @@
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-30" value="Количество матриц в интерфейсе" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="160" y="104" width="110" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="S01E7SAqJd3VSEOtWKj2-31" value="" style="endArrow=none;html=1;rounded=0;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="S01E7SAqJd3VSEOtWKj2-32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="157" y="336" as="sourcePoint" />
+            <mxPoint x="105" y="299" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S01E7SAqJd3VSEOtWKj2-32" value="Запустить процесс" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="273" width="110" height="27" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
