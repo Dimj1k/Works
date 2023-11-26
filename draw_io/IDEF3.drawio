@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T11:44:41.477Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Xy7AWbH3f1-BEhVxTpMG" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T11:45:14.850Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="bkDIBIEQRw_ye4M3Mevm" version="22.1.4" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="478" dy="260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="330" dy="179" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -286,6 +286,16 @@
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-22" value="Генерация матриц решений" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-17">
           <mxGeometry width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="lcVxslAkRvURmsZlSyza-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="395" />
+              <mxPoint x="660" y="320" />
+              <mxPoint x="680" y="320" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
