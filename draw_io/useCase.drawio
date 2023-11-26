@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T20:40:11.497Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="O4jU1mBBYEdOO428qo7y" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T20:40:50.050Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="8A2jTvovw8QbGRhaSBdp" version="22.1.4" type="github">
   <diagram name="Страница — 1" id="13ZsyIA3A2PHv1gfF3Tv">
-    <mxGraphModel dx="478" dy="260" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="398" dy="217" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -76,6 +76,16 @@
         </mxCell>
         <mxCell id="u1M5d2YBWSQStyXBgiU--3" value="Ввести весовые&lt;br&gt;коэффициенты" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="290" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="S01E7SAqJd3VSEOtWKj2-17" value="Использовать все" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="279" y="157" width="92" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="S01E7SAqJd3VSEOtWKj2-18" value="&quot;extend&quot;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.383;entryY=0;entryDx=0;entryDy=0;dashed=1;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="S01E7SAqJd3VSEOtWKj2-17" target="S01E7SAqJd3VSEOtWKj2-10">
+          <mxGeometry x="-0.2645" y="1" relative="1" as="geometry">
+            <mxPoint x="450" y="295" as="sourcePoint" />
+            <mxPoint x="402" y="316" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
