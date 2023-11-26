@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T11:06:24.859Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="lXjLKzCgwPDAJn8codnb" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T11:28:54.923Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Gvt7WwOjyRvRQ18sINx2" version="22.1.4" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="1195" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="683" dy="371" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -171,6 +171,13 @@
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-88" value="Окончание расчёта" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="rHtwVeTPGvIX2-GxLPoe-83" vertex="1">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-95" value="&amp;amp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="500" y="295" width="30" height="30" as="geometry" />
         </mxCell>
@@ -196,6 +203,24 @@
           <mxGeometry y="40" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-112" value="Имя файла с исходными рангами" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="rHtwVeTPGvIX2-GxLPoe-107" vertex="1">
+          <mxGeometry width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="600" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
+          <mxGeometry width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
+          <mxGeometry y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
+          <mxGeometry x="60" y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-5" value="А22" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
+          <mxGeometry y="40" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lcVxslAkRvURmsZlSyza-6" value="Генерация матриц решений" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
       </root>
