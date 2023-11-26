@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T11:45:14.850Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="bkDIBIEQRw_ye4M3Mevm" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T11:49:12.434Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="hGdF_7c1jwFFbi-4Ujl9" version="22.1.4" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="330" dy="179" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="478" dy="260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -171,8 +171,8 @@
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-88" value="Окончание расчёта" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="rHtwVeTPGvIX2-GxLPoe-83" vertex="1">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-7" value="Расчёт&lt;br&gt;значений&lt;br&gt;согласованности" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#999900;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-2">
-          <mxGeometry x="0.1364" relative="1" as="geometry">
+        <mxCell id="lcVxslAkRvURmsZlSyza-7" value="Вычисление&lt;br&gt;первого&lt;br&gt;критерия" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#999900;" edge="1" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-2">
+          <mxGeometry x="0.2273" relative="1" as="geometry">
             <mxPoint x="530" y="430" as="targetPoint" />
             <Array as="points">
               <mxPoint x="485" y="500" />
@@ -218,7 +218,7 @@
         <mxCell id="lcVxslAkRvURmsZlSyza-1" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="530" y="470" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-2" value="Расчёт значений согласованности" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lcVxslAkRvURmsZlSyza-1">
