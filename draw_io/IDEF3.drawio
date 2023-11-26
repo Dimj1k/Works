@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T12:23:15.829Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Wj46zHE4c6yiF12YiubN" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T12:23:30.321Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="GANkiNh1ft5Sp8ddonh_" version="22.1.4" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="1687" dy="918" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="333" dy="181" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,7 +20,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-113" value="&lt;div&gt;Используемые&lt;/div&gt;&lt;div&gt;ранги&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;strokeColor=#94FF57;endArrow=block;endFill=1;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-112" target="rHtwVeTPGvIX2-GxLPoe-55" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-78" value="Результат" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#FF6363;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-75" target="rHtwVeTPGvIX2-GxLPoe-76" edge="1">
           <mxGeometry x="-0.1429" relative="1" as="geometry">
@@ -239,7 +241,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-107" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry y="510" width="120" height="60" as="geometry" />
+          <mxGeometry y="470" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-108" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="rHtwVeTPGvIX2-GxLPoe-107" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
