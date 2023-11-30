@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-29T18:10:25.680Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="lFBlFz2YvMf1PoGc1-Yu" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-30T11:28:00.658Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="DN25kkxNMQVAJK-mujwZ" version="22.1.5" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="1195" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="399" dy="213" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -216,23 +216,24 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-32" value="Вычисление&lt;br&gt;третьего&lt;br&gt;критерия" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#B85450;" parent="1" edge="1">
-          <mxGeometry x="-0.1286" relative="1" as="geometry">
+        <mxCell id="lcVxslAkRvURmsZlSyza-32" value="&lt;div&gt;Формула&lt;/div&gt;&lt;div&gt;расчёта&lt;/div&gt;&lt;div&gt;уровня&lt;/div&gt;&lt;div&gt;значимости&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#B85450;" parent="1" edge="1" target="lcVxslAkRvURmsZlSyza-31">
+          <mxGeometry x="0.1418" y="3" relative="1" as="geometry">
             <mxPoint x="500" y="302.5" as="sourcePoint" />
             <mxPoint x="550" y="232" as="targetPoint" />
             <Array as="points">
               <mxPoint x="530" y="303" />
-              <mxPoint x="530" y="232" />
+              <mxPoint x="530" y="222" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-40" value="Вычисление&lt;br&gt;четвертого&lt;br&gt;критерия" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#6600CC;endArrow=block;endFill=1;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-39" edge="1">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="lcVxslAkRvURmsZlSyza-40" value="&lt;div&gt;Формула&lt;/div&gt;&lt;div&gt;расчёта&lt;/div&gt;&lt;div&gt;максимальной&lt;/div&gt;&lt;div&gt;разницы&lt;/div&gt;&lt;div&gt;в весах&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#6600CC;endArrow=block;endFill=1;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-39" edge="1">
+          <mxGeometry x="-0.0952" relative="1" as="geometry">
             <mxPoint x="543.6666666666666" y="152.33333333333331" as="targetPoint" />
             <Array as="points">
               <mxPoint x="485" y="150" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-95" value="&amp;amp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -331,7 +332,7 @@
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-26" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="550" y="202" width="120" height="60" as="geometry" />
+          <mxGeometry x="550" y="192" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="lcVxslAkRvURmsZlSyza-26" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
