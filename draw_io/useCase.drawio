@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-30T13:11:02.483Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="DB88LIputQ_WF_wfuTwl" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-30T13:11:54.493Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="fGIqGNwdmKAvmLau3f0T" version="22.1.5" type="github">
   <diagram name="Страница — 1" id="13ZsyIA3A2PHv1gfF3Tv">
     <mxGraphModel dx="988" dy="532" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -87,7 +87,7 @@
             <mxPoint x="292" y="245" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="S01E7SAqJd3VSEOtWKj2-24" value="Ввести настройки обновления интерфейса" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="S01E7SAqJd3VSEOtWKj2-24" value="Ввод настроек для обновления интерфейса" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="202" y="193" width="138" height="56" as="geometry" />
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-27" value="&quot;include&quot;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="S01E7SAqJd3VSEOtWKj2-24" target="S01E7SAqJd3VSEOtWKj2-28" edge="1">
