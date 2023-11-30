@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-30T11:28:00.658Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="DN25kkxNMQVAJK-mujwZ" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-30T11:28:25.229Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="8MvHq040ybJReJPotEAB" version="22.1.5" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="399" dy="213" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1728" dy="925" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -198,7 +198,7 @@
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-88" value="Окончание расчёта" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="rHtwVeTPGvIX2-GxLPoe-83" vertex="1">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-7" value="Вычисление&lt;br&gt;первого&lt;br&gt;критерия" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#999900;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-2" edge="1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-7" value="&lt;div&gt;Формула&lt;/div&gt;&lt;div&gt;расчёта&lt;/div&gt;&lt;div&gt;согласованности&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#999900;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-2" edge="1">
           <mxGeometry x="-0.0455" relative="1" as="geometry">
             <mxPoint x="530" y="430" as="targetPoint" />
             <Array as="points">
@@ -207,7 +207,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-23" value="Вычисление&lt;br&gt;второго&lt;br&gt;критерия" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1.003;exitY=0.832;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=block;endFill=1;strokeColor=#FFB570;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-22" edge="1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-23" value="&lt;div&gt;Формула&lt;/div&gt;&lt;div&gt;расчёта&lt;/div&gt;&lt;div&gt;хи-квадрата&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1.003;exitY=0.832;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=block;endFill=1;strokeColor=#FFB570;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-95" target="lcVxslAkRvURmsZlSyza-22" edge="1">
           <mxGeometry x="-0.1313" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="530" y="320" />
