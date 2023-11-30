@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-30T13:13:49.604Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="YZJgEaFAX_cNrrviD3pi" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-30T13:14:45.749Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="Zg5u52KVF-ubEHKw2Akn" version="22.1.5" type="github">
   <diagram name="Страница — 1" id="13ZsyIA3A2PHv1gfF3Tv">
     <mxGraphModel dx="1185" dy="639" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -181,6 +181,15 @@
         </mxCell>
         <mxCell id="pmKTjgoHwWbGK0lNRpNX-11" value="Просмотр результатов" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="80" y="376" width="110" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="pmKTjgoHwWbGK0lNRpNX-12" value="Просмотр электронных таблиц" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="432" width="110" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="pmKTjgoHwWbGK0lNRpNX-13" value="Просмотр графических результатов" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="92" y="479" width="110" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="pmKTjgoHwWbGK0lNRpNX-14" value="Просмотр отчета" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="435" width="110" height="53" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
