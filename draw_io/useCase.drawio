@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-22T19:47:32.278Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="mT-Nx8aXL__8mg4xHBgM" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-24T08:14:13.216Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="6HmaXU9q_wEQs6IFcYgZ" version="22.1.11" type="github">
   <diagram name="Страница — 1" id="13ZsyIA3A2PHv1gfF3Tv">
-    <mxGraphModel dx="1434" dy="780" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2790" dy="1383" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -88,27 +88,27 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-24" value="Ввод настроек для обновления интерфейса" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="226" y="197" width="138" height="56" as="geometry" />
+          <mxGeometry x="236" y="195.5" width="138" height="56" as="geometry" />
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-27" value="&quot;include&quot;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="S01E7SAqJd3VSEOtWKj2-24" target="S01E7SAqJd3VSEOtWKj2-28" edge="1">
           <mxGeometry x="-0.1252" y="-1" relative="1" as="geometry">
-            <mxPoint x="231" y="185" as="sourcePoint" />
-            <mxPoint x="236" y="173" as="targetPoint" />
+            <mxPoint x="241" y="183.5" as="sourcePoint" />
+            <mxPoint x="246" y="171.5" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-28" value="Промежуток обновления&lt;br&gt;интерфейса" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="134" y="124" width="120" height="48" as="geometry" />
+          <mxGeometry x="144" y="122.5" width="120" height="48" as="geometry" />
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-29" value="&quot;include&quot;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="S01E7SAqJd3VSEOtWKj2-24" target="S01E7SAqJd3VSEOtWKj2-30" edge="1">
           <mxGeometry x="-0.1252" y="-1" relative="1" as="geometry">
-            <mxPoint x="256" y="215" as="sourcePoint" />
-            <mxPoint x="306" y="157" as="targetPoint" />
+            <mxPoint x="266" y="213.5" as="sourcePoint" />
+            <mxPoint x="316" y="155.5" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-30" value="Количество матриц в интерфейсе" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="254" y="108" width="110" height="48" as="geometry" />
+          <mxGeometry x="264" y="106.5" width="110" height="48" as="geometry" />
         </mxCell>
         <mxCell id="S01E7SAqJd3VSEOtWKj2-32" value="Запустить процесс" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="144" y="277" width="110" height="27" as="geometry" />
