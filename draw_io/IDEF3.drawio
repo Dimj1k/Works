@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-31T19:05:16.697Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="4itFzoCd8ERDeuMxeQxh" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-01T11:51:05.337Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="_VLoURH0kkdxZk4bAZZJ" version="24.2.1" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="989" dy="514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="478" dy="249" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -28,7 +28,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rHtwVeTPGvIX2-GxLPoe-113" value="&lt;div&gt;Используемые&lt;/div&gt;&lt;div&gt;ранги&lt;br&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;strokeColor=#94FF57;endArrow=block;endFill=1;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-112" target="rHtwVeTPGvIX2-GxLPoe-55" edge="1">
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-113" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;strokeColor=#94FF57;endArrow=none;endFill=0;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-112" target="rHtwVeTPGvIX2-GxLPoe-55" edge="1">
           <mxGeometry x="-0.2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -261,7 +261,7 @@
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-109" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="rHtwVeTPGvIX2-GxLPoe-107" vertex="1">
           <mxGeometry y="40" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="rHtwVeTPGvIX2-GxLPoe-112" value="Лицо, принимающее решение" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="rHtwVeTPGvIX2-GxLPoe-107" vertex="1">
+        <mxCell id="rHtwVeTPGvIX2-GxLPoe-112" value="Избранные пользователем ранги" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="rHtwVeTPGvIX2-GxLPoe-107" vertex="1">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-1" value="" style="group" parent="1" vertex="1" connectable="0">
