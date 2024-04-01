@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-01T12:22:36.242Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="1sJI-gszCG4uGRrQfTN8" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-01T12:34:48.785Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="MH6Ey0gg6HDI52H7H4lB" version="24.2.1" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="1195" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="819" dy="426" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-24" value="Хи-квадрат&lt;br&gt;матриц&lt;div&gt;получены&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;endArrow=block;endFill=1;strokeColor=#FFB570;entryX=-0.011;entryY=0.833;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lcVxslAkRvURmsZlSyza-22" target="lcVxslAkRvURmsZlSyza-8" edge="1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-24" value="Хи-квадрат&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;endArrow=block;endFill=1;strokeColor=#FFB570;entryX=-0.011;entryY=0.833;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lcVxslAkRvURmsZlSyza-22" target="lcVxslAkRvURmsZlSyza-8" edge="1">
           <mxGeometry x="0.2028" relative="1" as="geometry">
             <mxPoint x="680" y="320" as="targetPoint" />
             <Array as="points">
@@ -168,7 +168,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-76" value="X" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="997" y="300" width="30" height="25" as="geometry" />
+          <mxGeometry x="997" y="295" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rHtwVeTPGvIX2-GxLPoe-77" value="" style="endArrow=none;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-76" target="rHtwVeTPGvIX2-GxLPoe-76" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -274,7 +274,7 @@
         <mxCell id="lcVxslAkRvURmsZlSyza-5" value="А231" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="lcVxslAkRvURmsZlSyza-1" vertex="1">
           <mxGeometry y="40" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-12" value="Критерии&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#369AFF;labelBackgroundColor=none;" parent="1" source="lcVxslAkRvURmsZlSyza-8" target="rHtwVeTPGvIX2-GxLPoe-75" edge="1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-12" value="Критерии&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=doubleBlock;endFill=1;strokeColor=#369AFF;labelBackgroundColor=none;" parent="1" source="lcVxslAkRvURmsZlSyza-8" target="rHtwVeTPGvIX2-GxLPoe-75" edge="1">
           <mxGeometry x="-0.1333" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -288,7 +288,7 @@
             <mxPoint x="750" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-11" value="Значения&lt;br&gt;согласованности&lt;br&gt;матриц&lt;div&gt;получены&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#999900;endArrow=block;endFill=1;" parent="1" source="lcVxslAkRvURmsZlSyza-2" target="lcVxslAkRvURmsZlSyza-8" edge="1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-11" value="Значения&lt;br&gt;согласованности&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#999900;endArrow=block;endFill=1;" parent="1" source="lcVxslAkRvURmsZlSyza-2" target="lcVxslAkRvURmsZlSyza-8" edge="1">
           <mxGeometry x="-0.0385" relative="1" as="geometry">
             <mxPoint x="650" y="430" as="sourcePoint" />
             <Array as="points">
@@ -307,7 +307,7 @@
           <mxGeometry x="730" y="273" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-16" value="J4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="969" y="280" width="40" height="30" as="geometry" />
+          <mxGeometry x="971" y="273" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-17" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="550" y="375" width="120" height="60" as="geometry" />
@@ -345,7 +345,7 @@
         <mxCell id="lcVxslAkRvURmsZlSyza-39" value="Расчёт максимальной разницы в весах" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="lcVxslAkRvURmsZlSyza-34" vertex="1">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-41" value="Максимальные&lt;br&gt;разницы&lt;br&gt;между исходными&lt;br&gt;и&amp;nbsp;весовыми&lt;br&gt;коэффициентами&lt;div&gt;матриц&lt;br&gt;&lt;div&gt;получены&lt;/div&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6600CC;endArrow=block;endFill=1;" parent="1" source="lcVxslAkRvURmsZlSyza-39" target="lcVxslAkRvURmsZlSyza-8" edge="1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-41" value="Максимальные&lt;br&gt;разницы&lt;br&gt;между исходными&lt;br&gt;и&amp;nbsp;весовыми&lt;br&gt;коэффициентами&lt;div&gt;матриц&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6600CC;endArrow=block;endFill=1;" parent="1" source="lcVxslAkRvURmsZlSyza-39" target="lcVxslAkRvURmsZlSyza-8" edge="1">
           <mxGeometry x="-0.05" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -368,7 +368,7 @@
         <mxCell id="oni3Qfsp55NMejHP_b9o-5" value="Отчеты" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="oni3Qfsp55NMejHP_b9o-2" vertex="1">
           <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="lcVxslAkRvURmsZlSyza-33" value="Уровни&lt;br&gt;значимости&lt;br&gt;матриц&lt;div&gt;получены&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#B85450;endArrow=block;endFill=1;labelBackgroundColor=default;" parent="1" source="lcVxslAkRvURmsZlSyza-31" target="lcVxslAkRvURmsZlSyza-8" edge="1">
+        <mxCell id="lcVxslAkRvURmsZlSyza-33" value="Уровни&lt;br&gt;значимости&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#B85450;endArrow=block;endFill=1;labelBackgroundColor=default;" parent="1" source="lcVxslAkRvURmsZlSyza-31" target="lcVxslAkRvURmsZlSyza-8" edge="1">
           <mxGeometry x="0.067" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
