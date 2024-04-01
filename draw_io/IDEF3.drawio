@@ -1,16 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2024-04-01T12:34:58.355Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="vonoblgJA0_-1_jTNJVC" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-01T12:58:09.179Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="9I76JUx9KzLO0RHMOj3D" version="24.2.1" type="github">
   <diagram name="Страница — 1" id="2axHYxeO-4VpE9UikgM9">
-    <mxGraphModel dx="989" dy="514" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1687" dy="878" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="oni3Qfsp55NMejHP_b9o-6" value="Результат&lt;br&gt;решения" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#FFB83D;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-87" target="oni3Qfsp55NMejHP_b9o-5" edge="1">
-          <mxGeometry x="-0.1107" relative="1" as="geometry">
+        <mxCell id="oni3Qfsp55NMejHP_b9o-6" value="Результат&lt;br&gt;решения" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=doubleBlock;endFill=1;strokeColor=#FFB83D;exitX=1;exitY=0.75;exitDx=0;exitDy=0;labelBackgroundColor=none;" parent="1" source="rHtwVeTPGvIX2-GxLPoe-88" edge="1">
+          <mxGeometry x="0.5098" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1106" y="450" />
-              <mxPoint x="1106" y="450" />
+              <mxPoint x="1106" y="404" />
             </Array>
             <mxPoint as="offset" />
+            <mxPoint x="1200" y="420" as="sourcePoint" />
+            <mxPoint x="1250" y="404" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-24" value="Хи-квадрат&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;endArrow=block;endFill=1;strokeColor=#FFB570;entryX=-0.011;entryY=0.833;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lcVxslAkRvURmsZlSyza-22" target="lcVxslAkRvURmsZlSyza-8" edge="1">
@@ -355,18 +356,6 @@
             <mxPoint x="733" y="325" as="sourcePoint" />
             <mxPoint x="733" y="295" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="oni3Qfsp55NMejHP_b9o-2" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1046" y="470" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="oni3Qfsp55NMejHP_b9o-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="oni3Qfsp55NMejHP_b9o-2" vertex="1">
-          <mxGeometry width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="oni3Qfsp55NMejHP_b9o-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="oni3Qfsp55NMejHP_b9o-2" vertex="1">
-          <mxGeometry y="40" width="120" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="oni3Qfsp55NMejHP_b9o-5" value="Отчеты" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="oni3Qfsp55NMejHP_b9o-2" vertex="1">
-          <mxGeometry width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="lcVxslAkRvURmsZlSyza-33" value="Уровни&lt;br&gt;значимости&lt;br&gt;матриц" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#B85450;endArrow=block;endFill=1;labelBackgroundColor=default;" parent="1" source="lcVxslAkRvURmsZlSyza-31" target="lcVxslAkRvURmsZlSyza-8" edge="1">
           <mxGeometry x="0.067" relative="1" as="geometry">
